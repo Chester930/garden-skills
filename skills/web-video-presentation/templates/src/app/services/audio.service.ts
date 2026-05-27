@@ -38,6 +38,7 @@ export class AudioService {
       if (m === "auto") {
         url.searchParams.set("auto", "1");
         this.autoStarted.set(true);
+        (window as any).presentationFinished = false;
         // 當點擊自動播放時，自動變成全螢幕
         if (!document.fullscreenElement) {
           document.documentElement.requestFullscreen().catch((err) => {
@@ -88,6 +89,7 @@ export class AudioService {
         } else if (e.key === " " && this.mode() === "auto" && !this.autoStarted()) {
           e.preventDefault();
           this.autoStarted.set(true);
+          (window as any).presentationFinished = false;
         }
       });
     }
@@ -156,12 +158,20 @@ export class AudioService {
       ? cachedSec * 1000
       : Math.min(10000, Math.max(2000, textLen * 250 + 1000));
 
+    const isLastChapter = this.stepper.currentChapterIdx() === this.stepper.totalChapters() - 1;
+    const isLastStep = this.stepper.currentStep() === this.stepper.chapterTotalSteps() - 1;
+    const isLast = isLastChapter && isLastStep;
+
     const advanceAfter = (ms: number) => {
       if (this.mode() !== "auto" || advanced) return;
       this.timer = window.setTimeout(() => {
         if (advanced) return;
         advanced = true;
-        this.stepper.next();
+        if (isLast) {
+          (window as any).presentationFinished = true;
+        } else {
+          this.stepper.next();
+        }
       }, ms);
     };
 

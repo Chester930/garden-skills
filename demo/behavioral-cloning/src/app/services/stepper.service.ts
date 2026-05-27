@@ -74,6 +74,11 @@ export class StepperService {
 
         if (e.key === "ArrowRight" || e.key === " ") {
           e.preventDefault();
+          const q = typeof window !== "undefined" ? new URLSearchParams(window.location.search) : null;
+          const isAutoOrAudio = q && (q.get("auto") === "1" || q.get("audio") === "1");
+          if (e.key === " " && isAutoOrAudio) {
+            return;
+          }
           this.next();
         } else if (e.key === "ArrowLeft" || e.key === "Backspace") {
           e.preventDefault();
