@@ -1,66 +1,66 @@
-# 手绘风信息图模板
+# 手繪風信息圖模板
 
-本文件用于生成"手绘 / 笔记本 / 涂鸦 / 暖色 macaron / morandi 雾感"质感的信息图：
+本文件用於生成"手繪 / 筆記本 / 塗鴉 / 暖色 macaron / morandi 霧感"質感的信息圖：
 
-- 学习笔记 / 知识卡 / 概念图解
-- 公众号 / 小红书"手绘种草"图文
-- 教学讲义 / 课堂涂鸦
-- 旅行手账 / 美食手账 / 阅读笔记
-- 活动通知 / 暖系活动海报
+- 學習筆記 / 知識卡 / 概念圖解
+- 公衆號 / 小紅書"手繪種草"圖文
+- 教學講義 / 課堂塗鴉
+- 旅行手賬 / 美食手賬 / 閱讀筆記
+- 活動通知 / 暖系活動海報
 
-特征：
+特徵：
 
-- 所有线条都有轻微抖动 / 不规则（hand-drawn wobble）
-- 配色低饱和、温暖、像水彩或彩铅
-- 元素之间有大量"留白 + 涂鸦装饰"
-- 字体是手写感（非电脑字体）
-- 颜色填充会"留边"，像手工上色
+- 所有線條都有輕微抖動 / 不規則（hand-drawn wobble）
+- 配色低飽和、溫暖、像水彩或彩鉛
+- 元素之間有大量"留白 + 塗鴉裝飾"
+- 字體是手寫感（非電腦字體）
+- 顏色填充會"留邊"，像手工上色
 
-> 设计判断：手绘风是「风格语言」，自由度极高，不同主题（学习 / 美食 / 旅行 / 心情）的具体元素差异极大。**强行 JSON 反而会限制画面自由度**，因此本模板采用「**结构化自然语言提示词 + 参数表 + 元素清单**」的混合形式，比纯 JSON 更自然。
+> 設計判斷：手繪風是「風格語言」，自由度極高，不同主題（學習 / 美食 / 旅行 / 心情）的具體元素差異極大。**強行 JSON 反而會限制畫面自由度**，因此本模板採用「**結構化自然語言提示詞 + 參數表 + 元素清單**」的混合形式，比純 JSON 更自然。
 
-## 适用范围
+## 適用範圍
 
-- 学习笔记 / 概念解析 / 知识卡片
-- 步骤教程 / how-to / 操作流程的"手绘版"
-- 列表 / 清单 / 排行榜的"手绘版"
-- 暖系内容（情绪 / 治愈 / 美食 / 旅行）
-- 公众号 / 小红书 / 社交平台"手账风"配图
+- 學習筆記 / 概念解析 / 知識卡片
+- 步驟教程 / how-to / 操作流程的"手繪版"
+- 列表 / 清單 / 排行榜的"手繪版"
+- 暖系內容（情緒 / 治癒 / 美食 / 旅行）
+- 公衆號 / 小紅書 / 社交平臺"手賬風"配圖
 
-## 何时使用
+## 何時使用
 
-- 用户提到 "手绘 / 手账 / sketch notes / 涂鸦 / 笔记 / 课堂笔记 / macaron / morandi / 暖色 / 治愈"
-- 用户希望视觉「亲切、好读、不像 PPT」
-- 用户希望「读者感觉是真人手画的」
+- 用戶提到 "手繪 / 手賬 / sketch notes / 塗鴉 / 筆記 / 課堂筆記 / macaron / morandi / 暖色 / 治癒"
+- 用戶希望視覺「親切、好讀、不像 PPT」
+- 用戶希望「讀者感覺是真人手畫的」
 
 不要使用：
 
-- 用户要的是高密度科普因果链 / 解剖图（用 `infographics/legend-heavy-infographic.md`）
-- 用户要的是模块化便当格（用 `infographics/bento-grid-infographic.md`）
-- 用户要的是工程精度的流程图 / 架构图（用 `technical-diagrams/`）
-- 用户要的是出版级图表（用 `academic-figures/publication-chart.md`）
-- 用户要的是真正的治愈系场景插画（用 `scenes-and-illustrations/healing-scene.md`）
+- 用戶要的是高密度科普因果鏈 / 解剖圖（用 `infographics/legend-heavy-infographic.md`）
+- 用戶要的是模塊化便當格（用 `infographics/bento-grid-infographic.md`）
+- 用戶要的是工程精度的流程圖 / 架構圖（用 `technical-diagrams/`）
+- 用戶要的是出版級圖表（用 `academic-figures/publication-chart.md`）
+- 用戶要的是真正的治癒系場景插畫（用 `scenes-and-illustrations/healing-scene.md`）
 
-## 缺失信息优先提问顺序
+## 缺失信息優先提問順序
 
-1. 主题（要讲什么？比如"5 种泡咖啡的方法"、"番茄工作法"、"上海 City Walk Top 10"）
-2. 信息条数（建议 3-7 条）
-3. 配色基调（macaron 暖奶油 / morandi 雾感 / kraft 牛皮纸 / 黑板色）
-4. 是否有人物 / 吉祥物（一只猫 / 简笔小人 / 无人物）
-5. 比例（小红书 3:4 竖版 / 公众号 16:9 横版 / 1:1 方版）
-6. 是否要配色块「条目分区」还是"自由排布"
+1. 主題（要講什麼？比如"5 種泡咖啡的方法"、"番茄工作法"、"上海 City Walk Top 10"）
+2. 信息條數（建議 3-7 條）
+3. 配色基調（macaron 暖奶油 / morandi 霧感 / kraft 牛皮紙 / 黑板色）
+4. 是否有人物 / 吉祥物（一隻貓 / 簡筆小人 / 無人物）
+5. 比例（小紅書 3:4 豎版 / 公衆號 16:9 橫版 / 1:1 方版）
+6. 是否要配色塊「條目分區」還是"自由排布"
 
-## 主模板：手绘风信息图
+## 主模板：手繪風信息圖
 
 📖 描述
 
-整张图是一张「像被人在笔记本上手画出来」的信息图：暖色背景 + 手写体大标题 + 3-7 条手绘卡片 / 圆圈 / 气泡 + 简笔图标 + 涂鸦装饰 + 手绘箭头连接。
+整張圖是一張「像被人在筆記本上手畫出來」的信息圖：暖色背景 + 手寫體大標題 + 3-7 條手繪卡片 / 圓圈 / 氣泡 + 簡筆圖標 + 塗鴉裝飾 + 手繪箭頭連接。
 
-📝 提示词（结构化自然语言模板）
+📝 提示詞（結構化自然語言模板）
 
 ```
 A hand-drawn educational infographic in the style of a high-quality bullet journal page.
 
-Topic: {argument name="topic" default="番茄工作法的 5 个核心步骤"}.
+Topic: {argument name="topic" default="番茄工作法的 5 個核心步驟"}.
 
 Aspect ratio: {argument name="aspect_ratio" default="3:4 portrait"}.
 
@@ -109,29 +109,29 @@ Composition:
 - Information hierarchy: title > item titles > body > doodle decorations
 - Items are large enough to be readable; do not cram
 
-Language: {argument name="language" default="中文（手写体感）"}; technical / proper nouns can stay in English.
+Language: {argument name="language" default="中文（手寫體感）"}; technical / proper nouns can stay in English.
 ```
 
-### 参数策略
+### 參數策略
 
-- **必问**：`topic`、`item_count`、`aspect_ratio`
-- **可默认**：`palette`（默认 macaron）、`background_color`（跟随 palette）、`language`（默认中文）
-- **可随机**：mascot 是否出现 / 用什么吉祥物、doodle 装饰的具体造型、卡片形状（圆角矩形 / 云朵 / 圆圈）
+- **必問**：`topic`、`item_count`、`aspect_ratio`
+- **可默認**：`palette`（默認 macaron）、`background_color`（跟隨 palette）、`language`（默認中文）
+- **可隨機**：mascot 是否出現 / 用什麼吉祥物、doodle 裝飾的具體造型、卡片形狀（圓角矩形 / 雲朵 / 圓圈）
 
-### 自动补全策略
+### 自動補全策略
 
-- 用户只给 `topic` 时：
-  - 自动决定 5 条要点（除非主题明显是 list 类的，比如"7 个习惯"那就用 7 条）
-  - 自动用 macaron 配色
-  - 自动用 3:4 portrait（小红书友好）
-  - 不放 mascot（除非主题适合，如"猫咪护理 5 步"自然出现猫）
-- 用户说"我要小红书风" → palette 自动选 macaron 或 morandi，aspect 3:4
-- 用户说"教学 / 课堂" → palette 自动选 chalkboard 或 macaron
-- 用户说"暖系 / 美食 / 治愈" → palette 自动选 morandi 或 kraft
+- 用戶只給 `topic` 時：
+  - 自動決定 5 條要點（除非主題明顯是 list 類的，比如"7 個習慣"那就用 7 條）
+  - 自動用 macaron 配色
+  - 自動用 3:4 portrait（小紅書友好）
+  - 不放 mascot（除非主題適合，如"貓咪護理 5 步"自然出現貓）
+- 用戶說"我要小紅書風" → palette 自動選 macaron 或 morandi，aspect 3:4
+- 用戶說"教學 / 課堂" → palette 自動選 chalkboard 或 macaron
+- 用戶說"暖系 / 美食 / 治癒" → palette 自動選 morandi 或 kraft
 
-## 变体 1：黑板粉笔风手绘信息图
+## 變體 1：黑板粉筆風手繪信息圖
 
-把上面提示词里的 palette 换成 `chalkboard`：
+把上面提示詞裡的 palette 換成 `chalkboard`：
 
 ```
 Background: dark slate / chalkboard green (#2F4F4F) with faint chalk dust texture.
@@ -140,11 +140,11 @@ Highlights: yellow chalk for important keywords, coral / mint chalk for accents.
 Decorations: hand-erased smudges in the background, chalk arrows, chalk underlines.
 ```
 
-适用：教学讲义、班级文化墙、知识科普"上课"感。
+適用：教學講義、班級文化牆、知識科普"上課"感。
 
-## 变体 2：牛皮纸 / Kraft 暖系手绘信息图
+## 變體 2：牛皮紙 / Kraft 暖系手繪信息圖
 
-把背景换成 `kraft paper`：
+把背景換成 `kraft paper`：
 
 ```
 Background: warm kraft paper #C9A876 with visible paper fibers.
@@ -153,9 +153,9 @@ Accents: tomato red #E63946, muted teal #457B9D.
 Decorations: stamp marks, dotted borders, thread / yarn doodles, postal style elements.
 ```
 
-适用：复古手账、咖啡 / 烘焙 / 慢生活、文创周边。
+適用：復古手賬、咖啡 / 烘焙 / 慢生活、文創周邊。
 
-## 变体 3：单色铅笔 / 极简手绘信息图
+## 變體 3：單色鉛筆 / 極簡手繪信息圖
 
 ```
 Background: pure cream #FAF7F2.
@@ -164,15 +164,15 @@ NO multi-color fills. Use varying line weight and cross-hatching for shading.
 Decorations: minimal — just dotted lines and small symbols.
 ```
 
-适用：克制 / 文艺 / 严肃但仍要手绘感的内容（哲学、读书笔记）。
+適用：克制 / 文藝 / 嚴肅但仍要手繪感的內容（哲學、讀書筆記）。
 
-## 避免事项
+## 避免事項
 
-- 任何元素出现完美的几何形状 / 直线 → 失去手绘灵魂
-- 使用 Helvetica / Arial / 思源黑等电脑字体 → 立刻塑感
-- 颜色填满到边缘没有留白 → 像电子贴纸，不像手画
-- 渐变 / 阴影 / 玻璃质感 / 金属质感 → 完全跑偏
-- 一张图 ≥ 6 种主色 → 失去手账的克制感
-- 文字行距过紧 / 字号一致 → 失去层次感
-- 装饰物太多到喧宾夺主 → 信息读不出来
-- 所有信息卡造型完全一致（一模一样的圆角矩形 ×5）→ 失去手绘的有机感
+- 任何元素出現完美的幾何形狀 / 直線 → 失去手繪靈魂
+- 使用 Helvetica / Arial / 思源黑等電腦字體 → 立刻塑感
+- 顏色填滿到邊緣沒有留白 → 像電子貼紙，不像手畫
+- 漸變 / 陰影 / 玻璃質感 / 金屬質感 → 完全跑偏
+- 一張圖 ≥ 6 種主色 → 失去手賬的克制感
+- 文字行距過緊 / 字號一致 → 失去層次感
+- 裝飾物太多到喧賓奪主 → 信息讀不出來
+- 所有信息卡造型完全一致（一模一樣的圓角矩形 ×5）→ 失去手繪的有機感

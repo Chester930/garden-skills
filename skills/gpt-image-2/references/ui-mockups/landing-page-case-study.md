@@ -1,67 +1,67 @@
-# 长页面 Landing Page / Case Study UI 样机模板
+# 長頁面 Landing Page / Case Study UI 樣機模板
 
-本文件用于生成"完整的一整页 SaaS / 营销 / case study 落地页 UI 样机"——把多个 section（hero / strategy / performance / social proof / CTA）从上到下拼到一张超长图里。
+本文件用於生成"完整的一整頁 SaaS / 營銷 / case study 落地頁 UI 樣機"——把多個 section（hero / strategy / performance / social proof / CTA）從上到下拼到一張超長圖裏。
 
 典型用途：
 
-- SaaS 产品官网首页 mockup
-- 营销 case study 长页面（投后报告 / KPI 复盘）
-- 增长 / agency 业务介绍页
-- Y Combinator 风格 demo day 项目页
-- 客户提案稿 / 投资人 deck 的网页化展示
+- SaaS 產品官網首頁 mockup
+- 營銷 case study 長頁面（投後報告 / KPI 復盤）
+- 增長 / agency 業務介紹頁
+- Y Combinator 風格 demo day 項目頁
+- 客戶提案稿 / 投資人 deck 的網頁化展示
 
-特征（与现有 UI 模板的区别）：
+特徵（與現有 UI 模板的區別）：
 
-| 模板 | 视觉范围 | 适用场景 |
+| 模板 | 視覺範圍 | 適用場景 |
 |---|---|---|
-| `chat-interface-scene.md` | 单屏聊天界面 | iMessage / 微信 / 群聊 |
-| `social-interface-mockup.md` | 单屏社交动态详情 | Twitter / 小红书 / 微博 |
-| `live-commerce-ui.md` | 单屏直播 UI 叠加 | 抖音 / 淘宝直播 |
-| `product-card-overlay.md` | 单屏 hero / 详情主图 | 电商详情页主图 |
-| **本模板** | **完整长页面**（5-7 个 section 纵向拼接） | **SaaS / 营销长页面 / case study** |
+| `chat-interface-scene.md` | 單屏聊天界面 | iMessage / 微信 / 羣聊 |
+| `social-interface-mockup.md` | 單屏社交動態詳情 | Twitter / 小紅書 / 微博 |
+| `live-commerce-ui.md` | 單屏直播 UI 疊加 | 抖音 / 淘寶直播 |
+| `product-card-overlay.md` | 單屏 hero / 詳情主圖 | 電商詳情頁主圖 |
+| **本模板** | **完整長頁面**（5-7 個 section 縱向拼接） | **SaaS / 營銷長頁面 / case study** |
 
-## 适用范围
+## 適用範圍
 
-- SaaS 落地页 / 产品官网首页
-- 营销 case study 长页面
-- 增长复盘报告 web 版
-- 投资人 / 客户提案的网页样机
-- Agency 业务介绍长页面
+- SaaS 落地頁 / 產品官網首頁
+- 營銷 case study 長頁面
+- 增長復盤報告 web 版
+- 投資人 / 客戶提案的網頁樣機
+- Agency 業務介紹長頁面
 
-## 何时使用
+## 何時使用
 
-- 用户提到"落地页 / landing page / case study / 一整页 / 长页面 / 网站 mockup"
-- 用户希望出"从上到下完整 section 结构"而不是单屏截图
-- 客户需要看到「hero → 数据 → 时间线 → 社交证明 → CTA」完整营销叙事
+- 用戶提到"落地頁 / landing page / case study / 一整頁 / 長頁面 / 網站 mockup"
+- 用戶希望出"從上到下完整 section 結構"而不是單屏截圖
+- 客戶需要看到「hero → 數據 → 時間線 → 社交證明 → CTA」完整營銷敘事
 
 不要使用：
 
-- 单屏 UI 截图 → 用 `chat-interface-scene` / `social-interface-mockup` / `live-commerce-ui`
-- 仅 hero section → 用 `poster-and-campaigns/banner-hero.md`
-- 真实可交互的 HTML 网页 → 应当生成 HTML 代码而非图片
+- 單屏 UI 截圖 → 用 `chat-interface-scene` / `social-interface-mockup` / `live-commerce-ui`
+- 僅 hero section → 用 `poster-and-campaigns/banner-hero.md`
+- 真實可交互的 HTML 網頁 → 應當生成 HTML 代碼而非圖片
 
-## 缺失信息优先提问顺序
+## 缺失信息優先提問順序
 
-1. 业务类型（SaaS / agency / 课程 / case study / 投后报告）
-2. 品牌 / 主标 + 一句话定位
-3. 是「营销 case study」（要展示数据 + 客户 logo）还是「产品官网首页」（要展示功能 + 截图）
-4. 配色基调（**深色 + 霓虹 / 纯白 + 强色 accent / 浅米色商务 / 玻璃拟态**）
-5. 必须出现的核心数据（GMV / 播放量 / 客户数 / 增长率）
-6. 是否要客户 logo 墙 / 推荐语 / CTA 表单
-7. 比例（**3:4 / 9:16 长截图 / 整张 desktop 截图**）
+1. 業務類型（SaaS / agency / 課程 / case study / 投後報告）
+2. 品牌 / 主標 + 一句話定位
+3. 是「營銷 case study」（要展示數據 + 客戶 logo）還是「產品官網首頁」（要展示功能 + 截圖）
+4. 配色基調（**深色 + 霓虹 / 純白 + 強色 accent / 淺米色商務 / 玻璃擬態**）
+5. 必須出現的核心數據（GMV / 播放量 / 客戶數 / 增長率）
+6. 是否要客戶 logo 牆 / 推薦語 / CTA 表單
+7. 比例（**3:4 / 9:16 長截圖 / 整張 desktop 截圖**）
 
-## 主模板：营销 case study 长页面 mockup
+## 主模板：營銷 case study 長頁面 mockup
 
 📖 描述
 
-一张超长截图，从上到下 6-7 个独立 section，整体用统一深色 + 霓虹 accent，每个 section 都长得像真实落地页里会出现的模块。
+一張超長截圖，從上到下 6-7 個獨立 section，整體用統一深色 + 霓虹 accent，每個 section 都長得像真實落地頁裏會出現的模塊。
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
   "type": "UI/UX landing page mockup",
-  "goal": "生成一张高仿真的营销 case study 长页面截图，可以作为提案稿、投后报告或作品集封面",
+  "goal": "生成一張高仿真的營銷 case study 長頁面截圖，可以作爲提案稿、投後報告或作品集封面",
   "theme": "{argument name=\"theme\" default=\"dark mode, sleek modern aesthetic, glassmorphism, neon purple and blue glowing accents\"}",
   "viewport": {
     "width": "{argument name=\"viewport width\" default=\"desktop 1440px width\"}",
@@ -82,11 +82,11 @@
         "name": "Hero",
         "position": "top",
         "headline": "{argument name=\"hero headline\" default=\"How We Created 10M+ Viral Impact\"}",
-        "subheadline": "{argument name=\"hero subhead\" default=\"3 天引爆全网, 助力品牌实现指数级增长\"}",
+        "subheadline": "{argument name=\"hero subhead\" default=\"3 天引爆全網, 助力品牌實現指數級增長\"}",
         "stats_row": {
           "count": 4,
-          "labels": ["{argument name=\"stat label 1\" default=\"总播放量\"}", "{argument name=\"stat label 2\" default=\"互动率\"}", "{argument name=\"stat label 3\" default=\"转化咨询\"}", "{argument name=\"stat label 4\" default=\"执行周期\"}"],
-          "values": ["{argument name=\"stat value 1\" default=\"10,240,000+\"}", "{argument name=\"stat value 2\" default=\"18.7%\"}", "{argument name=\"stat value 3\" default=\"3,200+\"}", "{argument name=\"stat value 4\" default=\"72小时\"}"]
+          "labels": ["{argument name=\"stat label 1\" default=\"總播放量\"}", "{argument name=\"stat label 2\" default=\"互動率\"}", "{argument name=\"stat label 3\" default=\"轉化諮詢\"}", "{argument name=\"stat label 4\" default=\"執行周期\"}"],
+          "values": ["{argument name=\"stat value 1\" default=\"10,240,000+\"}", "{argument name=\"stat value 2\" default=\"18.7%\"}", "{argument name=\"stat value 3\" default=\"3,200+\"}", "{argument name=\"stat value 4\" default=\"72小時\"}"]
         },
         "visual": "{argument name=\"hero visual\" default=\"cinematic shot of a person in a hoodie looking at glowing digital screens and graphs, large play button overlay\"}"
       },
@@ -136,7 +136,7 @@
         "title": "{argument name=\"cta title\" default=\"READY TO GO VIRAL?\"}",
         "interactive_elements": [
           "text input field with placeholder '{argument name=\"input placeholder\" default=\"Your work email\"}'",
-          "glowing button with text '{argument name=\"call to action text\" default=\"获取专属增长方案 ->\"}'"
+          "glowing button with text '{argument name=\"call to action text\" default=\"獲取專屬增長方案 ->\"}'"
         ],
         "visual": "{argument name=\"cta visual\" default=\"3D render of a rocket ship taking off with purple and blue flames\"}"
       }
@@ -157,37 +157,37 @@
   },
   "constraints": {
     "must_keep": [
-      "6 个 section 从上到下顺序清晰、可独立识别",
-      "每个 section 的内部组件都符合常规网页设计（卡片 / 网格 / 时间线 / chart）",
-      "数据可读、字体清晰、对比度足够",
-      "整体看起来像真实可滚动的网页截图，而不是 PPT 拼贴"
+      "6 個 section 從上到下順序清晰、可獨立識別",
+      "每個 section 的內部組件都符合常規網頁設計（卡片 / 網格 / 時間線 / chart）",
+      "數據可讀、字體清晰、對比度足夠",
+      "整體看起來像真實可滾動的網頁截圖，而不是 PPT 拼貼"
     ],
     "avoid": [
-      "section 之间没有视觉分隔（容易混在一起）",
-      "把 chart 画成示意图而非真实数据可视化",
-      "logo 墙的品牌名变得不可读",
-      "CTA 按钮颜色与全页配色冲突",
-      "Hero 占据 80%+ 高度（导致下面 section 被压扁）"
+      "section 之間沒有視覺分隔（容易混在一起）",
+      "把 chart 畫成示意圖而非真實數據可視化",
+      "logo 牆的品牌名變得不可讀",
+      "CTA 按鈕顏色與全頁配色衝突",
+      "Hero 佔據 80%+ 高度（導致下面 section 被壓扁）"
     ]
   }
 }
 ```
 
-### 参数策略
+### 參數策略
 
-- **必问**：brand name + 业务定位、core data values、配色基调
-- **可默认**：nav items、footer columns、stat labels（按业务类型推荐）
-- **可随机**：客户 logo 墙的具体品牌（按行业匹配真实存在的品牌名）、推荐语 quote 内容
+- **必問**：brand name + 業務定位、core data values、配色基調
+- **可默認**：nav items、footer columns、stat labels（按業務類型推薦）
+- **可隨機**：客戶 logo 牆的具體品牌（按行業匹配真實存在的品牌名）、推薦語 quote 內容
 
-### 自动补全策略
+### 自動補全策略
 
-- 用户只说"营销 case study 落地页"→ 默认深色 + 霓虹方案 + 6 section 标准结构
-- 用户给了核心数据（如「3 天 1000 万播放」）→ 自动反推 stat label / chart / strategy timeline
-- 用户没说客户 logo → 按行业生成 8 个真实存在的品牌名（不要造假名）
+- 用戶只說"營銷 case study 落地頁"→ 默認深色 + 霓虹方案 + 6 section 標準結構
+- 用戶給了核心數據（如「3 天 1000 萬播放」）→ 自動反推 stat label / chart / strategy timeline
+- 用戶沒說客戶 logo → 按行業生成 8 個真實存在的品牌名（不要造假名）
 
-## 变体 1：SaaS 产品官网首页（feature-driven）
+## 變體 1：SaaS 產品官網首頁（feature-driven）
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
@@ -207,15 +207,15 @@
 }
 ```
 
-### 何时选这个变体
+### 何時選這個變體
 
-- 用户做的是 SaaS 产品官网而非 case study
-- 需要展示「产品长什么样」（截图嵌套截图）
+- 用戶做的是 SaaS 產品官網而非 case study
+- 需要展示「產品長什麼樣」（截圖嵌套截圖）
 - 需要 pricing table
 
-## 变体 2：投资人 / 客户 deck 网页化版
+## 變體 2：投資人 / 客戶 deck 網頁化版
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
@@ -236,15 +236,15 @@
 }
 ```
 
-### 何时选这个变体
+### 何時選這個變體
 
-- 创业者要做 demo day 提案的网页化版
-- 把 Keynote deck 转成可分享的网页样机
-- 需要"传统 deck"的所有要素（market / team / ask）
+- 創業者要做 demo day 提案的網頁化版
+- 把 Keynote deck 轉成可分享的網頁樣機
+- 需要"傳統 deck"的所有要素（market / team / ask）
 
-## 变体 3：玻璃拟态 + 渐变（流行 2026 风格）
+## 變體 3：玻璃擬態 + 漸變（流行 2026 風格）
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
@@ -261,19 +261,19 @@
 }
 ```
 
-### 何时选这个变体
+### 何時選這個變體
 
-- 设计驱动型品牌 / AI 工具 / 创意产品
-- 需要在 SNS 引发设计师转发
-- 客户希望做「视觉惊艳」而非「企业稳重」
+- 設計驅動型品牌 / AI 工具 / 創意產品
+- 需要在 SNS 引發設計師轉發
+- 客戶希望做「視覺驚豔」而非「企業穩重」
 
-## 避免事项
+## 避免事項
 
-- ❌ section 之间分隔不清 → 必须有 80-120px 留白 + 颜色 / 背景微差
-- ❌ 把图表画成纯装饰（必须看起来像真实数据曲线）
-- ❌ logo 墙强行造假品牌名（用真实知名品牌或明确标注「示例」）
-- ❌ CTA 按钮颜色和品牌色冲突 → 应该是品牌色的 accent 版本
-- ❌ Hero 区域过大压扁后续 section（hero ≤ 35% 总高度）
-- ❌ 全页只用一种字号 → 必须有 ≥ 4 级 hierarchy（H1 / H2 / Body / Caption）
-- ❌ 把模板里的占位文字（"VIEW DETAIL"）原样保留 → 应根据业务替换成真实文案
-- ❌ 输出比例选错（如 1:1 会装不下完整长页面，建议 3:4 / 9:16）
+- ❌ section 之間分隔不清 → 必須有 80-120px 留白 + 顏色 / 背景微差
+- ❌ 把圖表畫成純裝飾（必須看起來像真實數據曲線）
+- ❌ logo 牆強行造假品牌名（用真實知名品牌或明確標註「示例」）
+- ❌ CTA 按鈕顏色和品牌色衝突 → 應該是品牌色的 accent 版本
+- ❌ Hero 區域過大壓扁後續 section（hero ≤ 35% 總高度）
+- ❌ 全頁只用一種字號 → 必須有 ≥ 4 級 hierarchy（H1 / H2 / Body / Caption）
+- ❌ 把模板裏的佔位文字（"VIEW DETAIL"）原樣保留 → 應根據業務替換成真實文案
+- ❌ 輸出比例選錯（如 1:1 會裝不下完整長頁面，建議 3:4 / 9:16）

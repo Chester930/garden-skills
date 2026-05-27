@@ -1,66 +1,66 @@
-# 网络拓扑图模板
+# 網絡拓撲圖模板
 
-> ⚠️ **本模板生成的是位图（PNG）**，不是 NetBox / Cisco Packet Tracer / draw.io 可编辑网络拓扑。
-> 需要可编辑请用 NetBox / Lucidchart / draw.io / Cisco Packet Tracer。
+> ⚠️ **本模板生成的是位圖（PNG）**，不是 NetBox / Cisco Packet Tracer / draw.io 可編輯網絡拓撲。
+> 需要可編輯請用 NetBox / Lucidchart / draw.io / Cisco Packet Tracer。
 
-本文件用于生成"工程感网络拓扑图"：
+本文件用於生成"工程感網絡拓撲圖"：
 
-- 公司 / 数据中心 网络拓扑
-- 多区域 / 多 zone 部署拓扑
-- 微服务 / 服务网格 拓扑
-- VPC / 子网 / 路由表拓扑
-- 边缘 / CDN / 多云互联拓扑
+- 公司 / 數據中心 網絡拓撲
+- 多區域 / 多 zone 部署拓撲
+- 微服務 / 服務網格 拓撲
+- VPC / 子網 / 路由表拓撲
+- 邊緣 / CDN / 多雲互聯拓撲
 
-特征：
+特徵：
 
-- 设备节点用类型化 glyph：路由器（菱形交叉）/ 交换机（矩形多端口）/ 服务器（带散热条小机箱）/ 防火墙（砖墙）/ 云（云朵）/ DB（圆柱）
-- 物理连线用粗线，逻辑连线用虚线
-- 大虚线框包围 zone / VLAN / VPC
-- 带宽 / 协议标在线上（如 "10 Gbps" / "BGP" / "TLS 1.3"）
-- 暗色 grid + 等宽字体（沿用视觉系统）
+- 設備節點用類型化 glyph：路由器（菱形交叉）/ 交換機（矩形多端口）/ 服務器（帶散熱條小機箱）/ 防火牆（磚牆）/ 雲（雲朵）/ DB（圓柱）
+- 物理連線用粗線，邏輯連線用虛線
+- 大虛線框包圍 zone / VLAN / VPC
+- 帶寬 / 協議標在線上（如 "10 Gbps" / "BGP" / "TLS 1.3"）
+- 暗色 grid + 等寬字體（沿用視覺系統）
 
-## 适用范围
+## 適用範圍
 
-- 数据中心 / 机房网络拓扑
-- 云架构网络拓扑（VPC / subnet / NAT / IGW）
-- 多区域 / 多云互联
-- 服务网格拓扑（service mesh）
-- 边缘 / CDN / 公网入口拓扑
+- 數據中心 / 機房網絡拓撲
+- 雲架構網絡拓撲（VPC / subnet / NAT / IGW）
+- 多區域 / 多雲互聯
+- 服務網格拓撲（service mesh）
+- 邊緣 / CDN / 公網入口拓撲
 
-## 何时使用
+## 何時使用
 
-- 用户提到 "网络拓扑 / network topology / 部署拓扑 / VPC / 子网 / 数据中心 / 机房 / 服务网格"
-- 用户希望「带网络设备 glyph + 区域分组 + 连线带宽标注」标准网络图
-- 用户接受位图
+- 用戶提到 "網絡拓撲 / network topology / 部署拓撲 / VPC / 子網 / 數據中心 / 機房 / 服務網格"
+- 用戶希望「帶網絡設備 glyph + 區域分組 + 連線帶寬標註」標準網絡圖
+- 用戶接受位圖
 
 不要使用：
 
-- 用户要的是「应用层系统架构」 → 用 `technical-diagrams/system-architecture.md`
-- 用户要的是「业务流程」 → 用 `technical-diagrams/flowchart-decision.md`
-- 用户要的是「时序图」 → 用 `technical-diagrams/sequence-diagram.md`
+- 用戶要的是「應用層系統架構」 → 用 `technical-diagrams/system-architecture.md`
+- 用戶要的是「業務流程」 → 用 `technical-diagrams/flowchart-decision.md`
+- 用戶要的是「時序圖」 → 用 `technical-diagrams/sequence-diagram.md`
 
-## 缺失信息优先提问顺序
+## 缺失信息優先提問順序
 
-1. 拓扑名称（"AWS VPC 拓扑 / 公司机房拓扑 / 多区域部署"）
-2. 主要 zones / subnets / VPCs（建议 2-5 个区域）
-3. 每个区域内的设备 / 实例（路由器 / 交换机 / 服务器 / DB / 负载均衡）
-4. 区域间的连接（VPN / Peering / IGW / Direct Connect）
-5. 连线的协议 / 带宽（可选）
-6. 是否标 IP 段 / CIDR
-7. 比例（默认 16:9 横版）
+1. 拓撲名稱（"AWS VPC 拓撲 / 公司機房拓撲 / 多區域部署"）
+2. 主要 zones / subnets / VPCs（建議 2-5 個區域）
+3. 每個區域內的設備 / 實例（路由器 / 交換機 / 服務器 / DB / 負載均衡）
+4. 區域間的連接（VPN / Peering / IGW / Direct Connect）
+5. 連線的協議 / 帶寬（可選）
+6. 是否標 IP 段 / CIDR
+7. 比例（默認 16:9 橫版）
 
-## 主模板：标准云 / 数据中心 网络拓扑图
+## 主模板：標準雲 / 數據中心 網絡拓撲圖
 
 📖 描述
 
-整张图按 zone / VPC 划分大虚线框区域，每个区域内放设备节点（带类型化 glyph），节点间用粗线连接（标带宽 / 协议），跨区域连接用专门的网关 / VPN 节点。整体在暗色 grid 背景上呈现工程感。
+整張圖按 zone / VPC 劃分大虛線框區域，每個區域內放設備節點（帶類型化 glyph），節點間用粗線連接（標帶寬 / 協議），跨區域連接用專門的網關 / VPN 節點。整體在暗色 grid 背景上呈現工程感。
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "工程感网络拓扑图",
-  "goal": "生成一张工程感网络拓扑图作为部署文档 / 网络架构 review / 培训材料",
+  "type": "工程感網絡拓撲圖",
+  "goal": "生成一張工程感網絡拓撲圖作爲部署文檔 / 網絡架構 review / 培訓材料",
   "canvas": {
     "aspect_ratio": "{argument name=\"aspect_ratio\" default=\"16:9\"}",
     "background": "deep slate #0F172A with subtle 1px grid #1E293B at 32px spacing",
@@ -72,7 +72,7 @@
     "position": "top-left, JetBrains Mono / SF Mono, light gray"
   },
   "device_glyphs": {
-    "rule": "每种设备使用统一的极简几何 glyph，避免使用真实厂商图标",
+    "rule": "每種設備使用統一的極簡幾何 glyph，避免使用真實廠商圖標",
     "types": [
       { "type": "router", "glyph": "diamond shape with X cross inside", "color": "amber #FBBF24" },
       { "type": "switch", "glyph": "rectangle with multiple port dots along the bottom edge", "color": "amber #FBBF24" },
@@ -109,7 +109,7 @@
       { "id": "N7", "type": "database", "label": "RDS PostgreSQL\\n(Multi-AZ)", "zone": "Z4" },
       { "id": "N8", "type": "cloud_service", "label": "S3\\n(static assets)", "zone": "Z1" }
     ],
-    "node_label_format": "device name + optional second line with detail (count / class / role)，mono 10pt 标在 glyph 下方"
+    "node_label_format": "device name + optional second line with detail (count / class / role)，mono 10pt 標在 glyph 下方"
   },
   "connections": {
     "items": [
@@ -128,17 +128,17 @@
       "redundant": "double-line in violet #A78BFA (HA pair, redundant link)",
       "encrypted": "solid line 2px emerald #34D399 with small lock glyph in middle"
     },
-    "label_format": "protocol + optional bandwidth, e.g. 'HTTPS / 443' / '10 Gbps' / 'BGP' / 'TLS 1.3'，mono 9pt 标在线中央",
-    "rule_routing": "正交走线为主；跨 zone 时穿过 zone 边界画"
+    "label_format": "protocol + optional bandwidth, e.g. 'HTTPS / 443' / '10 Gbps' / 'BGP' / 'TLS 1.3'，mono 9pt 標在線中央",
+    "rule_routing": "正交走線爲主；跨 zone 時穿過 zone 邊界畫"
   },
   "annotations": {
     "ip_cidr_labels": {
       "enabled": "{argument name=\"ip_labels_enabled\" default=\"true\"}",
-      "rule": "每个 zone 标 CIDR；关键节点标 IP 或 hostname"
+      "rule": "每個 zone 標 CIDR；關鍵節點標 IP 或 hostname"
     },
     "az_labels": {
       "enabled": "{argument name=\"az_labels_enabled\" default=\"true\"}",
-      "rule": "云环境下标可用区 (AZ-a / AZ-b)"
+      "rule": "雲環境下標可用區 (AZ-a / AZ-b)"
     }
   },
   "legend": {
@@ -149,42 +149,42 @@
   },
   "constraints": {
     "must_keep": [
-      "每种设备 glyph 一致，不混用",
-      "zone 用大虚线框清晰包围",
-      "zone 标签含 CIDR / AZ（云环境）或 VLAN ID（数据中心）",
-      "连线粗细 / 颜色编码反映连接类型",
-      "暗色 grid 背景 + 等宽字体",
-      "legend 必画"
+      "每種設備 glyph 一致，不混用",
+      "zone 用大虛線框清晰包圍",
+      "zone 標籤含 CIDR / AZ（雲環境）或 VLAN ID（數據中心）",
+      "連線粗細 / 顏色編碼反映連接類型",
+      "暗色 grid 背景 + 等寬字體",
+      "legend 必畫"
     ],
     "avoid": [
-      "用真实厂商 logo (Cisco / AWS / Azure 真实图标) → 容易侵权 + 破坏统一视觉",
-      "设备 glyph 不一致 (一个用方框一个用真实图标)",
-      "用 emoji 当设备图标",
-      "zone 不用虚线框 → 失去区域感",
-      "连线无 protocol 标 → 失去工程价值",
-      "节点 > 15 个 → 拥挤，考虑分子图",
-      "用 3D / 渐变 / 玻璃质感",
-      "声称这是可编辑 SVG"
+      "用真實廠商 logo (Cisco / AWS / Azure 真實圖標) → 容易侵權 + 破壞統一視覺",
+      "設備 glyph 不一致 (一個用方框一個用真實圖標)",
+      "用 emoji 當設備圖標",
+      "zone 不用虛線框 → 失去區域感",
+      "連線無 protocol 標 → 失去工程價值",
+      "節點 > 15 個 → 擁擠，考慮分子圖",
+      "用 3D / 漸變 / 玻璃質感",
+      "聲稱這是可編輯 SVG"
     ]
   }
 }
 ```
 
-### 参数策略
+### 參數策略
 
-- **必问**：`title`、zones 列表（含 CIDR / 名称）、nodes 列表（含 type + zone）、connections（含 from/to）
-- **可默认**：`background`（暗色 grid）、`device_glyphs`（默认全套）、`ip_labels_enabled`（true）、`az_labels_enabled`（true）
-- **可随机**：节点摆放位置（在 zone 内自动布局）
+- **必問**：`title`、zones 列表（含 CIDR / 名稱）、nodes 列表（含 type + zone）、connections（含 from/to）
+- **可默認**：`background`（暗色 grid）、`device_glyphs`（默認全套）、`ip_labels_enabled`（true）、`az_labels_enabled`（true）
+- **可隨機**：節點擺放位置（在 zone 內自動布局）
 
-### 自动补全策略
+### 自動補全策略
 
-- 用户给"AWS 单 AZ VPC + ALB + ECS + RDS" → 用 default 拓扑
-- 用户没给 CIDR → 反问（不能瞎编 IP 段）
-- 用户说"加多 AZ HA" → 复制 private subnet 到 AZ-b，标 redundant 连线
-- 用户说"加 WAF / Shield" → 在 ALB 前加 firewall glyph
-- 用户说要 light 模式 → 用变体 1
+- 用戶給"AWS 單 AZ VPC + ALB + ECS + RDS" → 用 default 拓撲
+- 用戶沒給 CIDR → 反問（不能瞎編 IP 段）
+- 用戶說"加多 AZ HA" → 複製 private subnet 到 AZ-b，標 redundant 連線
+- 用戶說"加 WAF / Shield" → 在 ALB 前加 firewall glyph
+- 用戶說要 light 模式 → 用變體 1
 
-## 变体 1：浅色 Light 网络拓扑
+## 變體 1：淺色 Light 網絡拓撲
 
 ```json
 {
@@ -194,52 +194,52 @@
     "node_glyph_border": "1.5px solid (deeper shade for white bg)",
     "label_color": "deep slate #0F172A",
     "zone_border_color": "deeper shade",
-    "vibe": "白底文档 / 印刷版"
+    "vibe": "白底文檔 / 印刷版"
   }
 }
 ```
 
-## 变体 2：服务网格 (Service Mesh) 拓扑
+## 變體 2：服務網格 (Service Mesh) 拓撲
 
 ```json
 {
   "modify": {
     "title_format": "Service Mesh Topology",
-    "node_emphasis": "每个 service node 旁边贴一个小 sidecar (proxy) glyph，表达 sidecar 模式",
-    "connections_emphasis": "service-to-service 连线全部经过 sidecar；标 mTLS 加密",
-    "extras": "可加 control plane node (Istio / Linkerd) 在右上角，连线用虚线表示控制流",
-    "use_case": "Istio / Linkerd / Consul / Cilium service mesh 文档"
+    "node_emphasis": "每個 service node 旁邊貼一個小 sidecar (proxy) glyph，表達 sidecar 模式",
+    "connections_emphasis": "service-to-service 連線全部經過 sidecar；標 mTLS 加密",
+    "extras": "可加 control plane node (Istio / Linkerd) 在右上角，連線用虛線表示控制流",
+    "use_case": "Istio / Linkerd / Consul / Cilium service mesh 文檔"
   }
 }
 ```
 
-适用：服务网格架构、零信任网络、SRE 培训材料。
+適用：服務網格架構、零信任網絡、SRE 培訓材料。
 
-## 变体 3：多云互联拓扑（hybrid cloud）
+## 變體 3：多雲互聯拓撲（hybrid cloud）
 
 ```json
 {
   "modify": {
-    "zones": "横向并排画多个云的大框：'AWS Region' + 'GCP Region' + 'On-Prem DC'",
-    "interconnect": "云间用 'Direct Connect' / 'Cloud Interconnect' / 'VPN' 粗连线连接，标带宽 / SLA",
-    "extras": "可加 transit gateway / 中央 routing hub 在画布中央",
-    "use_case": "混合云 / 多云架构、灾备拓扑、迁移规划"
+    "zones": "橫向並排畫多個雲的大框：'AWS Region' + 'GCP Region' + 'On-Prem DC'",
+    "interconnect": "雲間用 'Direct Connect' / 'Cloud Interconnect' / 'VPN' 粗連線連接，標帶寬 / SLA",
+    "extras": "可加 transit gateway / 中央 routing hub 在畫布中央",
+    "use_case": "混合雲 / 多雲架構、災備拓撲、遷移規劃"
   }
 }
 ```
 
-适用：混合云架构、多云部署、灾备 / DR 拓扑。
+適用：混合雲架構、多雲部署、災備 / DR 拓撲。
 
-## 避免事项
+## 避免事項
 
-- 用真实厂商图标（容易侵权）
-- 设备 glyph 不一致（同一种设备用不同形状）
-- 用 emoji 当设备图标
-- zone 没有虚线框 → 失去区域感
-- 连线无 protocol / 带宽标 → 失去工程价值
-- 节点 > 15 → 视觉爆炸
-- 用 3D / 渐变 / 玻璃质感（破坏工程感）
-- 中央 hub-and-spoke 但中心节点没标"作什么"
-- 把"应用层"组件塞进网络拓扑（应该用 system-architecture）
-- 假装这是可导出可编辑的 SVG
-- IP / CIDR 信息缺失（云环境网络图核心信息）
+- 用真實廠商圖標（容易侵權）
+- 設備 glyph 不一致（同一種設備用不同形狀）
+- 用 emoji 當設備圖標
+- zone 沒有虛線框 → 失去區域感
+- 連線無 protocol / 帶寬標 → 失去工程價值
+- 節點 > 15 → 視覺爆炸
+- 用 3D / 漸變 / 玻璃質感（破壞工程感）
+- 中央 hub-and-spoke 但中心節點沒標"作什麼"
+- 把"應用層"組件塞進網絡拓撲（應該用 system-architecture）
+- 假裝這是可導出可編輯的 SVG
+- IP / CIDR 信息缺失（雲環境網絡圖核心信息）

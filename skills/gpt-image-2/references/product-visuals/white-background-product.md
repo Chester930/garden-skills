@@ -1,73 +1,73 @@
-# 白底电商主图模板
+# 白底電商主圖模板
 
-本文件用于生成最常见的“电商纯净白底产品图”：
+本文件用於生成最常見的「電商純淨白底產品圖」：
 
-- 单品白底
+- 單品白底
 - 多角度白底
-- 白底 + 浅阴影
-- 白底 + 极简文案
+- 白底 + 淺陰影
+- 白底 + 極簡文案
 
-适合：
+適合：
 
-- 平台主图（淘宝 / 京东 / 亚马逊 / 抖音电商首图）
+- 平臺主圖（淘寶 / 京東 / 亞馬遜 / 抖音電商首圖）
 - 商品 SKU 卡
-- 详情页第一屏静态图
-- App 图标式产品瞄点图
+- 詳情頁第一屏靜態圖
+- App 圖標式產品瞄點圖
 
-## 适用范围
+## 適用範圍
 
-- 单品产品图
-- 多角度组合图
-- 极简文案版主图
-- 通用电商主图
+- 單品產品圖
+- 多角度組合圖
+- 極簡文案版主圖
+- 通用電商主圖
 
-## 何时使用
+## 何時使用
 
-- 用户提到“白底图 / 主图 / 商品图 / 平台主图 / SKU 卡”
-- 用户希望直接落到电商平台使用，不需要场景氛围
-- 用户希望突出商品本身，不要任何装饰
+- 用戶提到「白底圖 / 主圖 / 商品圖 / 平臺主圖 / SKU 卡」
+- 用戶希望直接落到電商平臺使用，不需要場景氛圍
+- 用戶希望突出商品本身，不要任何裝飾
 
 不要使用：
 
-- 用户希望产品出现在生活场景里（用 `lifestyle-product-scene.md`）
-- 用户希望影棚级氛围质感（用 `premium-studio-product.md`）
-- 用户希望展示包装外观（用 `packaging-showcase.md`）
+- 用戶希望產品出現在生活場景裏（用 `lifestyle-product-scene.md`）
+- 用戶希望影棚級氛圍質感（用 `premium-studio-product.md`）
+- 用戶希望展示包裝外觀（用 `packaging-showcase.md`）
 
-## 缺失信息优先提问顺序
+## 缺失信息優先提問順序
 
-1. 商品具体是什么（名称 + 关键视觉特征）
-2. 是单品还是多角度
-3. 是否需要文字（品牌名 / 卖点 / 价格）
+1. 商品具體是什麼（名稱 + 關鍵視覺特徵）
+2. 是單品還是多角度
+3. 是否需要文字（品牌名 / 賣點 / 價格）
 4. 是否需要徽章（新品 / 限定 / 折扣）
-5. 是否需要轻微阴影和反射
+5. 是否需要輕微陰影和反射
 
-## 主模板：极简白底单品
+## 主模板：極簡白底單品
 
 📖 描述
 
-纯净白底，商品居中，柔和反射 / 落地阴影，可选择是否叠加品牌名与单卖点。
+純淨白底，商品居中，柔和反射 / 落地陰影，可選擇是否疊加品牌名與單賣點。
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "白底电商主图",
-  "goal": "生成可直接用于电商平台主图位的白底产品图，商品作为绝对视觉中心",
+  "type": "白底電商主圖",
+  "goal": "生成可直接用於電商平臺主圖位的白底產品圖，商品作爲絕對視覺中心",
   "subject": {
-    "product_name": "{argument name=\"product name\" default=\"白色按压式精华瓶\"}",
-    "visual_description": "{argument name=\"product visual description\" default=\"圆肩瓶，磨砂白色瓶身，金属银色按压头，瓶身正面贴有简洁标签\"}",
+    "product_name": "{argument name=\"product name\" default=\"白色按壓式精華瓶\"}",
+    "visual_description": "{argument name=\"product visual description\" default=\"圓肩瓶，磨砂白色瓶身，金屬銀色按壓頭，瓶身正面貼有簡潔標籤\"}",
     "label_text": "{argument name=\"label text\" default=\"DERMA CALM Moisture Serum 30ml\"}",
-    "angle": "{argument name=\"shot angle\" default=\"正面 3/4 视角\"}",
-    "scale": "{argument name=\"product scale\" default=\"占据画面 60%\"}"
+    "angle": "{argument name=\"shot angle\" default=\"正面 3/4 視角\"}",
+    "scale": "{argument name=\"product scale\" default=\"佔據畫面 60%\"}"
   },
   "background": {
-    "type": "{argument name=\"background type\" default=\"纯白\"}",
-    "shadow": "{argument name=\"shadow\" default=\"轻微底部柔光阴影\"}",
-    "reflection": "{argument name=\"reflection\" default=\"无\"}"
+    "type": "{argument name=\"background type\" default=\"純白\"}",
+    "shadow": "{argument name=\"shadow\" default=\"輕微底部柔光陰影\"}",
+    "reflection": "{argument name=\"reflection\" default=\"無\"}"
   },
   "lighting": {
     "key_light": "{argument name=\"key light\" default=\"正面柔光\"}",
-    "fill_light": "{argument name=\"fill light\" default=\"两侧均匀柔光\"}"
+    "fill_light": "{argument name=\"fill light\" default=\"兩側均勻柔光\"}"
   },
   "text_overlay": {
     "enabled": "{argument name=\"text overlay enabled\" default=\"false\"}",
@@ -75,112 +75,112 @@
     "selling_point": "{argument name=\"overlay selling point\" default=\"\"}"
   },
   "style": {
-    "rendering": "高分辨率商业摄影 + 干净后期，没有任何场景元素",
-    "consistency": "颜色还原真实，质感还原真实"
+    "rendering": "高分辨率商業攝影 + 乾淨後期，沒有任何場景元素",
+    "consistency": "顏色還原真實，質感還原真實"
   },
   "constraints": {
     "must_keep": [
-      "纯净白底",
-      "商品作为唯一视觉中心",
-      "标签文字必须清晰可读"
+      "純淨白底",
+      "商品作爲唯一視覺中心",
+      "標籤文字必須清晰可讀"
     ],
     "avoid": [
-      "出现任何装饰道具",
-      "背景出现颜色斑块",
-      "强反射干扰商品本身",
-      "商品边缘有强烈描边"
+      "出現任何裝飾道具",
+      "背景出現顏色斑塊",
+      "強反射幹擾商品本身",
+      "商品邊緣有強烈描邊"
     ]
   }
 }
 ```
 
-### 参数策略
+### 參數策略
 
-- 必问：商品名、关键视觉特征、标签文字
-- 可默认：拍摄角度、阴影方式、灯光方案
-- 可随机：占画面比例（在合理范围内浮动）
+- 必問：商品名、關鍵視覺特徵、標籤文字
+- 可默認：拍攝角度、陰影方式、燈光方案
+- 可隨機：佔畫面比例（在合理範圍內浮動）
 
-### 自动补全策略
+### 自動補全策略
 
-- 没有给具体角度时，护肤 / 饮料 / 数码默认正面 3/4，鞋默认 45° 侧视，箱包默认正面平视
-- 没有给标签文字时不要编造品牌，直接留空
-- 没有给徽章默认不要加
+- 沒有給具體角度時，護膚 / 飲料 / 數碼默認正面 3/4，鞋默認 45° 側視，箱包默認正面平視
+- 沒有給標籤文字時不要編造品牌，直接留空
+- 沒有給徽章默認不要加
 
-## 变体 1：多角度组合白底
+## 變體 1：多角度組合白底
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "多角度白底组合图",
+  "type": "多角度白底組合圖",
   "subject": {
-    "product_name": "{argument name=\"product name\" default=\"无线耳机\"}",
+    "product_name": "{argument name=\"product name\" default=\"無線耳機\"}",
     "angles_count": "{argument name=\"angle count\" default=\"3\"}",
     "angles": [
-      "{argument name=\"angle 1\" default=\"正面充电盒闭合\"}",
-      "{argument name=\"angle 2\" default=\"打开盒子+耳机露出\"}",
-      "{argument name=\"angle 3\" default=\"单只耳机特写\"}"
+      "{argument name=\"angle 1\" default=\"正面充電盒閉合\"}",
+      "{argument name=\"angle 2\" default=\"打開盒子+耳機露出\"}",
+      "{argument name=\"angle 3\" default=\"單只耳機特寫\"}"
     ],
     "arrangement": "{argument name=\"arrangement\" default=\"水平等距排列\"}"
   },
   "background": {
-    "type": "纯白",
-    "shadow": "微阴影"
+    "type": "純白",
+    "shadow": "微陰影"
   },
   "constraints": {
-    "must_feel": "组合像同一组镜头拍摄，光线一致"
+    "must_feel": "組合像同一組鏡頭拍攝，光線一致"
   }
 }
 ```
 
-## 变体 2：白底 + 极简营销叠层
+## 變體 2：白底 + 極簡營銷疊層
 
-适合需要在白底上叠加“品牌 + 单卖点 + 价格”的简版主图。
+適合需要在白底上疊加「品牌 + 單賣點 + 價格」的簡版主圖。
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "白底极简营销主图",
+  "type": "白底極簡營銷主圖",
   "subject": {
-    "product_name": "{argument name=\"product name\" default=\"运动水壶\"}"
+    "product_name": "{argument name=\"product name\" default=\"運動水壺\"}"
   },
-  "background": "纯白",
+  "background": "純白",
   "text_overlay": {
     "enabled": true,
     "brand": "{argument name=\"brand\" default=\"AQUA GO\"}",
-    "selling_point": "{argument name=\"selling point\" default=\"24 小时保温\"}",
+    "selling_point": "{argument name=\"selling point\" default=\"24 小時保溫\"}",
     "price": "{argument name=\"price\" default=\"¥ 89\"}",
     "badge": "{argument name=\"badge\" default=\"新品上市\"}",
-    "layout": "品牌左上、卖点右上、价格右下、徽章左下"
+    "layout": "品牌左上、賣點右上、價格右下、徽章左下"
   },
   "constraints": {
-    "must_feel": "像电商平台 SKU 主图",
-    "avoid": "信息层级混乱"
+    "must_feel": "像電商平臺 SKU 主圖",
+    "avoid": "信息層級混亂"
   }
 }
 ```
 
-## 变体 3：自动补全模式
+## 變體 3：自動補全模式
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "白底主图自动补全模板",
+  "type": "白底主圖自動補全模板",
   "mode": "auto-fill",
-  "rule": "用户只给商品名，自动决定角度、阴影、画面占比，但严格保持纯白底",
+  "rule": "用戶只給商品名，自動決定角度、陰影、畫面佔比，但嚴格保持純白底",
   "constraints": {
-    "must_feel": "电商平台可直接上架"
+    "must_feel": "電商平臺可直接上架"
   }
 }
 ```
 
-## 避免事项
+## 避免事項
 
-- 背景不能出现灰边、渐变或纹理
-- 不要为了好看自动加入花卉、石头、布料等道具
-- 不要让阴影方向与灯光方向矛盾
-- 不要让商品占画面 < 40%，会显得稀薄
-- 不要给标签编造一个不存在的品牌名（除非明确允许）
-- 不要在白底图上加风格化文字字体（除非显式启用 `text_overlay`）
+- 背景不能出現灰邊、漸變或紋理
+- 不要爲了好看自動加入花卉、石頭、布料等道具
+- 不要讓陰影方向與燈光方向矛盾
+- 不要讓商品佔畫面 < 40%，會顯得稀薄
+- 不要給標籤編造一個不存在的品牌名（除非明確允許）
+- 不要在白底圖上加風格化文字字體（除非顯式啓用 `text_overlay`）

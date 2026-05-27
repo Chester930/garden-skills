@@ -1,227 +1,227 @@
-# 电商直播 / 社交直播 UI 样机模板
+# 電商直播 / 社交直播 UI 樣機模板
 
-本文件用于生成“人物肖像 + 直播平台叠加界面”的复杂视觉结果。
+本文件用於生成「人物肖像 + 直播平臺疊加界面」的複雜視覺結果。
 
-适用于：
+適用於：
 
-- 电商直播界面
-- 社交媒体直播截图
-- 主播带货样机
-- 聊天气泡 + 礼物弹窗 + 商品卡片的直播 UI 合成图
+- 電商直播界面
+- 社交媒體直播截圖
+- 主播帶貨樣機
+- 聊天氣泡 + 禮物彈窗 + 商品卡片的直播 UI 合成圖
 
-## 使用规则
+## 使用規則
 
-这个模板的关键点不是固定某一个主播，而是把画面拆成一套稳定结构，让用户可以：
+這個模板的關鍵點不是固定某一個主播，而是把畫面拆成一套穩定結構，讓用戶可以：
 
 - 指定真人照片
 - 指定名人名字
 - 指定人物描述
-- 完全随机生成一个主播人设
+- 完全隨機生成一個主播人設
 
-同理，商品卡、聊天消息、背景品牌、礼物内容都可以：
+同理，商品卡、聊天消息、背景品牌、禮物內容都可以：
 
-- 用户指定
-- 用默认值
-- 在合理范围内随机生成
+- 用戶指定
+- 用默認值
+- 在合理範圍內隨機生成
 
-## 缺失信息优先提问顺序
+## 缺失信息優先提問順序
 
-当用户只说“做一张电商直播 UI 样机”时，优先问：
+當用戶只說「做一張電商直播 UI 樣機」時，優先問：
 
-1. 主播来源：真人照片 / 名人名字 / 人物描述 / 随机生成
-2. 商品信息：卖什么
-3. 平台风格：更像抖音 / 小红书 / 淘宝直播 / 通用直播样机
-4. 语言：中文界面还是英文界面
+1. 主播來源：真人照片 / 名人名字 / 人物描述 / 隨機生成
+2. 商品信息：賣什麼
+3. 平颱風格：更像抖音 / 小紅書 / 淘寶直播 / 通用直播樣機
+4. 語言：中文界面還是英文界面
 
-如果用户不想逐项回答，可以明确提供一个“自动补全模式”：
+如果用戶不想逐項回答，可以明確提供一個「自動補全模式」：
 
-- 你来随机补齐次要信息
-- 仅保留用户指定的核心部分
+- 你來隨機補齊次要信息
+- 僅保留用戶指定的核心部分
 
-## 模板 1：通用电商直播 UI 样机
+## 模板 1：通用電商直播 UI 樣機
 
 📖 描述
 
-生成逼真的社交媒体直播界面，叠加在人物肖像之上，包含可自定义的聊天消息、礼物弹窗和商品购买卡片。
+生成逼真的社交媒體直播界面，疊加在人物肖像之上，包含可自定義的聊天消息、禮物彈窗和商品購買卡片。
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "电商直播 UI 样机",
-  "goal": "生成一张高仿真的直播带货截图风格视觉图，主体是主播肖像，叠加完整直播界面元素，适合做社交传播、概念样机或带货视觉方案演示",
+  "type": "電商直播 UI 樣機",
+  "goal": "生成一張高仿真的直播帶貨截圖風格視覺圖，主體是主播肖像，疊加完整直播界面元素，適合做社交傳播、概念樣機或帶貨視覺方案演示",
   "subject": {
     "source_mode": "{argument name=\"host source mode\" default=\"celebrity-name\"}",
     "reference_photo": "{argument name=\"host reference photo\" default=\"none\"}",
     "celebrity_name": "{argument name=\"host name\" default=\"Elon Musk\"}",
-    "description": "{argument name=\"host portrait description\" default=\"面带微笑，半身肖像，身穿印有白色科技示意图的黑色 T 恤\"}",
-    "pose": "{argument name=\"host pose\" default=\"正对镜头，轻微前倾，像在直播间讲话\"}",
-    "expression": "{argument name=\"host expression\" default=\"轻松、自信、具有交流感\"}"
+    "description": "{argument name=\"host portrait description\" default=\"面帶微笑，半身肖像，身穿印有白色科技示意圖的黑色 T 恤\"}",
+    "pose": "{argument name=\"host pose\" default=\"正對鏡頭，輕微前傾，像在直播間講話\"}",
+    "expression": "{argument name=\"host expression\" default=\"輕鬆、自信、具有交流感\"}"
   },
   "scene": {
-    "background_style": "{argument name=\"background style\" default=\"科技公司发布会后台 + 直播间布景\"}",
-    "left_background": "左侧显示带有 '{argument name=\"left background logo\" default=\"SPACEX\"}' 文字的屏幕",
-    "right_background": "右侧显示红色的 '{argument name=\"right background logo\" default=\"Tesla T logo\"}' 和一辆深色汽车",
-    "lighting": "{argument name=\"lighting\" default=\"明亮、商业感、影棚级补光，同时保留直播截图感\"}"
+    "background_style": "{argument name=\"background style\" default=\"科技公司發布會後臺 + 直播間布景\"}",
+    "left_background": "左側顯示帶有 '{argument name=\"left background logo\" default=\"SPACEX\"}' 文字的屏幕",
+    "right_background": "右側顯示紅色的 '{argument name=\"right background logo\" default=\"Tesla T logo\"}' 和一輛深色汽車",
+    "lighting": "{argument name=\"lighting\" default=\"明亮、商業感、影棚級補光，同時保留直播截圖感\"}"
   },
   "ui_overlay": {
-    "platform_style": "{argument name=\"platform style\" default=\"通用中文直播带货平台 UI\"}",
+    "platform_style": "{argument name=\"platform style\" default=\"通用中文直播帶貨平臺 UI\"}",
     "top_header": {
-      "host_info": "头像，名称 '{argument name=\"host name\" default=\"Elon Musk\"}'，副标题 '55.6万本场点赞'，红色 '关注' 按钮",
-      "rank_badge": "带有 '全站第1名' 的金币图标",
-      "viewer_stats": "3 个顶部观众头像，显示 '12.3w'、'8.6w'、'5.7w'，总计 '68.7万'，'X' 关闭按钮",
-      "right_links": "'更多直播 >'，'礼物展馆 0/24'（带有蓝色 '经典' 标签）"
+      "host_info": "頭像，名稱 '{argument name=\"host name\" default=\"Elon Musk\"}'，副標題 '55.6萬本場點讚'，紅色 '關注' 按鈕",
+      "rank_badge": "帶有 '全站第1名' 的金幣圖標",
+      "viewer_stats": "3 個頂部觀衆頭像，顯示 '12.3w'、'8.6w'、'5.7w'，總計 '68.7萬'，'X' 關閉按鈕",
+      "right_links": "'更多直播 >'，'禮物展館 0/24'（帶有藍色 '經典' 標籤）"
     },
     "mid_left_gifts": {
       "count": 2,
       "items": [
-        "头像 '科技爱好者'，'送小心心'，爱心图标 x 1314",
-        "头像 '星辰大海'，'送火箭'，火箭图标 x 666"
+        "頭像 '科技愛好者'，'送小心心'，愛心圖標 x 1314",
+        "頭像 '星辰大海'，'送火箭'，火箭圖標 x 666"
       ]
     },
     "bottom_left_chat": {
-      "system_message": "37 级勋章 '宇宙漫游者 加入了直播间'",
+      "system_message": "37 級勳章 '宇宙漫遊者 加入了直播間'",
       "message_count": 7,
       "messages": [
-        "小火箭: 马斯克！未来可期！🚀",
-        "future: 特斯拉Model 2什么时候出？",
-        "星空梦想家: SpaceX今年能上火星吗？",
-        "AI探索者: Neuralink进展如何？",
-        "帅气的网友: 马总好！",
-        "Mars: 第一次来你的直播，超激动！",
-        "用户123: 讲讲AI吧，会取代人类吗？"
+        "小火箭: 馬斯克！未來可期！🚀",
+        "future: 特斯拉Model 2什麼時候出？",
+        "星空夢想家: SpaceX今年能上火星嗎？",
+        "AI探索者: Neuralink進展如何？",
+        "帥氣的網友: 馬總好！",
+        "Mars: 第一次來你的直播，超激動！",
+        "用戶123: 講講AI吧，會取代人類嗎？"
       ]
     },
     "bottom_right_product_card": {
-      "hot_tag": "橙色 '热卖 x 1888'",
+      "hot_tag": "橙色 '熱賣 x 1888'",
       "image": "{argument name=\"product image subject\" default=\"Tesla Cybertruck\"}",
-      "title": "{argument name=\"product name\" default=\"特斯拉Cybertruck 电动皮卡\"}",
+      "title": "{argument name=\"product name\" default=\"特斯拉Cybertruck 電動皮卡\"}",
       "price": "{argument name=\"product price\" default=\"¥ 1,618,000\"}",
-      "button": "红色 '抢' 按钮",
-      "floating_animation": "半透明爱心沿右侧边缘向上浮动"
+      "button": "紅色 '搶' 按鈕",
+      "floating_animation": "半透明愛心沿右側邊緣向上浮動"
     },
     "bottom_bar": {
-      "input_field": "'说点什么...'",
-      "icons": ["笑脸", "三个点", "购物车", "礼物盒", "分享"]
+      "input_field": "'說點什麼...'",
+      "icons": ["笑臉", "三個點", "購物車", "禮物盒", "分享"]
     }
   },
   "style": {
-    "visual_target": "逼真的直播截图样机，不是纯 UI 设计稿，也不是纯摄影海报，而是主播真人画面与平台界面高自然融合",
-    "rendering": "真实人像摄影 + 平台叠加 UI + 商业广告级清晰度",
-    "color_tone": "科技感、商业感、平台直播氛围并存",
-    "composition": "竖版直播截图构图，人物占据视觉中心，UI 清晰可读，商品卡位于右下角，聊天区位于左下角"
+    "visual_target": "逼真的直播截圖樣機，不是純 UI 設計稿，也不是純攝影海報，而是主播真人畫面與平臺界面高自然融合",
+    "rendering": "真實人像攝影 + 平臺疊加 UI + 商業廣告級清晰度",
+    "color_tone": "科技感、商業感、平臺直播氛圍並存",
+    "composition": "豎版直播截圖構圖，人物佔據視覺中心，UI 清晰可讀，商品卡位於右下角，聊天區位於左下角"
   },
   "constraints": {
     "must_keep": [
-      "主播是视觉中心",
-      "直播 UI 分层清晰",
-      "商品卡、聊天区、礼物区都必须出现",
-      "整体像真实直播截图，而不是简单拼贴"
+      "主播是視覺中心",
+      "直播 UI 分層清晰",
+      "商品卡、聊天區、禮物區都必須出現",
+      "整體像真實直播截圖，而不是簡單拼貼"
     ],
     "avoid": [
-      "UI 文字完全不可读",
-      "界面过度拥挤",
-      "人物脸部畸形",
-      "商品卡透视错误",
-      "聊天框与背景融在一起"
+      "UI 文字完全不可讀",
+      "界面過度擁擠",
+      "人物臉部畸形",
+      "商品卡透視錯誤",
+      "聊天框與背景融在一起"
     ]
   }
 }
 ```
 
-## 模板 2：品牌创始人带货直播样机
+## 模板 2：品牌創始人帶貨直播樣機
 
 📖 描述
 
-适合“品牌创始人 / 科技企业家 / 明星主理人”本人出镜的高可信直播带货场景。
+適合「品牌創始人 / 科技企業家 / 明星主理人」本人出鏡的高可信直播帶貨場景。
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "品牌创始人直播带货样机",
+  "type": "品牌創始人直播帶貨樣機",
   "subject": {
-    "identity": "{argument name=\"host identity\" default=\"科技公司创始人\"}",
+    "identity": "{argument name=\"host identity\" default=\"科技公司創始人\"}",
     "name": "{argument name=\"host name\" default=\"Elon Musk\"}",
-    "description": "{argument name=\"host portrait description\" default=\"高可信度真人半身肖像，轻微微笑，像正在解释产品亮点\"}"
+    "description": "{argument name=\"host portrait description\" default=\"高可信度真人半身肖像，輕微微笑，像正在解釋產品亮點\"}"
   },
   "product": {
-    "name": "{argument name=\"product name\" default=\"旗舰智能电动车\"}",
+    "name": "{argument name=\"product name\" default=\"旗艦智能電動車\"}",
     "category": "{argument name=\"product category\" default=\"科技硬件\"}",
     "price": "{argument name=\"product price\" default=\"¥ 399,999\"}",
     "selling_points": [
-      "{argument name=\"selling point 1\" default=\"自动驾驶辅助\"}",
-      "{argument name=\"selling point 2\" default=\"极简智能座舱\"}",
-      "{argument name=\"selling point 3\" default=\"长续航\"}"
+      "{argument name=\"selling point 1\" default=\"自動駕駛輔助\"}",
+      "{argument name=\"selling point 2\" default=\"極簡智能座艙\"}",
+      "{argument name=\"selling point 3\" default=\"長續航\"}"
     ]
   },
   "ui": {
-    "product_card": "高可信带货卡片，展示主图、标题、价格、强购买按钮",
-    "chat_style": "观众围绕价格、发布时间、功能提问",
-    "gift_style": "科技圈、粉丝向礼物文案"
+    "product_card": "高可信帶貨卡片，展示主圖、標題、價格、強購買按鈕",
+    "chat_style": "觀衆圍繞價格、發布時間、功能提問",
+    "gift_style": "科技圈、粉絲向禮物文案"
   },
   "constraints": {
-    "goal": "让整张图看起来像品牌本人真的在直播带货，而不是简单概念海报"
+    "goal": "讓整張圖看起來像品牌本人真的在直播帶貨，而不是簡單概念海報"
   }
 }
 ```
 
-## 模板 3：随机主播 + 随机商品自动补全模式
+## 模板 3：隨機主播 + 隨機商品自動補全模式
 
 📖 描述
 
-适用于用户只说“帮我做一张直播带货界面图”，但不给具体人物和商品。
+適用於用戶只說「幫我做一張直播帶貨界面圖」，但不給具體人物和商品。
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "直播带货自动补全模板",
+  "type": "直播帶貨自動補全模板",
   "mode": "auto-fill",
   "subject": {
     "host_generation_mode": "random-but-plausible",
-    "description": "自动生成一个适合直播出镜的主播形象，具备明确的人设、职业感和镜头表现力"
+    "description": "自動生成一個適合直播出鏡的主播形象，具備明確的人設、職業感和鏡頭表現力"
   },
   "product": {
     "generation_mode": "random-but-coherent",
-    "rule": "自动生成与主播人设和场景一致的商品，不要出现明显不协调的搭配"
+    "rule": "自動生成與主播人設和場景一致的商品，不要出現明顯不協調的搭配"
   },
   "ui": {
-    "chat_messages": "自动生成与商品相关、看起来像真实直播观众会说的话",
-    "gift_messages": "自动生成少量礼物弹窗，增强直播氛围",
-    "product_card": "自动生成合理的商品名、价格与热卖标签"
+    "chat_messages": "自動生成與商品相關、看起來像真實直播觀衆會說的話",
+    "gift_messages": "自動生成少量禮物彈窗，增強直播氛圍",
+    "product_card": "自動生成合理的商品名、價格與熱賣標籤"
   },
   "constraints": {
     "must_feel": [
-      "真实",
-      "平台感明确",
-      "信息丰富但不杂乱",
-      "适合作为案例样机"
+      "真實",
+      "平臺感明確",
+      "信息豐富但不雜亂",
+      "適合作爲案例樣機"
     ]
   }
 }
 ```
 
-## 如何从这个模板生成变体
+## 如何從這個模板生成變體
 
-### 变体 1：用户给照片
+### 變體 1：用戶給照片
 
-- 把 `subject.source_mode` 改为 `reference-photo`
-- 用用户图片作为主体参考
-- 其他 UI 字段保留模板结构
+- 把 `subject.source_mode` 改爲 `reference-photo`
+- 用用戶圖片作爲主體參考
+- 其他 UI 字段保留模板結構
 
-### 变体 2：用户给名人名字
+### 變體 2：用戶給名人名字
 
 - 用 `celebrity-name`
-- 保留描述字段作为辅助形象说明
+- 保留描述字段作爲輔助形象說明
 
-### 变体 3：用户只给人物描述
+### 變體 3：用戶只給人物描述
 
 - 用 `text-description`
-- 让模板中的 `description` 成为主导字段
+- 讓模板中的 `description` 成爲主導字段
 
-### 变体 4：用户什么都没给
+### 變體 4：用戶什麼都沒給
 
 - 用 `auto-fill`
-- 只对核心字段发起少量必要提问
-- 其余字段可以随机补全
+- 只對核心字段發起少量必要提問
+- 其餘字段可以隨機補全

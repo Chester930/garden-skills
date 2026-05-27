@@ -2,7 +2,7 @@
 
 > A skill for AI agents to efficiently answer questions over a **local, multi-format knowledge directory** using hierarchical index navigation and progressive retrieval — without ever loading whole files into context.
 
-[中文文档](./README.zh-CN.md) · [Back to collection root](../../README.md)
+[中文文檔](./README.zh-CN.md) · [Back to collection root](../../README.md)
 
 ![Kb Retriever Skill](../../dist/imgs/kb-retriever-skill.png)
 

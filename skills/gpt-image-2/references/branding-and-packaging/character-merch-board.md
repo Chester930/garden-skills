@@ -1,67 +1,67 @@
-# 角色 IP × 周边商品板模板
+# 角色 IP × 周邊商品板模板
 
-本文件用于生成"以单一动漫 / VTuber / 二次元角色为核心，叠加品牌 logo + 包装 + 周边 + SNS profile + 推广 banner"的复合视觉板。
+本文件用於生成"以單一動漫 / VTuber / 二次元角色爲核心，疊加品牌 logo + 包裝 + 周邊 + SNS profile + 推廣 banner"的複合視覺板。
 
 典型用途：
 
-- VTuber 出道 / 周年 / 新企划介绍图
-- 同人 / 个人 IP 上线宣传图
-- 二次元品牌（candy / bakery / cafe / 杂货店）店铺联动图
-- 角色周边一图集合
-- IP 房间生活方式商品 catalog
-- 社交媒体宣传图（一图涵盖角色介绍 + 商品预告 + SNS handle）
+- VTuber 出道 / 周年 / 新企劃介紹圖
+- 同人 / 個人 IP 上線宣傳圖
+- 二次元品牌（candy / bakery / cafe / 雜貨店）店鋪聯動圖
+- 角色周邊一圖集合
+- IP 房間生活方式商品 catalog
+- 社交媒體宣傳圖（一圖涵蓋角色介紹 + 商品預告 + SNS handle）
 
-特征（与其它 mascot / brand 模板的区别）：
+特徵（與其它 mascot / brand 模板的區別）：
 
-| 模板 | 主体 | 重点 |
+| 模板 | 主體 | 重點 |
 |---|---|---|
-| `mascot-brand-kit.md`（已有） | 卡通吉祥物 | 三视图 + 表情 + 应用 |
-| `full-mascot-brand-doc.md`（新增） | 卡通吉祥物 | 18 模块全流程设计文档 |
-| `brand-identity-board.md`（已有） | 抽象品牌 | logo + 色 + 字 + 应用 mockup |
-| **本模板**（新增） | **二次元角色 / VTuber / 个人 IP** | **角色形象 + 包装 + 周边 + SNS + lifestyle goods** |
+| `mascot-brand-kit.md`（已有） | 卡通吉祥物 | 三視圖 + 表情 + 應用 |
+| `full-mascot-brand-doc.md`（新增） | 卡通吉祥物 | 18 模塊全流程設計文檔 |
+| `brand-identity-board.md`（已有） | 抽象品牌 | logo + 色 + 字 + 應用 mockup |
+| **本模板**（新增） | **二次元角色 / VTuber / 個人 IP** | **角色形象 + 包裝 + 周邊 + SNS + lifestyle goods** |
 
-## 适用范围
+## 適用範圍
 
-- VTuber 周边介绍板
-- 个人 IP / VUP 出道宣传图
-- 二次元品牌 × 实体商品联动图
-- 角色生活方式 / 房间杂货商品集合
-- 同人圈展会出本宣传图
+- VTuber 周邊介紹板
+- 個人 IP / VUP 出道宣傳圖
+- 二次元品牌 × 實體商品聯動圖
+- 角色生活方式 / 房間雜貨商品集合
+- 同人圈展會出本宣傳圖
 
-## 何时使用
+## 何時使用
 
-- 用户提到"角色周边 / VTuber 出道 / IP merch board / 个人企划图"
-- 角色是动漫 / 二次元 / 萌系风格，而不是企业级吉祥物
-- 需要"一张图秀完整 IP 商业生态"（角色 + 商品 + SNS + 包装）
+- 用戶提到"角色周邊 / VTuber 出道 / IP merch board / 個人企劃圖"
+- 角色是動漫 / 二次元 / 萌系風格，而不是企業級吉祥物
+- 需要"一張圖秀完整 IP 商業生態"（角色 + 商品 + SNS + 包裝）
 
 不要使用：
 
-- 企业 / 餐饮品牌吉祥物完整设计文档 → 用 `full-mascot-brand-doc.md`
-- 仅角色三视图 / 表情 → 用 `portraits-and-characters/character-sheet.md`
-- 单角色单海报 → 用 `portraits-and-characters/virtual-host.md`
-- 单纯包装设计 → 用 `branding-and-packaging/cosmetic-packaging.md`
+- 企業 / 餐飲品牌吉祥物完整設計文檔 → 用 `full-mascot-brand-doc.md`
+- 僅角色三視圖 / 表情 → 用 `portraits-and-characters/character-sheet.md`
+- 單角色單海報 → 用 `portraits-and-characters/virtual-host.md`
+- 單純包裝設計 → 用 `branding-and-packaging/cosmetic-packaging.md`
 
-## 缺失信息优先提问顺序
+## 缺失信息優先提問順序
 
-1. 角色名 + 一句性格描述（必问，画面灵魂）
-2. 主题色 + motif（樱花 / 海洋 / 星空 / 糖果 / 兔子…）
-3. 风格基调（**柔粉萌系 / 哥特暗黑 / 赛博 / 和风 / 童话**）
-4. 必须出现的商品类目（包装食品 / 文具 / 服饰 / 家居 / 数码周边）
-5. SNS handle（可选，加上更像真实企划）
-6. 是否包含店铺 / 活动信息（"4.26 NEW OPEN" 之类）
+1. 角色名 + 一句性格描述（必問，畫面靈魂）
+2. 主題色 + motif（櫻花 / 海洋 / 星空 / 糖果 / 兔子…）
+3. 風格基調（**柔粉萌系 / 哥特暗黑 / 賽博 / 和風 / 童話**）
+4. 必須出現的商品類目（包裝食品 / 文具 / 服飾 / 家居 / 數碼周邊）
+5. SNS handle（可選，加上更像真實企劃）
+6. 是否包含店鋪 / 活動信息（"4.26 NEW OPEN" 之類）
 
-## 主模板 1：动漫角色品牌识别 + 周边商品板（Case 112 风格）
+## 主模板 1：動漫角色品牌識別 + 周邊商品板（Case 112 風格）
 
 📖 描述
 
-一张大图，包含 header banner + 包装 mockup + 推广海报 + web banner + SNS profile + 周边商品集合，全部围绕同一个角色展开。
+一張大圖，包含 header banner + 包裝 mockup + 推廣海報 + web banner + SNS profile + 周邊商品集合，全部圍繞同一個角色展開。
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
   "type": "brand identity and merchandise design board",
-  "goal": "生成一张以单一动漫角色为核心的完整品牌发布板，可作为角色出道、周年企划、IP 上线宣传图",
+  "goal": "生成一張以單一動漫角色爲核心的完整品牌發布板，可作爲角色出道、周年企劃、IP 上線宣傳圖",
   "theme": {
     "color_palette": "{argument name=\"theme color\" default=\"pastel pink\"} and white",
     "motif": "{argument name=\"motif\" default=\"cherry blossoms\"} and pink hearts",
@@ -71,7 +71,7 @@
     "name": "{argument name=\"character name\" default=\"癒音ちー\"}",
     "subname": "{argument name=\"character subtext\" default=\"ゆおんちー\"}",
     "description": "{argument name=\"character description\" default=\"anime girl with short brown bob hair, pink eyes, wearing a white hoodie, gentle smile\"}",
-    "personality": "{argument name=\"personality\" default=\"治愈系，温柔，喜欢甜食\"}"
+    "personality": "{argument name=\"personality\" default=\"治癒系，溫柔，喜歡甜食\"}"
   },
   "branding": {
     "main_logo": "{argument name=\"main logo text\" default=\"癒音ちー\"}",
@@ -147,45 +147,45 @@
   },
   "constraints": {
     "must_keep": [
-      "角色形象在所有 section 中完全一致（发型 / 配色 / 表情 base）",
-      "logo / SNS handle 拼写统一",
-      "每个 section 有清晰边界，不要互相溢出",
-      "包装 / 周边看起来像真实物体而非贴图拼贴"
+      "角色形象在所有 section 中完全一致（髮型 / 配色 / 表情 base）",
+      "logo / SNS handle 拼寫統一",
+      "每個 section 有清晰邊界，不要互相溢出",
+      "包裝 / 周邊看起來像真實物體而非貼圖拼貼"
     ],
     "avoid": [
-      "在不同 section 中改变角色发色 / 服装 base color",
-      "周边商品看起来是同一物件复制（应有材质差异：陶瓷 / 棉布 / 亚克力 / 纸）",
-      "把 SNS profile 区做得不像真实社交平台 UI",
-      "header logo 字号被周围装饰挤压到难读"
+      "在不同 section 中改變角色發色 / 服裝 base color",
+      "周邊商品看起來是同一物件複製（應有材質差異：陶瓷 / 棉布 / 亞克力 / 紙）",
+      "把 SNS profile 區做得不像真實社交平臺 UI",
+      "header logo 字號被周圍裝飾擠壓到難讀"
     ]
   }
 }
 ```
 
-### 参数策略
+### 參數策略
 
-- **必问**：character name、character description、theme color、motif
-- **可默认**：merch 1-5（按 vibe 自动推荐周边类目）、aspect ratio
-- **可随机**：scattered item / poster prop（按 motif 自动）、bio 文案
+- **必問**：character name、character description、theme color、motif
+- **可默認**：merch 1-5（按 vibe 自動推薦周邊類目）、aspect ratio
+- **可隨機**：scattered item / poster prop（按 motif 自動）、bio 文案
 
-### 自动补全策略
+### 自動補全策略
 
-- 用户只说"VTuber 出道宣传图"+ 角色形象 → 自动配套粉色樱花 / 蓝色海洋 / 紫色星空 motif
-- 用户没指定周边 → 默认 9 件套（T 恤 / 马克杯 / 4 徽章 / 钥匙扣 / 2 包装）
-- 用户没说店铺信息 → SNS profile 区不强调"NEW OPEN"，改为"PROFILE"
+- 用戶只說"VTuber 出道宣傳圖"+ 角色形象 → 自動配套粉色櫻花 / 藍色海洋 / 紫色星空 motif
+- 用戶沒指定周邊 → 默認 9 件套（T 恤 / 馬克杯 / 4 徽章 / 鑰匙扣 / 2 包裝）
+- 用戶沒說店鋪信息 → SNS profile 區不強調"NEW OPEN"，改爲"PROFILE"
 
-## 主模板 2：角色房间杂货 lifestyle 商品集合（Case 167 风格）
+## 主模板 2：角色房間雜貨 lifestyle 商品集合（Case 167 風格）
 
 📖 描述
 
-不强调出道 / 品牌发布，而是"这个角色喜欢什么样的房间生活"，把 6 件家居生活物品 + 角色 + 概念说明拼在一张图。
+不強調出道 / 品牌發布，而是"這個角色喜歡什麼樣的房間生活"，把 6 件家居生活物品 + 角色 + 概念說明拼在一張圖。
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
   "type": "pastel lifestyle poster / character room-goods feature sheet",
-  "goal": "生成一张以角色为代言人、展示其喜爱房间生活物品的杂志风 catalog 图，适合 SNS 分享 / 商品预告 / 个人企划",
+  "goal": "生成一張以角色爲代言人、展示其喜愛房間生活物品的雜誌風 catalog 圖，適合 SNS 分享 / 商品預告 / 個人企劃",
   "theme": "{argument name=\"theme\" default=\"soft dreamy lavender jellyfish aesthetic\"}",
   "style": "{argument name=\"style\" default=\"Japanese cute editorial graphic, airy white background, pastel lilac palette, delicate handwritten notes, sparkles and tiny doodles, soft product photography mixed with magazine layout\"}",
   "subject": {
@@ -233,30 +233,30 @@
   "color_palette": ["white", "pastel lavender", "soft lilac", "pale gray-violet", "touches of pastel blue-pink gradient"],
   "constraints": {
     "must_keep": [
-      "6 件商品风格统一（同色系 + 同质感倾向）",
-      "角色出现在固定位置不抢主体",
-      "整体像 SNS 可分享的精致 catalog"
+      "6 件商品風格統一（同色系 + 同質感傾向）",
+      "角色出現在固定位置不搶主體",
+      "整體像 SNS 可分享的精緻 catalog"
     ],
     "avoid": [
-      "商品堆叠杂乱无 grid",
-      "字体太多种类（建议日文手写 + 一种主标题字体即可）",
-      "把角色画太大反客为主"
+      "商品堆疊雜亂無 grid",
+      "字體太多種類（建議日文手寫 + 一種主標題字體即可）",
+      "把角色畫太大反客爲主"
     ]
   }
 }
 ```
 
-### 何时选这个变体
+### 何時選這個變體
 
-- 用户做的是「我房间里有什么」「IP 同款杂货」类企划
-- 强调氛围 / 生活方式 > 商业 / 出道
-- 适合 SNS 分享、不需要 logo 系统 / 包装 mockup
+- 用戶做的是「我房間裡有什麼」「IP 同款雜貨」類企劃
+- 強調氛圍 / 生活方式 > 商業 / 出道
+- 適合 SNS 分享、不需要 logo 系統 / 包裝 mockup
 
-## 主模板 3：极简版（角色 + 4-6 件周边 + logo）
+## 主模板 3：極簡版（角色 + 4-6 件周邊 + logo）
 
-适合资源有限、只想做单一 IP 上新公告的场景。
+適合資源有限、只想做單一 IP 上新公告的場景。
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
@@ -268,22 +268,22 @@
   ],
   "vibe": "{argument name=\"vibe\" default=\"clean, premium, focus on products\"}",
   "merch_count": 6,
-  "must_keep": ["商品摄影质感统一", "logo 与 SNS handle 拼写一致"]
+  "must_keep": ["商品攝影質感統一", "logo 與 SNS handle 拼寫一致"]
 }
 ```
 
-### 何时选这个变体
+### 何時選這個變體
 
-- 没有时间做 6-8 个 section
-- 只想强调"角色 + 周边 + 上新时间"
-- 想做"洁净简约"风而非"信息量爆炸"风
+- 沒有時間做 6-8 個 section
+- 只想強調"角色 + 周邊 + 上新時間"
+- 想做"潔淨簡約"風而非"信息量爆炸"風
 
-## 避免事项
+## 避免事項
 
-- ❌ 在不同 section 中改变角色的发型 / 配色 / 服装 base → 视觉立刻不像「同一 IP」
-- ❌ 把 6 件商品画成同一样东西复制 → 必须有材质 / 形状 / 用途差异
-- ❌ logo 在 header 与 web banner 中字体不一致
-- ❌ SNS profile 区的 follow 按钮和角色 IP 主色冲突
-- ❌ 周边商品 mockup 出现透视错误（如 mug 椭圆变扁、T 恤褶皱不自然）
-- ❌ 包装 mockup 的"透明窗"画成纯贴图而非真实折射
-- ❌ 全图配色 ≥ 5 个主色调 → 失去 IP 一致性，应控制在 2-3 主色 + 1-2 accent
+- ❌ 在不同 section 中改變角色的髮型 / 配色 / 服裝 base → 視覺立刻不像「同一 IP」
+- ❌ 把 6 件商品畫成同一樣東西複製 → 必須有材質 / 形狀 / 用途差異
+- ❌ logo 在 header 與 web banner 中字體不一致
+- ❌ SNS profile 區的 follow 按鈕和角色 IP 主色衝突
+- ❌ 周邊商品 mockup 出現透視錯誤（如 mug 橢圓變扁、T 恤褶皺不自然）
+- ❌ 包裝 mockup 的"透明窗"畫成純貼圖而非真實折射
+- ❌ 全圖配色 ≥ 5 個主色調 → 失去 IP 一致性，應控制在 2-3 主色 + 1-2 accent

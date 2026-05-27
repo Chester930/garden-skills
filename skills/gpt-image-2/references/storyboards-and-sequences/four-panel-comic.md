@@ -1,69 +1,69 @@
-# 4 格漫画模板
+# 4 格漫畫模板
 
-本文件用于"4 格漫画 / 讽刺漫画 / 段子漫画"视觉：
+本文件用於"4 格漫畫 / 諷刺漫畫 / 段子漫畫"視覺：
 
-- 反转 4 格段子
-- 讽刺产品广告漫画
+- 反轉 4 格段子
+- 諷刺產品廣告漫畫
 - 短故事 4 格
-- 自媒体 4 格漫画
+- 自媒體 4 格漫畫
 - 食物 / 心情 4 格
 
-特征：
+特徵：
 
-- 4 个等大格子（2×2 或 1×4）
-- 每格独立场景但故事连贯
-- 起 / 承 / 转 / 合 节奏
-- 通常带对话气泡 / 心声
-- 风格统一
+- 4 個等大格子（2×2 或 1×4）
+- 每格獨立場景但故事連貫
+- 起 / 承 / 轉 / 合 節奏
+- 通常帶對話氣泡 / 心聲
+- 風格統一
 
-## 适用范围
+## 適用範圍
 
-- 自媒体 4 格漫画
-- 讽刺广告 4 格
-- 反转段子
-- 心情日记漫画
+- 自媒體 4 格漫畫
+- 諷刺廣告 4 格
+- 反轉段子
+- 心情日記漫畫
 
-## 何时使用
+## 何時使用
 
-- 用户提到"4 格 / 四格漫画 / 段子漫画 / 讽刺漫画"
-- 用户希望讲一个有节奏的小故事
-- 用户希望有反转 / 笑点
+- 用戶提到"4 格 / 四格漫畫 / 段子漫畫 / 諷刺漫畫"
+- 用戶希望講一個有節奏的小故事
+- 用戶希望有反轉 / 笑點
 
 不要使用：
 
-- 多分镜跨页漫画（用 `manga-spread-page.md`）
-- 无叙事的图标拼贴（用 `grids-and-collages/banner-grid-2x2.md`）
-- 单图 KV（用 `anime-key-visual.md`）
+- 多分鏡跨頁漫畫（用 `manga-spread-page.md`）
+- 無敘事的圖標拼貼（用 `grids-and-collages/banner-grid-2x2.md`）
+- 單圖 KV（用 `anime-key-visual.md`）
 
-## 缺失信息优先提问顺序
+## 缺失信息優先提問順序
 
-1. 主题 / 故事核心
+1. 主題 / 故事核心
 2. 主角描述
-3. 4 格分别讲什么（起承转合）
-4. 风格（手绘日漫 / 极简线稿 / 美式卡通 / 国漫）
-5. 是否有对话气泡
+3. 4 格分別講什麼（起承轉合）
+4. 風格（手繪日漫 / 極簡線稿 / 美式卡通 / 國漫）
+5. 是否有對話氣泡
 6. 比例（1:1 / 4:3 / 9:16）
 
-## 主模板：2×2 反转 4 格漫画
+## 主模板：2×2 反轉 4 格漫畫
 
 📖 描述
 
-整体一张图，分为 2×2 四格，按起 / 承 / 转 / 合讲一个有反转的小故事。
+整體一張圖，分爲 2×2 四格，按起 / 承 / 轉 / 合講一個有反轉的小故事。
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "2x2 反转 4 格漫画",
-  "goal": "生成一张 2×2 四格漫画，讲一个有节奏与反转的小故事",
+  "type": "2x2 反轉 4 格漫畫",
+  "goal": "生成一張 2×2 四格漫畫，講一個有節奏與反轉的小故事",
   "story": {
-    "theme": "{argument name=\"theme\" default=\"减肥的人和半夜的炸鸡\"}",
-    "structure": "起 / 承 / 转 / 合",
-    "main_character": "{argument name=\"main character\" default=\"短发女孩，穿睡衣\"}"
+    "theme": "{argument name=\"theme\" default=\"減肥的人和半夜的炸雞\"}",
+    "structure": "起 / 承 / 轉 / 合",
+    "main_character": "{argument name=\"main character\" default=\"短髮女孩，穿睡衣\"}"
   },
   "style": {
-    "art_style": "{argument name=\"art style\" default=\"日漫线稿 + 平涂淡色\"}",
-    "consistency": "4 格中主角必须是同一人，画风统一",
+    "art_style": "{argument name=\"art style\" default=\"日漫線稿 + 平塗淡色\"}",
+    "consistency": "4 格中主角必須是同一人，畫風統一",
     "color_palette": "{argument name=\"color palette\" default=\"米白 + 暖橙 + 灰\"}"
   },
   "panels": {
@@ -72,95 +72,95 @@
       {
         "position": "top-left",
         "label": "起",
-        "scene": "{argument name=\"panel 1\" default=\"主角站在体重秤上，皱着眉\"}",
-        "dialogue": "{argument name=\"dialogue 1\" default=\"今晚开始减肥！\"}"
+        "scene": "{argument name=\"panel 1\" default=\"主角站在體重秤上，皺着眉\"}",
+        "dialogue": "{argument name=\"dialogue 1\" default=\"今晚開始減肥！\"}"
       },
       {
         "position": "top-right",
         "label": "承",
-        "scene": "{argument name=\"panel 2\" default=\"主角坚定地喝了一杯水\"}",
-        "dialogue": "{argument name=\"dialogue 2\" default=\"水也很饱嘛\"}"
+        "scene": "{argument name=\"panel 2\" default=\"主角堅定地喝了一杯水\"}",
+        "dialogue": "{argument name=\"dialogue 2\" default=\"水也很飽嘛\"}"
       },
       {
         "position": "bottom-left",
-        "label": "转",
-        "scene": "{argument name=\"panel 3\" default=\"半夜里主角偷偷点开了外卖 app\"}",
-        "dialogue": "{argument name=\"dialogue 3\" default=\"...就一份炸鸡\"}"
+        "label": "轉",
+        "scene": "{argument name=\"panel 3\" default=\"半夜裡主角偷偷點開了外賣 app\"}",
+        "dialogue": "{argument name=\"dialogue 3\" default=\"...就一份炸雞\"}"
       },
       {
         "position": "bottom-right",
         "label": "合",
-        "scene": "{argument name=\"panel 4\" default=\"主角抱着炸鸡桶，眼泪汪汪\"}",
-        "dialogue": "{argument name=\"dialogue 4\" default=\"明天开始减\"}"
+        "scene": "{argument name=\"panel 4\" default=\"主角抱着炸雞桶，眼淚汪汪\"}",
+        "dialogue": "{argument name=\"dialogue 4\" default=\"明天開始減\"}"
       }
     ]
   },
   "dialogue_design": {
-    "balloon_style": "{argument name=\"balloon style\" default=\"白色圆角气泡，黑色描边\"}",
-    "font_style": "{argument name=\"font style\" default=\"圆润手写体\"}"
+    "balloon_style": "{argument name=\"balloon style\" default=\"白色圓角氣泡，黑色描邊\"}",
+    "font_style": "{argument name=\"font style\" default=\"圓潤手寫體\"}"
   },
   "aspect_ratio": "{argument name=\"aspect ratio\" default=\"1:1\"}",
   "constraints": {
     "must_keep": [
       "4 格主角是同一人",
-      "故事节奏明显（起 / 承 / 转 / 合）",
-      "对话气泡不挡脸",
-      "画风统一不漂移"
+      "故事節奏明顯（起 / 承 / 轉 / 合）",
+      "對話氣泡不擋臉",
+      "畫風統一不漂移"
     ],
     "avoid": [
-      "故事走向平淡无反转",
-      "对话超过 12 字",
+      "故事走向平淡無反轉",
+      "對話超過 12 字",
       "分格大小不一致",
-      "字体多种"
+      "字體多種"
     ]
   }
 }
 ```
 
-### 参数策略
+### 參數策略
 
-- 必问：主题、主角、4 格剧情
-- 可默认：风格、配色、气泡样式
-- 可随机：对话具体措辞
+- 必問：主題、主角、4 格劇情
+- 可默認：風格、配色、氣泡樣式
+- 可隨機：對話具體措辭
 
-### 自动补全策略
+### 自動補全策略
 
-- 用户只给主题时：自动展开起承转合 4 格剧情 + 4 句对话
-- 主角默认按主题选适合的形象
-- 默认 2×2
+- 用戶只給主題時：自動展開起承轉合 4 格劇情 + 4 句對話
+- 主角默認按主題選適合的形象
+- 默認 2×2
 
-## 变体 1：讽刺产品广告 4 格
+## 變體 1：諷刺產品廣告 4 格
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "讽刺产品广告 4 格",
+  "type": "諷刺產品廣告 4 格",
   "story": {
-    "theme": "{argument name=\"product satire theme\" default=\"科技公司 PPT vs 实际产品\"}"
+    "theme": "{argument name=\"product satire theme\" default=\"科技公司 PPT vs 實際產品\"}"
   },
   "panels": {
     "format": "2x2 grid",
     "items": [
-      {"label": "PPT 上的样子", "scene": "未来感产品 + 用户陶醉"},
-      {"label": "发布会演示", "scene": "工程师手在抖"},
-      {"label": "实际到货", "scene": "产品箱里只有一个充电器"},
-      {"label": "客服回复", "scene": "'下个版本会有'"}
+      {"label": "PPT 上的樣子", "scene": "未來感產品 + 用戶陶醉"},
+      {"label": "發布會演示", "scene": "工程師手在抖"},
+      {"label": "實際到貨", "scene": "產品箱裡只有一個充電器"},
+      {"label": "客服回復", "scene": "'下個版本會有'"}
     ]
   },
   "constraints": {
-    "must_feel": "讽刺 + 段子 + 一眼看懂"
+    "must_feel": "諷刺 + 段子 + 一眼看懂"
   }
 }
 ```
 
-## 变体 2：1×4 横向 strip（适合 Twitter / X 长帖）
+## 變體 2：1×4 橫向 strip（適合 Twitter / X 長帖）
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "1x4 横向 strip 漫画",
+  "type": "1x4 橫向 strip 漫畫",
   "panels": {
     "format": "1x4 horizontal strip",
     "items": [
@@ -172,49 +172,49 @@
   },
   "aspect_ratio": "16:9",
   "constraints": {
-    "must_feel": "横向阅读，4 格连成一段动作"
+    "must_feel": "橫向閱讀，4 格連成一段動作"
   }
 }
 ```
 
-## 变体 3：美食 / 心情日记 4 格
+## 變體 3：美食 / 心情日記 4 格
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "心情 4 格日记漫画",
+  "type": "心情 4 格日記漫畫",
   "story": {
     "theme": "{argument name=\"daily theme\" default=\"周一早上的我\"}"
   },
   "style": {
-    "art_style": "极简线稿 + 极少色块"
+    "art_style": "極簡線稿 + 極少色塊"
   },
   "constraints": {
-    "must_feel": "亲切、生活、有共鸣"
+    "must_feel": "親切、生活、有共鳴"
   }
 }
 ```
 
-## 变体 4：自动补全模式
+## 變體 4：自動補全模式
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "4 格漫画自动补全",
+  "type": "4 格漫畫自動補全",
   "mode": "auto-fill",
-  "rule": "用户给主题，自动展开起承转合 4 格 + 主角形象 + 对话",
+  "rule": "用戶給主題，自動展開起承轉合 4 格 + 主角形象 + 對話",
   "constraints": {
-    "must_feel": "可直接发社媒"
+    "must_feel": "可直接發社媒"
   }
 }
 ```
 
-## 避免事项
+## 避免事項
 
-- 不要让 4 格里没有反转 / 没有节奏
-- 不要让对话超过 12 字 / 格
-- 不要让画风每格漂移
-- 不要让 4 格大小不等（除非刻意设计）
-- 不要让气泡盖脸
+- 不要讓 4 格裏沒有反轉 / 沒有節奏
+- 不要讓對話超過 12 字 / 格
+- 不要讓畫風每格漂移
+- 不要讓 4 格大小不等（除非刻意設計）
+- 不要讓氣泡蓋臉

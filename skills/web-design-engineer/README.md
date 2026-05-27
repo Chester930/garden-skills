@@ -2,7 +2,7 @@
 
 **An AI agent skill that transforms AI-generated web pages from "functional" to "stunning."**
 
-[中文文档](./README.zh-CN.md) · [Back to collection root](../../README.md)
+[中文文檔](./README.zh-CN.md) · [Back to collection root](../../README.md)
 
 ![Web Design Skill](../../dist/imgs/web-design-skill.png)
 

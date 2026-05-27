@@ -1,68 +1,68 @@
-# 仿生 / 工业设计概念海报模板
+# 仿生 / 工業設計概念海報模板
 
-本文件用于生成"自然原型 → 抽象 → 工业产品"的概念设计海报，把生物形态、演化推导、最终产品 hero 渲染、多视图技术图、品牌文案全部组合成一张概念展板。
+本文件用於生成"自然原型 → 抽象 → 工業產品"的概念設計海報，把生物形態、演化推導、最終產品 hero 渲染、多視圖技術圖、品牌文案全部組合成一張概念展板。
 
 典型用途：
 
-- 仿生工业设计概念稿（飞行器 / 汽车 / 机器人 / 家电 / 鞋类）
-- 设计师 / 学生作品集封面
-- 创业公司 demo day "我们怎么从灵感走到产品"展示
-- 学院派工业设计课程 deliverable
-- 速度感 / 效率类品牌的视觉宣言海报
-- 速速 sketch → 蓝图 → 渲染 全流程演示
+- 仿生工業設計概念稿（飛行器 / 汽車 / 機器人 / 家電 / 鞋類）
+- 設計師 / 學生作品集封面
+- 創業公司 demo day "我們怎麼從靈感走到產品"展示
+- 學院派工業設計課程 deliverable
+- 速度感 / 效率類品牌的視覺宣言海報
+- 速速 sketch → 藍圖 → 渲染 全流程演示
 
-特征（与现有 poster 模板的区别）：
+特徵（與現有 poster 模板的區別）：
 
 | 模板 | 用途 |
 |---|---|
-| `brand-poster.md`（已有） | 品牌主海报（产品 / 人物 / 文字主张） |
-| `campaign-kv.md`（已有） | Campaign KV + 衍生 layout 系统 |
-| `banner-hero.md`（已有） | Web hero / 落地页横向构图 + CTA |
-| `editorial-cover.md`（已有） | 杂志 / 期刊封面 |
-| **本模板**（新增） | **工业设计概念海报：原型 → 演化 → hero → 多视图技术图** |
+| `brand-poster.md`（已有） | 品牌主海報（產品 / 人物 / 文字主張） |
+| `campaign-kv.md`（已有） | Campaign KV + 衍生 layout 系統 |
+| `banner-hero.md`（已有） | Web hero / 落地頁橫向構圖 + CTA |
+| `editorial-cover.md`（已有） | 雜誌 / 期刊封面 |
+| **本模板**（新增） | **工業設計概念海報：原型 → 演化 → hero → 多視圖技術圖** |
 
-## 适用范围
+## 適用範圍
 
-- 仿生工业设计（manta / shark / falcon / leaf / honeycomb 启发）
-- 概念产品介绍海报
-- 学生 / 设计师作品集封面
-- 「灵感 → 产品」的视觉叙事
-- 高端制造 / 航空 / 汽车 / 户外品类
+- 仿生工業設計（manta / shark / falcon / leaf / honeycomb 啓發）
+- 概念產品介紹海報
+- 學生 / 設計師作品集封面
+- 「靈感 → 產品」的視覺敘事
+- 高端製造 / 航空 / 汽車 / 戶外品類
 
-## 何时使用
+## 何時使用
 
-- 用户提到"仿生 / 概念设计 / 工业设计 / 演化推导 / 灵感来源"
-- 想做"从生物原型到最终产品"的视觉故事
-- 需要 hero 渲染 + 多视图技术图 + 设计推导一图全包
+- 用戶提到"仿生 / 概念設計 / 工業設計 / 演化推導 / 靈感來源"
+- 想做"從生物原型到最終產品"的視覺故事
+- 需要 hero 渲染 + 多視圖技術圖 + 設計推導一圖全包
 
 不要使用：
 
-- 单纯产品广告海报 → 用 `brand-poster.md` 或 `product-visuals/premium-studio-product.md`
-- 学术论文 figure → 用 `academic-figures/method-pipeline-overview.md`
-- 用户调研 / 需求分析海报 → 用 `slides-and-visual-docs/visual-report-page.md`
+- 單純產品廣告海報 → 用 `brand-poster.md` 或 `product-visuals/premium-studio-product.md`
+- 學術論文 figure → 用 `academic-figures/method-pipeline-overview.md`
+- 用戶調研 / 需求分析海報 → 用 `slides-and-visual-docs/visual-report-page.md`
 
-## 缺失信息优先提问顺序
+## 缺失信息優先提問順序
 
-1. 产品类型 + 名字（飞行器 SKYRAY / 鞋 SHARK SOLE / 椅 LEAF CHAIR）
-2. 仿生原型（魟鱼 / 鲨鱼 / 树叶 / 蜂巢 / 龙虾…）
-3. 风格基调（**black + cyan 高科技 / 米白 + 黑铁线稿 / 暖木色 + 自然 / 复古蓝图**）
-4. 是否需要演化条（5 阶段灵感 → 产品）
-5. 是否需要技术多视图（top / side / front / rear / underside / detail）
+1. 產品類型 + 名字（飛行器 SKYRAY / 鞋 SHARK SOLE / 椅 LEAF CHAIR）
+2. 仿生原型（魟魚 / 鯊魚 / 樹葉 / 蜂巢 / 龍蝦…）
+3. 風格基調（**black + cyan 高科技 / 米白 + 黑鐵線稿 / 暖木色 + 自然 / 復古藍圖**）
+4. 是否需要演化條（5 階段靈感 → 產品）
+5. 是否需要技術多視圖（top / side / front / rear / underside / detail）
 6. tagline / footer body text
-7. 比例（默认竖版 3:4）
+7. 比例（默認豎版 3:4）
 
-## 主模板：仿生概念产品海报
+## 主模板：仿生概念產品海報
 
 📖 描述
 
-竖版海报 / 横版展板，分 5 个区：header（emblem + 名 + tagline）+ evolution strip（5 阶段推导）+ hero render（中央 3D）+ technical views grid（6 视图）+ footer body text。
+豎版海報 / 橫版展板，分 5 個區：header（emblem + 名 + tagline）+ evolution strip（5 階段推導）+ hero render（中央 3D）+ technical views grid（6 視圖）+ footer body text。
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
   "type": "biomimetic concept design poster",
-  "goal": "生成一张「自然原型 → 推导 → hero → 多视图」的概念产品展板，可作为设计提案 / 作品集封面 / demo day 海报",
+  "goal": "生成一張「自然原型 → 推導 → hero → 多視圖」的概念產品展板，可作爲設計提案 / 作品集封面 / demo day 海報",
   "subject": {
     "vehicle_or_product": "{argument name=\"product type\" default=\"futuristic aircraft concept\"}",
     "name": "{argument name=\"product name\" default=\"SKYRAY\"}",
@@ -140,39 +140,39 @@
   "quality": "ultra-clean, polished, high contrast, sharp, poster-ready, concept design board for {argument name=\"industry\" default=\"aerospace\"} branding or speculative industrial design",
   "constraints": {
     "must_keep": [
-      "5 阶段演化条从左到右逻辑清晰（生物 → 抽象 → 产品）",
-      "hero render 占据视觉中心 ≥ 35% 高度",
-      "6 个 technical view 角度齐全且产品形态一致",
-      "header / footer 排版对齐 hero 中轴线",
-      "整体配色不超过 4 主色 + 1 accent"
+      "5 階段演化條從左到右邏輯清晰（生物 → 抽象 → 產品）",
+      "hero render 佔據視覺中心 ≥ 35% 高度",
+      "6 個 technical view 角度齊全且產品形態一致",
+      "header / footer 排版對齊 hero 中軸線",
+      "整體配色不超過 4 主色 + 1 accent"
     ],
     "avoid": [
-      "演化条画成 5 张同一姿态的照片（应有从写实 → 抽象的递进）",
-      "技术视图比例失调（top / front / rear 必须正交准确）",
-      "hero 与技术视图中产品形态漂移",
-      "footer body text 写得太长 → 应控制在 2-3 句",
-      "把 emblem / logo 放成大图 → 应该是小型徽章",
-      "用过多霓虹色破坏工业感"
+      "演化條畫成 5 張同一姿態的照片（應有從寫實 → 抽象的遞進）",
+      "技術視圖比例失調（top / front / rear 必須正交準確）",
+      "hero 與技術視圖中產品形態漂移",
+      "footer body text 寫得太長 → 應控制在 2-3 句",
+      "把 emblem / logo 放成大圖 → 應該是小型徽章",
+      "用過多霓虹色破壞工業感"
     ]
   }
 }
 ```
 
-### 参数策略
+### 參數策略
 
-- **必问**：product type + name、animal/biological inspiration、industry
-- **可默认**：tagline、background、color palette
-- **可随机**：evolution 5 阶段具体描述、technical views detail crop
+- **必問**：product type + name、animal/biological inspiration、industry
+- **可默認**：tagline、background、color palette
+- **可隨機**：evolution 5 階段具體描述、technical views detail crop
 
-### 自动补全策略
+### 自動補全策略
 
-- 用户给出"产品 + 灵感"→ 自动按"生物 → 解剖 → 抽象 → 工业 → 成品"5 步推导
-- 不指定 industry → 按产品类型自动归类（飞行器=aerospace；鞋=footwear；椅=furniture）
-- 不指定颜色 → 按 industry 推荐（aerospace=black+cyan；footwear=white+orange；furniture=warm wood+cream）
+- 用戶給出"產品 + 靈感"→ 自動按"生物 → 解剖 → 抽象 → 工業 → 成品"5 步推導
+- 不指定 industry → 按產品類型自動歸類（飛行器=aerospace；鞋=footwear；椅=furniture）
+- 不指定顏色 → 按 industry 推薦（aerospace=black+cyan；footwear=white+orange；furniture=warm wood+cream）
 
-## 变体 1：复古蓝图风（cream paper + ink）
+## 變體 1：復古藍圖風（cream paper + ink）
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
@@ -187,15 +187,15 @@
 }
 ```
 
-### 何时选这个变体
+### 何時選這個變體
 
-- 强调「设计哲学 / 文艺复兴感」
-- 教育 / 出版 / 文创品牌
-- 反差点：用复古手感呈现未来产品
+- 強調「設計哲學 / 文藝復興感」
+- 教育 / 出版 / 文創品牌
+- 反差點：用復古手感呈現未來產品
 
-## 变体 2：自然色调（暖木 + 米白，适合家居 / 鞋 / 椅）
+## 變體 2：自然色調（暖木 + 米白，適合家居 / 鞋 / 椅）
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
@@ -209,17 +209,17 @@
 }
 ```
 
-### 何时选这个变体
+### 何時選這個變體
 
-- 家居 / 椅 / 鞋 / 餐具 类
-- 强调可持续 / 环保 / 自然亲和
-- 不希望冷酷的"工业感"
+- 家居 / 椅 / 鞋 / 餐具 類
+- 強調可持續 / 環保 / 自然親和
+- 不希望冷酷的"工業感"
 
-## 变体 3：横版三联画（左灵感 / 中产品 / 右技术）
+## 變體 3：橫版三聯畫（左靈感 / 中產品 / 右技術）
 
-适合横屏展示 / agency 提案稿 hero 图。
+適合橫屏展示 / agency 提案稿 hero 圖。
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
@@ -229,22 +229,22 @@
     "structure": "3 vertical panels: left = biological inspiration column, center = hero product render, right = technical views stack",
     "evolution_strip": "vertical thin strip on the far left edge, 5 stages stacked top-to-bottom"
   },
-  "use_case": "横屏 deck / agency 提案首页 / Behance project cover"
+  "use_case": "橫屏 deck / agency 提案首頁 / Behance project cover"
 }
 ```
 
-### 何时选这个变体
+### 何時選這個變體
 
-- 横屏展示渠道
-- 设计师 case study 项目封面
-- 演讲 / 提案稿首页
+- 橫屏展示渠道
+- 設計師 case study 項目封面
+- 演講 / 提案稿首頁
 
-## 避免事项
+## 避免事項
 
-- ❌ 演化条 5 阶段都是「最终产品的不同角度」→ 必须有「生物 → 抽象 → 产品」递进
-- ❌ hero 与技术视图中产品的轮廓 / 比例不一致
-- ❌ technical views 6 张全是渲染图 → 至少 4 张应该是正交线稿，1 张是材质 detail crop
-- ❌ footer text 写成营销语 → 应该是设计哲学 / 工程描述
-- ❌ 用动漫 / 卡通风格画工业产品（应使用 hyperreal 3D 或 blueprint）
-- ❌ 把 emblem / logo 放成大字 → 应该是 ≤ headline 1/3 大小的小型徽章
-- ❌ 全图使用 6 种以上颜色（应控制在 3-4 主色 + 1 accent）
+- ❌ 演化條 5 階段都是「最終產品的不同角度」→ 必須有「生物 → 抽象 → 產品」遞進
+- ❌ hero 與技術視圖中產品的輪廓 / 比例不一致
+- ❌ technical views 6 張全是渲染圖 → 至少 4 張應該是正交線稿，1 張是材質 detail crop
+- ❌ footer text 寫成營銷語 → 應該是設計哲學 / 工程描述
+- ❌ 用動漫 / 卡通風格畫工業產品（應使用 hyperreal 3D 或 blueprint）
+- ❌ 把 emblem / logo 放成大字 → 應該是 ≤ headline 1/3 大小的小型徽章
+- ❌ 全圖使用 6 種以上顏色（應控制在 3-4 主色 + 1 accent）

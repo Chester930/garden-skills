@@ -3,7 +3,7 @@
 Everything you need to add a skill, cut a release, or hack on the tooling
 behind this monorepo.
 
-[English](./CONTRIBUTING.md) · [中文文档](./CONTRIBUTING.zh-CN.md) · [日本語](./CONTRIBUTING.ja-JP.md)
+[English](./CONTRIBUTING.md) · [中文文檔](./CONTRIBUTING.zh-CN.md) · [日本語](./CONTRIBUTING.ja-JP.md)
 
 ---
 
@@ -146,7 +146,7 @@ For the full SKILL.md spec, see [agentskills.io](https://agentskills.io) and the
    Start with `version: "0.1.0"` if it's experimental, or `1.0.0` if you're
    confident it's ready.
 2. Append the inline DOWNLOAD marker to the end of the new skill's "Links:" /
-   "链接：" row in every localized root README (preceded by ` · `):
+   "鏈接：" row in every localized root README (preceded by ` · `):
    ```markdown
    Links: [README](...) · [SKILL.md](...) · <!-- DOWNLOAD:<new-name>:start --><!-- DOWNLOAD:<new-name>:end -->
    ```

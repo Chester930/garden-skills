@@ -1,110 +1,110 @@
 # TTS Providers
 
 `synthesize-audio.sh` 是 provider-agnostic 的 runner —— 它自己不知道
-怎么调任何 TTS，只知道循环 `audio-segments.json`、跳过已存在文件、
-打印进度。
+怎麼調任何 TTS，只知道循環 `audio-segments.json`、跳過已存在文件、
+打印進度。
 
-**每个 provider 是这个目录下的一个 `.sh` 文件**，定义一个
-`tts_synthesize` 函数（必需），以及可选的 `tts_check` 和
-`tts_install_help`。runner 根据 `PRESENTATION_TTS` 环境变量加载对应文件。
+**每個 provider 是這個目錄下的一個 `.sh` 文件**，定義一個
+`tts_synthesize` 函數（必需），以及可選的 `tts_check` 和
+`tts_install_help`。runner 根據 `PRESENTATION_TTS` 環境變量加載對應文件。
 
 ---
 
-## 怎么用
+## 怎麼用
 
 ```bash
-# 默认（minimax）
+# 默認（minimax）
 npm run synthesize-audio
 
-# 换 provider
+# 換 provider
 PRESENTATION_TTS=openai npm run synthesize-audio
 npm run synthesize-audio -- --provider=elevenlabs
 
-# 指定音色（每个 provider 自己解析）
+# 指定音色（每個 provider 自己解析）
 PRESENTATION_TTS_VOICE=alloy npm run synthesize-audio
 npm run synthesize-audio -- --voice=zh-CN-YunxiNeural
 
-# 强制全部重合成
+# 強制全部重合成
 npm run synthesize-audio -- --force
 ```
 
-`--provider` 和 `--voice` 的命令行参数会覆盖 env var。
+`--provider` 和 `--voice` 的命令行參數會覆蓋 env var。
 
 ---
 
-## 内置 provider
+## 內置 provider
 
-| 文件 | 后端 | 鉴权 | 备注 |
+| 文件 | 後端 | 鑑權 | 備註 |
 |---|---|---|---|
-| `minimax.sh` | MiniMax `mmx` CLI | `mmx auth login --api-key` | **默认**；中文口播质量稳 |
-| `openai.sh` | OpenAI Audio Speech API | `OPENAI_API_KEY` env var | curl-based；多数 agent 已有 key |
+| `minimax.sh` | MiniMax `mmx` CLI | `mmx auth login --api-key` | **默認**；中文口播質量穩 |
+| `openai.sh` | OpenAI Audio Speech API | `OPENAI_API_KEY` env var | curl-based；多數 agent 已有 key |
 
-只内置这两个 —— 我们不替你做更多技术选型。其它后端的代码片段在下面，
-复制到 `tts-providers/<name>.sh` 即可启用。
+只內置這兩個 —— 我們不替你做更多技術選型。其它後端的代碼片段在下面，
+複製到 `tts-providers/<name>.sh` 即可啓用。
 
 ---
 
-## 怎么加你自己的 TTS
+## 怎麼加你自己的 TTS
 
-1. 在这个目录建 `<name>.sh`（小写、kebab-case）
-2. 实现 `tts_synthesize text out_path [voice]`（必需）
-3. 可选实现 `tts_check`（启动前校验环境）和 `tts_install_help`（失败时打印怎么修）
+1. 在這個目錄建 `<name>.sh`（小寫、kebab-case）
+2. 實現 `tts_synthesize text out_path [voice]`（必需）
+3. 可選實現 `tts_check`（啓動前校驗環境）和 `tts_install_help`（失敗時打印怎麼修）
 4. `PRESENTATION_TTS=<name> npm run synthesize-audio`
 
 ---
 
-## 三函数契约
+## 三函數契約
 
 ### `tts_synthesize <text> <out_path> [<voice>]` （required）
 
-把一段文字写成 mp3 / 任意 web 可播的音频文件到 `<out_path>`。
+把一段文字寫成 mp3 / 任意 web 可播的音頻文件到 `<out_path>`。
 
-| 参数 | 说明 |
+| 參數 | 說明 |
 |---|---|
-| `$1` | 要合成的文本（已是 UTF-8 字符串，可能包含中英文混排和标点） |
-| `$2` | 目标文件绝对路径（runner 已 `mkdir -p` 它的父目录），扩展名 `.mp3` |
-| `$3` | 音色 id（可能为空字符串，provider 自行决定默认） |
+| `$1` | 要合成的文本（已是 UTF-8 字符串，可能包含中英文混排和標點） |
+| `$2` | 目標文件絕對路徑（runner 已 `mkdir -p` 它的父目錄），擴展名 `.mp3` |
+| `$3` | 音色 id（可能爲空字符串，provider 自行決定默認） |
 
-成功 → exit 0 并把音频写到 `$2`。失败 → 非零退出（runner 会标 FAILED 继续下一段，不会终止全局合成）。
+成功 → exit 0 並把音頻寫到 `$2`。失敗 → 非零退出（runner 會標 FAILED 繼續下一段，不會終止全局合成）。
 
-> 如果 backend 只能出 wav / ogg，自己在函数末尾用 `ffmpeg` 转一下：
+> 如果 backend 只能出 wav / ogg，自己在函數末尾用 `ffmpeg` 轉一下：
 > `ffmpeg -y -i tmp.wav -codec:a libmp3lame -qscale:a 2 "$out" >/dev/null 2>&1`
 
 ### `tts_check` （optional）
 
-启动时被 runner 调一次（不是每段）。检查 CLI 是否装、API key 是否设、auth 是否通。
-未就绪 return 非零，runner 会立刻终止并打印 `tts_install_help`。
+啓動時被 runner 調一次（不是每段）。檢查 CLI 是否裝、API key 是否設、auth 是否通。
+未就緒 return 非零，runner 會立刻終止並打印 `tts_install_help`。
 
 ### `tts_install_help` （optional）
 
-`tts_check` 失败时被 runner 调，往 stderr 打印怎么装 / 怎么登录 / 在哪拿 key。
+`tts_check` 失敗時被 runner 調，往 stderr 打印怎麼裝 / 怎麼登錄 / 在哪拿 key。
 
 ---
 
-## 常见 TTS 后端的现成片段
+## 常見 TTS 後端的現成片段
 
-下面**不是**内置 provider —— 是你自己写 `tts-providers/<name>.sh` 时
-可以**直接抄过去**的代码片段。复制 → 保存为 `<name>.sh` → 调通了
+下面**不是**內置 provider —— 是你自己寫 `tts-providers/<name>.sh` 時
+可以**直接抄過去**的代碼片段。複製 → 保存爲 `<name>.sh` → 調通了
 就 `PRESENTATION_TTS=<name>` 用。
 
-> 大多数云 TTS 的 API key 通过环境变量传入（例如 `OPENAI_API_KEY`、
+> 大多數雲 TTS 的 API key 通過環境變量傳入（例如 `OPENAI_API_KEY`、
 > `ELEVENLABS_API_KEY`）。把 `export` 加到你的 shell rc，或在
-> 同目录放一个 git-ignored 的 `.env` 文件并 `set -a; source .env; set +a`。
+> 同目錄放一個 git-ignored 的 `.env` 文件並 `set -a; source .env; set +a`。
 
 ### OpenAI TTS
 
-**已内置** —— 直接看 [`openai.sh`](./openai.sh)。
-该文件也是写 HTTP-based provider 的**官方参考实现**：jq 构造 JSON
-payload、curl `-fsS` 提交、可选 base URL（接 Azure-OpenAI / 代理）、
-可选 model env var、空音色 fallback 到默认值。新接 REST API 的
+**已內置** —— 直接看 [`openai.sh`](./openai.sh)。
+該文件也是寫 HTTP-based provider 的**官方參考實現**：jq 構造 JSON
+payload、curl `-fsS` 提交、可選 base URL（接 Azure-OpenAI / 代理）、
+可選 model env var、空音色 fallback 到默認值。新接 REST API 的
 provider 直接抄它起手最快。
 
-启用：
+啓用：
 
 ```bash
 export OPENAI_API_KEY=sk-...
 PRESENTATION_TTS=openai npm run synthesize-audio
-# 用 HD 模型 + 别的音色
+# 用 HD 模型 + 別的音色
 OPENAI_TTS_MODEL=tts-1-hd npm run synthesize-audio -- --provider=openai --voice=nova
 ```
 
@@ -143,16 +143,16 @@ tts_synthesize() {
 }
 ```
 
-### edge-tts — `tts-providers/edge-tts.sh`（免费 / 无 API key）
+### edge-tts — `tts-providers/edge-tts.sh`（免費 / 無 API key）
 
 ```bash
 # Docs:   https://github.com/rany2/edge-tts
 # Install: pip install edge-tts
 # Voices: edge-tts --list-voices
-#   zh-CN-YunxiNeural     (男声)
-#   zh-CN-XiaoxiaoNeural  (女声)
-#   en-US-AriaNeural      (英文女声)
-#   en-US-GuyNeural       (英文男声)
+#   zh-CN-YunxiNeural     (男聲)
+#   zh-CN-XiaoxiaoNeural  (女聲)
+#   en-US-AriaNeural      (英文女聲)
+#   en-US-GuyNeural       (英文男聲)
 
 tts_check() {
   command -v edge-tts >/dev/null || { echo "✗ edge-tts not found" >&2; return 1; }
@@ -173,12 +173,12 @@ tts_synthesize() {
 }
 ```
 
-### macOS `say` — `tts-providers/say.sh`（离线 / 兜底）
+### macOS `say` — `tts-providers/say.sh`（離線 / 兜底）
 
 ```bash
-# 系统自带，零依赖，适合 CI 跑通流程 / 离线预览。
+# 系統自帶，零依賴，適合 CI 跑通流程 / 離線預覽。
 # 中文音色：Tingting / Sinji / Meijia（看 `say -v ?` 全列表）
-# 输出是 aiff，要 ffmpeg 转 mp3（Auto 模式 audio 标签默认认 mp3）。
+# 輸出是 aiff，要 ffmpeg 轉 mp3（Auto 模式 audio 標籤默認認 mp3）。
 
 tts_check() {
   command -v say     >/dev/null || { echo "✗ 'say' not available (macOS only)" >&2; return 1; }
@@ -289,36 +289,36 @@ tts_synthesize() {
 
 ---
 
-## 设计要点（自己写 provider 时记住）
+## 設計要點（自己寫 provider 時記住）
 
-1. **`set -e` 友好**：runner 用 `set -euo pipefail`，所以你的函数里要么明确处理失败，要么让命令自然非零退出。不要吞错误。
+1. **`set -e` 友好**：runner 用 `set -euo pipefail`，所以你的函數裡要麼明確處理失敗，要麼讓命令自然非零退出。不要吞錯誤。
 
-2. **静默成功，喧闹失败**：成功时不打印任何东西到 stdout（runner 自己打进度条）；失败时往 stderr 打详细原因。把 CLI 工具的 stdout 重定向到 `/dev/null`，stderr 留着看。
+2. **靜默成功，喧鬧失敗**：成功時不打印任何東西到 stdout（runner 自己打進度條）；失敗時往 stderr 打詳細原因。把 CLI 工具的 stdout 重定向到 `/dev/null`，stderr 留着看。
 
-3. **mp3 输出**：浏览器里 `<audio>` 标签最稳吃 mp3。能直接出 mp3 就出 mp3；非 mp3 后端在函数末尾加一步 ffmpeg。
+3. **mp3 輸出**：瀏覽器裏 `<audio>` 標籤最穩喫 mp3。能直接出 mp3 就出 mp3；非 mp3 後端在函數末尾加一步 ffmpeg。
 
-4. **音色 fallback**：`$3` 可能是空字符串。给一个合理的默认值（你最常用的中文音色 / 英文音色），不要因为没传音色就报错。
+4. **音色 fallback**：`$3` 可能是空字符串。給一個合理的默認值（你最常用的中文音色 / 英文音色），不要因爲沒傳音色就報錯。
 
-5. **不要做并发**：runner 是串行的（避免 rate limit）。provider 函数也别在内部 fork 多线程。
+5. **不要做並發**：runner 是串行的（避免 rate limit）。provider 函數也別在內部 fork 多線程。
 
-6. **不要修改全局状态**：provider 文件被 `source` 进 runner 的 shell。别 `cd`、别改 `IFS`、别 `set -e/+e` 切换，否则会污染 runner。把局部变量都 `local`。
+6. **不要修改全局狀態**：provider 文件被 `source` 進 runner 的 shell。別 `cd`、別改 `IFS`、別 `set -e/+e` 切換，否則會污染 runner。把局部變量都 `local`。
 
-   ⚠️ 一个坑：runner 用 `set -u`，**macOS 默认 bash 3.2 在 `"${arr[@]}"` 展开空数组时会炸 `unbound variable`**。如果你的 provider 需要"可选 --voice 参数"，**不要**用 `local args=(); [[ -n $voice ]] && args=(--voice $v); cmd "${args[@]}"` —— 直接写两个 if 分支调命令（看 `minimax.sh` 的写法）。
+   ⚠️ 一個坑：runner 用 `set -u`，**macOS 默認 bash 3.2 在 `"${arr[@]}"` 展開空數組時會炸 `unbound variable`**。如果你的 provider 需要"可選 --voice 參數"，**不要**用 `local args=(); [[ -n $voice ]] && args=(--voice $v); cmd "${args[@]}"` —— 直接寫兩個 if 分支調命令（看 `minimax.sh` 的寫法）。
 
-7. **API 长度上限**：单段大多数 API 都有上限（OpenAI ~4096 chars / MiniMax ~5000 / ElevenLabs ~5000）。Skill 的 narrations 单段一般 < 200 字符，正常不会撞到。如果你的 narration 撞到了，**先回去拆 step**——一个 step 的口播本来就不该这么长。
+7. **API 長度上限**：單段大多數 API 都有上限（OpenAI ~4096 chars / MiniMax ~5000 / ElevenLabs ~5000）。Skill 的 narrations 單段一般 < 200 字符，正常不會撞到。如果你的 narration 撞到了，**先回去拆 step**——一個 step 的口播本來就不該這麼長。
 
 ---
 
-## 调试
+## 調試
 
 ```bash
-# 看 runner 怎么调你的 provider
+# 看 runner 怎麼調你的 provider
 bash -x scripts/synthesize-audio.sh
 
-# 跑单段试试，不动 audio-segments.json
+# 跑單段試試，不動 audio-segments.json
 source scripts/tts-providers/<name>.sh
-tts_check && tts_synthesize "测试一下" /tmp/test.mp3 ""
-afplay /tmp/test.mp3   # macOS 播一下听听
+tts_check && tts_synthesize "測試一下" /tmp/test.mp3 ""
+afplay /tmp/test.mp3   # macOS 播一下聽聽
 ```
 
 跑通了再 `npm run synthesize-audio`。

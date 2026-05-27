@@ -1,187 +1,187 @@
-# 门店分布图模板
+# 門店分布圖模板
 
-本文件用于生成“品牌 / 餐饮 / 零售门店在某区域内分布”的可视化地图：
+本文件用於生成「品牌 / 餐飲 / 零售門店在某區域內分布」的可視化地圖：
 
-- 连锁品牌门店分布
-- 加盟商招商地图
-- 城市 / 商圈门店覆盖
-- 节日活动可达门店标记
-- 银行 / 充电桩 / 共享设施分布
+- 連鎖品牌門店分布
+- 加盟商招商地圖
+- 城市 / 商圈門店覆蓋
+- 節日活動可達門店標記
+- 銀行 / 充電樁 / 共享設施分布
 
-## 适用范围
+## 適用範圍
 
-- 全国 / 全省 / 全市级别的门店分布
-- 单一商圈门店分布
-- 加盟招商展示图
-- 区域服务覆盖图
+- 全國 / 全省 / 全市級別的門店分布
+- 單一商圈門店分布
+- 加盟招商展示圖
+- 區域服務覆蓋圖
 
-## 何时使用
+## 何時使用
 
-- 用户提到“门店分布 / 网点分布 / 覆盖图 / 门店地图 / 加盟招商”
-- 用户希望一张图能讲清楚“在哪有门店”
-- 用户希望突出门店密度与品牌覆盖
+- 用戶提到「門店分布 / 網點分布 / 覆蓋圖 / 門店地圖 / 加盟招商」
+- 用戶希望一張圖能講清楚「在哪有門店」
+- 用戶希望突出門店密度與品牌覆蓋
 
 不要使用：
 
-- 美食探店地图（用 `food-map.md`）
-- 路线图（用 `travel-route-map.md`）
-- 城市风貌图（用 `illustrated-city-map.md`）
+- 美食探店地圖（用 `food-map.md`）
+- 路線圖（用 `travel-route-map.md`）
+- 城市風貌圖（用 `illustrated-city-map.md`）
 
-## 缺失信息优先提问顺序
+## 缺失信息優先提問順序
 
-1. 区域：全国 / 全省 / 全市 / 商圈
+1. 區域：全國 / 全省 / 全市 / 商圈
 2. 品牌名 + logo 描述
-3. 门店类型：旗舰店 / 标准店 / 快闪店 / 加盟店
-4. 门店数量与具体名称（或允许我列）
-5. 是否需要图例区分门店类型
-6. 风格：品牌色现代扁平 / 拟真地图 / 信息图风
+3. 門店類型：旗艦店 / 標準店 / 快閃店 / 加盟店
+4. 門店數量與具體名稱（或允許我列）
+5. 是否需要圖例區分門店類型
+6. 風格：品牌色現代扁平 / 擬真地圖 / 信息圖風
 
-## 主模板：现代扁平品牌门店分布图
+## 主模板：現代扁平品牌門店分布圖
 
 📖 描述
 
-底图为简化的区域轮廓，门店以品牌色图钉 / 图标点位标注，配品牌信息卡 + 图例。
+底圖爲簡化的區域輪廓，門店以品牌色圖釘 / 圖標點位標註，配品牌信息卡 + 圖例。
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "品牌门店分布图",
-  "goal": "生成一张能直接用于品牌官网 / 招商手册 / 节日活动的门店分布可视化地图",
+  "type": "品牌門店分布圖",
+  "goal": "生成一張能直接用於品牌官網 / 招商手冊 / 節日活動的門店分布可視化地圖",
   "brand": {
     "name": "{argument name=\"brand name\" default=\"AURA Coffee\"}",
     "logo_description": "{argument name=\"brand logo\" default=\"金色咖啡豆 + 品牌字\"}",
     "brand_color": "{argument name=\"brand color\" default=\"暖棕 + 奶油白\"}"
   },
   "scope": {
-    "region": "{argument name=\"region scope\" default=\"全国\"}",
-    "base_map_style": "{argument name=\"base map style\" default=\"简化省份轮廓 + 浅色填色\"}"
+    "region": "{argument name=\"region scope\" default=\"全國\"}",
+    "base_map_style": "{argument name=\"base map style\" default=\"簡化省份輪廓 + 淺色填色\"}"
   },
   "stores": {
     "total_count": "{argument name=\"total stores\" default=\"168\"}",
     "by_type": [
-      "{argument name=\"flagship\" default=\"旗舰店 8 家\"}",
-      "{argument name=\"standard\" default=\"标准店 120 家\"}",
-      "{argument name=\"pop_up\" default=\"快闪店 12 家\"}",
+      "{argument name=\"flagship\" default=\"旗艦店 8 家\"}",
+      "{argument name=\"standard\" default=\"標準店 120 家\"}",
+      "{argument name=\"pop_up\" default=\"快閃店 12 家\"}",
       "{argument name=\"franchise\" default=\"加盟店 28 家\"}"
     ],
-    "highlight_cities": "{argument name=\"highlight cities\" default=\"北京、上海、广州、深圳、成都、杭州\"}"
+    "highlight_cities": "{argument name=\"highlight cities\" default=\"北京、上海、廣州、深圳、成都、杭州\"}"
   },
   "marker_design": {
-    "shapes": "圆形品牌色图钉 + 不同尺寸代表不同类型",
-    "rule": "尺寸排序：旗舰 > 标准 > 快闪 > 加盟"
+    "shapes": "圓形品牌色圖釘 + 不同尺寸代表不同類型",
+    "rule": "尺寸排序：旗艦 > 標準 > 快閃 > 加盟"
   },
   "info_panel": {
     "enabled": "{argument name=\"info panel enabled\" default=\"true\"}",
-    "position": "{argument name=\"info panel position\" default=\"右侧\"}",
+    "position": "{argument name=\"info panel position\" default=\"右側\"}",
     "content": [
-      "总门店数",
-      "覆盖城市数",
-      "近一年新开",
-      "重点城市 Top 5"
+      "總門店數",
+      "覆蓋城市數",
+      "近一年新開",
+      "重點城市 Top 5"
     ]
   },
   "legend": {
     "items": [
-      "大圆点：旗舰店",
-      "中圆点：标准店",
-      "三角：快闪店",
-      "方块：加盟店"
+      "大圓點：旗艦店",
+      "中圓點：標準店",
+      "三角：快閃店",
+      "方塊：加盟店"
     ]
   },
-  "extras": ["品牌 logo 角标", "招商联系方式区"],
+  "extras": ["品牌 logo 角標", "招商聯繫方式區"],
   "constraints": {
     "must_keep": [
-      "门店密度真实合理（不要全国都是密点）",
-      "品牌色严格统一",
-      "图例与门店类型对应",
-      "重点城市清晰可读"
+      "門店密度真實合理（不要全國都是密點）",
+      "品牌色嚴格統一",
+      "圖例與門店類型對應",
+      "重點城市清晰可讀"
     ],
     "avoid": [
-      "底图细节过多盖过门店",
-      "出现非品牌色",
-      "标记过密导致看不清",
-      "图例缺失"
+      "底圖細節過多蓋過門店",
+      "出現非品牌色",
+      "標記過密導致看不清",
+      "圖例缺失"
     ]
   }
 }
 ```
 
-### 参数策略
+### 參數策略
 
-- 必问：品牌、区域、门店数量、品牌色
-- 可默认：图例样式、信息卡内容
-- 可随机：城市排序、次要装饰
+- 必問：品牌、區域、門店數量、品牌色
+- 可默認：圖例樣式、信息卡內容
+- 可隨機：城市排序、次要裝飾
 
-### 自动补全策略
+### 自動補全策略
 
-- 用户只给品牌名时：自动设定 100-200 家门店级别，重点城市选 Top 5-10
-- 品牌色未指定时根据行业常用色（咖啡棕、奶茶粉、零售蓝、医疗绿）
-- 图例最少 2 项最多 5 项
+- 用戶只給品牌名時：自動設定 100-200 家門店級別，重點城市選 Top 5-10
+- 品牌色未指定時根據行業常用色（咖啡棕、奶茶粉、零售藍、醫療綠）
+- 圖例最少 2 項最多 5 項
 
-## 变体 1：单商圈密度图
+## 變體 1：單商圈密度圖
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "商圈门店密度图",
+  "type": "商圈門店密度圖",
   "scope": {
-    "region": "{argument name=\"district\" default=\"上海·静安寺商圈\"}"
+    "region": "{argument name=\"district\" default=\"上海·靜安寺商圈\"}"
   },
   "stores": {
     "total_count": "{argument name=\"store count\" default=\"24\"}",
-    "highlight_cities": "门店具体名称 + 编号"
+    "highlight_cities": "門店具體名稱 + 編號"
   },
   "constraints": {
-    "must_feel": "本地化、密度感、街区级"
+    "must_feel": "本地化、密度感、街區級"
   }
 }
 ```
 
-## 变体 2：服务覆盖图（充电桩 / 网点 / 服务点）
+## 變體 2：服務覆蓋圖（充電樁 / 網點 / 服務點）
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "服务覆盖分布图",
+  "type": "服務覆蓋分布圖",
   "service": {
-    "name": "{argument name=\"service name\" default=\"NEX 充电网络\"}",
-    "color": "{argument name=\"service color\" default=\"科技蓝 + 高亮黄\"}"
+    "name": "{argument name=\"service name\" default=\"NEX 充電網絡\"}",
+    "color": "{argument name=\"service color\" default=\"科技藍 + 高亮黃\"}"
   },
   "stations_count": "{argument name=\"station count\" default=\"800+\"}",
   "marker_design": {
-    "shapes": "闪电图标 + 不同颜色代表充电速度等级"
+    "shapes": "閃電圖標 + 不同顏色代表充電速度等級"
   },
   "legend": {
-    "items": ["黄色：超充", "蓝色：快充", "灰色：慢充"]
+    "items": ["黃色：超充", "藍色：快充", "灰色：慢充"]
   },
   "constraints": {
-    "must_feel": "科技、专业、可靠"
+    "must_feel": "科技、專業、可靠"
   }
 }
 ```
 
-## 变体 3：自动补全模式
+## 變體 3：自動補全模式
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "门店分布图自动补全模板",
+  "type": "門店分布圖自動補全模板",
   "mode": "auto-fill",
-  "rule": "用户给品牌 + 行业，自动估计门店规模、品牌色、图例",
+  "rule": "用戶給品牌 + 行業，自動估計門店規模、品牌色、圖例",
   "constraints": {
-    "must_feel": "招商手册级"
+    "must_feel": "招商手冊級"
   }
 }
 ```
 
-## 避免事项
+## 避免事項
 
-- 不要让点位密度脱离真实（小品牌不要画成全国满屏点）
-- 不要让品牌 logo 淹没在地图细节里
-- 不要把多个不同行业品牌混在一张图
-- 不要让信息卡占据超过 1/3 画面
-- 不要使用真实地图截图风（这是品牌图，不是 GIS 截图）
+- 不要讓點位密度脫離真實（小品牌不要畫成全國滿屏點）
+- 不要讓品牌 logo 淹沒在地圖細節裏
+- 不要把多個不同行業品牌混在一張圖
+- 不要讓信息卡佔據超過 1/3 畫面
+- 不要使用真實地圖截圖風（這是品牌圖，不是 GIS 截圖）

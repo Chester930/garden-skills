@@ -64,15 +64,15 @@
 
 亮點：
 
-- 固定 1920×1080 舞台，並按視窗大小縮放，適合穩定錄影
-- 點擊 / 鍵盤驅動 `(chapter, step)` 游標，一個口播節拍對應一個視覺 step
+- 固定 1920×1080 舞臺，並按視窗大小縮放，適合穩定錄影
+- 點擊 / 鍵盤驅動 `(chapter, step)` 遊標，一個口播節拍對應一個視覺 step
 - 在稿子、主題、大綱、開發模式和可選音訊合成前設置強檢查點（checkpoint）
 - 懸浮才出現的進度控制，錄影時畫面保持乾淨
 - 基於主題 token 的視覺架構，內建 **23 套主題**，每套獨立設計風格，覆蓋編輯器、終端機、工程、瑞士國際主義等多種風格
 - **可插拔 TTS**：獨立於供應商（provider-agnostic）的音訊執行器，**內建 2 個 provider**（MiniMax `mmx-cli` + OpenAI TTS via curl），並附帶三函數契約 + ElevenLabs / edge-tts / Azure / Google Cloud / macOS `say` 的現成程式碼片段
-- 腳手架產出 Vite + Angular + TypeScript 專案，並附帶舞台原語與錄影指南
+- 腳手架產出 Vite + Angular + TypeScript 專案，並附帶舞臺原語與錄影指南
 
-連結：[README](./skills/web-video-presentation/README.zh-CN.md) · [SKILL.md](./skills/web-video-presentation/SKILL.md) · <!-- DOWNLOAD:web-video-presentation:start -->[下载 v1.2.1 .zip](https://github.com/ConardLi/garden-skills/releases/download/web-video-presentation-v1.2.1/web-video-presentation-1.2.1.zip)<!-- DOWNLOAD:web-video-presentation:end -->
+連結：[README](./skills/web-video-presentation/README.zh-CN.md) · [SKILL.md](./skills/web-video-presentation/SKILL.md) · <!-- DOWNLOAD:web-video-presentation:start -->[下載 v1.2.1 .zip](https://github.com/ConardLi/garden-skills/releases/download/web-video-presentation-v1.2.1/web-video-presentation-1.2.1.zip)<!-- DOWNLOAD:web-video-presentation:end -->
 
 ---
 
@@ -81,7 +81,7 @@
 ![Web Design Skill](./dist/imgs/web-design-skill.png)
 
 **類別：** 設計 / 前端  
-**適合：** 網頁、落地頁、儀表板、互動原型、HTML 投影片、動畫、UI 樣機、資料視覺化和設計系統探索。
+**適合：** 網頁、落地頁、儀錶板、互動原型、HTML 投影片、動畫、UI 樣機、資料視覺化和設計系統探索。
 
 `web-design-engineer` 把 AI 生成的 Web 產物從「能用」推進到「精緻、克制、真正有設計判斷」。它把 Agent 當作設計工程師來約束：先理解產品上下文，再宣告設計系統，儘早展示 v0，然後完整建構並驗證結果。
 
@@ -92,9 +92,9 @@
 - 內建 **設計方向顧問（6 學派差異化推薦）+ 25 套有 anchor 的風格配方庫**（Linear / Aesop / Pentagram / Bloomberg / Stripe Press / Mid-Century 等），含可貼上的 palette / typography / signature moves / 反模式
 - 覆蓋 HTML / CSS / JavaScript / React 原型，以及響應式版面配置、動效和互動細節
 - 包含 inline React + Babel、CSS tokens、`oklch()` 配色、container queries、reduced-motion 等實作規則
-- 提供高階模式參考，覆蓋設備框、投影片引擎、動畫時間軸、儀表板等常見 Web 產物
+- 提供高階模式參考，覆蓋設備框、投影片引擎、動畫時間軸、儀錶板等常見 Web 產物
 
-連結：[README](./skills/web-design-engineer/README.zh-CN.md) · [SKILL.md](./skills/web-design-engineer/SKILL.md) · [Website](./website/web-design-website) · [Demo](./demo/web-design-demo) · <!-- DOWNLOAD:web-design-engineer:start -->[下载 v1.2.0 .zip](https://github.com/ConardLi/garden-skills/releases/download/web-design-engineer-v1.2.0/web-design-engineer-1.2.0.zip)<!-- DOWNLOAD:web-design-engineer:end -->
+連結：[README](./skills/web-design-engineer/README.zh-CN.md) · [SKILL.md](./skills/web-design-engineer/SKILL.md) · [Website](./website/web-design-website) · [Demo](./demo/web-design-demo) · <!-- DOWNLOAD:web-design-engineer:start -->[下載 v1.2.0 .zip](https://github.com/ConardLi/garden-skills/releases/download/web-design-engineer-v1.2.0/web-design-engineer-1.2.0.zip)<!-- DOWNLOAD:web-design-engineer:end -->
 
 ---
 
@@ -115,7 +115,7 @@
 - 同時覆蓋影像生成和影像編輯，並配套專門工作流與指令碼
 - Garden 模式下會把 prompt 與生成圖片儲存到 `garden-gpt-image-2/`，方便複用、審查和版本管理
 
-連結：[README](./skills/gpt-image-2/README.zh-CN.md) · [SKILL.md](./skills/gpt-image-2/SKILL.md) · [Website](./website/gpt-image2-website) · <!-- DOWNLOAD:gpt-image-2:start -->[下载 v1.0.3 .zip](https://github.com/ConardLi/garden-skills/releases/download/gpt-image-2-v1.0.3/gpt-image-2-1.0.3.zip)<!-- DOWNLOAD:gpt-image-2:end -->
+連結：[README](./skills/gpt-image-2/README.zh-CN.md) · [SKILL.md](./skills/gpt-image-2/SKILL.md) · [Website](./website/gpt-image2-website) · <!-- DOWNLOAD:gpt-image-2:start -->[下載 v1.0.3 .zip](https://github.com/ConardLi/garden-skills/releases/download/gpt-image-2-v1.0.3/gpt-image-2-1.0.3.zip)<!-- DOWNLOAD:gpt-image-2:end -->
 
 ---
 
@@ -136,7 +136,7 @@
 - 最多 5 輪檢索，讓探索過程有邊界
 - 內建 `grep`、`pdftotext`、`pdfplumber`、`pandas` 工作流，並強調答案來源
 
-連結：[README](./skills/kb-retriever/README.zh-CN.md) · [SKILL.md](./skills/kb-retriever/SKILL.md) · <!-- DOWNLOAD:kb-retriever:start -->[下载 v1.0.0 .zip](https://github.com/ConardLi/garden-skills/releases/download/kb-retriever-v1.0.0/kb-retriever-1.0.0.zip)<!-- DOWNLOAD:kb-retriever:end -->
+連結：[README](./skills/kb-retriever/README.zh-CN.md) · [SKILL.md](./skills/kb-retriever/SKILL.md) · <!-- DOWNLOAD:kb-retriever:start -->[下載 v1.0.0 .zip](https://github.com/ConardLi/garden-skills/releases/download/kb-retriever-v1.0.0/kb-retriever-1.0.0.zip)<!-- DOWNLOAD:kb-retriever:end -->
 
 ---
 
@@ -150,7 +150,7 @@
 | B | [Claude Code 外掛市場](#方式-b--claude-code-外掛市場) | Claude Code 使用者、訂閱外掛包 | ✅ 透過市場版本 |
 | C | [Releases 鎖定版本 `.zip`](#方式-c--releases-鎖定版本-zip) | CI / 內網 / 可複現安裝 | ✅ ✅（不可變） |
 | D | [`git clone` 後手動拷貝](#方式-d--手動拷貝到專案) | 本地 hack / 想自己魔改 | ❌（跟隨 `main`） |
-| E | [Git Submodule](#方式-e--git-submodule) | 嵌進更大專案，需要隨上游升級 | ✅ 透過 submodule SHA |
+| E | [Git Submodule](#方式-e--git-submodule) | 嵌進更大專案，需要隨上遊升級 | ✅ 透過 submodule SHA |
 
 > 上面每個 Skill 的"連結"那一行末尾，都有一個 **`下載 v<版本> .zip`** 連結，
 > 指向該 Skill 目前的鎖定版本發佈產物。這些 URL 由
@@ -159,7 +159,7 @@
 
 ### 方式 A · `skills` CLI（npx）
 
-最快的、跨 Agent 通用的方式。直接使用社群標準的
+最快的、跨 Agent 通用的方式。直接使用社羣標準的
 [`npx skills` CLI](https://www.npmjs.com/package/skills)，它會自動識別你正在用
 的 Agent（Claude Code / Cursor / Codex / …）並把 Skill 放到對的目錄。
 
@@ -270,7 +270,7 @@ Agent 在下次掃描工作區時會自動發現。
 
 ### 方式 E · Git Submodule
 
-如果你想在更大的專案裡把本倉庫作為依賴來跟蹤上游更新：
+如果你想在更大的專案裡把本倉庫作為依賴來跟蹤上遊更新：
 
 ```bash
 git submodule add https://github.com/ConardLi/garden-skills.git vendor/garden-skills
@@ -347,7 +347,7 @@ npm run validate  # 跑一遍和 PR CI 完全一樣的檢查
 
 - **[Anthropic](https://www.anthropic.com)** —— [Agent Skills 規範](https://agentskills.io) 和 [`anthropics/skills`](https://github.com/anthropics/skills) 參考倉庫。
 - **[Claude Design](https://www.anthropic.com/news/claude-design-anthropic-labs)** —— `web-design-engineer` 的靈感來源，原系統提示詞保留在 [`dist/prompt/claude-design-system-prompt.md`](./dist/prompt/claude-design-system-prompt.md) 供參考。
-- 更廣義的 OSS Skill 社群——延伸閱讀：[`travisvn/awesome-claude-skills`](https://github.com/travisvn/awesome-claude-skills) 和 [`obra/superpowers`](https://github.com/obra/superpowers)。
+- 更廣義的 OSS Skill 社羣——延伸閱讀：[`travisvn/awesome-claude-skills`](https://github.com/travisvn/awesome-claude-skills) 和 [`obra/superpowers`](https://github.com/obra/superpowers)。
 
 ---
 

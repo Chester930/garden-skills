@@ -1,123 +1,123 @@
-# 贡献与维护指南
+# 貢獻與維護指南
 
-新增 Skill、发版、改 release 工具链——你需要知道的都在这。
+新增 Skill、發版、改 release 工具鏈——你需要知道的都在這。
 
-[English](./CONTRIBUTING.md) · [中文文档](./CONTRIBUTING.zh-CN.md) · [日本語](./CONTRIBUTING.ja-JP.md)
+[English](./CONTRIBUTING.md) · [中文文檔](./CONTRIBUTING.zh-CN.md) · [日本語](./CONTRIBUTING.ja-JP.md)
 
 ---
 
-## 目录
+## 目錄
 
-- [快速开始](#快速开始)
-- [仓库结构](#仓库结构)
-- [Skill 的标准结构](#skill-的标准结构)
-- [新增一个 Skill](#新增一个-skill)
-- [发版](#发版)
-- [版本号规则](#版本号规则)
-- [npm 脚本](#npm-脚本)
+- [快速開始](#快速開始)
+- [倉庫結構](#倉庫結構)
+- [Skill 的標準結構](#skill-的標準結構)
+- [新增一個 Skill](#新增一個-skill)
+- [發版](#發版)
+- [版本號規則](#版本號規則)
+- [npm 腳本](#npm-腳本)
 - [CI / GitHub Actions](#ci--github-actions)
-- [README 下载链接是怎么自动维护的](#readme-下载链接是怎么自动维护的)
-- [手动发版（fallback）](#手动发版fallback)
-- [常见问题](#常见问题)
+- [README 下載鏈接是怎麼自動維護的](#readme-下載鏈接是怎麼自動維護的)
+- [手動發版（fallback）](#手動發版fallback)
+- [常見問題](#常見問題)
 
 ---
 
-## 快速开始
+## 快速開始
 
 ```bash
 git clone https://github.com/ConardLi/garden-skills.git
 cd garden-skills
-node --version    # 必须 >= 20
+node --version    # 必須 >= 20
 
-npm run list      # 列出所有 Skill + manifest 状态
-npm run validate  # 跑一遍和 PR CI 完全一样的检查
+npm run list      # 列出所有 Skill + manifest 狀態
+npm run validate  # 跑一遍和 PR CI 完全一樣的檢查
 ```
 
-无运行时依赖——`npm install` 是 no-op。Release 工具是纯 ESM Node，零依赖。
+無運行時依賴——`npm install` 是 no-op。Release 工具是純 ESM Node，零依賴。
 
 ---
 
-## 仓库结构
+## 倉庫結構
 
 ```text
 .
-├── skills/                              ← 所有 Skill 都在这里，每个一个文件夹
+├── skills/                              ← 所有 Skill 都在這裡，每個一個文件夾
 │   ├── web-video-presentation/
 │   │   ├── SKILL.md                     ← Agent 看的指令（必需）
 │   │   ├── manifest.json                ← name / version / category / compat（必需）
-│   │   ├── README.md / README.zh-CN.md  ← 给人看的文档
-│   │   ├── references/                  ← （可选）Agent 按需加载的扩展文档
-│   │   ├── scripts/                     ← （可选）确定性可执行代码
-│   │   ├── templates/                   ← （可选）脚手架模板
-│   │   └── themes/                      ← （可选）skill 专属素材
+│   │   ├── README.md / README.zh-CN.md  ← 給人看的文檔
+│   │   ├── references/                  ← （可選）Agent 按需加載的擴展文檔
+│   │   ├── scripts/                     ← （可選）確定性可執行代碼
+│   │   ├── templates/                   ← （可選）腳手架模板
+│   │   └── themes/                      ← （可選）skill 專屬素材
 │   │
 │   ├── web-design-engineer/
 │   ├── gpt-image-2/
 │   └── kb-retriever/
 │
-├── scripts/release/                     ← 发版工具（零依赖 Node ESM）
-│   ├── cut-release.mjs                  ← 交互式发版主入口
-│   ├── pack-skill.mjs                   ← skill → 钉版本 .zip + .sha256
-│   ├── update-readme.mjs                ← 重写 README 的 Download 链接
-│   ├── list-skills.mjs                  ← 查看 manifest + 结构状态
-│   └── lib/skills.mjs                   ← 共享辅助函数
+├── scripts/release/                     ← 發版工具（零依賴 Node ESM）
+│   ├── cut-release.mjs                  ← 交互式發版主入口
+│   ├── pack-skill.mjs                   ← skill → 釘版本 .zip + .sha256
+│   ├── update-readme.mjs                ← 重寫 README 的 Download 鏈接
+│   ├── list-skills.mjs                  ← 查看 manifest + 結構狀態
+│   └── lib/skills.mjs                   ← 共享輔助函數
 │
 ├── .github/workflows/
-│   ├── release-skill.yml                ← tag 触发的单 Skill 发版
-│   └── validate-skills.yml              ← PR 守门
+│   ├── release-skill.yml                ← tag 觸發的單 Skill 發版
+│   └── validate-skills.yml              ← PR 守門
 │
 ├── .claude-plugin/
-│   └── marketplace.json                 ← Claude Code 插件市场清单
+│   └── marketplace.json                 ← Claude Code 插件市場清單
 │
-├── demo/                                ← 可直接打开的演示
-├── dist/                                ← 共享 README 素材 + 参考资料
-├── website/                             ← 独立展示网站
+├── demo/                                ← 可直接打開的演示
+├── dist/                                ← 共享 README 素材 + 參考資料
+├── website/                             ← 獨立展示網站
 │
-├── package.json                         ← 维护者脚本（无运行时依赖）
-├── README.md / README.zh-CN.md / README.ja-JP.md ← 用户向集合首页
+├── package.json                         ← 維護者腳本（無運行時依賴）
+├── README.md / README.zh-CN.md / README.ja-JP.md ← 用戶向集合首頁
 └── CONTRIBUTING.md / CONTRIBUTING.zh-CN.md / CONTRIBUTING.ja-JP.md ← 本文件
 ```
 
 ---
 
-## Skill 的标准结构
+## Skill 的標準結構
 
-本仓库每个 Skill 都遵循同一种最简结构：
+本倉庫每個 Skill 都遵循同一種最簡結構：
 
 ```text
 <skill-name>/
-├── SKILL.md            ← 必需：YAML frontmatter + 给 Agent 看的指令
+├── SKILL.md            ← 必需：YAML frontmatter + 給 Agent 看的指令
 ├── manifest.json       ← 必需：name / version / category / description / compat
-├── README.md           ← 给人看的英文文档（GitHub 渲染的就是它）
-├── README.zh-CN.md     ← 给人看的中文文档
-├── README.ja-JP.md     ← 给人看的日文文档
-├── references/         ← 可选：Agent 按需加载的扩展文档
-├── scripts/            ← 可选：确定性的可执行代码
-└── assets/             ← 可选：模板、字体、图标等输出物素材
+├── README.md           ← 給人看的英文文檔（GitHub 渲染的就是它）
+├── README.zh-CN.md     ← 給人看的中文文檔
+├── README.ja-JP.md     ← 給人看的日文文檔
+├── references/         ← 可選：Agent 按需加載的擴展文檔
+├── scripts/            ← 可選：確定性的可執行代碼
+└── assets/             ← 可選：模板、字體、圖標等輸出物素材
 ```
 
-`SKILL.md` 的 frontmatter 是 Agent 判断"什么时候该用这个 Skill"的契约：
+`SKILL.md` 的 frontmatter 是 Agent 判斷"什麼時候該用這個 Skill"的契約：
 
 ```markdown
 ---
 name: my-skill
-description: 用一句话清楚说明这个 Skill 是干什么的、什么时候应该用。
-              Agent 会用这段话判断是否激活本 Skill。
+description: 用一句話清楚說明這個 Skill 是幹什麼的、什麼時候應該用。
+              Agent 會用這段話判斷是否激活本 Skill。
 ---
 
 # My Skill
 
-详细指令、示例与约束写在这里。
+詳細指令、示例與約束寫在這裡。
 ```
 
-`manifest.json` 是给**发版工具和下游安装器**看的契约：
+`manifest.json` 是給**發版工具和下遊安裝器**看的契約：
 
 ```json
 {
   "name": "my-skill",
   "version": "1.0.0",
   "category": "Design / Frontend",
-  "description": "做什么的、适合什么场景。会显示在安装界面里。",
+  "description": "做什麼的、適合什麼場景。會顯示在安裝界面裏。",
   "homepage": "https://github.com/ConardLi/garden-skills/tree/main/skills/my-skill",
   "compat": [
     "claude-code",
@@ -130,201 +130,201 @@ description: 用一句话清楚说明这个 Skill 是干什么的、什么时候
 }
 ```
 
-`name` 字段**必须和文件夹名、`SKILL.md` frontmatter 的 `name` 完全一致**——
-不一致 `npm run list` 会 fail。
+`name` 字段**必須和文件夾名、`SKILL.md` frontmatter 的 `name` 完全一致**——
+不一致 `npm run list` 會 fail。
 
-完整的 SKILL.md 规范见 [agentskills.io](https://agentskills.io) 与
-[Anthropic 官方示例仓库](https://github.com/anthropics/skills)。
+完整的 SKILL.md 規範見 [agentskills.io](https://agentskills.io) 與
+[Anthropic 官方示例倉庫](https://github.com/anthropics/skills)。
 
 ---
 
-## 新增一个 Skill
+## 新增一個 Skill
 
-1. 创建 `skills/<new-name>/`，至少要有 `SKILL.md` + `manifest.json`。
-   实验性的可以用 `version: "0.1.0"` 起步，比较成熟的就直接 `1.0.0`。
-2. 在所有根目录多语言 README 里新 Skill 的"链接：" / "Links:" 行末尾
-   追加 inline DOWNLOAD marker（前面加 ` · ` 保持视觉一致）：
+1. 創建 `skills/<new-name>/`，至少要有 `SKILL.md` + `manifest.json`。
+   實驗性的可以用 `version: "0.1.0"` 起步，比較成熟的就直接 `1.0.0`。
+2. 在所有根目錄多語言 README 裏新 Skill 的"鏈接：" / "Links:" 行末尾
+   追加 inline DOWNLOAD marker（前面加 ` · ` 保持視覺一致）：
    ```markdown
-   链接：[README](...) · [SKILL.md](...) · <!-- DOWNLOAD:<new-name>:start --><!-- DOWNLOAD:<new-name>:end -->
+   鏈接：[README](...) · [SKILL.md](...) · <!-- DOWNLOAD:<new-name>:start --><!-- DOWNLOAD:<new-name>:end -->
    ```
-3. 跑 `npm run readme:sync` 填充占位符。
-4. 本地跑 `npm run validate` 确认全部通过。
-5. 开 PR，CI 会再校验一遍。
-6. 合并后用 `npm run release` 发首版（脚本会自动检测无 tag 并提示 "initial
+3. 跑 `npm run readme:sync` 填充佔位符。
+4. 本地跑 `npm run validate` 確認全部通過。
+5. 開 PR，CI 會再校驗一遍。
+6. 合併後用 `npm run release` 發首版（腳本會自動檢測無 tag 並提示 "initial
    release at v<manifest 版本>"）。
 
-可选：在 [`.claude-plugin/marketplace.json`](./.claude-plugin/marketplace.json)
-里加一条 plugin pack，让它能通过 `/plugin install` 被发现。
+可選：在 [`.claude-plugin/marketplace.json`](./.claude-plugin/marketplace.json)
+裏加一條 plugin pack，讓它能通過 `/plugin install` 被發現。
 
 ---
 
-## 发版
+## 發版
 
 ```bash
 npm run release
 ```
 
-就这一条命令。脚本（[`scripts/release/cut-release.mjs`](./scripts/release/cut-release.mjs)）会：
+就這一條命令。腳本（[`scripts/release/cut-release.mjs`](./scripts/release/cut-release.mjs)）會：
 
-1. 自检（在 `main`、工作区干净、和 `origin` 同步）。
-2. 扫描每个 Skill，找上一个 release tag，列出之后的所有 commit。
-3. 对每个候选提示 **patch / minor / major / skip**——首次发版的自动走
+1. 自檢（在 `main`、工作區乾淨、和 `origin` 同步）。
+2. 掃描每個 Skill，找上一個 release tag，列出之後的所有 commit。
+3. 對每個候選提示 **patch / minor / major / skip**——首次發版的自動走
    "initial release"。
-4. 展示完整计划 + diff 摘要。
-5. 改 manifest、跑 `update-readme.mjs`、commit、打 tag，最后**原子地**用一次
-   `git push` 把 commit 和所有 tag 一起推出去——CI 永远看到一致的状态。
-6. 打印 Actions URL，方便你看后续。
+4. 展示完整計劃 + diff 摘要。
+5. 改 manifest、跑 `update-readme.mjs`、commit、打 tag，最後**原子地**用一次
+   `git push` 把 commit 和所有 tag 一起推出去——CI 永遠看到一致的狀態。
+6. 打印 Actions URL，方便你看後續。
 
-[`release-skill`](./.github/workflows/release-skill.yml) 工作流接管之后会：
-打 zip、创建 GitHub Release、再同步一次 README 下载链接 commit 回 `main`。
+[`release-skill`](./.github/workflows/release-skill.yml) 工作流接管之後會：
+打 zip、創建 GitHub Release、再同步一次 README 下載鏈接 commit 回 `main`。
 
-### 常用变体
+### 常用變體
 
 ```bash
-# 只预览，不写不推（dirty tree 也能跑）
+# 只預覽，不寫不推（dirty tree 也能跑）
 npm run release:dry
 
-# 跳过最后的"proceed?"确认
+# 跳過最後的"proceed?"確認
 npm run release -- --yes
 
-# 给某些 Skill 预设 bump 类型（其它的还会提示）
+# 給某些 Skill 預設 bump 類型（其它的還會提示）
 npm run release -- \
   --skill web-design-engineer --bump minor \
   --skill gpt-image-2 --bump patch
 
-# 从非默认分支发版
+# 從非默認分支發版
 npm run release -- --branch release/2026-q2
 ```
 
-> 注意 `npm run release` 和参数之间要有 `--`，npm 才会把后面的 flag 透传给
-> 下面的 node 脚本。
+> 注意 `npm run release` 和參數之間要有 `--`，npm 才會把後面的 flag 透傳給
+> 下面的 node 腳本。
 
-### 第一次发版完整步骤
+### 第一次發版完整步驟
 
-第一次给整个仓库（或任何从未打过 tag 的 Skill）发版：
+第一次給整個倉庫（或任何從未打過 tag 的 Skill）發版：
 
 ```bash
-# 1. 确保所有筹备工作都已 commit、CI 是绿的
-git status        # 应该是 clean
+# 1. 確保所有籌備工作都已 commit、CI 是綠的
+git status        # 應該是 clean
 git push origin main
 gh run watch      # 等 validate-skills.yml 跑完
 
-# 2. 先 dry-run 看一眼计划
+# 2. 先 dry-run 看一眼計劃
 npm run release:dry
-# 每个 Skill 都应该显示为 INITIAL，manifest 里的版本号会成为发布版本
+# 每個 Skill 都應該顯示爲 INITIAL，manifest 裏的版本號會成爲發布版本
 
-# 3. 正式发版
+# 3. 正式發版
 npm run release
-# 确认 y。脚本会：不改 manifest（initial）、commit README sync、
-# 一口气打 4 个 tag、原子 push
+# 確認 y。腳本會：不改 manifest（initial）、commit README sync、
+# 一口氣打 4 個 tag、原子 push
 
-# 4. 看 4 个 release-skill 工作流并行跑完（每个约 1 分钟）
+# 4. 看 4 個 release-skill 工作流並行跑完（每個約 1 分鐘）
 gh run list --workflow=release-skill.yml
 
-# 5. 拉一下 main（bot 会 commit README 同步）
+# 5. 拉一下 main（bot 會 commit README 同步）
 git pull origin main
 ```
 
-跑完之后 `https://github.com/ConardLi/garden-skills/releases` 下面就有 4 个
-release，每个带 zip + sha256 + 自动 changelog，README 的下载链接也会指向它们。
+跑完之後 `https://github.com/ConardLi/garden-skills/releases` 下面就有 4 個
+release，每個帶 zip + sha256 + 自動 changelog，README 的下載鏈接也會指向它們。
 
 ---
 
-## 版本号规则
+## 版本號規則
 
-每个 Skill **独立**版本号，遵循 [SemVer](https://semver.org/)。
+每個 Skill **獨立**版本號，遵循 [SemVer](https://semver.org/)。
 
-| 变更 | bump |
+| 變更 | bump |
 |---|---|
-| 拼写修正、新增可选 reference、`SKILL.md` 微调 | **patch** |
-| `SKILL.md` 工作流改动、`references/` 结构调整、新增必需步骤 | **minor** |
-| 重命名 Skill、删除文件、frontmatter 破坏性变更 | **major** |
+| 拼寫修正、新增可選 reference、`SKILL.md` 微調 | **patch** |
+| `SKILL.md` 工作流改動、`references/` 結構調整、新增必需步驟 | **minor** |
+| 重命名 Skill、刪除文件、frontmatter 破壞性變更 | **major** |
 
-预发布后缀（`1.2.0-beta.1`、`1.2.0-rc.1`）在 tag 正则和 workflow 里都允许，
-但 `cut-release.mjs` 只提供 patch / minor / major 三个选项。要发预发布版本，
-请手动改 manifest 后再推 tag（见 [手动发版](#手动发版fallback)）。
+預發布後綴（`1.2.0-beta.1`、`1.2.0-rc.1`）在 tag 正則和 workflow 裏都允許，
+但 `cut-release.mjs` 只提供 patch / minor / major 三個選項。要發預發布版本，
+請手動改 manifest 後再推 tag（見 [手動發版](#手動發版fallback)）。
 
-首次发版（无 prior tag 的 Skill）会直接用 manifest 里的版本号——`--bump`
-被忽略。想从其它版本起步，发版前手动改 manifest。
+首次發版（無 prior tag 的 Skill）會直接用 manifest 裏的版本號——`--bump`
+被忽略。想從其它版本起步，發版前手動改 manifest。
 
 ---
 
-## npm 脚本
+## npm 腳本
 
 ```bash
-npm run release       # 交互式发版（你 99% 时间会用的命令）
-npm run release:dry   # 同上，但不写不推（只预览）
+npm run release       # 交互式發版（你 99% 時間會用的命令）
+npm run release:dry   # 同上，但不寫不推（只預覽）
 
-npm run list          # 列出所有 Skill + manifest 状态（manifest 错时 exit 1）
-npm run pack          # 打单个 Skill：npm run pack -- --skill web-design-engineer
+npm run list          # 列出所有 Skill + manifest 狀態（manifest 錯時 exit 1）
+npm run pack          # 打單個 Skill：npm run pack -- --skill web-design-engineer
 npm run pack:all      # 把所有 Skill 都打到 dist/release/
-npm run readme:sync   # 重写 README 下载链接到当前 manifest 版本
-npm run readme:check  # CI 风格检查：有任何链接过期就 exit 1
+npm run readme:sync   # 重寫 README 下載鏈接到當前 manifest 版本
+npm run readme:check  # CI 風格檢查：有任何鏈接過期就 exit 1
 
-npm run validate      # CI 在每个 PR 跑的全套（list + pack:all + readme:check）
+npm run validate      # CI 在每個 PR 跑的全套（list + pack:all + readme:check）
 ```
 
 ---
 
 ## CI / GitHub Actions
 
-两个工作流，都很轻：
+兩個工作流，都很輕：
 
 ### [`validate-skills.yml`](./.github/workflows/validate-skills.yml)
 
-每个 PR、以及 main 上任何动到 `skills/**` / `scripts/release/**` / 任一多语言 README
-的 push，都会跑。它跑的是 `npm run validate`，等价于：
+每個 PR、以及 main 上任何動到 `skills/**` / `scripts/release/**` / 任一多語言 README
+的 push，都會跑。它跑的是 `npm run validate`，等價於：
 
-- lint 每个 `manifest.json` + skill 文件夹结构
-- 空跑一遍打包所有 skill（不上传）
-- 校验 README 下载链接是否和 manifest 同步
+- lint 每個 `manifest.json` + skill 文件夾結構
+- 空跑一遍打包所有 skill（不上傳）
+- 校驗 README 下載鏈接是否和 manifest 同步
 
 ### [`release-skill.yml`](./.github/workflows/release-skill.yml)
 
-push 一个 `<skill>-v<semver>` 格式的 tag 时触发。流程：
+push 一個 `<skill>-v<semver>` 格式的 tag 時觸發。流程：
 
-1. 解析 tag，校验是否和 `manifest.json#version` 一致（防漂移）。
+1. 解析 tag，校驗是否和 `manifest.json#version` 一致（防漂移）。
 2. 把 `skills/<name>/` 打成 `<name>-<version>.zip` + `.sha256`。
-3. 基于该 Skill 上一个 tag 之后的 `git log` 自动生成 release notes。
-4. 创建一个带 zip + sha256 的 GitHub Release。
-5. 重写多语言 README 里这个 Skill 的 `下载 v<版本> .zip` 链接，以
+3. 基於該 Skill 上一個 tag 之後的 `git log` 自動生成 release notes。
+4. 創建一個帶 zip + sha256 的 GitHub Release。
+5. 重寫多語言 README 裏這個 Skill 的 `下載 v<版本> .zip` 鏈接，以
    `github-actions[bot]` 身份 commit 回 `main`。
 
-两个 workflow 跑的是和你本地完全一样的 `npm run *` 命令——单一事实来源。
+兩個 workflow 跑的是和你本地完全一樣的 `npm run *` 命令——單一事實來源。
 
 ---
 
-## README 下载链接是怎么自动维护的
+## README 下載鏈接是怎麼自動維護的
 
-主 README 里每个 Skill 区块的"链接：" / "Links:" 行末尾都有一个 inline marker：
+主 README 裏每個 Skill 區塊的"鏈接：" / "Links:" 行末尾都有一個 inline marker：
 
 ```markdown
-链接：[README](...) · [SKILL.md](...) · <!-- DOWNLOAD:gpt-image-2:start -->[下载 v1.0.0 .zip](...)<!-- DOWNLOAD:gpt-image-2:end -->
+鏈接：[README](...) · [SKILL.md](...) · <!-- DOWNLOAD:gpt-image-2:start -->[下載 v1.0.0 .zip](...)<!-- DOWNLOAD:gpt-image-2:end -->
 ```
 
 [`scripts/release/update-readme.mjs`](./scripts/release/update-readme.mjs)
-会根据每个 Skill 当前 `manifest.json#version` 重写 `:start` / `:end` 之间的内容。
-幂等的，跑两次没差异。运行时机：
+會根據每個 Skill 當前 `manifest.json#version` 重寫 `:start` / `:end` 之間的內容。
+冪等的，跑兩次沒差異。運行時機：
 
 - 本地：`npm run readme:sync`
-- CI：`npm run readme:check`（PR 守门）
-- 自动：发版工作流在每次 tag 发布后自动跑
+- CI：`npm run readme:check`（PR 守門）
+- 自動：發版工作流在每次 tag 發布後自動跑
 
-为啥不用一个永远指向 latest 的稳定 URL？因为 GitHub 的
-`releases/latest/download/<asset>` 跟踪的是**整个仓库**的最新 release，对多
-Skill 的 monorepo 不适用——比如 `gpt-image-2` 刚发了 v2，但 `kb-retriever`
-的"latest"也会变成那个 release。Marker 让每个 Skill 永远指向它**自己**的最近
-不可变产物。
+爲啥不用一個永遠指向 latest 的穩定 URL？因爲 GitHub 的
+`releases/latest/download/<asset>` 跟蹤的是**整個倉庫**的最新 release，對多
+Skill 的 monorepo 不適用——比如 `gpt-image-2` 剛發了 v2，但 `kb-retriever`
+的"latest"也會變成那個 release。Marker 讓每個 Skill 永遠指向它**自己**的最近
+不可變產物。
 
 ---
 
-## 手动发版（fallback）
+## 手動發版（fallback）
 
-不想用 helper（或者要 debug 它）的话，手动等价做法：
+不想用 helper（或者要 debug 它）的話，手動等價做法：
 
 ```bash
-# 1. 改 skills/<name>/manifest.json 里的 version
-# 2. 同步 README 下载链接
+# 1. 改 skills/<name>/manifest.json 裏的 version
+# 2. 同步 README 下載鏈接
 npm run readme:sync
 
 # 3. commit + tag + push（一定要原子！）
@@ -333,51 +333,51 @@ git tag <name>-v<X.Y.Z>
 git push origin main <name>-v<X.Y.Z>
 ```
 
-`release-skill` 工作流会校验 tag 与 `manifest.json#version` 一致，不一致就拒
-绝发布——所以打错 tag 只会 fail CI，不会发出错版本。
+`release-skill` 工作流會校驗 tag 與 `manifest.json#version` 一致，不一致就拒
+絕發布——所以打錯 tag 只會 fail CI，不會發出錯版本。
 
-撤回一个 release：
+撤回一個 release：
 
 ```bash
-# 删本地 + 远程 tag
+# 刪本地 + 遠程 tag
 git tag -d <name>-v<X.Y.Z>
 git push origin :refs/tags/<name>-v<X.Y.Z>
 
-# 删 GitHub Release
+# 刪 GitHub Release
 gh release delete <name>-v<X.Y.Z> --yes
 ```
 
-> 强烈建议**bump 版本号重发**（发个 `<X.Y.(Z+1)>`）而不是覆盖原来的 release——
-> 不可变才是钉版本 `.zip` URL 的核心价值。
+> 強烈建議**bump 版本號重發**（發個 `<X.Y.(Z+1)>`）而不是覆蓋原來的 release——
+> 不可變才是釘版本 `.zip` URL 的核心價值。
 
 ---
 
-## 常见问题
+## 常見問題
 
-| 现象 | 原因 | 解决 |
+| 現象 | 原因 | 解決 |
 |---|---|---|
-| `release-skill` 失败：`Version drift: tag asks for 1.1.0 but manifest is 1.0.0` | tag 推了但 `manifest.json#version` 没 bump | bump manifest 后 commit + 重 tag |
-| `validate-skills` 失败：`README out of date` | 有人手改了 README 的 Download 链接，或者改了 manifest 但忘了 `npm run readme:sync` | 跑 `npm run readme:sync` 然后 commit |
-| `validate-skills` 失败：missing `manifest.json` | 新加 skill 文件夹但没补 manifest | 在 `skills/<name>/manifest.json` 至少补上 `name` / `version` / `description` / `category` / `compat` |
-| `cut-release.mjs` exit `Tag 'foo' does not match <skill>-v<semver>` | tag 名字格式不对 | tag 必须严格是 `<lower-kebab-skill-name>-v<X.Y.Z>` |
-| `cut-release.mjs` 提示 "Local main is N commit(s) behind origin/main" | bot 在你上次 pull 后又 push 了 README sync | `git pull origin main` 后重跑 |
-| `npm run release` 在 dirty tree 报错 | 有未 commit 的改动 | 先 commit / stash，或者用 `npm run release:dry` 只预览 |
+| `release-skill` 失敗：`Version drift: tag asks for 1.1.0 but manifest is 1.0.0` | tag 推了但 `manifest.json#version` 沒 bump | bump manifest 後 commit + 重 tag |
+| `validate-skills` 失敗：`README out of date` | 有人手改了 README 的 Download 鏈接，或者改了 manifest 但忘了 `npm run readme:sync` | 跑 `npm run readme:sync` 然後 commit |
+| `validate-skills` 失敗：missing `manifest.json` | 新加 skill 文件夾但沒補 manifest | 在 `skills/<name>/manifest.json` 至少補上 `name` / `version` / `description` / `category` / `compat` |
+| `cut-release.mjs` exit `Tag 'foo' does not match <skill>-v<semver>` | tag 名字格式不對 | tag 必須嚴格是 `<lower-kebab-skill-name>-v<X.Y.Z>` |
+| `cut-release.mjs` 提示 "Local main is N commit(s) behind origin/main" | bot 在你上次 pull 後又 push 了 README sync | `git pull origin main` 後重跑 |
+| `npm run release` 在 dirty tree 報錯 | 有未 commit 的改動 | 先 commit / stash，或者用 `npm run release:dry` 只預覽 |
 
 ---
 
-## 设计取舍
+## 設計取捨
 
-- **为什么用单独的 `manifest.json` 而不是塞进 `SKILL.md` frontmatter？**
-  我们想让 manifest 是机器可读的 JSON，不依赖 YAML 解析器；同时让 `version`
-  / `compat` 这些跟 Agent 契约（`SKILL.md`）解耦。
-- **为什么 per-skill SemVer 而不是仓库统一版本？**
-  每个 Skill 的迭代节奏差异很大，绑定就会让下游钉版本变得困难。
-- **为什么不做 rolling-latest tag？**
-  GitHub 已经有 `releases/latest/download/<asset>`，加上 README 自动重写机
-  制，没必要再维护第三种 URL。
-- **为什么不发 npm 包？**
-  社区维护的 [`npx skills`](https://www.npmjs.com/package/skills) CLI 已经
-  能识别本仓库的布局（子路径、tag URL、Agent 自动检测）。再做一个私有 CLI
-  只会割裂生态。
-- **为什么零 npm 依赖？**
-  CI 不用 install 步骤，没有供应链攻击面，任何 Node 20+ 环境都能直接跑。
+- **爲什麼用單獨的 `manifest.json` 而不是塞進 `SKILL.md` frontmatter？**
+  我們想讓 manifest 是機器可讀的 JSON，不依賴 YAML 解析器；同時讓 `version`
+  / `compat` 這些跟 Agent 契約（`SKILL.md`）解耦。
+- **爲什麼 per-skill SemVer 而不是倉庫統一版本？**
+  每個 Skill 的迭代節奏差異很大，綁定就會讓下遊釘版本變得困難。
+- **爲什麼不做 rolling-latest tag？**
+  GitHub 已經有 `releases/latest/download/<asset>`，加上 README 自動重寫機
+  制，沒必要再維護第三種 URL。
+- **爲什麼不發 npm 包？**
+  社區維護的 [`npx skills`](https://www.npmjs.com/package/skills) CLI 已經
+  能識別本倉庫的布局（子路徑、tag URL、Agent 自動檢測）。再做一個私有 CLI
+  只會割裂生態。
+- **爲什麼零 npm 依賴？**
+  CI 不用 install 步驟，沒有供應鏈攻擊面，任何 Node 20+ 環境都能直接跑。

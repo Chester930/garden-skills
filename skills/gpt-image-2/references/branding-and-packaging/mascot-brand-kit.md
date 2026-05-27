@@ -1,160 +1,160 @@
-# 吉祥物品牌套装模板
+# 吉祥物品牌套裝模板
 
-本文件用于"以吉祥物为核心的多面板品牌识别 / 周边视觉文档"：
+本文件用於"以吉祥物爲核心的多面板品牌識別 / 周邊視覺文檔"：
 
-- 吉祥物多角度 + 表情 + 应用场景
-- 吉祥物周边商品 catalog
-- 品牌 IP 完整介绍页
-- 卡通人设品牌识别文档
+- 吉祥物多角度 + 表情 + 應用場景
+- 吉祥物周邊商品 catalog
+- 品牌 IP 完整介紹頁
+- 卡通人設品牌識別文檔
 
-特征：
+特徵：
 
-- 一张大图，多区块
-- 主区：吉祥物三视图 + 主形象
-- 次区：表情 + 配色 + 周边
-- 风格强调"亲切 + 可爱 + 一致"
+- 一張大圖，多區塊
+- 主區：吉祥物三視圖 + 主形象
+- 次區：表情 + 配色 + 周邊
+- 風格強調"親切 + 可愛 + 一致"
 - 通常含 IP 名 + 性格描述
 
-## 适用范围
+## 適用範圍
 
-- 吉祥物品牌识别套装
-- IP 周边商品 catalog
-- 卡通人设介绍页
-- 营销活动 IP 包
+- 吉祥物品牌識別套裝
+- IP 周邊商品 catalog
+- 卡通人設介紹頁
+- 營銷活動 IP 包
 
-## 何时使用
+## 何時使用
 
-- 用户提到"吉祥物 / mascot / IP 形象 / 卡通代言"
-- 用户希望出"完整 IP 套装"而不是单图
+- 用戶提到"吉祥物 / mascot / IP 形象 / 卡通代言"
+- 用戶希望出"完整 IP 套裝"而不是單圖
 
 不要使用：
 
-- 单个角色设定稿（用 `portraits-and-characters/character-sheet.md`）
-- 通用品牌识别（用 `brand-identity-board.md`）
-- 单个动漫 KV（用 `storyboards-and-sequences/anime-key-visual.md`）
+- 單個角色設定稿（用 `portraits-and-characters/character-sheet.md`）
+- 通用品牌識別（用 `brand-identity-board.md`）
+- 單個動漫 KV（用 `storyboards-and-sequences/anime-key-visual.md`）
 
-## 缺失信息优先提问顺序
+## 缺失信息優先提問順序
 
 1. 品牌 / IP 名 + 一句性格描述
-2. 吉祥物主形态（动物 / 人 / 拟物 / 食物）
-3. 配色 1-2 个
-4. 是否需要表情包 / 周边 / 服装
-5. 渲染风格（2D 卡通 / 3D Q 萌 / Pixar 写实卡通）
+2. 吉祥物主形態（動物 / 人 / 擬物 / 食物）
+3. 配色 1-2 個
+4. 是否需要表情包 / 周邊 / 服裝
+5. 渲染風格（2D 卡通 / 3D Q 萌 / Pixar 寫實卡通）
 6. 比例
 
-## 主模板：吉祥物品牌识别套装
+## 主模板：吉祥物品牌識別套裝
 
 📖 描述
 
-整体一张大图，分主形象区 + 三视图区 + 表情区 + 应用区。
+整體一張大圖，分主形象區 + 三視圖區 + 表情區 + 應用區。
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "吉祥物品牌识别套装",
-  "goal": "生成一张可作为吉祥物 brand kit / 周边介绍页的多面板视觉文档",
+  "type": "吉祥物品牌識別套裝",
+  "goal": "生成一張可作爲吉祥物 brand kit / 周邊介紹頁的多面板視覺文檔",
   "ip": {
     "name": "{argument name=\"ip name\" default=\"AURORA 小光\"}",
-    "tagline": "{argument name=\"tagline\" default=\"陪你度过每个夜晚\"}",
-    "personality": "{argument name=\"personality\" default=\"温柔、好奇、爱发光\"}",
-    "brand_owner": "{argument name=\"brand owner\" default=\"AURORA 家居灯光\"}"
+    "tagline": "{argument name=\"tagline\" default=\"陪你度過每個夜晚\"}",
+    "personality": "{argument name=\"personality\" default=\"溫柔、好奇、愛發光\"}",
+    "brand_owner": "{argument name=\"brand owner\" default=\"AURORA 家居燈光\"}"
   },
   "mascot": {
-    "form": "{argument name=\"mascot form\" default=\"小型半透明灯泡精灵，圆乎乎，有发光的尾巴\"}",
-    "color_palette": "{argument name=\"color palette\" default=\"暖金 + 米白 + 浅蓝\"}",
-    "rendering": "{argument name=\"rendering\" default=\"3D Pixar 风 + Q 萌\"}"
+    "form": "{argument name=\"mascot form\" default=\"小型半透明燈泡精靈，圓乎乎，有發光的尾巴\"}",
+    "color_palette": "{argument name=\"color palette\" default=\"暖金 + 米白 + 淺藍\"}",
+    "rendering": "{argument name=\"rendering\" default=\"3D Pixar 風 + Q 萌\"}"
   },
   "regions": {
     "hero": {
-      "position": "{argument name=\"hero position\" default=\"左上大区\"}",
+      "position": "{argument name=\"hero position\" default=\"左上大區\"}",
       "content": "吉祥物主形象 + 名字 + 一句性格描述",
-      "background": "纯色 + 微光晕"
+      "background": "純色 + 微光暈"
     },
     "three_view": {
       "position": "{argument name=\"three view position\" default=\"右上\"}",
-      "content": "正面 / 侧面 / 背面三视图",
+      "content": "正面 / 側面 / 背面三視圖",
       "label": "FRONT / SIDE / BACK"
     },
     "expressions": {
       "position": "{argument name=\"expression position\" default=\"左下\"}",
       "count": "{argument name=\"expression count\" default=\"6\"}",
-      "items": ["开心", "好奇", "困了", "惊讶", "害羞", "小生气"]
+      "items": ["開心", "好奇", "困了", "驚訝", "害羞", "小生氣"]
     },
     "applications": {
       "position": "{argument name=\"app position\" default=\"右下\"}",
       "items": [
-        "{argument name=\"app 1\" default=\"产品包装盒角落\"}",
-        "{argument name=\"app 2\" default=\"app 启动页\"}",
-        "{argument name=\"app 3\" default=\"周边贴纸\"}",
-        "{argument name=\"app 4\" default=\"短视频片头吉祥物动画静帧\"}"
+        "{argument name=\"app 1\" default=\"產品包裝盒角落\"}",
+        "{argument name=\"app 2\" default=\"app 啓動頁\"}",
+        "{argument name=\"app 3\" default=\"周邊貼紙\"}",
+        "{argument name=\"app 4\" default=\"短視頻片頭吉祥物動畫靜幀\"}"
       ]
     }
   },
   "style": {
-    "background": "{argument name=\"background\" default=\"米色纸纹 + 细灰辅助线\"}",
-    "typography": "圆润 sans + 一行手写体强调"
+    "background": "{argument name=\"background\" default=\"米色紙紋 + 細灰輔助線\"}",
+    "typography": "圓潤 sans + 一行手寫體強調"
   },
   "aspect_ratio": "{argument name=\"aspect ratio\" default=\"3:4\"}",
   "constraints": {
     "must_keep": [
-      "吉祥物在所有区块外观一致",
-      "三视图比例严格统一",
-      "表情清晰可识别",
-      "应用场景符合品牌"
+      "吉祥物在所有區塊外觀一致",
+      "三視圖比例嚴格統一",
+      "表情清晰可識別",
+      "應用場景符合品牌"
     ],
     "avoid": [
-      "吉祥物在不同区块画风漂移",
-      "表情夸张到失真",
-      "配色出现强烈对比破坏 IP 调性",
-      "应用 mockup 风格冲突"
+      "吉祥物在不同區塊畫風漂移",
+      "表情誇張到失真",
+      "配色出現強烈對比破壞 IP 調性",
+      "應用 mockup 風格衝突"
     ]
   }
 }
 ```
 
-### 参数策略
+### 參數策略
 
-- 必问：IP 名、形态、性格、主色
-- 可默认：layout、表情、应用场景
-- 可随机：周边细节
+- 必問：IP 名、形態、性格、主色
+- 可默認：layout、表情、應用場景
+- 可隨機：周邊細節
 
-### 自动补全策略
+### 自動補全策略
 
-- 用户给一句"我想要一个 X 行业的可爱代言"时：自动决定形态 + 性格 + 配色 + 6 表情 + 4 应用
-- 默认 3D Q 萌渲染
-- 默认 4 区块布局
+- 用戶給一句"我想要一個 X 行業的可愛代言"時：自動決定形態 + 性格 + 配色 + 6 表情 + 4 應用
+- 默認 3D Q 萌渲染
+- 默認 4 區塊布局
 
-## 变体 1：吉祥物周边 catalog（重点是商品）
+## 變體 1：吉祥物周邊 catalog（重點是商品）
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "吉祥物周边 catalog",
+  "type": "吉祥物周邊 catalog",
   "regions": {
     "hero": {"content": "吉祥物 + IP 名"},
     "three_view": null,
     "expressions": null,
     "applications": {
       "items": [
-        "T 恤", "马克杯", "手机壳", "贴纸包", "钥匙扣", "毛绒玩偶", "帆布包", "手机支架"
+        "T 恤", "馬克杯", "手機殼", "貼紙包", "鑰匙扣", "毛絨玩偶", "帆布包", "手機支架"
       ]
     }
   },
   "constraints": {
-    "must_feel": "电商商品 catalog 感"
+    "must_feel": "電商商品 catalog 感"
   }
 }
 ```
 
-## 变体 2：极简吉祥物介绍页（仅主形象 + 性格）
+## 變體 2：極簡吉祥物介紹頁（僅主形象 + 性格）
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "极简吉祥物介绍页",
+  "type": "極簡吉祥物介紹頁",
   "regions": {
     "hero": {"content": "吉祥物 + 名 + 性格"},
     "three_view": null,
@@ -162,30 +162,30 @@
     "applications": null
   },
   "constraints": {
-    "must_feel": "干净、易读"
+    "must_feel": "乾淨、易讀"
   }
 }
 ```
 
-## 变体 3：自动补全模式
+## 變體 3：自動補全模式
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "Mascot brand kit 自动补全",
+  "type": "Mascot brand kit 自動補全",
   "mode": "auto-fill",
-  "rule": "用户给品牌 + 行业 + 性格关键词，自动决定吉祥物形态 + 表情 + 应用",
+  "rule": "用戶給品牌 + 行業 + 性格關鍵詞，自動決定吉祥物形態 + 表情 + 應用",
   "constraints": {
-    "must_feel": "可发布周边 / 公关图"
+    "must_feel": "可發布周邊 / 公關圖"
   }
 }
 ```
 
-## 避免事项
+## 避免事項
 
-- 不要让吉祥物在不同区块比例不一致
-- 不要让表情夸张到看起来另一个角色
-- 不要在应用 mockup 上加太多其他设计元素
-- 不要让配色超过 4 种主色
+- 不要讓吉祥物在不同區塊比例不一致
+- 不要讓表情誇張到看起來另一個角色
+- 不要在應用 mockup 上加太多其他設計元素
+- 不要讓配色超過 4 種主色
 - 不要漏掉 IP 名 + 性格描述

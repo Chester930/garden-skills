@@ -1,68 +1,68 @@
-# 姿势 / 动作参考表 N×N 模板
+# 姿勢 / 動作參考表 N×N 模板
 
-本文件用于生成"同一个人物 / 角色，在 N×N 网格中以不同姿势 / 动作 / 战斗 / 舞蹈 pose 出现"的纯参考表 / 动作字典。
+本文件用於生成"同一個人物 / 角色，在 N×N 網格中以不同姿勢 / 動作 / 戰鬥 / 舞蹈 pose 出現"的純參考表 / 動作字典。
 
 典型用途：
 
-- 舞蹈 / hip-hop / 战斗 pose 编舞参考
-- 角色动画师 / 漫画家 pose 速查表
-- 健身 / 瑜伽 / 武术姿势字典
-- 时尚拍照 pose 灵感库
-- 游戏角色动作参考表
-- AI 视频 / 后续生成的 pose 控制参考集
+- 舞蹈 / hip-hop / 戰鬥 pose 編舞參考
+- 角色動畫師 / 漫畫家 pose 速查表
+- 健身 / 瑜伽 / 武術姿勢字典
+- 時尚拍照 pose 靈感庫
+- 遊戲角色動作參考表
+- AI 視頻 / 後續生成的 pose 控制參考集
 
-特征（与现有 portraits 模板的区别）：
+特徵（與現有 portraits 模板的區別）：
 
-| 模板 | 重点 |
+| 模板 | 重點 |
 |---|---|
-| `character-sheet.md`（已有） | 一个角色的"完整设定"（三视图 + 表情 + 服装 + 配饰）|
-| `avatars-and-profile/character-grid-portrait.md`（已有） | n×n 角色网格（多职业 / 多朝代肖像）|
-| **本模板**（新增） | **同角色 N 个不同姿势 / 动作 / 舞蹈 pose 的纯动作字典** |
+| `character-sheet.md`（已有） | 一個角色的"完整設定"（三視圖 + 表情 + 服裝 + 配飾）|
+| `avatars-and-profile/character-grid-portrait.md`（已有） | n×n 角色網格（多職業 / 多朝代肖像）|
+| **本模板**（新增） | **同角色 N 個不同姿勢 / 動作 / 舞蹈 pose 的純動作字典** |
 
-**核心区别**：本模板不变服装、不换角色、不换风格，只变姿势——每格的差异完全在 body language 上。
+**核心區別**：本模板不變服裝、不換角色、不換風格，只變姿勢——每格的差異完全在 body language 上。
 
-## 适用范围
+## 適用範圍
 
-- 4×4 / 4×5 / 5×5 姿势速查表
-- 舞蹈 / 战斗 / 健身 / 时尚 pose 字典
-- 动画师 / 漫画家 / 教练参考
-- AI pose control 数据集源图
+- 4×4 / 4×5 / 5×5 姿勢速查表
+- 舞蹈 / 戰鬥 / 健身 / 時尚 pose 字典
+- 動畫師 / 漫畫家 / 教練參考
+- AI pose control 數據集源圖
 
-## 何时使用
+## 何時使用
 
-- 用户提到"姿势参考 / pose sheet / 动作参考表 / 编舞 / 健身 / 战斗动作"
-- 想要 N 个不同姿势的同一角色
-- 用作教学 / 参考 / 后续生成的输入
+- 用戶提到"姿勢參考 / pose sheet / 動作參考表 / 編舞 / 健身 / 戰鬥動作"
+- 想要 N 個不同姿勢的同一角色
+- 用作教學 / 參考 / 後續生成的輸入
 
 不要使用：
 
-- 角色完整设定（三视图 + 表情 + 服装）→ 用 `character-sheet.md`
-- 多职业 / 多朝代肖像 → 用 `avatars-and-profile/character-grid-portrait.md`
-- 漫画分镜 / 故事 → 用 `storyboards-and-sequences/four-panel-comic.md`
-- 真实摄影分镜（带产品 / 商业广告）→ 用 `storyboards-and-sequences/product-tvc-storyboard.md`
+- 角色完整設定（三視圖 + 表情 + 服裝）→ 用 `character-sheet.md`
+- 多職業 / 多朝代肖像 → 用 `avatars-and-profile/character-grid-portrait.md`
+- 漫畫分鏡 / 故事 → 用 `storyboards-and-sequences/four-panel-comic.md`
+- 真實攝影分鏡（帶產品 / 商業廣告）→ 用 `storyboards-and-sequences/product-tvc-storyboard.md`
 
-## 缺失信息优先提问顺序
+## 缺失信息優先提問順序
 
-1. 姿势数量（默认 16，常见 9 / 12 / 16 / 20 / 25）
-2. 角色性别 + 体型 + 发型 + 服装（**必须固定，所有 panel 共用**）
-3. 渲染风格（**写实摄影 / 灰度 3D 雕塑 / 动漫线稿 / 极简扁平**）
-4. 姿势主题（**hip-hop / 战斗 / 时尚 / 瑜伽 / 健身 / 通用动作**）
-5. 是否需要每格编号 / 标注 / 方向箭头
-6. 背景（默认 seamless 白）+ 灯光（默认柔和影棚）
-7. 比例（默认 1:1 contact sheet / 16:9 横版）
+1. 姿勢數量（默認 16，常見 9 / 12 / 16 / 20 / 25）
+2. 角色性別 + 體型 + 髮型 + 服裝（**必須固定，所有 panel 共用**）
+3. 渲染風格（**寫實攝影 / 灰度 3D 雕塑 / 動漫線稿 / 極簡扁平**）
+4. 姿勢主題（**hip-hop / 戰鬥 / 時尚 / 瑜伽 / 健身 / 通用動作**）
+5. 是否需要每格編號 / 標註 / 方向箭頭
+6. 背景（默認 seamless 白）+ 燈光（默認柔和影棚）
+7. 比例（默認 1:1 contact sheet / 16:9 橫版）
 
-## 主模板：4×4 = 16 格姿势参考表（写实摄影风）
+## 主模板：4×4 = 16 格姿勢參考表（寫實攝影風）
 
 📖 描述
 
-清洁影棚 contact sheet，无背景，全身入框，每格姿势独立但角色 / 服装 / 镜头距离严格一致。
+清潔影棚 contact sheet，無背景，全身入框，每格姿勢獨立但角色 / 服裝 / 鏡頭距離嚴格一致。
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
   "type": "pose reference sheet",
-  "goal": "生成一张同一角色 N 个不同姿势的纯动作参考表，可用于编舞 / 动画 / 健身 / AI pose 控制参考",
+  "goal": "生成一張同一角色 N 個不同姿勢的純動作參考表，可用於編舞 / 動畫 / 健身 / AI pose 控制參考",
   "subject": {
     "theme": "{argument name=\"pose theme\" default=\"hip-hop dance and combat-ready movement chart\"}",
     "character": {
@@ -133,40 +133,40 @@
   "composition": "show the same person in all 16 panels with consistent outfit and scale, centered within each frame, designed like a movement library or choreography reference chart",
   "constraints": {
     "must_keep": [
-      "16 panel 中的角色完全一致（脸 / 体型 / 发型 / 服装 / 鞋）",
-      "每格全身入框，镜头距离一致",
-      "每格姿势必须可识别且差异明显",
-      "每格左上角编号 1-16 清晰",
-      "身体比例正确（无肢体扭曲）"
+      "16 panel 中的角色完全一致（臉 / 體型 / 髮型 / 服裝 / 鞋）",
+      "每格全身入框，鏡頭距離一致",
+      "每格姿勢必須可識別且差異明顯",
+      "每格左上角編號 1-16 清晰",
+      "身體比例正確（無肢體扭曲）"
     ],
     "avoid": [
-      "16 个姿势都是站立 → 必须混合 squat / lunge / floor / jump / arabesque",
-      "服装 / 配饰在不同 panel 改变",
-      "全身入框被裁掉头或脚",
-      "肢体扭曲 / 多手 / 多脚",
-      "脸部表情过度抢戏（应该看姿势而不是表情）"
+      "16 個姿勢都是站立 → 必須混合 squat / lunge / floor / jump / arabesque",
+      "服裝 / 配飾在不同 panel 改變",
+      "全身入框被裁掉頭或腳",
+      "肢體扭曲 / 多手 / 多腳",
+      "臉部表情過度搶戲（應該看姿勢而不是表情）"
     ]
   }
 }
 ```
 
-### 参数策略
+### 參數策略
 
-- **必问**：pose count、character description（性别 + 体型 + 发型 + 服装）、render style
-- **可默认**：pose 1-16 具体描述（按 theme 自动生成多样化姿势）
-- **可随机**：face treatment、shadow direction
+- **必問**：pose count、character description（性別 + 體型 + 髮型 + 服裝）、render style
+- **可默認**：pose 1-16 具體描述（按 theme 自動生成多樣化姿勢）
+- **可隨機**：face treatment、shadow direction
 
-### 自动补全策略
+### 自動補全策略
 
-- 用户只说"舞蹈 pose 16 格" → 用模板默认 16 姿势组合（已混合 squat / lunge / floor / balance / jump / backbend）
-- 用户给出 theme（hip-hop / 战斗 / 时尚） → 自动调整 pose 描述风格
-- 用户给参考人物 → 把 character 字段全部用参考图细节填充
+- 用戶只說"舞蹈 pose 16 格" → 用模板默認 16 姿勢組合（已混合 squat / lunge / floor / balance / jump / backbend）
+- 用戶給出 theme（hip-hop / 戰鬥 / 時尚） → 自動調整 pose 描述風格
+- 用戶給參考人物 → 把 character 字段全部用參考圖細節填充
 
-## 变体 1：4×4 灰度 3D 雕塑风（带方向箭头）
+## 變體 1：4×4 灰度 3D 雕塑風（帶方向箭頭）
 
-适合 Korean 舞蹈编舞 / 战斗动作教学，源自 Case 130 风格。
+適合 Korean 舞蹈編舞 / 戰鬥動作教學，源自 Case 130 風格。
 
-📝 提示词
+📝 提示詞
 
 ```text
 [STYLE]
@@ -199,58 +199,58 @@ no background scenery, no color tones, no extra characters,
 no cluttered backgrounds
 ```
 
-### 何时选这个变体
+### 何時選這個變體
 
-- 想要"教学手册感"
-- 需要明确的方向箭头
-- 灰度 3D 雕塑感（不是写实摄影）
+- 想要"教學手冊感"
+- 需要明確的方向箭頭
+- 灰度 3D 雕塑感（不是寫實攝影）
 
-## 变体 2：5×5 = 25 格大型动作字典
+## 變體 2：5×5 = 25 格大型動作字典
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
   "type": "expanded pose reference sheet 25-panel",
   "layout": { "rows": 5, "columns": 5, "count": 25 },
-  "must_keep": ["每格的细节会变小，但姿势仍可识别", "适合 contact sheet / 16:10 横屏"],
-  "use_case": "动画师 / 编舞 / pose AI 数据集"
+  "must_keep": ["每格的細節會變小，但姿勢仍可識別", "適合 contact sheet / 16:10 橫屏"],
+  "use_case": "動畫師 / 編舞 / pose AI 數據集"
 }
 ```
 
-### 何时选这个变体
+### 何時選這個變體
 
-- 需要更多 pose 样本
-- 接受单格细节降低
-- 适合作为 dataset / library
+- 需要更多 pose 樣本
+- 接受單格細節降低
+- 適合作爲 dataset / library
 
-## 变体 3：3×3 = 9 格精修 hero pose 集（每格细节更高）
+## 變體 3：3×3 = 9 格精修 hero pose 集（每格細節更高）
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
   "type": "hero pose collection 9-panel",
   "layout": { "rows": 3, "columns": 3, "count": 9 },
   "rendering_quality_per_panel": "increase detail since fewer panels",
-  "use_case": "时尚拍照 pose 灵感 / 模特参考 / 海报 hero pose 库"
+  "use_case": "時尚拍照 pose 靈感 / 模特參考 / 海報 hero pose 庫"
 }
 ```
 
-### 何时选这个变体
+### 何時選這個變體
 
-- 用作时尚 / 模特拍摄 pose 灵感
+- 用作時尚 / 模特拍攝 pose 靈感
 - 每格需要更高完成度
-- 不追求姿势数量
+- 不追求姿勢數量
 
-## 避免事项
+## 避免事項
 
-- ❌ 16 panel 中角色服装漂移 → 致命错误
-- ❌ 16 个姿势全是站立或全是 squat → 缺乏动作多样性
-- ❌ 编号丢失或乱序
-- ❌ 全身入框被裁（头 / 脚）
-- ❌ 多手 / 多脚 / 关节扭曲
-- ❌ 给写实姿势加抽象背景（应保持 seamless 纯色）
-- ❌ 脸部表情过度抢戏（应使用 blurred face / neutral 处理）
-- ❌ 把模板里默认的"hip-hop"姿势组合直接用在"瑜伽"主题（应替换 pose 1-16 描述）
-- ❌ 让模型自由生成 N 个 pose（必须显式列出每格姿势描述）
+- ❌ 16 panel 中角色服裝漂移 → 致命錯誤
+- ❌ 16 個姿勢全是站立或全是 squat → 缺乏動作多樣性
+- ❌ 編號丟失或亂序
+- ❌ 全身入框被裁（頭 / 腳）
+- ❌ 多手 / 多腳 / 關節扭曲
+- ❌ 給寫實姿勢加抽象背景（應保持 seamless 純色）
+- ❌ 臉部表情過度搶戲（應使用 blurred face / neutral 處理）
+- ❌ 把模板裏默認的"hip-hop"姿勢組合直接用在"瑜伽"主題（應替換 pose 1-16 描述）
+- ❌ 讓模型自由生成 N 個 pose（必須顯式列出每格姿勢描述）

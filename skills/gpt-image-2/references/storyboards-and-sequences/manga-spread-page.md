@@ -1,204 +1,204 @@
-# 漫画跨页 / 多分镜页模板
+# 漫畫跨頁 / 多分鏡頁模板
 
-本文件用于"一页内多个不规则分镜叙事"的漫画视觉：
+本文件用於"一頁內多個不規則分鏡敘事"的漫畫視覺：
 
-- 单页 5-7 个分镜的漫画
-- 跨页 spread（左右两页连贯）
-- 心理 / 悬疑 / 战斗 / 日常多分镜
-- 同人漫画 / 商业漫画
+- 單頁 5-7 個分鏡的漫畫
+- 跨頁 spread（左右兩頁連貫）
+- 心理 / 懸疑 / 戰鬥 / 日常多分鏡
+- 同人漫畫 / 商業漫畫
 - 故事板 storyboard
 
-特征：
+特徵：
 
-- 不规则格子
-- 大格 + 小格组合
-- 有阅读顺序（通常右上 → 左下）
-- 含对话框 + 心声 + 旁白
-- 风格更"漫画书"而不是 4 格段子
+- 不規則格子
+- 大格 + 小格組合
+- 有閱讀順序（通常右上 → 左下）
+- 含對話框 + 心聲 + 旁白
+- 風格更"漫畫書"而不是 4 格段子
 
-## 适用范围
+## 適用範圍
 
-- 单页多分镜漫画
-- 跨页 spread
-- 故事板 / 分镜稿
-- 同人 / 商业漫画
+- 單頁多分鏡漫畫
+- 跨頁 spread
+- 故事板 / 分鏡稿
+- 同人 / 商業漫畫
 
-## 何时使用
+## 何時使用
 
-- 用户提到"漫画分镜 / spread / 多格漫画 / 故事板"
-- 用户希望叙事更复杂、节奏更动感
-- 用户希望"漫画书"质感
+- 用戶提到"漫畫分鏡 / spread / 多格漫畫 / 故事板"
+- 用戶希望敘事更複雜、節奏更動感
+- 用戶希望"漫畫書"質感
 
 不要使用：
 
 - 4 格段子（用 `four-panel-comic.md`）
-- 单图 KV（用 `anime-key-visual.md`）
-- 角色设定稿（用 `portraits-and-characters/character-sheet.md`）
+- 單圖 KV（用 `anime-key-visual.md`）
+- 角色設定稿（用 `portraits-and-characters/character-sheet.md`）
 
-## 缺失信息优先提问顺序
+## 缺失信息優先提問順序
 
-1. 故事概要 / 这一页要讲什么
-2. 分镜数量（5-9 格）
+1. 故事概要 / 這一頁要講什麼
+2. 分鏡數量（5-9 格）
 3. 主角描述
-4. 风格：日漫 / 韩漫 / 美漫 / 同人
-5. 阅读方向（日式右往左 / 美式左往右）
-6. 是否含色彩或纯黑白
+4. 風格：日漫 / 韓漫 / 美漫 / 同人
+5. 閱讀方向（日式右往左 / 美式左往右）
+6. 是否含色彩或純黑白
 
-## 主模板：单页多分镜漫画
+## 主模板：單頁多分鏡漫畫
 
 📖 描述
 
-整体一页漫画，包含 5-7 个不规则分镜，按阅读顺序展开一段叙事。
+整體一頁漫畫，包含 5-7 個不規則分鏡，按閱讀順序展開一段敘事。
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "单页多分镜漫画",
-  "goal": "生成一张完整的单页漫画，含多个分镜，叙事节奏紧凑",
+  "type": "單頁多分鏡漫畫",
+  "goal": "生成一張完整的單頁漫畫，含多個分鏡，敘事節奏緊湊",
   "story": {
-    "summary": "{argument name=\"story summary\" default=\"主角接到神秘电话，决定独自前往\"}",
-    "main_character": "{argument name=\"main character\" default=\"年轻女性侦探，短发，黑色风衣\"}",
-    "supporting": "{argument name=\"supporting\" default=\"无\"}"
+    "summary": "{argument name=\"story summary\" default=\"主角接到神祕電話，決定獨自前往\"}",
+    "main_character": "{argument name=\"main character\" default=\"年輕女性偵探，短髮，黑色風衣\"}",
+    "supporting": "{argument name=\"supporting\" default=\"無\"}"
   },
   "style": {
-    "art_style": "{argument name=\"art style\" default=\"日式黑白漫画 + 网点 + 强阴影\"}",
-    "tone": "{argument name=\"tone\" default=\"悬疑 + 紧张\"}",
-    "color": "{argument name=\"color\" default=\"黑白 + 灰阶\"}"
+    "art_style": "{argument name=\"art style\" default=\"日式黑白漫畫 + 網點 + 強陰影\"}",
+    "tone": "{argument name=\"tone\" default=\"懸疑 + 緊張\"}",
+    "color": "{argument name=\"color\" default=\"黑白 + 灰階\"}"
   },
   "page_layout": {
     "panel_count": "{argument name=\"panel count\" default=\"6\"}",
-    "reading_direction": "{argument name=\"reading direction\" default=\"日式：从右到左、从上到下\"}",
+    "reading_direction": "{argument name=\"reading direction\" default=\"日式：從右到左、從上到下\"}",
     "panels": [
       {
         "id": 1,
         "size": "大格 跨上半部分",
-        "scene": "{argument name=\"panel 1\" default=\"主角侧脸特写，电话靠耳边\"}",
-        "text": "{argument name=\"text 1\" default=\"旁白：那通电话，改变了一切\"}"
+        "scene": "{argument name=\"panel 1\" default=\"主角側臉特寫，電話靠耳邊\"}",
+        "text": "{argument name=\"text 1\" default=\"旁白：那通電話，改變了一切\"}"
       },
       {
         "id": 2,
         "size": "中格 右下",
-        "scene": "{argument name=\"panel 2\" default=\"特写电话听筒里的杂音\"}",
-        "text": "{argument name=\"text 2\" default=\"对方：今晚十点，老地方\"}"
+        "scene": "{argument name=\"panel 2\" default=\"特寫電話聽筒裏的雜音\"}",
+        "text": "{argument name=\"text 2\" default=\"對方：今晚十點，老地方\"}"
       },
       {
         "id": 3,
         "size": "小格 左下",
-        "scene": "{argument name=\"panel 3\" default=\"主角眼神特写，瞳孔放大\"}",
-        "text": "{argument name=\"text 3\" default=\"心声：又是他\"}"
+        "scene": "{argument name=\"panel 3\" default=\"主角眼神特寫，瞳孔放大\"}",
+        "text": "{argument name=\"text 3\" default=\"心聲：又是他\"}"
       },
       {
         "id": 4,
         "size": "中格 右",
-        "scene": "{argument name=\"panel 4\" default=\"主角穿上风衣的动作分镜\"}",
+        "scene": "{argument name=\"panel 4\" default=\"主角穿上風衣的動作分鏡\"}",
         "text": ""
       },
       {
         "id": 5,
         "size": "中格 中",
-        "scene": "{argument name=\"panel 5\" default=\"主角推开门，雨夜街道\"}",
+        "scene": "{argument name=\"panel 5\" default=\"主角推開門，雨夜街道\"}",
         "text": ""
       },
       {
         "id": 6,
         "size": "大格 跨下半部分",
-        "scene": "{argument name=\"panel 6\" default=\"主角背影远去，路灯昏黄\"}",
-        "text": "{argument name=\"text 6\" default=\"旁白：这是赴约，还是赴死\"}"
+        "scene": "{argument name=\"panel 6\" default=\"主角背影遠去，路燈昏黃\"}",
+        "text": "{argument name=\"text 6\" default=\"旁白：這是赴約，還是赴死\"}"
       }
     ]
   },
   "dialogue_design": {
-    "balloon_style": "白底 + 黑描边 + 尖角指向",
-    "narration_box": "矩形 + 灰底 + 黑边",
-    "thought_balloon": "云形 + 虚线尾巴",
-    "font_style": "无衬线漫画体"
+    "balloon_style": "白底 + 黑描邊 + 尖角指向",
+    "narration_box": "矩形 + 灰底 + 黑邊",
+    "thought_balloon": "雲形 + 虛線尾巴",
+    "font_style": "無襯線漫畫體"
   },
   "aspect_ratio": "{argument name=\"aspect ratio\" default=\"3:4\"}",
   "constraints": {
     "must_keep": [
-      "分镜大小有节奏（大 + 小 + 大）",
-      "阅读顺序清晰",
+      "分鏡大小有節奏（大 + 小 + 大）",
+      "閱讀順序清晰",
       "主角在多格中保持一致",
-      "对话框不挡关键人物动作"
+      "對話框不擋關鍵人物動作"
     ],
     "avoid": [
-      "分镜全部一样大（节奏单调）",
-      "阅读顺序混乱",
+      "分鏡全部一樣大（節奏單調）",
+      "閱讀順序混亂",
       "主角形象漂移",
-      "色调突变（黑白页里突然有彩色）"
+      "色調突變（黑白頁裏突然有彩色）"
     ]
   }
 }
 ```
 
-### 参数策略
+### 參數策略
 
-- 必问：故事概要、分镜数、主角
-- 可默认：风格、阅读方向、对话框样式
-- 可随机：背景细节
+- 必問：故事概要、分鏡數、主角
+- 可默認：風格、閱讀方向、對話框樣式
+- 可隨機：背景細節
 
-### 自动补全策略
+### 自動補全策略
 
-- 用户只给故事时：自动决定 5-7 格分镜节奏
-- 默认日式黑白漫画 + 网点
-- 默认日式阅读方向
+- 用戶只給故事時：自動決定 5-7 格分鏡節奏
+- 默認日式黑白漫畫 + 網點
+- 默認日式閱讀方向
 
-## 变体 1：跨页 spread（左右两页）
+## 變體 1：跨頁 spread（左右兩頁）
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "跨页 spread 漫画",
+  "type": "跨頁 spread 漫畫",
   "page_layout": {
-    "panel_count": "8-12（左右两页加起来）",
-    "format": "横向 spread，画面分左右两页"
+    "panel_count": "8-12（左右兩頁加起來）",
+    "format": "橫向 spread，畫面分左右兩頁"
   },
   "aspect_ratio": "16:11",
   "constraints": {
-    "must_feel": "左右两页连贯，中央 gutter 不要切到关键元素"
+    "must_feel": "左右兩頁連貫，中央 gutter 不要切到關鍵元素"
   }
 }
 ```
 
-## 变体 2：彩色商业漫画页
+## 變體 2：彩色商業漫畫頁
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "彩色商业漫画页",
+  "type": "彩色商業漫畫頁",
   "style": {
-    "color": "全彩 + 平涂 + 数字漫画质感",
-    "art_style": "美漫 / 韩漫 风"
+    "color": "全彩 + 平塗 + 數字漫畫質感",
+    "art_style": "美漫 / 韓漫 風"
   },
   "constraints": {
-    "must_feel": "可作为商业漫画连载页"
+    "must_feel": "可作爲商業漫畫連載頁"
   }
 }
 ```
 
-## 变度 3：自动补全模式
+## 變度 3：自動補全模式
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "漫画跨页自动补全",
+  "type": "漫畫跨頁自動補全",
   "mode": "auto-fill",
-  "rule": "用户给一段故事，自动切分镜、排版、对话",
+  "rule": "用戶給一段故事，自動切分鏡、排版、對話",
   "constraints": {
-    "must_feel": "出版社编辑可直接放入排版"
+    "must_feel": "出版社編輯可直接放入排版"
   }
 }
 ```
 
-## 避免事项
+## 避免事項
 
-- 不要让分镜全部等大
-- 不要让阅读顺序难以辨认
-- 不要让对话框挡脸 / 挡动作
-- 不要在黑白漫画页里突然出现强彩色
-- 不要让主角形象在不同格里像不同人
-- 跨页时不要让关键元素正好在中央装订线
+- 不要讓分鏡全部等大
+- 不要讓閱讀順序難以辨認
+- 不要讓對話框擋臉 / 擋動作
+- 不要在黑白漫畫頁裏突然出現強彩色
+- 不要讓主角形象在不同格裏像不同人
+- 跨頁時不要讓關鍵元素正好在中央裝訂線

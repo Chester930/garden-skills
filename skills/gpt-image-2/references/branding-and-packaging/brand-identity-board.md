@@ -1,142 +1,142 @@
-# 品牌识别系统板模板
+# 品牌識別系統板模板
 
-本文件用于"一张图展示品牌完整识别系统"的视觉：
+本文件用於"一張圖展示品牌完整識別系統"的視覺：
 
-- 品牌 logo + 字体 + 配色 + 应用场景
-- VI 摘要单页
+- 品牌 logo + 字體 + 配色 + 應用場景
+- VI 摘要單頁
 - 品牌提案 board
 - 品牌指南 cover
-- 设计师 case study 单页
+- 設計師 case study 單頁
 
-特征：
+特徵：
 
-- 一张大图分多区块
-- logo 应用 + 配色板 + 字体规范 + 实物 mockup
-- 强调"系统感 + 专业感"
-- 通常带 grid + label
-- 偏冷静、不过度装饰
+- 一張大圖分多區塊
+- logo 應用 + 配色板 + 字體規範 + 實物 mockup
+- 強調"系統感 + 專業感"
+- 通常帶 grid + label
+- 偏冷靜、不過度裝飾
 
-## 适用范围
+## 適用範圍
 
-- 品牌识别系统板（VI summary）
+- 品牌識別系統板（VI summary）
 - 品牌提案 board
-- 设计师作品集 single page
+- 設計師作品集 single page
 
-## 何时使用
+## 何時使用
 
-- 用户提到"VI / 品牌识别 / 品牌系统 / brand board / brand guideline cover"
-- 用户希望一张图展示品牌全套
+- 用戶提到"VI / 品牌識別 / 品牌系統 / brand board / brand guideline cover"
+- 用戶希望一張圖展示品牌全套
 
 不要使用：
 
-- 吉祥物品牌套装（用 `mascot-brand-kit.md`）
-- 单个海报（用 `poster-and-campaigns/brand-poster.md`）
-- 包装 mockup 单图（用 `cosmetic-packaging.md`）
+- 吉祥物品牌套裝（用 `mascot-brand-kit.md`）
+- 單個海報（用 `poster-and-campaigns/brand-poster.md`）
+- 包裝 mockup 單圖（用 `cosmetic-packaging.md`）
 
-## 缺失信息优先提问顺序
+## 缺失信息優先提問順序
 
 1. 品牌名 + 一句定位
-2. 行业 / 受众
-3. logo 主形态（文字 / 图形 / 组合）
-4. 主色 1-2 个
-5. 字体偏好（衬线 / 无衬线 / 手写）
-6. 是否需要包装 / 名片 / 海报 mockup
+2. 行業 / 受衆
+3. logo 主形態（文字 / 圖形 / 組合）
+4. 主色 1-2 個
+5. 字體偏好（襯線 / 無襯線 / 手寫）
+6. 是否需要包裝 / 名片 / 海報 mockup
 
-## 主模板：品牌识别系统板
+## 主模板：品牌識別系統板
 
 📖 描述
 
-整体一张大图，分 logo 区 + 配色区 + 字体区 + 应用 mockup 区。
+整體一張大圖，分 logo 區 + 配色區 + 字體區 + 應用 mockup 區。
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "品牌识别系统板",
-  "goal": "生成一张可作为 VI summary / brand board 的品牌识别系统单页",
+  "type": "品牌識別系統板",
+  "goal": "生成一張可作爲 VI summary / brand board 的品牌識別系統單頁",
   "brand": {
     "name": "{argument name=\"brand name\" default=\"AURORA\"}",
-    "tagline": "{argument name=\"tagline\" default=\"光，让生活柔软\"}",
-    "industry": "{argument name=\"industry\" default=\"家居灯光\"}",
-    "personality": "{argument name=\"personality\" default=\"温柔、现代、克制\"}"
+    "tagline": "{argument name=\"tagline\" default=\"光，讓生活柔軟\"}",
+    "industry": "{argument name=\"industry\" default=\"家居燈光\"}",
+    "personality": "{argument name=\"personality\" default=\"溫柔、現代、克制\"}"
   },
   "regions": {
     "logo": {
-      "position": "{argument name=\"logo position\" default=\"左上大区\"}",
-      "primary_logo": "{argument name=\"primary logo\" default=\"AURORA 字标 + 圆形光晕图形\"}",
-      "secondary_logos": ["黑白单色版", "图形版（无文字）", "竖排版"],
-      "background_test": "深底 / 浅底各展示一次"
+      "position": "{argument name=\"logo position\" default=\"左上大區\"}",
+      "primary_logo": "{argument name=\"primary logo\" default=\"AURORA 字標 + 圓形光暈圖形\"}",
+      "secondary_logos": ["黑白單色版", "圖形版（無文字）", "豎排版"],
+      "background_test": "深底 / 淺底各展示一次"
     },
     "color_palette": {
       "position": "{argument name=\"color position\" default=\"右上\"}",
       "primary": [
-        "{argument name=\"primary color 1\" default=\"#0F4C81 海军蓝\"}",
+        "{argument name=\"primary color 1\" default=\"#0F4C81 海軍藍\"}",
         "{argument name=\"primary color 2\" default=\"#FFD166 暖金\"}"
       ],
       "secondary": [
         "{argument name=\"secondary color 1\" default=\"#F4F1EA 米白\"}",
         "{argument name=\"secondary color 2\" default=\"#222 深灰\"}"
       ],
-      "swatch_design": "色块 + HEX + 中文名"
+      "swatch_design": "色塊 + HEX + 中文名"
     },
     "typography": {
       "position": "{argument name=\"type position\" default=\"左下\"}",
-      "headline_font": "{argument name=\"headline font\" default=\"现代 serif（如 Playfair Display）\"}",
-      "body_font": "{argument name=\"body font\" default=\"中文圆体 + 英文 sans\"}",
+      "headline_font": "{argument name=\"headline font\" default=\"現代 serif（如 Playfair Display）\"}",
+      "body_font": "{argument name=\"body font\" default=\"中文圓體 + 英文 sans\"}",
       "demo_block": "Aa Bb Cc 1234 + 一句中文 + 一句英文"
     },
     "applications": {
       "position": "{argument name=\"app position\" default=\"右下\"}",
       "mockups": [
         "{argument name=\"mockup 1\" default=\"名片正反面\"}",
-        "{argument name=\"mockup 2\" default=\"产品包装盒\"}",
-        "{argument name=\"mockup 3\" default=\"app icon + 闪屏\"}"
+        "{argument name=\"mockup 2\" default=\"產品包裝盒\"}",
+        "{argument name=\"mockup 3\" default=\"app icon + 閃屏\"}"
       ]
     }
   },
   "style": {
-    "art_style": "{argument name=\"art style\" default=\"现代极简 brand board，米色背景 + 微纸纹\"}",
-    "grid": "细灰色辅助线"
+    "art_style": "{argument name=\"art style\" default=\"現代極簡 brand board，米色背景 + 微紙紋\"}",
+    "grid": "細灰色輔助線"
   },
   "aspect_ratio": "{argument name=\"aspect ratio\" default=\"3:4\"}",
   "constraints": {
     "must_keep": [
-      "4 个区块边界清晰",
-      "logo 区始终居首位",
-      "配色板 ≤ 6 色 + HEX 可读",
-      "应用 mockup 风格统一"
+      "4 個區塊邊界清晰",
+      "logo 區始終居首位",
+      "配色板 ≤ 6 色 + HEX 可讀",
+      "應用 mockup 風格統一"
     ],
     "avoid": [
-      "塞太多元素导致每区无呼吸感",
-      "字体超过 2 种家族",
-      "颜色超过 6 种",
-      "缺少 HEX 编号"
+      "塞太多元素導致每區無呼吸感",
+      "字體超過 2 種家族",
+      "顏色超過 6 種",
+      "缺少 HEX 編號"
     ]
   }
 }
 ```
 
-### 参数策略
+### 參數策略
 
-- 必问：品牌名、行业、主色、定位
-- 可默认：layout、字体推荐、应用 mockup
-- 可随机：mockup 实物细节
+- 必問：品牌名、行業、主色、定位
+- 可默認：layout、字體推薦、應用 mockup
+- 可隨機：mockup 實物細節
 
-### 自动补全策略
+### 自動補全策略
 
-- 用户给品牌名 + 行业 + 一种性格关键词时：自动展开 logo + 配色 + 字体 + 3 个 mockup
-- 默认"现代极简"风
-- 默认竖版 3:4
+- 用戶給品牌名 + 行業 + 一種性格關鍵詞時：自動展開 logo + 配色 + 字體 + 3 個 mockup
+- 默認"現代極簡"風
+- 默認豎版 3:4
 
-## 变体 1：极致极简 brand board（仅 logo + 颜色）
+## 變體 1：極致極簡 brand board（僅 logo + 顏色）
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "极简 brand board",
+  "type": "極簡 brand board",
   "regions": {
-    "logo": {"primary_logo": "字标 + 极简图形", "background_test": "白底 + 纯黑底"},
+    "logo": {"primary_logo": "字標 + 極簡圖形", "background_test": "白底 + 純黑底"},
     "color_palette": {"primary": ["#000", "#FFF", "#FFD166"]},
     "typography": {"demo_block": "Aa Bb"},
     "applications": null
@@ -147,9 +147,9 @@
 }
 ```
 
-## 变体 2：高密度 brand board（含语气、icon 系统）
+## 變體 2：高密度 brand board（含語氣、icon 系統）
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
@@ -158,11 +158,11 @@
     "logo": {"primary_logo": "..."},
     "color_palette": {"primary": ["..."], "secondary": ["..."]},
     "typography": {"demo_block": "..."},
-    "applications": {"mockups": ["名片", "包装", "海报", "app icon", "网站 hero"]}
+    "applications": {"mockups": ["名片", "包裝", "海報", "app icon", "網站 hero"]}
   },
   "extras": {
-    "icon_system": "12 个统一风格图标网格",
-    "tone_of_voice": "3 句品牌语气示例"
+    "icon_system": "12 個統一風格圖標網格",
+    "tone_of_voice": "3 句品牌語氣示例"
   },
   "constraints": {
     "must_feel": "完整可印刷 brand book cover"
@@ -170,26 +170,26 @@
 }
 ```
 
-## 变体 3：自动补全模式
+## 變體 3：自動補全模式
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "Brand board 自动补全",
+  "type": "Brand board 自動補全",
   "mode": "auto-fill",
-  "rule": "用户给品牌名 + 行业 + 一句性格描述，自动决定 logo / 配色 / 字体 / 应用 mockup",
+  "rule": "用戶給品牌名 + 行業 + 一句性格描述，自動決定 logo / 配色 / 字體 / 應用 mockup",
   "constraints": {
-    "must_feel": "可作为客户提案首页"
+    "must_feel": "可作爲客戶提案首頁"
   }
 }
 ```
 
-## 避免事项
+## 避免事項
 
-- 不要让 logo 区被压缩到不显眼
-- 不要让配色 > 6 种
-- 不要让字体 > 2 个家族
-- 不要让 mockup 过于花哨破坏专业感
-- 不要漏掉 HEX 标注
-- 不要让背景出现强烈纹理
+- 不要讓 logo 區被壓縮到不顯眼
+- 不要讓配色 > 6 種
+- 不要讓字體 > 2 個家族
+- 不要讓 mockup 過於花哨破壞專業感
+- 不要漏掉 HEX 標註
+- 不要讓背景出現強烈紋理

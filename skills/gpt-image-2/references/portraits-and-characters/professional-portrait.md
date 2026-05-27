@@ -1,177 +1,177 @@
-# 职业肖像模板
+# 職業肖像模板
 
-本文件用于生成“职业级 / 商务级 / LinkedIn 级” 肖像视觉：
+本文件用於生成「職業級 / 商務級 / LinkedIn 級」 肖像視覺：
 
-- 职业头像
-- LinkedIn 主图
-- 公司官网团队页
-- 媒体专访配图
-- 个人品牌主图
+- 職業頭像
+- LinkedIn 主圖
+- 公司官網團隊頁
+- 媒體專訪配圖
+- 個人品牌主圖
 
-特征：
+特徵：
 
-- 干净背景
-- 专业灯光
+- 乾淨背景
+- 專業燈光
 - 自然表情
-- 强调可信感
-- 高级感来自“克制”而非“华丽”
+- 強調可信感
+- 高級感來自「克制」而非「華麗」
 
-## 适用范围
+## 適用範圍
 
-- 商务头像
-- 公司官网团队照
-- LinkedIn / 公开演讲使用照
-- 媒体专访配图
+- 商務頭像
+- 公司官網團隊照
+- LinkedIn / 公開演講使用照
+- 媒體專訪配圖
 
-## 何时使用
+## 何時使用
 
-- 用户提到“职业头像 / LinkedIn / 商务照 / 公司官网照”
-- 用户希望视觉看起来可信、专业、克制
+- 用戶提到「職業頭像 / LinkedIn / 商務照 / 公司官網照」
+- 用戶希望視覺看起來可信、專業、克制
 
 不要使用：
 
-- 创始人媒体大片（用 `founder-portrait.md`）
-- 虚拟主播 / VTuber（用 `virtual-host.md`）
-- 角色三视图（用 `character-sheet.md`）
+- 創始人媒體大片（用 `founder-portrait.md`）
+- 虛擬主播 / VTuber（用 `virtual-host.md`）
+- 角色三視圖（用 `character-sheet.md`）
 
-## 缺失信息优先提问顺序
+## 缺失信息優先提問順序
 
-1. 性别 / 年龄段 / 种族
-2. 行业 / 职业（影响穿着与背景）
-3. 风格：经典商务 / 现代休闲 / 创意行业
-4. 构图：胸像 / 半身
-5. 背景：纯色 / 办公环境 / 自然光
-6. 表情：微笑 / 自然 / 严谨
+1. 性別 / 年齡段 / 種族
+2. 行業 / 職業（影響穿着與背景）
+3. 風格：經典商務 / 現代休閒 / 創意行業
+4. 構圖：胸像 / 半身
+5. 背景：純色 / 辦公環境 / 自然光
+6. 表情：微笑 / 自然 / 嚴謹
 
-## 主模板：现代商务职业肖像
+## 主模板：現代商務職業肖像
 
 📖 描述
 
-整体一张职业肖像，主体为人物胸像，干净背景，自然光或柔和影棚光，自然表情，可直接用作 LinkedIn 主图。
+整體一張職業肖像，主體爲人物胸像，乾淨背景，自然光或柔和影棚光，自然表情，可直接用作 LinkedIn 主圖。
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "现代商务职业肖像",
-  "goal": "生成一张可直接作为 LinkedIn 主图 / 公司官网团队页 / 媒体专访配图的职业肖像",
+  "type": "現代商務職業肖像",
+  "goal": "生成一張可直接作爲 LinkedIn 主圖 / 公司官網團隊頁 / 媒體專訪配圖的職業肖像",
   "subject": {
-    "gender": "{argument name=\"gender\" default=\"东亚男性\"}",
-    "age_range": "{argument name=\"age range\" default=\"30-40 岁\"}",
-    "appearance": "{argument name=\"appearance\" default=\"短发干净，戴细框眼镜\"}",
-    "outfit": "{argument name=\"outfit\" default=\"深蓝色西装外套 + 浅灰色衬衫，无领带\"}"
+    "gender": "{argument name=\"gender\" default=\"東亞男性\"}",
+    "age_range": "{argument name=\"age range\" default=\"30-40 歲\"}",
+    "appearance": "{argument name=\"appearance\" default=\"短髮乾淨，戴細框眼鏡\"}",
+    "outfit": "{argument name=\"outfit\" default=\"深藍色西裝外套 + 淺灰色襯衫，無領帶\"}"
   },
   "expression": {
-    "mood": "{argument name=\"mood\" default=\"自然微笑，眼神平稳\"}",
-    "gaze": "{argument name=\"gaze\" default=\"望向镜头\"}"
+    "mood": "{argument name=\"mood\" default=\"自然微笑，眼神平穩\"}",
+    "gaze": "{argument name=\"gaze\" default=\"望向鏡頭\"}"
   },
   "composition": {
     "shot": "{argument name=\"shot\" default=\"胸像\"}",
-    "framing": "{argument name=\"framing\" default=\"人物居中略偏左，留 1/3 给背景\"}"
+    "framing": "{argument name=\"framing\" default=\"人物居中略偏左，留 1/3 給背景\"}"
   },
   "background": {
-    "type": "{argument name=\"background\" default=\"浅灰渐变 + 微微虚化办公环境\"}",
-    "depth_of_field": "{argument name=\"dof\" default=\"浅景深\"}"
+    "type": "{argument name=\"background\" default=\"淺灰漸變 + 微微虛化辦公環境\"}",
+    "depth_of_field": "{argument name=\"dof\" default=\"淺景深\"}"
   },
   "lighting": {
     "key_light": "{argument name=\"key light\" default=\"45° 柔光\"}",
-    "fill_light": "{argument name=\"fill light\" default=\"右侧弱补光\"}",
-    "rim_light": "{argument name=\"rim light\" default=\"无明显轮廓光\"}",
+    "fill_light": "{argument name=\"fill light\" default=\"右側弱補光\"}",
+    "rim_light": "{argument name=\"rim light\" default=\"無明顯輪廓光\"}",
     "color_temp": "{argument name=\"color temp\" default=\"自然偏暖\"}"
   },
   "style": {
-    "rendering": "高分辨率人像摄影 + 自然肤质",
-    "post_processing": "克制磨皮，保留毛孔与自然纹理"
+    "rendering": "高分辨率人像攝影 + 自然膚質",
+    "post_processing": "克制磨皮，保留毛孔與自然紋理"
   },
   "constraints": {
     "must_keep": [
       "人物自然不僵硬",
       "眼神聚焦",
-      "肤质真实不过度磨皮",
-      "穿着与行业匹配"
+      "膚質真實不過度磨皮",
+      "穿着與行業匹配"
     ],
     "avoid": [
-      "夸张特效灯光",
-      "滤镜假皮肤",
-      "出现品牌 logo",
-      "背景元素喧宾夺主"
+      "誇張特效燈光",
+      "濾鏡假皮膚",
+      "出現品牌 logo",
+      "背景元素喧賓奪主"
     ]
   }
 }
 ```
 
-### 参数策略
+### 參數策略
 
-- 必问：性别、年龄、行业、构图
-- 可默认：背景、灯光、后期
-- 可随机：眼镜样式、配饰
+- 必問：性別、年齡、行業、構圖
+- 可默認：背景、燈光、後期
+- 可隨機：眼鏡樣式、配飾
 
-### 自动补全策略
+### 自動補全策略
 
-- 行业自动决定穿着（金融 = 西装；科技 = 休闲衬衫；创意 = 黑 T + 外套）
-- 表情默认“自然微笑”
-- 背景默认“浅灰渐变 + 虚化环境”
+- 行業自動決定穿着（金融 = 西裝；科技 = 休閒襯衫；創意 = 黑 T + 外套）
+- 表情默認「自然微笑」
+- 背景默認「淺灰漸變 + 虛化環境」
 
-## 变体 1：户外自然光肖像
+## 變體 1：戶外自然光肖像
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "户外自然光职业肖像",
+  "type": "戶外自然光職業肖像",
   "background": {
-    "type": "{argument name=\"outdoor scene\" default=\"绿色公园虚化背景\"}"
+    "type": "{argument name=\"outdoor scene\" default=\"綠色公園虛化背景\"}"
   },
   "lighting": {
-    "key_light": "自然顺光",
-    "color_temp": "暖金时段"
+    "key_light": "自然順光",
+    "color_temp": "暖金時段"
   },
   "constraints": {
-    "must_feel": "自然、亲切、生活感"
+    "must_feel": "自然、親切、生活感"
   }
 }
 ```
 
-## 变体 2：纯色背景棚拍
+## 變體 2：純色背景棚拍
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "棚拍职业肖像",
+  "type": "棚拍職業肖像",
   "background": {
-    "type": "{argument name=\"backdrop\" default=\"中性灰背景纸\"}",
-    "depth_of_field": "无"
+    "type": "{argument name=\"backdrop\" default=\"中性灰背景紙\"}",
+    "depth_of_field": "無"
   },
   "lighting": {
     "key_light": "蝴蝶光",
-    "fill_light": "对称柔光"
+    "fill_light": "對稱柔光"
   },
   "constraints": {
-    "must_feel": "杂志大片级"
+    "must_feel": "雜誌大片級"
   }
 }
 ```
 
-## 变体 3：自动补全模式
+## 變體 3：自動補全模式
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "职业肖像自动补全模板",
+  "type": "職業肖像自動補全模板",
   "mode": "auto-fill",
-  "rule": "用户给行业 + 性别 + 年龄，自动决定穿着 / 灯光 / 背景",
+  "rule": "用戶給行業 + 性別 + 年齡，自動決定穿着 / 燈光 / 背景",
   "constraints": {
-    "must_feel": "可直接换 LinkedIn 主图"
+    "must_feel": "可直接換 LinkedIn 主圖"
   }
 }
 ```
 
-## 避免事项
+## 避免事項
 
-- 不要过度磨皮，皮肤要保留质感
-- 不要用过度饱和滤镜
-- 不要让背景出现可识别第三方 logo
-- 不要让人物穿着与行业明显不匹配
-- 不要使用夸张戏剧光（除非用户明确要求）
+- 不要過度磨皮，皮膚要保留質感
+- 不要用過度飽和濾鏡
+- 不要讓背景出現可識別第三方 logo
+- 不要讓人物穿着與行業明顯不匹配
+- 不要使用誇張戲劇光（除非用戶明確要求）

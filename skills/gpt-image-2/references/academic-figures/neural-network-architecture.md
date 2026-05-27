@@ -1,63 +1,63 @@
-# 神经网络架构图模板
+# 神經網絡架構圖模板
 
-本文件用于生成"论文中那种神经网络架构图"：
+本文件用於生成"論文中那種神經網絡架構圖"：
 
-- Transformer / Encoder-Decoder 架构图
-- U-Net / FPN / 多尺度网络架构
-- GAN / Diffusion / VAE 架构
-- Attention 机制示意
-- 自定义模型架构图
+- Transformer / Encoder-Decoder 架構圖
+- U-Net / FPN / 多尺度網絡架構
+- GAN / Diffusion / VAE 架構
+- Attention 機制示意
+- 自定義模型架構圖
 
-特征：
+特徵：
 
-- 多个 layer 块按数据流方向排布（横向或竖向）
-- 每个 layer 块有：层名 + tensor shape 标注（H × W × C）
-- 跳连 / residual / attention 连线清晰
-- 颜色编码不同 layer 类型（Conv / Attention / FC / Norm）
-- 出版物级，白底克制
+- 多個 layer 塊按數據流方向排布（橫向或豎向）
+- 每個 layer 塊有：層名 + tensor shape 標註（H × W × C）
+- 跳連 / residual / attention 連線清晰
+- 顏色編碼不同 layer 類型（Conv / Attention / FC / Norm）
+- 出版物級，白底克制
 
-## 适用范围
+## 適用範圍
 
-- 论文中的 model architecture figure
-- 综述论文 framework
-- 答辩 PPT 模型介绍页
-- 教学 slide 中的网络示意
+- 論文中的 model architecture figure
+- 綜述論文 framework
+- 答辯 PPT 模型介紹頁
+- 教學 slide 中的網絡示意
 
-## 何时使用
+## 何時使用
 
-- 用户提到 "网络架构 / network architecture / model architecture / Transformer / U-Net / GAN / Diffusion / VAE"
-- 用户希望「层级清晰、tensor shape 标准、跳连一目了然」
-- 用户希望视觉「论文风、白底、彩色编码 layer 类型」
+- 用戶提到 "網絡架構 / network architecture / model architecture / Transformer / U-Net / GAN / Diffusion / VAE"
+- 用戶希望「層級清晰、tensor shape 標準、跳連一目了然」
+- 用戶希望視覺「論文風、白底、彩色編碼 layer 類型」
 
 不要使用：
 
-- 用户要的是「方法 pipeline 总览」（多 stage 业务流）→ 用 `academic-figures/method-pipeline-overview.md`
-- 用户要的是「系统架构图」（前端 + 后端 + DB）→ 用 `technical-diagrams/system-architecture.md`
-- 用户要的是「数据流向 / ER 图」 → 用 `technical-diagrams/er-diagram.md`
-- 用户要的是「概念示意 / 注意力可视化」（自由度高）→ 用 `academic-figures/scientific-schematic.md`
+- 用戶要的是「方法 pipeline 總覽」（多 stage 業務流）→ 用 `academic-figures/method-pipeline-overview.md`
+- 用戶要的是「系統架構圖」（前端 + 後端 + DB）→ 用 `technical-diagrams/system-architecture.md`
+- 用戶要的是「數據流向 / ER 圖」 → 用 `technical-diagrams/er-diagram.md`
+- 用戶要的是「概念示意 / 注意力可視化」（自由度高）→ 用 `academic-figures/scientific-schematic.md`
 
-## 缺失信息优先提问顺序
+## 缺失信息優先提問順序
 
-1. 模型类型（Encoder-Decoder / U-Net / Transformer / GAN / Diffusion / 自定义）
-2. 主干网络层数 / 每层类型（如「6 层 Transformer encoder + 6 层 decoder + 8 头 attention」）
-3. Tensor shape（输入分辨率 / 通道数 / 序列长度）
-4. 是否有跳连 / residual / cross-attention
-5. 是否有 multi-task / multi-head 输出
-6. 是否要中文标签（论文图通常英文）
-7. 比例（横向 16:9 / 2:1，符合论文双栏）
+1. 模型類型（Encoder-Decoder / U-Net / Transformer / GAN / Diffusion / 自定義）
+2. 主幹網絡層數 / 每層類型（如「6 層 Transformer encoder + 6 層 decoder + 8 頭 attention」）
+3. Tensor shape（輸入分辨率 / 通道數 / 序列長度）
+4. 是否有跳連 / residual / cross-attention
+5. 是否有 multi-task / multi-head 輸出
+6. 是否要中文標籤（論文圖通常英文）
+7. 比例（橫向 16:9 / 2:1，符合論文雙欄）
 
-## 主模板：Transformer / Encoder-Decoder 架构图
+## 主模板：Transformer / Encoder-Decoder 架構圖
 
 📖 描述
 
-整张图横向流动：左输入 embedding → 多层 encoder 块 → cross-attention → 多层 decoder 块 → 右输出 head。每个 layer 块标注层类型与 tensor shape，跳连用弧形虚线。
+整張圖橫向流動：左輸入 embedding → 多層 encoder 塊 → cross-attention → 多層 decoder 塊 → 右輸出 head。每個 layer 塊標註層類型與 tensor shape，跳連用弧形虛線。
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "神经网络架构图（neural network architecture diagram）",
-  "goal": "生成论文级别的网络架构图：层级清晰、tensor shape 标注、跳连分明、可单色印刷可读",
+  "type": "神經網絡架構圖（neural network architecture diagram）",
+  "goal": "生成論文級別的網絡架構圖：層級清晰、tensor shape 標註、跳連分明、可單色印刷可讀",
   "canvas": {
     "aspect_ratio": "{argument name=\"aspect_ratio\" default=\"16:9\"}",
     "background": "white #FFFFFF",
@@ -149,71 +149,71 @@
 }
 ```
 
-### 参数策略
+### 參數策略
 
-- **必问**：`layer_count`、每层的 `type` 和 `shape`
-- **可默认**：`aspect_ratio`（16:9）、`background`（白）、`color_legend`（默认 5 类配色）、`block_style`
-- **可随机**：blocks 内每行的精确字号 / padding，annotation 摆放位置
+- **必問**：`layer_count`、每層的 `type` 和 `shape`
+- **可默認**：`aspect_ratio`（16:9）、`background`（白）、`color_legend`（默認 5 類配色）、`block_style`
+- **可隨機**：blocks 內每行的精確字號 / padding，annotation 擺放位置
 
-### 自动补全策略
+### 自動補全策略
 
-- 用户给「我用 Transformer」但没给细节 → 反问关键参数（层数、头数、隐藏维度、序列长度）；不要瞎编模型规模
-- 用户给「U-Net」 → 自动用 contracting + expansive 双臂布局变体（见变体 2）
-- 用户没说有没有 residual → 默认 `residual_enabled: true`（绝大多数现代网络都有）
-- 用户没说有没有 novelty → 默认 `highlight_novelty: true`（论文图一般要标自己的贡献）
-- 用户没说参数量 → 默认 `show_params: false`（除非用户提到模型规模对比）
+- 用戶給「我用 Transformer」但沒給細節 → 反問關鍵參數（層數、頭數、隱藏維度、序列長度）；不要瞎編模型規模
+- 用戶給「U-Net」 → 自動用 contracting + expansive 雙臂布局變體（見變體 2）
+- 用戶沒說有沒有 residual → 默認 `residual_enabled: true`（絕大多數現代網絡都有）
+- 用戶沒說有沒有 novelty → 默認 `highlight_novelty: true`（論文圖一般要標自己的貢獻）
+- 用戶沒說參數量 → 默認 `show_params: false`（除非用戶提到模型規模對比）
 
-## 变体 1：U-Net / FPN 双臂架构
+## 變體 1：U-Net / FPN 雙臂架構
 
 ```json
 {
-  "type": "U-Net / FPN 双臂架构图",
+  "type": "U-Net / FPN 雙臂架構圖",
   "modify": {
-    "layout": "U 形：左臂下采样（contracting path）+ 中央 bottleneck + 右臂上采样（expansive path），每层之间有水平 skip connection",
-    "annotation": "skip 用横向虚线箭头标注，特征图用渐窄 / 渐宽的矩形示意 spatial 维度变化"
+    "layout": "U 形：左臂下採樣（contracting path）+ 中央 bottleneck + 右臂上採樣（expansive path），每層之間有水平 skip connection",
+    "annotation": "skip 用橫向虛線箭頭標註，特徵圖用漸窄 / 漸寬的矩形示意 spatial 維度變化"
   }
 }
 ```
 
-适用：U-Net、FPN、HRNet、所有 encoder-decoder 分割网络。
+適用：U-Net、FPN、HRNet、所有 encoder-decoder 分割網絡。
 
-## 变体 2：GAN / Diffusion 双网络对抗 / 多步推理
+## 變體 2：GAN / Diffusion 雙網絡對抗 / 多步推理
 
 ```json
 {
-  "type": "GAN / Diffusion 架构图",
+  "type": "GAN / Diffusion 架構圖",
   "modify": {
-    "layout_gan": "上方 Generator（noise → image）+ 下方 Discriminator（image → real/fake），中间共享生成图像作为 D 的输入",
-    "layout_diffusion": "横向 timestep 序列 t=T → t=0，每个 timestep 是同一个 U-Net 实例，标 't' 嵌入条件"
+    "layout_gan": "上方 Generator（noise → image）+ 下方 Discriminator（image → real/fake），中間共享生成圖像作爲 D 的輸入",
+    "layout_diffusion": "橫向 timestep 序列 t=T → t=0，每個 timestep 是同一個 U-Net 實例，標 't' 嵌入條件"
   }
 }
 ```
 
-适用：GAN 系列、扩散模型、Score-based 模型。
+適用：GAN 系列、擴散模型、Score-based 模型。
 
-## 变体 3：Multi-task / Multi-head 输出
+## 變體 3：Multi-task / Multi-head 輸出
 
 ```json
 {
-  "type": "多任务 / 多头输出架构图",
+  "type": "多任務 / 多頭輸出架構圖",
   "modify": {
-    "layout": "共享 backbone 在中央 → 右侧分叉成 2-4 个 task head（如 classification head / regression head / segmentation head）",
-    "annotation": "每个 head 旁边标对应 loss 函数和权重 λ"
+    "layout": "共享 backbone 在中央 → 右側分叉成 2-4 個 task head（如 classification head / regression head / segmentation head）",
+    "annotation": "每個 head 旁邊標對應 loss 函數和權重 λ"
   }
 }
 ```
 
-适用：多任务学习、检测 + 分割、辅助监督。
+適用：多任務學習、檢測 + 分割、輔助監督。
 
-## 避免事项
+## 避免事項
 
-- tensor shape 缺失或随便写 → 论文图核心信息没了
-- 用渐变 / 3D 立方体堆叠 → 像 PPT 不像论文
-- 颜色 ≥ 6 种 → 失去 layer 类型语义
-- 没有 residual / cross-attention 标注（如果架构里有）→ 误导读者
-- 用 Comic Sans / 手写字体
-- 跳连箭头穿过 layer 块
-- 同一类 layer 块大小不一致
-- 中英文标签混用
-- 把"训练 loss"画进结构图（应该单独一张 training figure 或 caption 里说明）
-- 在结构图里塞具体超参数表（应该走 table，不进 figure）
+- tensor shape 缺失或隨便寫 → 論文圖核心信息沒了
+- 用漸變 / 3D 立方體堆疊 → 像 PPT 不像論文
+- 顏色 ≥ 6 種 → 失去 layer 類型語義
+- 沒有 residual / cross-attention 標註（如果架構裏有）→ 誤導讀者
+- 用 Comic Sans / 手寫字體
+- 跳連箭頭穿過 layer 塊
+- 同一類 layer 塊大小不一致
+- 中英文標籤混用
+- 把"訓練 loss"畫進結構圖（應該單獨一張 training figure 或 caption 裏說明）
+- 在結構圖裏塞具體超參數表（應該走 table，不進 figure）

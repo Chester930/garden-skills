@@ -1,70 +1,70 @@
 # Web Design Engineer Skill
 
-**一个让 AI 生成网页从"能用"进阶到"惊艳"的 Agent 技能。**
+**一個讓 AI 生成網頁從"能用"進階到"驚豔"的 Agent 技能。**
 
-[English](./README.md) · [返回集合首页](../../README.zh-CN.md)
+[English](./README.md) · [返回集合首頁](../../README.zh-CN.md)
 
 ![Web Design Skill](../../dist/imgs/web-design-skill.png)
 
 ---
 
-## 这是什么？
+## 這是什麼？
 
-这是一个面向 AI 编程代理（如 [Claude Code](https://docs.anthropic.com/en/docs/claude-code)、[Cursor](https://cursor.com) 以及其他支持 `SKILL.md` 格式的工具）的可复用 **Skill**（结构化系统提示词），能显著提升 AI 生成的 HTML/CSS/JavaScript 产物的设计品质。
+這是一個面向 AI 編程代理（如 [Claude Code](https://docs.anthropic.com/en/docs/claude-code)、[Cursor](https://cursor.com) 以及其他支持 `SKILL.md` 格式的工具）的可復用 **Skill**（結構化系統提示詞），能顯著提升 AI 生成的 HTML/CSS/JavaScript 產物的設計品質。
 
-它将 [Claude Design](https://www.anthropic.com/news/claude-design-anthropic-labs) 系统提示词中的核心设计理念提炼为一个开放、可移植、可自定义的技能文件，可以直接放进任何项目中使用。
+它將 [Claude Design](https://www.anthropic.com/news/claude-design-anthropic-labs) 系統提示詞中的核心設計理念提煉爲一個開放、可移植、可自定義的技能文件，可以直接放進任何項目中使用。
 
-### 问题
+### 問題
 
-现代大语言模型已经能根据简单的提示词生成功能完整的网页。但它们的输出总是趋向同一种审美：Inter 字体、蓝色主按钮、紫粉渐变、大圆角卡片、emoji 充当图标、编造的好评数据。技术上没问题，视觉上千篇一律。
+現代大語言模型已經能根據簡單的提示詞生成功能完整的網頁。但它們的輸出總是趨向同一種審美：Inter 字體、藍色主按鈕、紫粉漸變、大圓角卡片、emoji 充當圖標、編造的好評數據。技術上沒問題，視覺上千篇一律。
 
-### 解决方案
+### 解決方案
 
-这个 Skill 通过以下方式将**设计品位**注入 AI 的决策过程：
+這個 Skill 通過以下方式將**設計品位**注入 AI 的決策過程：
 
-- **反俗套规则** —— 一份明确的 AI 设计雷区清单
-- **设计系统宣告** —— 强制 AI 在写代码之前，先用自然语言说清配色、字体、间距和动效选择
-- **oklch 色彩理论** —— 基于感知均匀色彩空间的配色派生，取代随机 hex 值
-- **精选字体 × 配色组合** —— 高品质起点，替代默认的 Inter + #3b82f6
-- **占位符哲学** —— 用诚实的 `[icon]` 标记代替拙劣的 SVG 假图
-- **结构化工作流** —— 从需求理解 → 上下文获取 → 设计系统宣告 → v0 草稿 → 完整构建 → 验证的六步流程
+- **反俗套規則** —— 一份明確的 AI 設計雷區清單
+- **設計系統宣告** —— 強制 AI 在寫代碼之前，先用自然語言說清配色、字體、間距和動效選擇
+- **oklch 色彩理論** —— 基於感知均勻色彩空間的配色派生，取代隨機 hex 值
+- **精選字體 × 配色組合** —— 高品質起點，替代默認的 Inter + #3b82f6
+- **佔位符哲學** —— 用誠實的 `[icon]` 標記代替拙劣的 SVG 假圖
+- **結構化工作流** —— 從需求理解 → 上下文獲取 → 設計系統宣告 → v0 草稿 → 完整構建 → 驗證的六步流程
 
 ---
 
 ## 快速上手
 
-### 用于 Claude Code / Cursor / AI Agent
+### 用於 Claude Code / Cursor / AI Agent
 
-将本 Skill 目录复制到你的项目中：
+將本 Skill 目錄複製到你的項目中：
 
 ```
 your-project/
 ├── .agents/skills/web-design-engineer/   # 或 .claude/skills/web-design-engineer/
 │   ├── SKILL.md                          # 主技能文件
 │   └── references/
-│       ├── advanced-patterns.md          # 代码模板库（slide engine / 设备框架 / 动效时间线 / 数据可视化）
-│       ├── design-directions.md          # 设计方向顾问（6 学派，差异化 3 选 1 推荐）
-│       ├── style-recipes/                # 25 套有 anchor 的风格配方（按需读单文件，每个 anchor 一个 .md）
-│       │   ├── INDEX.md                   #   目录索引 + 3 张索引表 + 跨配方反模式
-│       │   ├── linear.md / aesop.md / pentagram.md / ...    #   25 个独立 recipe 文件
-│       └── critique-guide.md             # 5 维评分细则 + 常见问题清单
+│       ├── advanced-patterns.md          # 代碼模板庫（slide engine / 設備框架 / 動效時間線 / 數據可視化）
+│       ├── design-directions.md          # 設計方向顧問（6 學派，差異化 3 選 1 推薦）
+│       ├── style-recipes/                # 25 套有 anchor 的風格配方（按需讀單文件，每個 anchor 一個 .md）
+│       │   ├── INDEX.md                   #   目錄索引 + 3 張索引表 + 跨配方反模式
+│       │   ├── linear.md / aesop.md / pentagram.md / ...    #   25 個獨立 recipe 文件
+│       └── critique-guide.md             # 5 維評分細則 + 常見問題清單
 └── ...
 ```
 
-也可以从集合首页通过 Claude Code 插件市场一键安装 —— 参见[根目录 README](../../README.zh-CN.md#%E5%AE%89%E8%A3%85)。
+也可以從集合首頁通過 Claude Code 插件市場一鍵安裝 —— 參見[根目錄 README](../../README.zh-CN.md#%E5%AE%89%E8%A3%85)。
 
-当你的请求涉及可视化/交互式前端工作时，Agent 会自动启用此技能。
+當你的請求涉及可視化/交互式前端工作時，Agent 會自動啓用此技能。
 
-### 覆盖范围
+### 覆蓋範圍
 
-| 输出类型 | 示例 |
+| 輸出類型 | 示例 |
 |---|---|
-| 网页 & 落地页 | 营销页面、产品页、作品集 |
-| 交互式原型 | 带设备框架的可点击 App 模型 |
-| 幻灯片 | HTML 演示文稿（1920×1080，键盘导航） |
-| 数据可视化 | 基于 Chart.js 或 D3.js 的仪表盘 |
-| 动画 | CSS/JS 动效设计，时间线驱动的演示 |
-| 设计系统 | Token 探索、组件变体 |
+| 網頁 & 落地頁 | 營銷頁面、產品頁、作品集 |
+| 交互式原型 | 帶設備框架的可點擊 App 模型 |
+| 幻燈片 | HTML 演示文稿（1920×1080，鍵盤導航） |
+| 數據可視化 | 基於 Chart.js 或 D3.js 的儀錶盤 |
+| 動畫 | CSS/JS 動效設計，時間線驅動的演示 |
+| 設計系統 | Token 探索、組件變體 |
 
 ---
 
@@ -73,103 +73,103 @@ your-project/
 ### 六步工作流
 
 ```
-1. 理解需求          →  信息充足就干活，信息不足才提问
-2. 获取设计上下文    →  代码 > 截图；不要从空气中开始
-3. 宣告设计系统      →  配色、字体、间距、动效 —— 用 Markdown 说明，写代码之前
-4. 尽早展示 v0       →  占位符 + 布局 + token；让用户提前纠偏
-5. 完整构建          →  组件、状态、动效；在关键决策点暂停确认
-6. 验证              →  交付前清单；无控制台错误，无私自新增色相
+1. 理解需求          →  信息充足就幹活，信息不足才提問
+2. 獲取設計上下文    →  代碼 > 截圖；不要從空氣中開始
+3. 宣告設計系統      →  配色、字體、間距、動效 —— 用 Markdown 說明，寫代碼之前
+4. 儘早展示 v0       →  佔位符 + 布局 + token；讓用戶提前糾偏
+5. 完整構建          →  組件、狀態、動效；在關鍵決策點暫停確認
+6. 驗證              →  交付前清單；無控制臺錯誤，無私自新增色相
 ```
 
-### 核心设计原则
+### 核心設計原則
 
-**反 AI 俗套清单。** Skill 明确禁止以下模式：
-- 紫粉蓝渐变背景
-- 带左侧彩色边框的卡片
-- Inter / Roboto / Arial / Fraunces / system-ui 字体
-- 用 emoji 充当图标
-- 编造的数据、假 logo 墙、虚假好评
+**反 AI 俗套清單。** Skill 明確禁止以下模式：
+- 紫粉藍漸變背景
+- 帶左側彩色邊框的卡片
+- Inter / Roboto / Arial / Fraunces / system-ui 字體
+- 用 emoji 充當圖標
+- 編造的數據、假 logo 牆、虛假好評
 
-**oklch 色彩系统。** 在感知均匀的 oklch 色彩空间中派生颜色。相同的亮度值在人眼中看起来确实一样亮——HSL 做不到这一点，HSL 中亮度 50% 的黄色看起来比亮度 50% 的蓝色亮得多。
+**oklch 色彩系統。** 在感知均勻的 oklch 色彩空間中派生顏色。相同的亮度值在人眼中看起來確實一樣亮——HSL 做不到這一點，HSL 中亮度 50% 的黃色看起來比亮度 50% 的藍色亮得多。
 
-**精选起点。** 六套经过验证的配色 × 字体组合，覆盖常见场景：
+**精選起點。** 六套經過驗證的配色 × 字體組合，覆蓋常見場景：
 
-| 风格 | 主色 | 字体组合 | 适用场景 |
+| 風格 | 主色 | 字體組合 | 適用場景 |
 |---|---|---|---|
-| 现代科技感 | 蓝紫 | Space Grotesk + Inter | SaaS、开发者工具 |
-| 优雅杂志风 | 暖棕 | Newsreader + Outfit | 内容平台、博客 |
+| 現代科技感 | 藍紫 | Space Grotesk + Inter | SaaS、開發者工具 |
+| 優雅雜誌風 | 暖棕 | Newsreader + Outfit | 內容平臺、博客 |
 | 高端品牌 | 近黑 | Sora + Plus Jakarta Sans | 奢侈品、金融 |
-| 活泼消费 | 珊瑚 | Plus Jakarta Sans + Outfit | 电商、社交 |
-| 极简专业 | 青蓝 | Outfit + Space Grotesk | 仪表盘、B2B |
-| 手作温度 | 焦糖 | Caveat + Newsreader | 餐饮、教育 |
+| 活潑消費 | 珊瑚 | Plus Jakarta Sans + Outfit | 電商、社交 |
+| 極簡專業 | 青藍 | Outfit + Space Grotesk | 儀錶盤、B2B |
+| 手作溫度 | 焦糖 | Caveat + Newsreader | 餐飲、教育 |
 
-**风格配方库（25 套有 anchor，渐进式加载）。** 当用户点名"Linear 风" / "Aesop 风" / "Pentagram 级排版"时，Agent 只需读 `references/style-recipes/<anchor>.md` 单个文件（约 50 行）；目录索引、3 张索引表、跨配方反模式都在 `references/style-recipes/INDEX.md`（约 150 行）。整个目录从不一次性加载。25 套配方分布在 7 个学派（Direction Advisor 的 6 学派 + 一个只能通过直接点名 anchor 触达的 *Specialty / Genre* 学派）：
+**風格配方庫（25 套有 anchor，漸進式加載）。** 當用戶點名"Linear 風" / "Aesop 風" / "Pentagram 級排版"時，Agent 只需讀 `references/style-recipes/<anchor>.md` 單個文件（約 50 行）；目錄索引、3 張索引表、跨配方反模式都在 `references/style-recipes/INDEX.md`（約 150 行）。整個目錄從不一次性加載。25 套配方分布在 7 個學派（Direction Advisor 的 6 學派 + 一個只能通過直接點名 anchor 觸達的 *Specialty / Genre* 學派）：
 
-| 学派 | 配方 |
+| 學派 | 配方 |
 |---|---|
-| Editorial / 极简 | `apple-hig` · `muji-kenya-hara` · `aesop` · `dieter-rams-braun` · `monocle-magazine` |
-| 信息架构 | `pentagram` · `vignelli-swiss-helvetica` · `bloomberg-terminal` · `tufte-dataink` · `nyt-the-daily` |
-| 现代工具 / Builder SaaS | `linear` · `vercel-mesh` · `raycast` · `notion-pre-ai` |
-| 动效 / 实验 | `field-io` · `active-theory` · `resn-storytelling` |
-| 粗粝 / Brutalist | `are-na` · `bloomberg-businessweek-turley` · `balenciaga-post-2017` |
-| 温暖人文 | `mailchimp-freddie` · `stripe-press` · `headspace-meditation` |
-| 特定风格 / 年代 | `y2k-retrofuturism` · `mid-century-modern` |
+| Editorial / 極簡 | `apple-hig` · `muji-kenya-hara` · `aesop` · `dieter-rams-braun` · `monocle-magazine` |
+| 信息架構 | `pentagram` · `vignelli-swiss-helvetica` · `bloomberg-terminal` · `tufte-dataink` · `nyt-the-daily` |
+| 現代工具 / Builder SaaS | `linear` · `vercel-mesh` · `raycast` · `notion-pre-ai` |
+| 動效 / 實驗 | `field-io` · `active-theory` · `resn-storytelling` |
+| 粗糲 / Brutalist | `are-na` · `bloomberg-businessweek-turley` · `balenciaga-post-2017` |
+| 溫暖人文 | `mailchimp-freddie` · `stripe-press` · `headspace-meditation` |
+| 特定風格 / 年代 | `y2k-retrofuturism` · `mid-century-modern` |
 
 ---
 
 ## 示例
 
-仓库的 [`demo/web-design-demo/`](../../demo/web-design-demo) 目录包含使用相同提示词、分别在有 Skill 和无 Skill 条件下生成的页面对比。打开 [`demo/web-design-demo/demo2/index.html`](../../demo/web-design-demo/demo2/index.html) 查看对比展示页。
+倉庫的 [`demo/web-design-demo/`](../../demo/web-design-demo) 目錄包含使用相同提示詞、分別在有 Skill 和無 Skill 條件下生成的頁面對比。打開 [`demo/web-design-demo/demo2/index.html`](../../demo/web-design-demo/demo2/index.html) 查看對比展示頁。
 
-### Demo 1：太空探索博物馆
+### Demo 1：太空探索博物館
 
-**提示词：** *"帮我做一个'太空探索博物馆'的线上展览首页——全屏 Hero、4 个核心展览介绍、一个至少 6 个节点的时间线、参观预约 CTA、页脚。整体风格要沉浸感强、有宇宙的深邃感。"*
+**提示詞：** *"幫我做一個'太空探索博物館'的線上展覽首頁——全屏 Hero、4 個核心展覽介紹、一個至少 6 個節點的時間線、參觀預約 CTA、頁腳。整體風格要沉浸感強、有宇宙的深邃感。"*
 
-| | 无 Skill | 有 Skill |
+| | 無 Skill | 有 Skill |
 |---|---|---|
 | **文件** | `demo/web-design-demo/demo2/demo1.html` | `demo/web-design-demo/demo2/demo1-with-skill.html` |
-| **色彩系统** | 硬编码 hex 值（#7cf0ff, #b388ff） | 基于 oklch 的 token 系统，使用 CSS 自定义属性 |
-| **字体** | Orbitron + Noto Serif SC | Instrument Serif + Space Grotesk + JetBrains Mono |
-| **布局** | 标准落地页结构 | 杂志编辑式布局，grid 组合排版 |
-| **细节** | 大量发光效果、霓虹渐变 | 克制的色彩方案、字体层级、装饰性数据元素 |
-| **整体感受** | 热情的初级设计师 | 有经验的设计总监 |
+| **色彩系統** | 硬編碼 hex 值（#7cf0ff, #b388ff） | 基於 oklch 的 token 系統，使用 CSS 自定義屬性 |
+| **字體** | Orbitron + Noto Serif SC | Instrument Serif + Space Grotesk + JetBrains Mono |
+| **布局** | 標準落地頁結構 | 雜誌編輯式布局，grid 組合排版 |
+| **細節** | 大量發光效果、霓虹漸變 | 克制的色彩方案、字體層級、裝飾性數據元素 |
+| **整體感受** | 熱情的初級設計師 | 有經驗的設計總監 |
 
-### Demo 2：摄影师作品集
+### Demo 2：攝影師作品集
 
-**提示词：** *"帮我做一个独立摄影师的个人作品集网站首页。"*
+**提示詞：** *"幫我做一個獨立攝影師的個人作品集網站首頁。"*
 
 | | 有 Skill |
 |---|---|
 | **文件** | `demo/web-design-demo/demo2/demo2-with-skill.html` |
-| **角色塑造** | 虚构了北欧摄影师 "Mira Høst"，设计了一整套视觉身份 |
-| **配色** | 暖纸色浅底（#f2efe8）+ 墨色深文（#161513）—— 极度克制的双色调 |
-| **字体** | Instrument Serif（展示标题）+ Space Grotesk（界面）, 大量使用斜体 |
-| **布局** | 杂志编排式结构，编号分节、不对称网格、侧边竖排文字 |
-| **动效** | Hero 图片的慢速 Ken Burns 动画（24秒周期），胶片噪点纹理叠加 |
-| **导航** | `mix-blend-mode: difference` 顶栏 —— 在深浅背景间无缝过渡 |
+| **角色塑造** | 虛構了北歐攝影師 "Mira Høst"，設計了一整套視覺身份 |
+| **配色** | 暖紙色淺底（#f2efe8）+ 墨色深文（#161513）—— 極度克制的雙色調 |
+| **字體** | Instrument Serif（展示標題）+ Space Grotesk（界面）, 大量使用斜體 |
+| **布局** | 雜誌編排式結構，編號分節、不對稱網格、側邊豎排文字 |
+| **動效** | Hero 圖片的慢速 Ken Burns 動畫（24秒周期），膠片噪點紋理疊加 |
+| **導航** | `mix-blend-mode: difference` 頂欄 —— 在深淺背景間無縫過渡 |
 
-> 启发本 Skill 的 Claude Design 原始系统提示词保留在 [`dist/prompt/claude-design-system-prompt.md`](../../dist/prompt/claude-design-system-prompt.md)。
+> 啓發本 Skill 的 Claude Design 原始系統提示詞保留在 [`dist/prompt/claude-design-system-prompt.md`](../../dist/prompt/claude-design-system-prompt.md)。
 
 ---
 
 ## 背景
 
-此 Skill 的灵感来自 [Claude Design](https://www.anthropic.com/news/claude-design-anthropic-labs) 的系统提示词。Claude Design 是 Anthropic 于 2026 年 4 月推出的视觉设计产品。其系统提示词（约 420 行）编码了一套精密的设计原则、反模式和工作流约束，使其输出保持稳定的高品质。
+此 Skill 的靈感來自 [Claude Design](https://www.anthropic.com/news/claude-design-anthropic-labs) 的系統提示詞。Claude Design 是 Anthropic 於 2026 年 4 月推出的視覺設計產品。其系統提示詞（約 420 行）編碼了一套精密的設計原則、反模式和工作流約束，使其輸出保持穩定的高品質。
 
-本项目将这些核心理念提取并精炼为一个可移植的 Skill，适用于任何 AI 编程代理——让你获得 Claude Design 级别的设计品位，同时摆脱产品锁定和用量限制。
+本項目將這些核心理念提取並精煉爲一個可移植的 Skill，適用於任何 AI 編程代理——讓你獲得 Claude Design 級別的設計品位，同時擺脫產品鎖定和用量限制。
 
-相比 Claude Design 原始提示词的主要新增内容：
-- **设计系统宣告步骤** —— 强制 AI 在编码前用自然语言说明设计 token
-- **v0 草稿策略** —— 一套具体的方法论，确保尽早展示半成品
-- **扩展的反俗套清单** —— 从真实 AI 输出中识别出的额外模式
-- **占位符哲学** —— 一套完整的框架，专业地处理缺失素材
-- **配色 × 字体配对表** —— 六套经过验证的视觉系统起点
-- **设计方向顾问** —— 模糊需求场景的 6 学派差异化 3 选 1 推荐机制，且显式接入到 recipe 库做落地
-- **25 套有 anchor 的风格配方库** —— 每套绑定一个真实品牌 / studio / 设计师，含可粘贴的具体值；用来抵御 AI 默认味
-- **高级模式库** —— 常见 UI 模式的即用代码模板
+相比 Claude Design 原始提示詞的主要新增內容：
+- **設計系統宣告步驟** —— 強制 AI 在編碼前用自然語言說明設計 token
+- **v0 草稿策略** —— 一套具體的方法論，確保儘早展示半成品
+- **擴展的反俗套清單** —— 從真實 AI 輸出中識別出的額外模式
+- **佔位符哲學** —— 一套完整的框架，專業地處理缺失素材
+- **配色 × 字體配對表** —— 六套經過驗證的視覺系統起點
+- **設計方向顧問** —— 模糊需求場景的 6 學派差異化 3 選 1 推薦機制，且顯式接入到 recipe 庫做落地
+- **25 套有 anchor 的風格配方庫** —— 每套綁定一個真實品牌 / studio / 設計師，含可粘貼的具體值；用來抵禦 AI 默認味
+- **高級模式庫** —— 常見 UI 模式的即用代碼模板
 
 ---
 
-## 许可证
+## 許可證
 
 MIT

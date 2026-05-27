@@ -1,198 +1,198 @@
-# 社交平台界面样机模板
+# 社交平臺界面樣機模板
 
-本文件用于生成“社交媒体 App 界面 + 内容”的高度仿真样机，比如微博 / Twitter(X) / 小红书 / Threads / Instagram 等平台的发帖页、动态详情页、评论区。
+本文件用於生成「社交媒體 App 界面 + 內容」的高度仿真樣機，比如微博 / Twitter(X) / 小紅書 / Threads / Instagram 等平臺的發帖頁、動態詳情頁、評論區。
 
-不是用来做真实截图，而是用来做：
+不是用來做真實截圖，而是用來做：
 
-- 概念产品视觉
-- 角色 / 历史人物 / 虚拟 IP 在社交平台的“假账号”
-- 营销 demo
-- 内容创意展示
+- 概念產品視覺
+- 角色 / 歷史人物 / 虛擬 IP 在社交平臺的「假賬號」
+- 營銷 demo
+- 內容創意展示
 
-## 适用范围
+## 適用範圍
 
-- 单条动态详情页（推文 / 帖子）
-- 评论区样机
-- 社交平台个人主页头部
-- 暗黑 / 浅色模式 UI 模拟
-- 多图九宫格 / 多图卡片样机
+- 單條動態詳情頁（推文 / 帖子）
+- 評論區樣機
+- 社交平臺個人主頁頭部
+- 暗黑 / 淺色模式 UI 模擬
+- 多圖九宮格 / 多圖卡片樣機
 
-## 何时使用
+## 何時使用
 
-- 用户提到“社交媒体样机 / 推文样机 / 微博样机 / Twitter 样机 / 朋友圈样机 / 小红书样机”
-- 用户希望让一个名人 / 角色 / 虚拟身份“在某个平台发了一条 xx”
-- 用户希望生成 UI + 内容融合的运营素材，而不是真实截屏
+- 用戶提到「社交媒體樣機 / 推文樣機 / 微博樣機 / Twitter 樣機 / 朋友圈樣機 / 小紅書樣機」
+- 用戶希望讓一個名人 / 角色 / 虛擬身份「在某個平臺發了一條 xx」
+- 用戶希望生成 UI + 內容融合的運營素材，而不是真實截屏
 
-不要使用本模板的场景：
+不要使用本模板的場景：
 
-- 用户只想要一张人物头像
-- 用户想要的是真实功能截图
-- 用户要的是直播带货界面（去 `live-commerce-ui.md`）
+- 用戶只想要一張人物頭像
+- 用戶想要的是真實功能截圖
+- 用戶要的是直播帶貨界面（去 `live-commerce-ui.md`）
 
-## 缺失信息优先提问顺序
+## 缺失信息優先提問順序
 
-当用户只说“做一个社交平台样机”时，按以下顺序提问，能合并的合并：
+當用戶只說「做一個社交平臺樣機」時，按以下順序提問，能合併的合併：
 
-1. 平台风格：Twitter/X、小红书、微博、Threads、Instagram、通用社交 App
-2. 颜色模式：深色还是浅色
-3. 账号主体：真人 / 名人 / 虚构人物 / 历史人物 / 品牌账号
-4. 帖子内容：核心文案
-5. 是否需要配图，配图主题是什么
-6. 是否允许我自动补全互动数据（点赞、转发、评论文案）
+1. 平颱風格：Twitter/X、小紅書、微博、Threads、Instagram、通用社交 App
+2. 顏色模式：深色還是淺色
+3. 賬號主體：真人 / 名人 / 虛構人物 / 歷史人物 / 品牌賬號
+4. 帖子內容：核心文案
+5. 是否需要配圖，配圖主題是什麼
+6. 是否允許我自動補全互動數據（點讚、轉發、評論文案）
 
-如果用户说“你帮我补全”，则只问平台风格 + 主体身份 + 帖子主题，其余字段自动填充。
+如果用戶說「你幫我補全」，則只問平颱風格 + 主體身份 + 帖子主題，其餘字段自動填充。
 
-## 主模板：单条社交动态详情页
+## 主模板：單條社交動態詳情頁
 
 📖 描述
 
-仿真“某社交平台动态详情页”的截图样机，包含：
+仿真「某社交平臺動態詳情頁」的截圖樣機，包含：
 
-- 顶部状态栏与导航
-- 帖子作者信息（头像 / 昵称 / handle / 认证标）
-- 帖子正文与可选 hashtags
-- 多图卡片（可选）
-- 互动统计与操作行
-- 底部回复栏与底部 Tab Bar
+- 頂部狀態欄與導航
+- 帖子作者信息（頭像 / 暱稱 / handle / 認證標）
+- 帖子正文與可選 hashtags
+- 多圖卡片（可選）
+- 互動統計與操作行
+- 底部回復欄與底部 Tab Bar
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "移动端社交平台动态详情页样机",
-  "goal": "生成一张高仿真度的社交平台帖子详情页截图，用于做内容样机或概念演示",
+  "type": "移動端社交平臺動態詳情頁樣機",
+  "goal": "生成一張高仿真度的社交平臺帖子詳情頁截圖，用於做內容樣機或概念演示",
   "platform": {
     "name": "{argument name=\"platform\" default=\"Twitter / X\"}",
     "color_mode": "{argument name=\"color mode\" default=\"dark\"}",
     "language": "{argument name=\"interface language\" default=\"中文\"}"
   },
   "header": {
-    "status_bar": "顶部状态栏，显示时间 '{argument name=\"status time\" default=\"19:28\"}'，信号、Wi-Fi、电量图标",
-    "navigation": "返回箭头 + 标题 '{argument name=\"page title\" default=\"帖子\"}'"
+    "status_bar": "頂部狀態欄，顯示時間 '{argument name=\"status time\" default=\"19:28\"}'，信號、Wi-Fi、電量圖標",
+    "navigation": "返回箭頭 + 標題 '{argument name=\"page title\" default=\"帖子\"}'"
   },
   "post": {
     "author": {
-      "avatar": "{argument name=\"avatar description\" default=\"身穿红袍头戴黑帽的中国古代帝王半身肖像\"}",
+      "avatar": "{argument name=\"avatar description\" default=\"身穿紅袍頭戴黑帽的中國古代帝王半身肖像\"}",
       "display_name": "{argument name=\"display name\" default=\"朱元璋\"}",
       "verified_badge": true,
       "handle": "{argument name=\"handle\" default=\"@Emperor_Ming\"}",
-      "extra_badges": "{argument name=\"author extra badges\" default=\"皇室认证\"}"
+      "extra_badges": "{argument name=\"author extra badges\" default=\"皇室認證\"}"
     },
     "content": {
-      "text": "{argument name=\"post text\" default=\"今日登基，开启洪武元年。愿与诸卿共建大明！\"}",
+      "text": "{argument name=\"post text\" default=\"今日登基，開啓洪武元年。願與諸卿共建大明！\"}",
       "hashtags": "{argument name=\"hashtags\" default=\"#洪武元年 #登基大典 #大明王朝\"}",
       "media_grid": {
         "count": "{argument name=\"image count\" default=\"3\"}",
         "images": [
-          "{argument name=\"image 1\" default=\"金色龙椅上的帝王正面照\"}",
-          "{argument name=\"image 2\" default=\"宫殿庭院前万人朝拜的远景\"}",
-          "{argument name=\"image 3\" default=\"帝王骑马率军前进的场景\"}"
+          "{argument name=\"image 1\" default=\"金色龍椅上的帝王正面照\"}",
+          "{argument name=\"image 2\" default=\"宮殿庭院前萬人朝拜的遠景\"}",
+          "{argument name=\"image 3\" default=\"帝王騎馬率軍前進的場景\"}"
         ]
       }
     },
     "metadata": {
       "timestamp": "{argument name=\"timestamp\" default=\"下午 1:36 · 1368 年 1 月 23 日\"}",
-      "engagement": "{argument name=\"engagement stats\" default=\"5,432 转发 · 8,765 引用 · 2.01 万 点赞 · 10.23 万 浏览\"}"
+      "engagement": "{argument name=\"engagement stats\" default=\"5,432 轉發 · 8,765 引用 · 2.01 萬 點讚 · 10.23 萬 瀏覽\"}"
     },
-    "actions": "底部一行操作图标：回复、转发、点赞（红色心形带计数 '1'）、分享、上传"
+    "actions": "底部一行操作圖標：回復、轉發、點讚（紅色心形帶計數 '1'）、分享、上傳"
   },
   "comments_preview": {
     "show": "{argument name=\"show top comment\" default=\"true\"}",
     "top_comment": {
-      "avatar": "随机普通用户头像",
-      "name": "{argument name=\"top commenter\" default=\"红巾军老张\"}",
-      "text": "{argument name=\"top comment text\" default=\"陛下圣明！愿大明永昌！\"}"
+      "avatar": "隨機普通用戶頭像",
+      "name": "{argument name=\"top commenter\" default=\"紅巾軍老張\"}",
+      "text": "{argument name=\"top comment text\" default=\"陛下聖明！願大明永昌！\"}"
     }
   },
   "footer": {
     "reply_bar": {
-      "avatar": "当前登录用户的小头像",
-      "placeholder": "{argument name=\"reply placeholder\" default=\"回复给 朱元璋...\"}"
+      "avatar": "當前登錄用戶的小頭像",
+      "placeholder": "{argument name=\"reply placeholder\" default=\"回復給 朱元璋...\"}"
     },
-    "navigation_bar": "底部 Tab：首页、搜索、通知（带红点 '1'）、消息"
+    "navigation_bar": "底部 Tab：首頁、搜索、通知（帶紅點 '1'）、消息"
   },
   "style": {
-    "rendering": "高保真移动端 UI 截图，1:2 左右纵向比例，看起来像真实手机截屏",
-    "consistency": "整体配色严格遵循平台官方风格"
+    "rendering": "高保真移動端 UI 截圖，1:2 左右縱向比例，看起來像真實手機截屏",
+    "consistency": "整體配色嚴格遵循平臺官方風格"
   },
   "constraints": {
     "must_keep": [
-      "平台 UI 元素层级清晰",
-      "头像、昵称、认证标、handle 都必须正确呈现",
-      "正文文字必须清晰可读"
+      "平臺 UI 元素層級清晰",
+      "頭像、暱稱、認證標、handle 都必須正確呈現",
+      "正文文字必須清晰可讀"
     ],
     "avoid": [
-      "看起来像图片拼接而不是真实 UI",
-      "比例错误导致像桌面网页",
-      "头像与昵称配不上"
+      "看起來像圖片拼接而不是真實 UI",
+      "比例錯誤導致像桌面網頁",
+      "頭像與暱稱配不上"
     ]
   }
 }
 ```
 
-### 参数策略
+### 參數策略
 
-- 必问：平台、颜色模式、账号主体、帖子文案
-- 可默认：状态栏时间、底部 Tab Bar 文案、操作行图标
-- 可随机：互动统计数字、热门评论文案、hashtags 中的次要标签
+- 必問：平臺、顏色模式、賬號主體、帖子文案
+- 可默認：狀態欄時間、底部 Tab Bar 文案、操作行圖標
+- 可隨機：互動統計數字、熱門評論文案、hashtags 中的次要標籤
 
-### 自动补全策略
+### 自動補全策略
 
-当用户说“你帮我补全”时：
+當用戶說「你幫我補全」時：
 
-- 时间默认下午时段
-- 浏览数与点赞数按帖子内容热度估算（小众内容用 K，热点用 W）
-- 评论用真实社区口吻，不要生成空洞模板话
-- hashtags 与帖子主题保持一致，不要塞入无关流量词
+- 時間默認下午時段
+- 瀏覽數與點讚數按帖子內容熱度估算（小衆內容用 K，熱點用 W）
+- 評論用真實社區口吻，不要生成空洞模板話
+- hashtags 與帖子主題保持一致，不要塞入無關流量詞
 
-## 变体 1：明亮模式 + 中文小红书风
+## 變體 1：明亮模式 + 中文小紅書風
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "小红书风格图文动态详情页样机",
+  "type": "小紅書風格圖文動態詳情頁樣機",
   "platform": {
-    "name": "小红书",
+    "name": "小紅書",
     "color_mode": "light",
     "language": "中文"
   },
-  "header": "顶部为搜索栏 + 头像 + 关注按钮",
+  "header": "頂部爲搜索欄 + 頭像 + 關注按鈕",
   "post": {
     "author": {
-      "display_name": "{argument name=\"display name\" default=\"小满 Maya\"}",
+      "display_name": "{argument name=\"display name\" default=\"小滿 Maya\"}",
       "tag": "{argument name=\"author tag\" default=\"穿搭 | 探店\"}"
     },
-    "title": "{argument name=\"post title\" default=\"上海周末 City Walk 路线分享\"}",
-    "cover_image": "{argument name=\"cover image\" default=\"街头年轻女生侧身行走\"}",
+    "title": "{argument name=\"post title\" default=\"上海周末 City Walk 路線分享\"}",
+    "cover_image": "{argument name=\"cover image\" default=\"街頭年輕女生側身行走\"}",
     "swipeable_images_count": 4,
-    "body_text": "{argument name=\"body text\" default=\"安福路 → 武康路 → 五原路，全程 3 公里...\"}",
-    "tags": ["#周末出片", "#City Walk", "#上海周末去哪儿"]
+    "body_text": "{argument name=\"body text\" default=\"安福路 → 武康路 → 五原路，全程 3 公裏...\"}",
+    "tags": ["#周末出片", "#City Walk", "#上海周末去哪兒"]
   },
-  "interaction_bar": "点赞、收藏、评论、分享，全部带数字",
+  "interaction_bar": "點讚、收藏、評論、分享，全部帶數字",
   "comments_preview": {
     "count": 3,
     "messages": [
-      "想要详细攻略！",
-      "这条路线我也走过，超出片",
-      "求穿搭链接 🔗"
+      "想要詳細攻略！",
+      "這條路線我也走過，超出片",
+      "求穿搭鏈接 🔗"
     ]
   },
   "constraints": {
-    "must_feel": "像真实小红书图文笔记，而不是海报"
+    "must_feel": "像真實小紅書圖文筆記，而不是海報"
   }
 }
 ```
 
-## 变体 2：品牌账号官方公告
+## 變體 2：品牌賬號官方公告
 
-适合品牌、应用、企业账号风格。
+適合品牌、應用、企業賬號風格。
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "品牌官方账号公告样机",
+  "type": "品牌官方賬號公告樣機",
   "platform": {
     "name": "{argument name=\"platform\" default=\"Twitter / X\"}",
     "color_mode": "{argument name=\"color mode\" default=\"light\"}"
@@ -207,44 +207,44 @@
       "text": "{argument name=\"announcement text\" default=\"Today we're introducing Claude Opus 4.7 — our most capable model yet for coding and complex reasoning.\"}",
       "media_grid": {
         "count": 1,
-        "images": ["产品发布主视觉，带 '{argument name=\"product name\" default=\"Claude Opus 4.7\"}' 大字"]
+        "images": ["產品發布主視覺，帶 '{argument name=\"product name\" default=\"Claude Opus 4.7\"}' 大字"]
       }
     },
     "metadata": {
-      "engagement": "高互动量级，例如 '12K 转发 / 36K 引用 / 158K 点赞 / 2.3M 浏览'"
+      "engagement": "高互動量級，例如 '12K 轉發 / 36K 引用 / 158K 點讚 / 2.3M 瀏覽'"
     }
   },
   "constraints": {
-    "must_feel": "像官方账号正式发布",
-    "avoid": "出现明显的私人化、口语化措辞"
+    "must_feel": "像官方賬號正式發布",
+    "avoid": "出現明顯的私人化、口語化措辭"
   }
 }
 ```
 
-## 变体 3：自动补全模式
+## 變體 3：自動補全模式
 
-适合用户只说“给我做一个社交平台样机”。
+適合用戶只說「給我做一個社交平臺樣機」。
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "社交动态样机自动补全模板",
+  "type": "社交動態樣機自動補全模板",
   "mode": "auto-fill",
-  "platform_generation": "若用户没说，默认 Twitter / X，深色模式，中文界面",
-  "author_generation": "随机生成一个看起来真实但不冒犯的账号主体",
-  "content_generation": "围绕一个具体且具体感强的话题展开，不要泛而空",
-  "media_generation": "默认 1-3 张配图，与正文紧密相关",
+  "platform_generation": "若用戶沒說，默認 Twitter / X，深色模式，中文界面",
+  "author_generation": "隨機生成一個看起來真實但不冒犯的賬號主體",
+  "content_generation": "圍繞一個具體且具體感強的話題展開，不要泛而空",
+  "media_generation": "默認 1-3 張配圖，與正文緊密相關",
   "constraints": {
-    "must_feel": "真实、有人味、可信"
+    "must_feel": "真實、有人味、可信"
   }
 }
 ```
 
-## 避免事项
+## 避免事項
 
-- 不要让 UI 元素只是纯文字堆叠，必须有头像、按钮、图标三要素
-- 不要把社交平台风格混搭到分不清是哪个平台
-- 不要让正文超过截图所能正常显示的长度，否则会出现严重截断
-- 不要在“品牌官方账号”里生成太私人化或太情绪化的话术
-- 不要生成与平台官方颜色明显冲突的主色（比如 X 出现纯小红书红）
+- 不要讓 UI 元素只是純文字堆疊，必須有頭像、按鈕、圖標三要素
+- 不要把社交平颱風格混搭到分不清是哪個平臺
+- 不要讓正文超過截圖所能正常顯示的長度，否則會出現嚴重截斷
+- 不要在「品牌官方賬號」裏生成太私人化或太情緒化的話術
+- 不要生成與平臺官方顏色明顯衝突的主色（比如 X 出現純小紅書紅）

@@ -1,60 +1,60 @@
-# 杂志 / 编辑封面模板
+# 雜誌 / 編輯封面模板
 
-本文件用于生成“杂志封面 / 编辑式视觉 / 出版物封面”：
+本文件用於生成「雜誌封面 / 編輯式視覺 / 出版物封面」：
 
-- 时尚杂志封面
-- 行业刊物封面
-- 内部刊物 / 报告封面
-- 自媒体特刊封面
-- 编辑式专题主图
+- 時尚雜誌封面
+- 行業刊物封面
+- 內部刊物 / 報告封面
+- 自媒體特刊封面
+- 編輯式專題主圖
 
-特征：
+特徵：
 
-- 强烈的“出版物气质”
-- 主视觉肖像 / 单一物品占主导
-- 大字标题 + 小字栏目导引
-- 比例多为竖版 3:4 / 4:5
-- 留刊名 + 期号位置
+- 強烈的「出版物氣質」
+- 主視覺肖像 / 單一物品佔主導
+- 大字標題 + 小字欄目導引
+- 比例多爲豎版 3:4 / 4:5
+- 留刊名 + 期號位置
 
-## 适用范围
+## 適用範圍
 
-- 杂志 / 期刊封面
-- 行业报告封面
-- 自媒体特刊封面
-- 出版物风视觉海报
+- 雜誌 / 期刊封面
+- 行業報告封面
+- 自媒體特刊封面
+- 出版物風視覺海報
 
-## 何时使用
+## 何時使用
 
-- 用户提到“杂志 / 封面 / 期刊 / cover / 出版风”
-- 用户希望视觉极具“编辑感”，而不是广告海报感
+- 用戶提到「雜誌 / 封面 / 期刊 / cover / 出版風」
+- 用戶希望視覺極具「編輯感」，而不是廣告海報感
 
 不要使用：
 
-- 通用品牌海报（用 `brand-poster.md`）
+- 通用品牌海報（用 `brand-poster.md`）
 - Banner（用 `banner-hero.md`）
 - Campaign KV（用 `campaign-kv.md`）
 
-## 缺失信息优先提问顺序
+## 缺失信息優先提問順序
 
-1. 刊名 / 期号 / 出版方
-2. 主标题（封面大字）
-3. 主视觉（人 / 物 / 概念）
-4. 子栏目 / 内页导引短句（3-5 条）
-5. 风格：高级时装 / 文化 / 财经 / 科技 / 复古
+1. 刊名 / 期號 / 出版方
+2. 主標題（封面大字）
+3. 主視覺（人 / 物 / 概念）
+4. 子欄目 / 內頁導引短句（3-5 條）
+5. 風格：高級時裝 / 文化 / 財經 / 科技 / 復古
 6. 比例
 
-## 主模板：杂志封面（人物肖像）
+## 主模板：雜誌封面（人物肖像）
 
 📖 描述
 
-竖版封面，主视觉为人物肖像或单物，左上角刊名 + 期号，主标题大字横排或竖排，左右栏目导引小字。
+豎版封面，主視覺爲人物肖像或單物，左上角刊名 + 期號，主標題大字橫排或豎排，左右欄目導引小字。
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "杂志封面",
-  "goal": "生成一张可作为时尚 / 文化 / 行业杂志封面的视觉，编辑感强烈",
+  "type": "雜誌封面",
+  "goal": "生成一張可作爲時尚 / 文化 / 行業雜誌封面的視覺，編輯感強烈",
   "publication": {
     "name": "{argument name=\"publication name\" default=\"NEUE\"}",
     "tagline": "{argument name=\"tagline\" default=\"Culture · Design · Future\"}",
@@ -63,23 +63,23 @@
   "aspect_ratio": "{argument name=\"aspect ratio\" default=\"3:4\"}",
   "main_visual": {
     "type": "{argument name=\"main visual type\" default=\"人物肖像\"}",
-    "description": "{argument name=\"main visual\" default=\"东亚年轻女性正面肖像，眼神平静，自然光\"}",
-    "composition": "{argument name=\"composition\" default=\"占满画面，头部居中略偏右\"}"
+    "description": "{argument name=\"main visual\" default=\"東亞年輕女性正面肖像，眼神平靜，自然光\"}",
+    "composition": "{argument name=\"composition\" default=\"佔滿畫面，頭部居中略偏右\"}"
   },
   "title_block": {
-    "main_title": "{argument name=\"main title\" default=\"重启与重启之间\"}",
-    "main_title_style": "{argument name=\"title style\" default=\"超大粗衬线，叠加在主视觉上\"}",
-    "kicker": "{argument name=\"kicker\" default=\"专访\"}"
+    "main_title": "{argument name=\"main title\" default=\"重啓與重啓之間\"}",
+    "main_title_style": "{argument name=\"title style\" default=\"超大粗襯線，疊加在主視覺上\"}",
+    "kicker": "{argument name=\"kicker\" default=\"專訪\"}"
   },
   "side_teasers": {
     "count": "{argument name=\"teaser count\" default=\"4\"}",
     "items": [
-      "{argument name=\"teaser 1\" default=\"AI 时代的写作 · 韩松落 vs ChatGPT\"}",
-      "{argument name=\"teaser 2\" default=\"建筑师手记 · 在杭州慢慢盖一座房子\"}",
-      "{argument name=\"teaser 3\" default=\"特别企划 · 30 位 30 岁\"}",
-      "{argument name=\"teaser 4\" default=\"长读 · 一个失败的创业\"}"
+      "{argument name=\"teaser 1\" default=\"AI 時代的寫作 · 韓松落 vs ChatGPT\"}",
+      "{argument name=\"teaser 2\" default=\"建築師手記 · 在杭州慢慢蓋一座房子\"}",
+      "{argument name=\"teaser 3\" default=\"特別企劃 · 30 位 30 歲\"}",
+      "{argument name=\"teaser 4\" default=\"長讀 · 一個失敗的創業\"}"
     ],
-    "position": "{argument name=\"teaser position\" default=\"画面下方 + 左侧 vertical\"}"
+    "position": "{argument name=\"teaser position\" default=\"畫面下方 + 左側 vertical\"}"
   },
   "color_palette": "{argument name=\"color palette\" default=\"米白 + 墨黑 + 一抹品牌橙\"}",
   "barcode": {
@@ -88,93 +88,93 @@
   },
   "constraints": {
     "must_keep": [
-      "主视觉作为绝对锚点",
-      "刊名清晰可读且不被遮挡",
-      "主标题字号最大",
-      "栏目导引不抢戏"
+      "主視覺作爲絕對錨點",
+      "刊名清晰可讀且不被遮擋",
+      "主標題字號最大",
+      "欄目導引不搶戲"
     ],
     "avoid": [
-      "主视觉与文字争抢同一区域",
-      "字体多于 3 种",
-      "色板出现额外色",
-      "出现广告 logo"
+      "主視覺與文字爭搶同一區域",
+      "字體多於 3 種",
+      "色板出現額外色",
+      "出現廣告 logo"
     ]
   }
 }
 ```
 
-### 参数策略
+### 參數策略
 
-- 必问：刊名、期号、主标题、主视觉
-- 可默认：色板、栏目导引、条码
-- 可随机：装饰小元素
+- 必問：刊名、期號、主標題、主視覺
+- 可默認：色板、欄目導引、條碼
+- 可隨機：裝飾小元素
 
-### 自动补全策略
+### 自動補全策略
 
-- 风格根据刊型自动选（时尚 = 高对比 + 极简，财经 = 蓝灰 + 衬线，文化 = 暖米 + 衬线）
-- 主标题默认 6-12 字
-- 栏目默认 3-4 条
+- 風格根據刊型自動選（時尚 = 高對比 + 極簡，財經 = 藍灰 + 襯線，文化 = 暖米 + 襯線）
+- 主標題默認 6-12 字
+- 欄目默認 3-4 條
 
-## 变体 1：单物封面（产品 / 物品）
+## 變體 1：單物封面（產品 / 物品）
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "单物杂志封面",
+  "type": "單物雜誌封面",
   "main_visual": {
     "type": "object",
-    "description": "{argument name=\"object\" default=\"一把保养良好的复古打字机\"}"
+    "description": "{argument name=\"object\" default=\"一把保養良好的復古打字機\"}"
   },
   "title_block": {
-    "main_title": "{argument name=\"title\" default=\"工具的灵魂\"}"
+    "main_title": "{argument name=\"title\" default=\"工具的靈魂\"}"
   },
   "constraints": {
-    "must_feel": "静物、克制、文学感"
+    "must_feel": "靜物、克制、文學感"
   }
 }
 ```
 
-## 变体 2：财经 / 科技刊封面
+## 變體 2：財經 / 科技刊封面
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "财经科技刊封面",
+  "type": "財經科技刊封面",
   "main_visual": {
     "type": "concept",
-    "description": "{argument name=\"concept\" default=\"信息流抽象图形 + 主体人物剪影\"}"
+    "description": "{argument name=\"concept\" default=\"信息流抽象圖形 + 主體人物剪影\"}"
   },
-  "color_palette": "深蓝 + 银 + 一抹荧光",
+  "color_palette": "深藍 + 銀 + 一抹熒光",
   "title_block": {
-    "main_title": "{argument name=\"title\" default=\"AI 重写商业\"}"
+    "main_title": "{argument name=\"title\" default=\"AI 重寫商業\"}"
   },
   "constraints": {
-    "must_feel": "前沿、可信、行业旗舰"
+    "must_feel": "前沿、可信、行業旗艦"
   }
 }
 ```
 
-## 变体 3：自动补全模式
+## 變體 3：自動補全模式
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "杂志封面自动补全模板",
+  "type": "雜誌封面自動補全模板",
   "mode": "auto-fill",
-  "rule": "用户给刊型 + 主题，自动生成刊名、期号、主标题、栏目导引、风格",
+  "rule": "用戶給刊型 + 主題，自動生成刊名、期號、主標題、欄目導引、風格",
   "constraints": {
-    "must_feel": "可放上书报亭"
+    "must_feel": "可放上書報亭"
   }
 }
 ```
 
-## 避免事项
+## 避免事項
 
-- 不要让刊名被主视觉遮住
-- 不要让主标题与主视觉色彩对比过低
-- 不要让栏目导引超过 5 条
-- 不要使用 > 3 种字体
-- 不要让条码出现在主视觉中心
+- 不要讓刊名被主視覺遮住
+- 不要讓主標題與主視覺色彩對比過低
+- 不要讓欄目導引超過 5 條
+- 不要使用 > 3 種字體
+- 不要讓條碼出現在主視覺中心

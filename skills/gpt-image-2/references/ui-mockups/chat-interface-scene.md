@@ -1,73 +1,73 @@
-# 聊天界面 / 对话气泡场景模板
+# 聊天界面 / 對話氣泡場景模板
 
-本文件用于生成“聊天 App 界面 + 对话气泡 + 角色头像”的样机，可用于：
+本文件用於生成「聊天 App 界面 + 對話氣泡 + 角色頭像」的樣機，可用於：
 
-- 微信 / iMessage / WhatsApp / Discord 风格聊天截图
-- 对话流式表情包
-- 角色之间的“假聊天”剧本视觉
-- 客服对话样机
-- 心理咨询 / 教学场景对话演示
-- AI 助手对话界面演示
+- 微信 / iMessage / WhatsApp / Discord 風格聊天截圖
+- 對話流式表情包
+- 角色之間的「假聊天」劇本視覺
+- 客服對話樣機
+- 心理諮詢 / 教學場景對話演示
+- AI 助手對話界面演示
 
-它跟 `live-commerce-ui.md` 的区别：
+它跟 `live-commerce-ui.md` 的區別：
 
-- 直播 UI：以人物画面为主，UI 叠加在上面
-- 聊天界面：以聊天气泡 + 头像为主，画面就是 App 内的对话流
+- 直播 UI：以人物畫面爲主，UI 疊加在上面
+- 聊天界面：以聊天氣泡 + 頭像爲主，畫面就是 App 內的對話流
 
-## 适用范围
+## 適用範圍
 
-- 一对一聊天截图样机
-- 群聊截图样机
-- AI 与人聊天的对话流截图
-- 双角色 / 多角色互动剧本
-- 故事化截图（比如“甲乙两人的对话推进剧情”）
+- 一對一聊天截圖樣機
+- 羣聊截圖樣機
+- AI 與人聊天的對話流截圖
+- 雙角色 / 多角色互動劇本
+- 故事化截圖（比如「甲乙兩人的對話推進劇情」）
 
-## 何时使用
+## 何時使用
 
-- 用户提到“聊天截图 / 对话样机 / 微信聊天 / iMessage / 群聊样机”
-- 用户希望让两个或多个角色“聊一段话”
-- 用户希望生成具备表情包属性的对话流
-- 用户希望生成 AI 助手 / 客服的对话演示
+- 用戶提到「聊天截圖 / 對話樣機 / 微信聊天 / iMessage / 羣聊樣機」
+- 用戶希望讓兩個或多個角色「聊一段話」
+- 用戶希望生成具備表情包屬性的對話流
+- 用戶希望生成 AI 助手 / 客服的對話演示
 
 不要使用：
 
-- 用户要的是社交平台帖子（用 `social-interface-mockup.md`）
-- 用户要的是直播间界面（用 `live-commerce-ui.md`）
+- 用戶要的是社交平臺帖子（用 `social-interface-mockup.md`）
+- 用戶要的是直播間界面（用 `live-commerce-ui.md`）
 
-## 缺失信息优先提问顺序
+## 缺失信息優先提問順序
 
-1. 平台风格：iMessage、微信、WhatsApp、Discord、通用 IM、AI 助手
-2. 颜色模式：浅色 / 深色
-3. 对话角色：几人，每人是谁
-4. 对话主题：具体场景（吵架 / 表白 / 谈业务 / 角色扮演 / AI 答疑）
-5. 是否需要表情、贴纸、转账卡片、语音条等富媒体
-6. 是否允许我自动补全对话内容
+1. 平颱風格：iMessage、微信、WhatsApp、Discord、通用 IM、AI 助手
+2. 顏色模式：淺色 / 深色
+3. 對話角色：幾人，每人是誰
+4. 對話主題：具體場景（吵架 / 表白 / 談業務 / 角色扮演 / AI 答疑）
+5. 是否需要表情、貼紙、轉賬卡片、語音條等富媒體
+6. 是否允許我自動補全對話內容
 
-## 主模板：双人聊天截图
+## 主模板：雙人聊天截圖
 
 📖 描述
 
-仿真两人在某个 IM App 里的聊天页面，包含顶部头部、滚动对话流、底部输入栏。
+仿真兩人在某個 IM App 裏的聊天頁面，包含頂部頭部、滾動對話流、底部輸入欄。
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "移动端双人聊天截图样机",
-  "goal": "生成一张高仿真的聊天截图，可用于内容创意、剧本演示、角色对话视觉",
+  "type": "移動端雙人聊天截圖樣機",
+  "goal": "生成一張高仿真的聊天截圖，可用於內容創意、劇本演示、角色對話視覺",
   "platform": {
     "name": "{argument name=\"platform\" default=\"iMessage\"}",
     "color_mode": "{argument name=\"color mode\" default=\"light\"}",
     "language": "{argument name=\"interface language\" default=\"中文\"}"
   },
   "header": {
-    "status_bar": "顶部状态栏，时间 '{argument name=\"status time\" default=\"21:42\"}'，信号、Wi-Fi、电量",
+    "status_bar": "頂部狀態欄，時間 '{argument name=\"status time\" default=\"21:42\"}'，信號、Wi-Fi、電量",
     "navigation": {
-      "back": "返回箭头",
-      "contact_avatar": "{argument name=\"contact avatar\" default=\"对话方头像\"}",
+      "back": "返回箭頭",
+      "contact_avatar": "{argument name=\"contact avatar\" default=\"對話方頭像\"}",
       "contact_name": "{argument name=\"contact name\" default=\"林深\"}",
-      "online_status": "{argument name=\"online status\" default=\"在线\"}",
-      "right_actions": ["语音通话图标", "视频通话图标"]
+      "online_status": "{argument name=\"online status\" default=\"在線\"}",
+      "right_actions": ["語音通話圖標", "視頻通話圖標"]
     }
   },
   "conversation": {
@@ -78,19 +78,19 @@
       {
         "role": "other",
         "type": "text",
-        "text": "{argument name=\"msg 1\" default=\"在吗？刚刚那个事我想了想\"}",
+        "text": "{argument name=\"msg 1\" default=\"在嗎？剛剛那個事我想了想\"}",
         "timestamp": "21:38"
       },
       {
         "role": "self",
         "type": "text",
-        "text": "{argument name=\"msg 2\" default=\"在的，你说\"}",
+        "text": "{argument name=\"msg 2\" default=\"在的，你說\"}",
         "timestamp": "21:39"
       },
       {
         "role": "other",
         "type": "text",
-        "text": "{argument name=\"msg 3\" default=\"我决定明天就把方案交出去\"}",
+        "text": "{argument name=\"msg 3\" default=\"我決定明天就把方案交出去\"}",
         "timestamp": "21:39"
       },
       {
@@ -102,184 +102,184 @@
       {
         "role": "other",
         "type": "sticker",
-        "description": "可爱猫咪 OK 贴纸",
+        "description": "可愛貓咪 OK 貼紙",
         "timestamp": "21:40"
       },
       {
         "role": "self",
         "type": "image",
-        "description": "白板上写着思维导图",
+        "description": "白板上寫着思維導圖",
         "timestamp": "21:41"
       },
       {
         "role": "other",
         "type": "text",
-        "text": "{argument name=\"msg 7\" default=\"这个方向我也认同，明天九点见\"}",
+        "text": "{argument name=\"msg 7\" default=\"這個方向我也認同，明天九點見\"}",
         "timestamp": "21:41"
       },
       {
         "role": "self",
         "type": "text",
-        "text": "{argument name=\"msg 8\" default=\"好，明早咖啡我请\"}",
+        "text": "{argument name=\"msg 8\" default=\"好，明早咖啡我請\"}",
         "timestamp": "21:42"
       }
     ]
   },
   "footer": {
     "input_bar": {
-      "left_icons": ["相机", "图片", "语音"],
-      "placeholder": "{argument name=\"input placeholder\" default=\"输入消息\"}",
+      "left_icons": ["相機", "圖片", "語音"],
+      "placeholder": "{argument name=\"input placeholder\" default=\"輸入消息\"}",
       "right_icons": ["表情", "+"]
     },
-    "home_indicator": "底部 home 指示条"
+    "home_indicator": "底部 home 指示條"
   },
   "style": {
-    "rendering": "高保真移动端聊天界面截图，纵向比例，看起来像真实手机截屏",
-    "consistency": "气泡颜色、头像位置、时间样式严格遵循平台风格"
+    "rendering": "高保真移動端聊天界面截圖，縱向比例，看起來像真實手機截屏",
+    "consistency": "氣泡顏色、頭像位置、時間樣式嚴格遵循平颱風格"
   },
   "constraints": {
     "must_keep": [
-      "气泡左右对齐与角色一致",
-      "时间戳合理推进，不能乱序",
-      "中文文字清晰可读",
-      "头像与昵称一致"
+      "氣泡左右對齊與角色一致",
+      "時間戳合理推進，不能亂序",
+      "中文文字清晰可讀",
+      "頭像與暱稱一致"
     ],
     "avoid": [
-      "气泡背景与文字颜色对比度过低",
-      "时间显示不符合一天内的逻辑",
-      "图片与语音条出现错位"
+      "氣泡背景與文字顏色對比度過低",
+      "時間顯示不符合一天內的邏輯",
+      "圖片與語音條出現錯位"
     ]
   }
 }
 ```
 
-### 参数策略
+### 參數策略
 
-- 必问：平台、对话双方身份、对话主题
-- 可默认：状态栏时间、底部输入栏图标、在线状态
-- 可随机：少量氛围消息（贴纸、表情、emoji），但不能盖过主对话
+- 必問：平臺、對話雙方身份、對話主題
+- 可默認：狀態欄時間、底部輸入欄圖標、在線狀態
+- 可隨機：少量氛圍消息（貼紙、表情、emoji），但不能蓋過主對話
 
-### 自动补全策略
+### 自動補全策略
 
-当用户说“你帮我编一段对话”：
+當用戶說「你幫我編一段對話」：
 
-- 控制在 6-10 条消息内
-- 内容要有起承转合，不要全是“嗯嗯好的”
-- 每条消息字数控制在合理 IM 长度（≤ 35 字最佳）
-- 时间戳必须连续合理
+- 控制在 6-10 條消息內
+- 內容要有起承轉合，不要全是「嗯嗯好的」
+- 每條消息字數控制在合理 IM 長度（≤ 35 字最佳）
+- 時間戳必須連續合理
 
-## 变体 1：群聊样机
+## 變體 1：羣聊樣機
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "群聊样机",
+  "type": "羣聊樣機",
   "platform": {
     "name": "{argument name=\"platform\" default=\"微信\"}",
     "color_mode": "light"
   },
   "group": {
-    "name": "{argument name=\"group name\" default=\"产品组日常\"}",
+    "name": "{argument name=\"group name\" default=\"產品組日常\"}",
     "member_count": "{argument name=\"member count\" default=\"12\"}"
   },
   "conversation": {
     "messages": [
-      {"role": "member", "name": "Lily", "text": "今天的需求评审定 4 点对吗？"},
-      {"role": "member", "name": "陈工", "text": "对，会议室 A"},
-      {"role": "self", "text": "我把文档更新到群里了"},
-      {"role": "system", "text": "撤回了一条消息"},
-      {"role": "member", "name": "PM 老王", "text": "@all 提前 5 分钟到位"}
+      {"role": "member", "name": "Lily", "text": "今天的需求評審定 4 點對嗎？"},
+      {"role": "member", "name": "陳工", "text": "對，會議室 A"},
+      {"role": "self", "text": "我把文檔更新到羣裏了"},
+      {"role": "system", "text": "撤回了一條消息"},
+      {"role": "member", "name": "PM 老王", "text": "@all 提前 5 分鐘到位"}
     ]
   },
   "constraints": {
-    "must_feel": "像真实工作群"
+    "must_feel": "像真實工作羣"
   }
 }
 ```
 
-## 变体 2：AI 助手对话界面
+## 變體 2：AI 助手對話界面
 
-适合：AI 产品的功能演示截图、宣传图、教学图。
+適合：AI 產品的功能演示截圖、宣傳圖、教學圖。
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "AI 助手对话界面样机",
+  "type": "AI 助手對話界面樣機",
   "platform": {
     "name": "{argument name=\"product name\" default=\"通用 AI 助手\"}",
     "color_mode": "{argument name=\"color mode\" default=\"light\"}"
   },
   "header": {
-    "title": "{argument name=\"chat title\" default=\"新对话\"}",
+    "title": "{argument name=\"chat title\" default=\"新對話\"}",
     "model_label": "{argument name=\"model label\" default=\"Claude Opus 4.7\"}",
-    "right_actions": ["新建对话", "历史"]
+    "right_actions": ["新建對話", "歷史"]
   },
   "conversation": {
     "messages": [
       {
         "role": "user",
-        "text": "{argument name=\"user question\" default=\"帮我把下面这段会议纪要整理成行动项\"}"
+        "text": "{argument name=\"user question\" default=\"幫我把下面這段會議紀要整理成行動項\"}"
       },
       {
         "role": "assistant",
         "type": "structured",
         "content": [
-          "1. 行动项一：负责人 / 截止日",
-          "2. 行动项二：负责人 / 截止日",
-          "3. 行动项三：负责人 / 截止日"
+          "1. 行動項一：負責人 / 截止日",
+          "2. 行動項二：負責人 / 截止日",
+          "3. 行動項三：負責人 / 截止日"
         ]
       },
       {
         "role": "user",
-        "text": "{argument name=\"follow up\" default=\"再生成一份发给团队的邮件\"}"
+        "text": "{argument name=\"follow up\" default=\"再生成一份發給團隊的郵件\"}"
       },
       {
         "role": "assistant",
         "type": "code-block",
         "language": "markdown",
-        "preview": "邮件正文预览，开头致敬，中间结构化要点，结尾签名"
+        "preview": "郵件正文預覽，開頭致敬，中間結構化要點，結尾籤名"
       }
     ]
   },
   "footer": {
     "input_bar": {
-      "placeholder": "{argument name=\"input placeholder\" default=\"问点什么...\"}",
-      "right_button": "发送"
+      "placeholder": "{argument name=\"input placeholder\" default=\"問點什麼...\"}",
+      "right_button": "發送"
     },
-    "tools_row": ["上传文件", "网页", "代码", "图像"]
+    "tools_row": ["上傳文件", "網頁", "代碼", "圖像"]
   },
   "constraints": {
-    "must_feel": "像真实 AI 产品截图，而不是纯设计稿"
+    "must_feel": "像真實 AI 產品截圖，而不是純設計稿"
   }
 }
 ```
 
-## 变体 3：自动补全模式
+## 變體 3：自動補全模式
 
-适用于用户只说“做一段聊天截图”。
+適用於用戶只說「做一段聊天截圖」。
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "聊天界面自动补全模板",
+  "type": "聊天界面自動補全模板",
   "mode": "auto-fill",
-  "platform_default": "iMessage 浅色模式",
-  "scene_generation": "默认生成生活感对话，不强加故事走向",
-  "rule": "如果用户没指定双方身份，默认两个朋友之间的轻松对话",
+  "platform_default": "iMessage 淺色模式",
+  "scene_generation": "默認生成生活感對話，不強加故事走向",
+  "rule": "如果用戶沒指定雙方身份，默認兩個朋友之間的輕鬆對話",
   "constraints": {
-    "must_feel": "自然、像真实手机截图"
+    "must_feel": "自然、像真實手機截圖"
   }
 }
 ```
 
-## 避免事项
+## 避免事項
 
-- 不要让对话双方全部用一边对齐，必须区分发送者与接收者
-- 不要让头像出现在用户自己消息那一侧（除部分平台特例）
-- 不要混合两种平台的 UI 元素（比如 iMessage 蓝色气泡 + 微信底栏）
-- 不要让消息之间时间戳出现倒退、不连贯
-- 不要在“客服 / AI 助手”场景中加入私人化情绪表达
-- 不要把所有消息都做成纯文字，会显得不真实，可适当夹杂图片 / 贴纸 / 语音条
+- 不要讓對話雙方全部用一邊對齊，必須區分發送者與接收者
+- 不要讓頭像出現在用戶自己消息那一側（除部分平臺特例）
+- 不要混合兩種平臺的 UI 元素（比如 iMessage 藍色氣泡 + 微信底欄）
+- 不要讓消息之間時間戳出現倒退、不連貫
+- 不要在「客服 / AI 助手」場景中加入私人化情緒表達
+- 不要把所有消息都做成純文字，會顯得不真實，可適當夾雜圖片 / 貼紙 / 語音條

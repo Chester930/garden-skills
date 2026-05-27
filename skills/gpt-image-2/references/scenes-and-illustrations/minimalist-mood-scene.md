@@ -1,175 +1,175 @@
-# 极简氛围插画模板
+# 極簡氛圍插畫模板
 
-本文件用于生成“极简留白 / 强氛围” 插画：
+本文件用於生成「極簡留白 / 強氛圍」 插畫：
 
-- 极简海报
-- 文学性氛围图
-- 品牌情绪图
-- 公众号文末图
-- 桌面 / 手机壁纸
+- 極簡海報
+- 文學性氛圍圖
+- 品牌情緒圖
+- 公衆號文末圖
+- 桌面 / 手機壁紙
 
-特征：
+特徵：
 
 - 大留白
-- 单一主体或极少元素
-- 一种主导色
-- 强情绪 / 强气质
-- 文字（如有）极少
+- 單一主體或極少元素
+- 一種主導色
+- 強情緒 / 強氣質
+- 文字（如有）極少
 
-## 适用范围
+## 適用範圍
 
-- 文学性氛围图
-- 极简海报
-- 品牌情绪图
-- 壁纸 / 文末图
+- 文學性氛圍圖
+- 極簡海報
+- 品牌情緒圖
+- 壁紙 / 文末圖
 
-## 何时使用
+## 何時使用
 
-- 用户提到“极简 / 留白 / 氛围 / 一种心情 / 文学风”
-- 用户希望视觉以“情绪为先”，不需要叙事
+- 用戶提到「極簡 / 留白 / 氛圍 / 一種心情 / 文學風」
+- 用戶希望視覺以「情緒爲先」，不需要敘事
 
 不要使用：
 
-- 治愈日常（用 `healing-scene.md`）
-- 概念大场景（用 `concept-scene.md`）
-- 童书插画（用 `picture-book-scene.md`）
+- 治癒日常（用 `healing-scene.md`）
+- 概念大場景（用 `concept-scene.md`）
+- 童書插畫（用 `picture-book-scene.md`）
 
-## 缺失信息优先提问顺序
+## 缺失信息優先提問順序
 
-1. 一种心情 / 一句话
-2. 主体（一个人 / 一只鸟 / 一棵树 / 抽象图形）
-3. 主导色
+1. 一種心情 / 一句話
+2. 主體（一個人 / 一隻鳥 / 一棵樹 / 抽象圖形）
+3. 主導色
 4. 是否需要文字
 5. 比例
 
-## 主模板：极简留白氛围图
+## 主模板：極簡留白氛圍圖
 
 📖 描述
 
-整体大量留白，主体小且偏置，色调统一，文字（如有）只 1 句话。
+整體大量留白，主體小且偏置，色調統一，文字（如有）只 1 句話。
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "极简留白氛围图",
-  "goal": "生成一张以情绪为主、留白极致的极简插画",
+  "type": "極簡留白氛圍圖",
+  "goal": "生成一張以情緒爲主、留白極致的極簡插畫",
   "mood": {
-    "feeling": "{argument name=\"feeling\" default=\"安静、独处、深秋\"}",
-    "one_sentence": "{argument name=\"one sentence\" default=\"风停了，我也终于停了一下。\"}"
+    "feeling": "{argument name=\"feeling\" default=\"安靜、獨處、深秋\"}",
+    "one_sentence": "{argument name=\"one sentence\" default=\"風停了，我也終於停了一下。\"}"
   },
   "subject": {
-    "description": "{argument name=\"main subject\" default=\"远处一棵孤零零的小树\"}",
-    "scale": "{argument name=\"subject scale\" default=\"占画面 10%\"}",
-    "position": "{argument name=\"subject position\" default=\"画面右下\"}"
+    "description": "{argument name=\"main subject\" default=\"遠處一棵孤零零的小樹\"}",
+    "scale": "{argument name=\"subject scale\" default=\"佔畫面 10%\"}",
+    "position": "{argument name=\"subject position\" default=\"畫面右下\"}"
   },
   "background": {
-    "type": "{argument name=\"background\" default=\"米白色雾气 + 微微纸纹\"}",
+    "type": "{argument name=\"background\" default=\"米白色霧氣 + 微微紙紋\"}",
     "main_color": "{argument name=\"main color\" default=\"米白 + 一抹暖灰\"}"
   },
   "text_overlay": {
     "enabled": "{argument name=\"text enabled\" default=\"true\"}",
-    "text": "{argument name=\"text\" default=\"风停了，我也终于停了一下。\"}",
-    "position": "{argument name=\"text position\" default=\"画面左上\"}",
-    "font_style": "{argument name=\"font style\" default=\"细衬线体\"}",
+    "text": "{argument name=\"text\" default=\"風停了，我也終於停了一下。\"}",
+    "position": "{argument name=\"text position\" default=\"畫面左上\"}",
+    "font_style": "{argument name=\"font style\" default=\"細襯線體\"}",
     "color": "深灰"
   },
   "style": {
-    "rendering": "极简插画 + 微纸纹 + 柔和颗粒",
-    "lighting": "整体柔光、几乎无戏剧光",
-    "color_palette": "≤ 2 种主色"
+    "rendering": "極簡插畫 + 微紙紋 + 柔和顆粒",
+    "lighting": "整體柔光、幾乎無戲劇光",
+    "color_palette": "≤ 2 種主色"
   },
   "aspect_ratio": "{argument name=\"aspect ratio\" default=\"3:4\"}",
   "constraints": {
     "must_keep": [
-      "留白 ≥ 画面 70%",
-      "主体小但不可缺",
-      "色调严格统一",
-      "情绪通过色 + 留白传达，不靠装饰"
+      "留白 ≥ 畫面 70%",
+      "主體小但不可缺",
+      "色調嚴格統一",
+      "情緒通過色 + 留白傳達，不靠裝飾"
     ],
     "avoid": [
-      "次要元素堆叠",
-      "颜色多于 2 种",
-      "文字超过 1 句",
-      "出现品牌 logo"
+      "次要元素堆疊",
+      "顏色多於 2 種",
+      "文字超過 1 句",
+      "出現品牌 logo"
     ]
   }
 }
 ```
 
-### 参数策略
+### 參數策略
 
-- 必问：心情、主体
-- 可默认：背景、配色、字体
-- 可随机：主体小细节
+- 必問：心情、主體
+- 可默認：背景、配色、字體
+- 可隨機：主體小細節
 
-### 自动补全策略
+### 自動補全策略
 
-- 心情 → 配色（独处 = 米白；夜晚 = 深蓝；秋 = 暖棕；春 = 樱粉）
-- 主体根据心情选（孤独 = 一棵树 / 一只鸟；平静 = 一片海；思念 = 远去的背影）
+- 心情 → 配色（獨處 = 米白；夜晚 = 深藍；秋 = 暖棕；春 = 櫻粉）
+- 主體根據心情選（孤獨 = 一棵樹 / 一隻鳥；平靜 = 一片海；思念 = 遠去的背影）
 - 文字 ≤ 18 字
 
-## 变体 1：纯色极简海报
+## 變體 1：純色極簡海報
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "纯色极简海报",
+  "type": "純色極簡海報",
   "subject": {
-    "description": "{argument name=\"subject\" default=\"一只飞鸟剪影\"}",
+    "description": "{argument name=\"subject\" default=\"一隻飛鳥剪影\"}",
     "scale": "5%"
   },
   "background": {
-    "type": "纯色",
-    "main_color": "{argument name=\"main color\" default=\"深蓝\"}"
+    "type": "純色",
+    "main_color": "{argument name=\"main color\" default=\"深藍\"}"
   },
   "text_overlay": {
     "text": "{argument name=\"text\" default=\"自由\"}",
-    "font_style": "极粗黑体"
+    "font_style": "極粗黑體"
   },
   "constraints": {
-    "must_feel": "强一句话、克制、概念"
+    "must_feel": "強一句話、克制、概念"
   }
 }
 ```
 
-## 变体 2：抽象图形氛围
+## 變體 2：抽象圖形氛圍
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "抽象图形氛围图",
+  "type": "抽象圖形氛圍圖",
   "subject": {
-    "description": "{argument name=\"abstract\" default=\"两个相切的圆\"}",
+    "description": "{argument name=\"abstract\" default=\"兩個相切的圓\"}",
     "scale": "30%"
   },
   "constraints": {
-    "must_feel": "概念、设计感、品牌资产"
+    "must_feel": "概念、設計感、品牌資產"
   }
 }
 ```
 
-## 变体 3：自动补全模式
+## 變體 3：自動補全模式
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "极简氛围图自动补全模板",
+  "type": "極簡氛圍圖自動補全模板",
   "mode": "auto-fill",
-  "rule": "用户给一句心情或一个词，自动决定主体、配色、文字、比例",
+  "rule": "用戶給一句心情或一個詞，自動決定主體、配色、文字、比例",
   "constraints": {
-    "must_feel": "可做壁纸 / 文末图"
+    "must_feel": "可做壁紙 / 文末圖"
   }
 }
 ```
 
-## 避免事项
+## 避免事項
 
-- 不要让画面塞满
-- 不要使用 > 2 种主色
-- 不要让文字超过 18 字
-- 不要让主体居正中（极简通常偏置）
-- 不要使用花哨字体
+- 不要讓畫面塞滿
+- 不要使用 > 2 種主色
+- 不要讓文字超過 18 字
+- 不要讓主體居正中（極簡通常偏置）
+- 不要使用花哨字體

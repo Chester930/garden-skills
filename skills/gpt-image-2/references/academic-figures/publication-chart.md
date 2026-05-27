@@ -1,69 +1,69 @@
-# Publication-Ready 数据图表模板
+# Publication-Ready 數據圖表模板
 
-本文件用于生成"论文 / 报告里出现的标准数据图表"：
+本文件用於生成"論文 / 報告裡出現的標準數據圖表"：
 
-- Bar chart / grouped bar chart（消融实验、方法对比）
-- Line chart / 训练曲线（loss / accuracy 随 epoch）
+- Bar chart / grouped bar chart（消融實驗、方法對比）
+- Line chart / 訓練曲線（loss / accuracy 隨 epoch）
 - Scatter plot（性能-效率 trade-off）
-- Box plot / Violin plot（统计分布）
-- Heatmap（confusion matrix / attention map / 相关性矩阵）
+- Box plot / Violin plot（統計分布）
+- Heatmap（confusion matrix / attention map / 相關性矩陣）
 
-特征：
+特徵：
 
-- matplotlib / seaborn / R ggplot2 出版物风
-- 含坐标轴 + 标签 + 单位 + 图例 + 误差棒 + 显著性标记
-- 字体 ≥ 10pt（确保打印可读）
-- 配色克制（≤ 6 色），可单色印刷
-- 网格线极淡或无
+- matplotlib / seaborn / R ggplot2 出版物風
+- 含坐標軸 + 標籤 + 單位 + 圖例 + 誤差棒 + 顯著性標記
+- 字體 ≥ 10pt（確保打印可讀）
+- 配色克制（≤ 6 色），可單色印刷
+- 網格線極淡或無
 
-> ⚠️ 重要免责声明：**本模板生成的是"出版级图表的视觉呈现"，不是真实数据可视化**。GPT Image 2 不能保证坐标和数据的精确对应。
+> ⚠️ 重要免責聲明：**本模板生成的是"出版級圖表的視覺呈現"，不是真實數據可視化**。GPT Image 2 不能保證坐標和數據的精確對應。
 >
-> - 如果你需要"展示一张论文图表的样子" / "做封面 / hero 配图" → 用本模板
-> - 如果你需要"用真实数据生成可发表的图表" → 请用 matplotlib / seaborn / ggplot2 / Plotly
+> - 如果你需要"展示一張論文圖表的樣子" / "做封面 / hero 配圖" → 用本模板
+> - 如果你需要"用真實數據生成可發表的圖表" → 請用 matplotlib / seaborn / ggplot2 / Plotly
 
-## 适用范围
+## 適用範圍
 
-- 论文方法对比 chart 的视觉示例
-- 教学 slide 中"看一眼这个图就懂"的演示图
-- Blog / 公众号配图 — "我们的方法在这个 chart 上表现"
-- 投资人 deck 中的"数据 mock"
-- 演示用、可视化教学用的图表
+- 論文方法對比 chart 的視覺示例
+- 教學 slide 中"看一眼這個圖就懂"的演示圖
+- Blog / 公衆號配圖 — "我們的方法在這個 chart 上表現"
+- 投資人 deck 中的"數據 mock"
+- 演示用、可視化教學用的圖表
 
-## 何时使用
+## 何時使用
 
-- 用户提到 "publication chart / matplotlib 风 / seaborn 风 / 论文图表 / bar chart / line chart / scatter / heatmap / confusion matrix"
-- 用户希望「白底、克制、可单色、像 NeurIPS 论文那种图表」
-- 用户**明确知道**这只是视觉呈现，不依赖坐标精度
+- 用戶提到 "publication chart / matplotlib 風 / seaborn 風 / 論文圖表 / bar chart / line chart / scatter / heatmap / confusion matrix"
+- 用戶希望「白底、克制、可單色、像 NeurIPS 論文那種圖表」
+- 用戶**明確知道**這只是視覺呈現，不依賴坐標精度
 
 不要使用：
 
-- 用户要的是「真实数据可视化产出」 → 推荐 matplotlib / seaborn / Plotly
-- 用户要的是「KPI 仪表盘 / 数据回顾」 → 用 `infographics/kpi-dashboard-infographic.md`
-- 用户要的是「商业 PPT 数据页」 → 用 `slides-and-visual-docs/visual-report-page.md`
-- 用户要的是「手绘风信息图」 → 用 `infographics/hand-drawn-infographic.md`
+- 用戶要的是「真實數據可視化產出」 → 推薦 matplotlib / seaborn / Plotly
+- 用戶要的是「KPI 儀錶盤 / 數據回顧」 → 用 `infographics/kpi-dashboard-infographic.md`
+- 用戶要的是「商業 PPT 數據頁」 → 用 `slides-and-visual-docs/visual-report-page.md`
+- 用戶要的是「手繪風信息圖」 → 用 `infographics/hand-drawn-infographic.md`
 
-## 缺失信息优先提问顺序
+## 缺失信息優先提問順序
 
-1. 图表类型（bar / line / scatter / box / violin / heatmap / pie）
-2. 主题（"我们方法在 ImageNet 上的 accuracy vs baselines"）
-3. X 轴和 Y 轴名称 + 单位
-4. 数据系列数量（单一系列 / 多系列）
-5. 是否有误差棒、显著性标记 *
-6. 配色基调（学术克制 / 强调对比 / 黑白单色）
-7. 图标题 + caption（论文 figure 一般有 caption）
+1. 圖表類型（bar / line / scatter / box / violin / heatmap / pie）
+2. 主題（"我們方法在 ImageNet 上的 accuracy vs baselines"）
+3. X 軸和 Y 軸名稱 + 單位
+4. 數據系列數量（單一系列 / 多系列）
+5. 是否有誤差棒、顯著性標記 *
+6. 配色基調（學術克制 / 強調對比 / 黑白單色）
+7. 圖標題 + caption（論文 figure 一般有 caption）
 
-## 主模板：Publication-Ready Bar Chart（默认）
+## 主模板：Publication-Ready Bar Chart（默認）
 
 📖 描述
 
-整张图是一张标准学术 bar chart：横轴为方法 / 类别，纵轴为指标，多个方法对比，含误差棒、显著性 *、图例。整体白底，sans-serif 字体，限定配色。
+整張圖是一張標準學術 bar chart：橫軸爲方法 / 類別，縱軸爲指標，多個方法對比，含誤差棒、顯著性 *、圖例。整體白底，sans-serif 字體，限定配色。
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "Publication-Ready Bar Chart（学术出版级条形图）",
-  "goal": "生成视觉呈现一张论文 / 报告中的 bar chart，要求白底、克制、专业、可单色印刷",
+  "type": "Publication-Ready Bar Chart（學術出版級條形圖）",
+  "goal": "生成視覺呈現一張論文 / 報告中的 bar chart，要求白底、克制、專業、可單色印刷",
   "canvas": {
     "aspect_ratio": "{argument name=\"aspect_ratio\" default=\"4:3\"}",
     "background": "white #FFFFFF",
@@ -149,25 +149,25 @@
 }
 ```
 
-### 参数策略
+### 參數策略
 
-- **必问**：图表类型（如果不是 bar）、`title`、`x_label` / `y_label` / 单位、`categories`
-- **可默认**：`aspect_ratio`（4:3）、`background`（白）、`error_bars_enabled`（true）、`value_labels_enabled`（true）、`legend_enabled`（false 单系列时）
-- **可随机**：bar 宽度、tick 数量、网格线密度（在合理范围）
+- **必問**：圖表類型（如果不是 bar）、`title`、`x_label` / `y_label` / 單位、`categories`
+- **可默認**：`aspect_ratio`（4:3）、`background`（白）、`error_bars_enabled`（true）、`value_labels_enabled`（true）、`legend_enabled`（false 單系列時）
+- **可隨機**：bar 寬度、tick 數量、網格線密度（在合理範圍）
 
-### 自动补全策略
+### 自動補全策略
 
-- 用户给"我有 5 个方法的 accuracy 对比" → 自动用 default 5 categories，highlight 最后一个为 Ours
-- 用户没指定 y_range → 推断（基于数值范围 ± 5%）
-- 用户没说 error → 默认开启 error_bars（论文标准做法）
-- 用户没说 significance → 默认关闭（除非是统计学论文）
-- 用户说"不是 bar" → 切换到对应变体
+- 用戶給"我有 5 個方法的 accuracy 對比" → 自動用 default 5 categories，highlight 最後一個爲 Ours
+- 用戶沒指定 y_range → 推斷（基於數值範圍 ± 5%）
+- 用戶沒說 error → 默認開啓 error_bars（論文標準做法）
+- 用戶沒說 significance → 默認關閉（除非是統計學論文）
+- 用戶說"不是 bar" → 切換到對應變體
 
-## 变体 1：Line Chart（训练曲线 / 时间序列）
+## 變體 1：Line Chart（訓練曲線 / 時間序列）
 
 ```json
 {
-  "type": "Publication-Ready Line Chart（学术出版级折线图）",
+  "type": "Publication-Ready Line Chart（學術出版級折線圖）",
   "modify": {
     "x_axis_typical": "epoch / step / time / iteration",
     "y_axis_typical": "loss / accuracy / metric",
@@ -180,13 +180,13 @@
 }
 ```
 
-适用：训练曲线、time series 趋势、ablation 随超参变化、scaling laws。
+適用：訓練曲線、time series 趨勢、ablation 隨超參變化、scaling laws。
 
-## 变体 2：Scatter Plot（trade-off 图）
+## 變體 2：Scatter Plot（trade-off 圖）
 
 ```json
 {
-  "type": "Publication-Ready Scatter Plot（学术出版级散点图）",
+  "type": "Publication-Ready Scatter Plot（學術出版級散點圖）",
   "modify": {
     "typical_use": "performance vs efficiency trade-off (e.g. accuracy vs FLOPs / latency / params)",
     "x_axis_typical": "compute / params / latency (often log scale)",
@@ -199,54 +199,54 @@
 }
 ```
 
-适用：性能-效率 trade-off、参数 vs 准确率、Pareto frontier。
+適用：性能-效率 trade-off、參數 vs 準確率、Pareto frontier。
 
-## 变体 3：Heatmap（confusion matrix / attention map / 相关性）
+## 變體 3：Heatmap（confusion matrix / attention map / 相關性）
 
 ```json
 {
-  "type": "Publication-Ready Heatmap（学术出版级热力图）",
+  "type": "Publication-Ready Heatmap（學術出版級熱力圖）",
   "modify": {
-    "grid": "N × N（默认 5×5 至 10×10）",
-    "color_map": "sequential — viridis / Blues / Reds / 灰阶；diverging（如相关矩阵）— RdBu_r 红蓝双向",
+    "grid": "N × N（默認 5×5 至 10×10）",
+    "color_map": "sequential — viridis / Blues / Reds / 灰階；diverging（如相關矩陣）— RdBu_r 紅藍雙向",
     "cell_annotation": "show numeric value inside each cell in monospace, color flips for readability on dark cells",
-    "axes_label": "row labels = ground truth, column labels = predicted（confusion matrix 场景）",
+    "axes_label": "row labels = ground truth, column labels = predicted（confusion matrix 場景）",
     "colorbar": "right side vertical colorbar with label and ticks",
-    "rule_extra": "always include colorbar; never use rainbow colormap for sequential data (jet 已被学界淘汰)"
+    "rule_extra": "always include colorbar; never use rainbow colormap for sequential data (jet 已被學界淘汰)"
   }
 }
 ```
 
-适用：confusion matrix、attention 权重可视化、相关性矩阵、ablation grid。
+適用：confusion matrix、attention 權重可視化、相關性矩陣、ablation grid。
 
-## 变体 4：Box Plot / Violin Plot（统计分布）
+## 變體 4：Box Plot / Violin Plot（統計分布）
 
 ```json
 {
-  "type": "Publication-Ready Box / Violin Plot（学术出版级分布图）",
+  "type": "Publication-Ready Box / Violin Plot（學術出版級分布圖）",
   "modify": {
     "typical_use": "compare distributions across methods / conditions / groups",
-    "elements": "box (Q1, median, Q3) + whiskers (1.5 IQR) + outlier dots; violin 形状叠加显示密度",
-    "median_line_emphasis": "median 线粗实线，颜色区分 group",
-    "annotation": "可叠加 swarm / strip plot 显示每个数据点",
-    "rule_extra": "如果用 violin，violin 内部仍画 box；不要纯 violin（损失中位数信息）"
+    "elements": "box (Q1, median, Q3) + whiskers (1.5 IQR) + outlier dots; violin 形狀疊加顯示密度",
+    "median_line_emphasis": "median 線粗實線，顏色區分 group",
+    "annotation": "可疊加 swarm / strip plot 顯示每個數據點",
+    "rule_extra": "如果用 violin，violin 內部仍畫 box；不要純 violin（損失中位數信息）"
   }
 }
 ```
 
-适用：实验重复结果分布、跨数据集 / 跨用户 / 跨条件分布对比。
+適用：實驗重複結果分布、跨數據集 / 跨用戶 / 跨條件分布對比。
 
-## 避免事项
+## 避免事項
 
-- 用 3D 柱 / 3D 饼 → 严重不专业
-- 用彩虹 / jet colormap 表示连续值（学界已抛弃）
-- 漏掉单位 / 漏掉坐标轴标签
-- value 标签过小读不清
-- 没有 caption 或 caption 没解释 error bar
-- 把 4-5 个不相关 chart 拼一张（应该用 multi-panel figure 模板，每个 sub 图独立）
-- 假装精确（暗示这是真数据但其实是 illustrative）
-- 用花哨字体（Comic Sans / 手写体）
-- 加水印 / 装饰背景
-- 漏掉图例（多系列必须有）
+- 用 3D 柱 / 3D 餅 → 嚴重不專業
+- 用彩虹 / jet colormap 表示連續值（學界已拋棄）
+- 漏掉單位 / 漏掉坐標軸標籤
+- value 標籤過小讀不清
+- 沒有 caption 或 caption 沒解釋 error bar
+- 把 4-5 個不相關 chart 拼一張（應該用 multi-panel figure 模板，每個 sub 圖獨立）
+- 假裝精確（暗示這是真數據但其實是 illustrative）
+- 用花哨字體（Comic Sans / 手寫體）
+- 加水印 / 裝飾背景
+- 漏掉圖例（多系列必須有）
 - 多 series 但配色完全相同
-- 漏掉 Ours 高亮（论文图通常要让 reviewer 一眼看出你的）
+- 漏掉 Ours 高亮（論文圖通常要讓 reviewer 一眼看出你的）

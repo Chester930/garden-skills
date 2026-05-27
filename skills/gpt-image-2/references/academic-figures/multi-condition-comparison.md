@@ -1,59 +1,59 @@
-# 多工况 / 多条件结果对比图模板
+# 多工況 / 多條件結果對比圖模板
 
-本文件用于生成「同一研究对象在不同工况 / 条件 / 组别下的多面板结果对比图」：
+本文件用於生成「同一研究對象在不同工況 / 條件 / 組別下的多面板結果對比圖」：
 
-- 不同温度 / 压力 / 浓度 / 配比 / 时间下的实验或仿真结果
-- 不同处理组 / 对照组 / 工艺方案的并列结果
-- 多面板 (a)(b)(c)(d) 形式的论文 result figure
+- 不同溫度 / 壓力 / 濃度 / 配比 / 時間下的實驗或仿真結果
+- 不同處理組 / 對照組 / 工藝方案的並列結果
+- 多面板 (a)(b)(c)(d) 形式的論文 result figure
 
-特征：
+特徵：
 
-- 2×2 / 1×3 / 1×4 等统一网格布局
-- **所有 panel 严格统一**：相同尺寸、相同色彩逻辑、相同图例、相同字体层级、相同边距
-- 白底、低饱和工程色，论文结果图风格
-- **无真实数据时只做定性表达，禁止虚构数值 / 等值线 / 色标范围**
+- 2×2 / 1×3 / 1×4 等統一網格布局
+- **所有 panel 嚴格統一**：相同尺寸、相同色彩邏輯、相同圖例、相同字體層級、相同邊距
+- 白底、低飽和工程色，論文結果圖風格
+- **無真實數據時只做定性表達，禁止虛構數值 / 等值線 / 色標範圍**
 
-## 适用范围
+## 適用範圍
 
-- 工程 / 物理 / 化学 / 能源 / 材料 / 环境方向的多工况结果对比
-- 燃烧 / 流场 / 温度场 / 应力场 / 浓度场 等场图对比
-- 不同处理组 / 不同剂量 / 不同时间点 的实验对照
-- 同一指标在多个 condition 下的多面板可视化
+- 工程 / 物理 / 化學 / 能源 / 材料 / 環境方向的多工況結果對比
+- 燃燒 / 流場 / 溫度場 / 應力場 / 濃度場 等場圖對比
+- 不同處理組 / 不同劑量 / 不同時間點 的實驗對照
+- 同一指標在多個 condition 下的多面板可視化
 
-## 何时使用
+## 何時使用
 
-- 用户提到「多工况 / 多条件 / 不同 X 下的对比 / panel (a)(b)(c)(d) / 结果对比图」
-- 用户希望视觉「论文 result figure，不是营销信息图」
-- 比较的是**同一对象在不同条件下的同类结果**
+- 用戶提到「多工況 / 多條件 / 不同 X 下的對比 / panel (a)(b)(c)(d) / 結果對比圖」
+- 用戶希望視覺「論文 result figure，不是營銷信息圖」
+- 比較的是**同一對象在不同條件下的同類結果**
 
 不要使用：
 
-- 用户要的是「不同方法在同一样本上的输出对比」（行=样本，列=方法） → 用 `academic-figures/qualitative-comparison-grid.md`
-- 用户要的是「单个 publication-ready 图表」（bar / line / scatter） → 用 `academic-figures/publication-chart.md`
-- 用户要的是「营销 / 信息图风格的二元对比」 → 用 `infographics/comparison-infographic.md`
+- 用戶要的是「不同方法在同一樣本上的輸出對比」（行=樣本，列=方法） → 用 `academic-figures/qualitative-comparison-grid.md`
+- 用戶要的是「單個 publication-ready 圖表」（bar / line / scatter） → 用 `academic-figures/publication-chart.md`
+- 用戶要的是「營銷 / 信息圖風格的二元對比」 → 用 `infographics/comparison-infographic.md`
 
-## 缺失信息优先提问顺序
+## 缺失信息優先提問順序
 
-1. 比较对象是什么（同一现象 / 同一指标）
-2. 比较的是哪些工况 / 条件（建议 2-6 个；超过 6 个考虑分两张图）
-3. 每个 panel 显示的是什么（场图 / 折线 / 柱图 / 等值线 / 显微图）—— 必须**所有 panel 同类型**
-4. 是否有真实数据（**关键**：决定是定性图还是定量图）
-5. 网格布局（2×2 / 1×3 / 1×4 / 2×3）
-6. 标签语言（中文 / 英文 / 双语）
-7. 共享图例 / 共享色标（强烈建议共享）
+1. 比較對象是什麼（同一現象 / 同一指標）
+2. 比較的是哪些工況 / 條件（建議 2-6 個；超過 6 個考慮分兩張圖）
+3. 每個 panel 顯示的是什麼（場圖 / 折線 / 柱圖 / 等值線 / 顯微圖）—— 必須**所有 panel 同類型**
+4. 是否有真實數據（**關鍵**：決定是定性圖還是定量圖）
+5. 網格布局（2×2 / 1×3 / 1×4 / 2×3）
+6. 標籤語言（中文 / 英文 / 雙語）
+7. 共享圖例 / 共享色標（強烈建議共享）
 
-## 主模板：N panel 多工况对比（统一规格）
+## 主模板：N panel 多工況對比（統一規格）
 
 📖 描述
 
-整张图按统一网格分割成 N 个 panel，每个 panel 展示同一类结果在不同工况下的表现。所有 panel 共享色标 / 图例 / 字体层级 / 边距。子图标记为 (a)(b)(c)(d)，标签简短克制。**绝对不允许每个 panel 自成一套风格。**
+整張圖按統一網格分割成 N 個 panel，每個 panel 展示同一類結果在不同工況下的表現。所有 panel 共享色標 / 圖例 / 字體層級 / 邊距。子圖標記爲 (a)(b)(c)(d)，標籤簡短克制。**絕對不允許每個 panel 自成一套風格。**
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "学术多工况结果对比图（multi-condition comparison figure）",
-  "goal": "生成一张可直接放进论文 results 章节的多面板对比图，要求所有 panel 严格统一、白底、低饱和工程色、可单色印刷可读",
+  "type": "學術多工況結果對比圖（multi-condition comparison figure）",
+  "goal": "生成一張可直接放進論文 results 章節的多面板對比圖，要求所有 panel 嚴格統一、白底、低飽和工程色、可單色印刷可讀",
   "canvas": {
     "aspect_ratio": "{argument name=\"aspect_ratio\" default=\"4:3\"}",
     "background": "pure white #FFFFFF",
@@ -145,53 +145,53 @@
 }
 ```
 
-### 参数策略
+### 參數策略
 
-- **必问**：`panel_count`、`panel_type`（所有 panel 同一类型）、`has_real_data`
-- **可默认**：`aspect_ratio`、`grid_layout`（2×2 是最常见）、`shared_legend_enabled`（true）
-- **可随机**：每个 condition 的 `*_detail` 措辞（用户给了控制变量名时可学术化）
+- **必問**：`panel_count`、`panel_type`（所有 panel 同一類型）、`has_real_data`
+- **可默認**：`aspect_ratio`、`grid_layout`（2×2 是最常見）、`shared_legend_enabled`（true）
+- **可隨機**：每個 condition 的 `*_detail` 措辭（用戶給了控制變量名時可學術化）
 
-### 自动补全策略
+### 自動補全策略
 
-- 用户没说有没有真实数据 → **必须先确认**：`has_real_data` = false 时全图走定性渲染
-- 用户给了不同 condition 但没说每 panel 的具体取值 → 在 condition_detail 里用占位短语（如 `λ = X1`），**不要编造数字**
-- 用户给了 panel 数但 row × col 不匹配 → 自动选最接近正方的网格（2×2 / 2×3 / 3×3）
-- 用户说"中文论文 / 答辩" → 切换标签为中文 + 字体 PingFang / 思源黑
+- 用戶沒說有沒有真實數據 → **必須先確認**：`has_real_data` = false 時全圖走定性渲染
+- 用戶給了不同 condition 但沒說每 panel 的具體取值 → 在 condition_detail 裏用佔位短語（如 `λ = X1`），**不要編造數字**
+- 用戶給了 panel 數但 row × col 不匹配 → 自動選最接近正方的網格（2×2 / 2×3 / 3×3）
+- 用戶說"中文論文 / 答辯" → 切換標籤爲中文 + 字體 PingFang / 思源黑
 
-## 变体 1：横向 1×N（适合窄 panel 比较）
+## 變體 1：橫向 1×N（適合窄 panel 比較）
 
 ```json
 {
-  "type": "横向 1×N 多工况对比",
+  "type": "橫向 1×N 多工況對比",
   "modify": {
-    "layout": "rows = 1, cols = N（建议 N ≤ 4）",
-    "use_case": "panel 内部是窄柱图 / 窄折线，更适合横向铺开；或论文双栏排版需要横向单行"
+    "layout": "rows = 1, cols = N（建議 N ≤ 4）",
+    "use_case": "panel 內部是窄柱圖 / 窄折線，更適合橫向鋪開；或論文雙欄排版需要橫向單行"
   }
 }
 ```
 
-适用：单栏 / 双栏论文格式中的横向比较。
+適用：單欄 / 雙欄論文格式中的橫向比較。
 
-## 变体 2：行列双因子矩阵（M×N）
+## 變體 2：行列雙因子矩陣（M×N）
 
 ```json
 {
-  "type": "双因子矩阵对比",
+  "type": "雙因子矩陣對比",
   "modify": {
-    "layout": "rows = M（一种因子的不同水平），cols = N（另一种因子的不同水平）",
-    "rule": "顶部一行写列因子标签，最左一列写行因子标签；panel 内部样式严格统一",
-    "use_case": "需要同时变化两个独立变量（如温度 × 含水率，或时间 × 浓度）"
+    "layout": "rows = M（一種因子的不同水平），cols = N（另一種因子的不同水平）",
+    "rule": "頂部一行寫列因子標籤，最左一列寫行因子標籤；panel 內部樣式嚴格統一",
+    "use_case": "需要同時變化兩個獨立變量（如溫度 × 含水率，或時間 × 濃度）"
   }
 }
 ```
 
-适用：双因子实验设计的结果展示，正交试验结果可视化。
+適用：雙因子實驗設計的結果展示，正交試驗結果可視化。
 
-## 变体 3：定性场图渲染（无真实数据）
+## 變體 3：定性場圖渲染（無真實數據）
 
 ```json
 {
-  "type": "定性场图多工况对比",
+  "type": "定性場圖多工況對比",
   "modify": {
     "panel_type": "contour-field",
     "data_authenticity": {
@@ -199,20 +199,20 @@
       "rule": "render smooth qualitative gradient fields with NO numerical tick labels and NO specific isoline values; the colorbar shows 'low → high' as a qualitative scale only",
       "intent": "visually communicate 'higher temperature in panel (b)' without claiming any specific value"
     },
-    "use_case": "答辩 / 开题阶段尚未拿到数据，需要先讲清研究思路时使用"
+    "use_case": "答辯 / 開題階段尚未拿到數據，需要先講清研究思路時使用"
   }
 }
 ```
 
-适用：示意性结果对比、方法论说明阶段。
+適用：示意性結果對比、方法論說明階段。
 
-## 避免事项
+## 避免事項
 
-- 给每个 panel 用不同 colormap / 不同 range → 直接破坏可比性
-- 在没有真实数据时画出带具体数值的等值线 / 色标刻度（**严格禁止虚构数据**）
-- 让某一 panel 视觉权重明显大于其他 panel（不允许"主图 + 辅图"的结构）
-- 在每个 panel 加独立的装饰性标题
-- 把不同类型的图（bar / line / contour）混排在同一对比图里
-- 使用饱和 brand 色或霓虹渐变
-- 把"对比方法"的逻辑（行=样本×列=方法）误用到本模板（请改用 `qualitative-comparison-grid.md`）
-- 加水印 / 期刊 logo / 设备品牌标
+- 給每個 panel 用不同 colormap / 不同 range → 直接破壞可比性
+- 在沒有真實數據時畫出帶具體數值的等值線 / 色標刻度（**嚴格禁止虛構數據**）
+- 讓某一 panel 視覺權重明顯大於其他 panel（不允許"主圖 + 輔圖"的結構）
+- 在每個 panel 加獨立的裝飾性標題
+- 把不同類型的圖（bar / line / contour）混排在同一對比圖裏
+- 使用飽和 brand 色或霓虹漸變
+- 把"對比方法"的邏輯（行=樣本×列=方法）誤用到本模板（請改用 `qualitative-comparison-grid.md`）
+- 加水印 / 期刊 logo / 設備品牌標

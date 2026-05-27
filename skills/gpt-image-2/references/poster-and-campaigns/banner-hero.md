@@ -1,45 +1,45 @@
 # Web Banner / Hero 模板
 
-本文件用于生成“网页顶部 hero 区 / app banner / 投放素材”视觉：
+本文件用於生成「網頁頂部 hero 區 / app banner / 投放素材」視覺：
 
-- 网站首页 hero
-- 落地页 banner
-- App 顶部活动 banner
-- 邮件 marketing banner
-- 信息流广告素材
+- 網站首頁 hero
+- 落地頁 banner
+- App 頂部活動 banner
+- 郵件 marketing banner
+- 信息流廣告素材
 
-特征：
+特徵：
 
-- 横向比例（16:9 / 21:9 / 3:1）
-- 一句强 claim
-- 留出 CTA 区域
-- 安全留白（避免裁切关键元素）
+- 橫向比例（16:9 / 21:9 / 3:1）
+- 一句強 claim
+- 留出 CTA 區域
+- 安全留白（避免裁切關鍵元素）
 
-## 适用范围
+## 適用範圍
 
 - Web hero
-- 落地页 hero
+- 落地頁 hero
 - App banner
-- 邮件 banner
+- 郵件 banner
 - 投放素材
 
-## 何时使用
+## 何時使用
 
-- 用户提到“banner / hero / 落地页主图 / 顶部图”
-- 用户需要横向构图 + CTA 区
+- 用戶提到「banner / hero / 落地頁主圖 / 頂部圖」
+- 用戶需要橫向構圖 + CTA 區
 
 不要使用：
 
-- 竖图 / 方图主海报（用 `brand-poster.md`）
+- 豎圖 / 方圖主海報（用 `brand-poster.md`）
 - 系列 KV（用 `campaign-kv.md`）
-- 杂志封面（用 `editorial-cover.md`）
+- 雜誌封面（用 `editorial-cover.md`）
 
-## 缺失信息优先提问顺序
+## 缺失信息優先提問順序
 
-1. 用途（web hero / app banner / 邮件）
-2. 主题 / claim
-3. 主视觉
-4. CTA 文案 + 颜色
+1. 用途（web hero / app banner / 郵件）
+2. 主題 / claim
+3. 主視覺
+4. CTA 文案 + 顏色
 5. 品牌色
 6. 比例
 
@@ -47,131 +47,131 @@
 
 📖 描述
 
-整体横向构图，左侧为标题 + 副标题 + CTA，右侧为主视觉，底部安全留白。
+整體橫向構圖，左側爲標題 + 副標題 + CTA，右側爲主視覺，底部安全留白。
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
   "type": "Web hero banner",
-  "goal": "生成一张可直接作为产品官网 / 营销落地页 hero 区主图的横向 banner",
+  "goal": "生成一張可直接作爲產品官網 / 營銷落地頁 hero 區主圖的橫向 banner",
   "aspect_ratio": "{argument name=\"aspect ratio\" default=\"16:9\"}",
   "layout": {
     "left_column": {
-      "headline": "{argument name=\"headline\" default=\"重新定义你的工作节奏\"}",
-      "subhead": "{argument name=\"subhead\" default=\"AURORA Pro · 让 AI 替你处理 80% 的琐事\"}",
+      "headline": "{argument name=\"headline\" default=\"重新定義你的工作節奏\"}",
+      "subhead": "{argument name=\"subhead\" default=\"AURORA Pro · 讓 AI 替你處理 80% 的瑣事\"}",
       "cta": {
-        "text": "{argument name=\"cta text\" default=\"免费试用\"}",
+        "text": "{argument name=\"cta text\" default=\"免費試用\"}",
         "color": "{argument name=\"cta color\" default=\"品牌主色\"}",
         "secondary": "{argument name=\"secondary cta\" default=\"了解更多\"}"
       }
     },
     "right_column": {
-      "centerpiece": "{argument name=\"hero visual\" default=\"产品截图 + 微微 3D 透视 + 高光\"}",
-      "scale": "{argument name=\"hero scale\" default=\"占右侧 80%\"}"
+      "centerpiece": "{argument name=\"hero visual\" default=\"產品截圖 + 微微 3D 透視 + 高光\"}",
+      "scale": "{argument name=\"hero scale\" default=\"佔右側 80%\"}"
     }
   },
   "background": {
-    "type": "{argument name=\"background type\" default=\"浅色渐变\"}",
-    "decoration": "{argument name=\"decoration\" default=\"微噪点 + 极淡几何形\"}"
+    "type": "{argument name=\"background type\" default=\"淺色漸變\"}",
+    "decoration": "{argument name=\"decoration\" default=\"微噪點 + 極淡幾何形\"}"
   },
   "brand": {
     "logo_position": "左上角",
-    "navigation_hint": "{argument name=\"nav hint\" default=\"顶部导航条已存在，banner 不要画\"}"
+    "navigation_hint": "{argument name=\"nav hint\" default=\"頂部導航條已存在，banner 不要畫\"}"
   },
   "safe_area": {
-    "rule": "底部 10% + 右侧 5% 留白，避免裁切",
+    "rule": "底部 10% + 右側 5% 留白，避免裁切",
     "mobile_consideration": "{argument name=\"mobile aware\" default=\"true\"}"
   },
   "constraints": {
     "must_keep": [
-      "headline 字号最大",
-      "CTA 必须可点击感（明确按钮形态）",
-      "主视觉在右侧不超出安全区",
-      "色板严格统一"
+      "headline 字號最大",
+      "CTA 必須可點擊感（明確按鈕形態）",
+      "主視覺在右側不超出安全區",
+      "色板嚴格統一"
     ],
     "avoid": [
-      "headline 与主视觉重叠",
-      "CTA 颜色与背景对比过低",
-      "信息密度过高",
-      "主视觉横跨整个画面无 claim 空间"
+      "headline 與主視覺重疊",
+      "CTA 顏色與背景對比過低",
+      "信息密度過高",
+      "主視覺橫跨整個畫面無 claim 空間"
     ]
   }
 }
 ```
 
-### 参数策略
+### 參數策略
 
-- 必问：headline、CTA、主视觉、比例
-- 可默认：背景、副标题、安全区
-- 可随机：装饰几何形
+- 必問：headline、CTA、主視覺、比例
+- 可默認：背景、副標題、安全區
+- 可隨機：裝飾幾何形
 
-### 自动补全策略
+### 自動補全策略
 
-- 用户给产品名时：自动生成 1 句 headline + 1 句 sub + 1 个 CTA
-- CTA 默认品牌主色按钮 + 灰色辅助按钮
-- 主视觉按行业自动选（SaaS = 截图，消费 = 产品，服务 = 人物）
+- 用戶給產品名時：自動生成 1 句 headline + 1 句 sub + 1 個 CTA
+- CTA 默認品牌主色按鈕 + 灰色輔助按鈕
+- 主視覺按行業自動選（SaaS = 截圖，消費 = 產品，服務 = 人物）
 
-## 变体 1：纯图大背景 + 浮层文案
+## 變體 1：純圖大背景 + 浮層文案
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "全屏背景图 hero",
+  "type": "全屏背景圖 hero",
   "background": {
-    "type": "全图背景",
+    "type": "全圖背景",
     "description": "{argument name=\"background image\" default=\"清晨工作桌面，柔光\"}"
   },
   "layout": {
     "left_column": {
-      "headline": "{argument name=\"headline\" default=\"AI 让早晨多出 30 分钟\"}",
-      "cta": "立即体验"
+      "headline": "{argument name=\"headline\" default=\"AI 讓早晨多出 30 分鐘\"}",
+      "cta": "立即體驗"
     }
   },
   "constraints": {
-    "must_feel": "氛围、生活、品牌精神"
+    "must_feel": "氛圍、生活、品牌精神"
   }
 }
 ```
 
-## 变体 2：长横条 banner（21:9 / 3:1）
+## 變體 2：長橫條 banner（21:9 / 3:1）
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "超宽横条 banner",
+  "type": "超寬橫條 banner",
   "aspect_ratio": "{argument name=\"aspect ratio\" default=\"21:9\"}",
   "layout": {
-    "left_column": { "headline": "限时 8 折 · 仅限 7 天" },
-    "right_column": { "centerpiece": "倒计时数字 + 商品小图" }
+    "left_column": { "headline": "限時 8 折 · 僅限 7 天" },
+    "right_column": { "centerpiece": "倒計時數字 + 商品小圖" }
   },
   "constraints": {
-    "must_feel": "促销、紧迫感、CTA 强烈"
+    "must_feel": "促銷、緊迫感、CTA 強烈"
   }
 }
 ```
 
-## 变体 3：自动补全模式
+## 變體 3：自動補全模式
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "Banner / hero 自动补全模板",
+  "type": "Banner / hero 自動補全模板",
   "mode": "auto-fill",
-  "rule": "用户给产品 + 主题 + 比例，自动生成 headline / CTA / 主视觉 / 安全区",
+  "rule": "用戶給產品 + 主題 + 比例，自動生成 headline / CTA / 主視覺 / 安全區",
   "constraints": {
     "must_feel": "可直接上 web / app"
   }
 }
 ```
 
-## 避免事项
+## 避免事項
 
-- 不要让 headline 和主视觉互相遮挡
-- 不要让 CTA 颜色与背景对比 < 4.5:1
+- 不要讓 headline 和主視覺互相遮擋
+- 不要讓 CTA 顏色與背景對比 < 4.5:1
 - 不要在 banner 上塞 > 3 行正文
-- 不要忽略安全留白（移动端裁切会出问题）
-- 不要让 banner 横向构图变成纯图（必须有 claim）
+- 不要忽略安全留白（移動端裁切會出問題）
+- 不要讓 banner 橫向構圖變成純圖（必須有 claim）

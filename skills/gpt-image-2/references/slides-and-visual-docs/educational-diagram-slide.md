@@ -1,187 +1,187 @@
-# 教学示意 Slide 模板
+# 教學示意 Slide 模板
 
-本文件用于生成“一页讲清楚一个概念 / 一种机制 / 一个流程”的教学型视觉页：
+本文件用於生成「一頁講清楚一個概念 / 一種機制 / 一個流程」的教學型視覺頁：
 
-- 课程内页
-- 教科书示意图
-- 在线课程截图
-- 工程师教学图
-- 培训手册插图
+- 課程內頁
+- 教科書示意圖
+- 在線課程截圖
+- 工程師教學圖
+- 培訓手冊插圖
 
-特征：
+特徵：
 
-- 中央主图 + 步骤分解
+- 中央主圖 + 步驟分解
 - 文字克制
-- 颜色温和
-- 强调可读性
-- 适合反复阅读
+- 顏色溫和
+- 強調可讀性
+- 適合反覆閱讀
 
-## 适用范围
+## 適用範圍
 
-- 概念示意图
-- 机制 / 流程图
-- 工程原理图
-- 教科书内页插图
+- 概念示意圖
+- 機制 / 流程圖
+- 工程原理圖
+- 教科書內頁插圖
 
-## 何时使用
+## 何時使用
 
-- 用户提到“教学 / 课程 / 教科书 / 概念图 / 机制图 / 原理图”
-- 用户希望讲清楚“X 是怎么工作的”
-- 用户面向学生 / 学习者，而非投资人 / 政府
+- 用戶提到「教學 / 課程 / 教科書 / 概念圖 / 機製圖 / 原理圖」
+- 用戶希望講清楚「X 是怎麼工作的」
+- 用戶面向學生 / 學習者，而非投資人 / 政府
 
 不要使用：
 
-- 用户要的是讲解课件（用 `dense-explainer-slides.md`）
-- 用户要的是政策风（用 `policy-style-slide.md`）
-- 用户要的是商业报告（用 `visual-report-page.md`）
+- 用戶要的是講解課件（用 `dense-explainer-slides.md`）
+- 用戶要的是政策風（用 `policy-style-slide.md`）
+- 用戶要的是商業報告（用 `visual-report-page.md`）
 
-## 缺失信息优先提问顺序
+## 缺失信息優先提問順序
 
-1. 概念 / 机制名称
-2. 教学层级（小学 / 中学 / 大学 / 行业培训）
-3. 步骤数（3-7 步）
-4. 是否需要中央主图
-5. 风格：手绘风 / 卡通风 / 学院派 / 工程图风
+1. 概念 / 機制名稱
+2. 教學層級（小學 / 中學 / 大學 / 行業培訓）
+3. 步驟數（3-7 步）
+4. 是否需要中央主圖
+5. 風格：手繪風 / 卡通風 / 學院派 / 工程圖風
 6. 配色
 
-## 主模板：步骤分解教学示意图
+## 主模板：步驟分解教學示意圖
 
 📖 描述
 
-整体一页教学图，顶部主标题 + 中央主图 + 周围按编号步骤分解 + 底部小结句。
+整體一頁教學圖，頂部主標題 + 中央主圖 + 周圍按編號步驟分解 + 底部小結句。
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "教学示意 Slide",
-  "goal": "生成一张能让学习者一眼看懂某个概念 / 机制 / 流程的教学示意图",
+  "type": "教學示意 Slide",
+  "goal": "生成一張能讓學習者一眼看懂某個概念 / 機制 / 流程的教學示意圖",
   "style": {
-    "color_palette": "{argument name=\"color palette\" default=\"温和米色 + 学院蓝 + 浅灰\"}",
-    "rendering": "{argument name=\"rendering\" default=\"清晰矢量插图 + 简洁字体\"}"
+    "color_palette": "{argument name=\"color palette\" default=\"溫和米色 + 學院藍 + 淺灰\"}",
+    "rendering": "{argument name=\"rendering\" default=\"清晰矢量插圖 + 簡潔字體\"}"
   },
   "header": {
-    "main_title": "{argument name=\"main title\" default=\"光合作用是怎么工作的\"}",
-    "subtitle": "{argument name=\"subtitle\" default=\"从光到糖，七步看懂\"}",
-    "audience": "{argument name=\"audience\" default=\"中学生\"}"
+    "main_title": "{argument name=\"main title\" default=\"光合作用是怎麼工作的\"}",
+    "subtitle": "{argument name=\"subtitle\" default=\"從光到糖，七步看懂\"}",
+    "audience": "{argument name=\"audience\" default=\"中學生\"}"
   },
   "centerpiece": {
     "enabled": "{argument name=\"centerpiece enabled\" default=\"true\"}",
-    "description": "{argument name=\"centerpiece description\" default=\"一片完整的叶子横剖面，标出叶绿体与气孔\"}"
+    "description": "{argument name=\"centerpiece description\" default=\"一片完整的葉子橫剖面，標出葉綠體與氣孔\"}"
   },
   "steps": {
     "count": "{argument name=\"step count\" default=\"6\"}",
     "items": [
-      "{argument name=\"step 1\" default=\"01 光线进入叶绿体\"}",
-      "{argument name=\"step 2\" default=\"02 水从根部输送上来\"}",
-      "{argument name=\"step 3\" default=\"03 二氧化碳从气孔进入\"}",
-      "{argument name=\"step 4\" default=\"04 光反应：水分解为氢与氧\"}",
-      "{argument name=\"step 5\" default=\"05 暗反应：CO₂ 转为糖分\"}",
-      "{argument name=\"step 6\" default=\"06 释放氧气、生成葡萄糖\"}"
+      "{argument name=\"step 1\" default=\"01 光線進入葉綠體\"}",
+      "{argument name=\"step 2\" default=\"02 水從根部輸送上來\"}",
+      "{argument name=\"step 3\" default=\"03 二氧化碳從氣孔進入\"}",
+      "{argument name=\"step 4\" default=\"04 光反應：水分解爲氫與氧\"}",
+      "{argument name=\"step 5\" default=\"05 暗反應：CO₂ 轉爲糖分\"}",
+      "{argument name=\"step 6\" default=\"06 釋放氧氣、生成葡萄糖\"}"
     ],
-    "step_block_style": "编号 + 一句话 + 小图标"
+    "step_block_style": "編號 + 一句話 + 小圖標"
   },
   "annotations": {
-    "style": "细线引线 + 编号小标签",
-    "rule": "标注线不能交叉"
+    "style": "細線引線 + 編號小標籤",
+    "rule": "標註線不能交叉"
   },
   "summary_line": "{argument name=\"summary\" default=\"光合作用 = 光 + 水 + CO₂ → 葡萄糖 + O₂\"}",
   "constraints": {
     "must_keep": [
-      "中央主图作为视觉锚点",
-      "步骤编号连续清晰",
-      "字体一致",
-      "颜色 ≤ 3 种主色"
+      "中央主圖作爲視覺錨點",
+      "步驟編號連續清晰",
+      "字體一致",
+      "顏色 ≤ 3 種主色"
     ],
     "avoid": [
-      "步骤过多导致一页放不下",
-      "插画风格夹杂多种风格",
-      "标注线穿过主图",
-      "正文使用过多专业术语未做解释"
+      "步驟過多導致一頁放不下",
+      "插畫風格夾雜多種風格",
+      "標註線穿過主圖",
+      "正文使用過多專業術語未做解釋"
     ]
   }
 }
 ```
 
-### 参数策略
+### 參數策略
 
-- 必问：概念、教学层级、步骤数
-- 可默认：风格、配色、底部公式句
-- 可随机：图标具体造型
+- 必問：概念、教學層級、步驟數
+- 可默認：風格、配色、底部公式句
+- 可隨機：圖標具體造型
 
-### 自动补全策略
+### 自動補全策略
 
-- 教学层级越低，插画越卡通，文字越短
-- 教学层级越高，插画越科学示意，文字越精确
-- 步骤建议 4-7 步，超过 7 步要拆为多页
+- 教學層級越低，插畫越卡通，文字越短
+- 教學層級越高，插畫越科學示意，文字越精確
+- 步驟建議 4-7 步，超過 7 步要拆爲多頁
 
-## 变体 1：工程原理示意图
+## 變體 1：工程原理示意圖
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
   "type": "工程原理示意 Slide",
   "header": {
-    "main_title": "{argument name=\"concept\" default=\"内燃机四冲程是怎么工作的\"}"
+    "main_title": "{argument name=\"concept\" default=\"內燃機四衝程是怎麼工作的\"}"
   },
   "centerpiece": {
-    "description": "气缸剖面图 + 活塞动作"
+    "description": "氣缸剖面圖 + 活塞動作"
   },
   "steps": {
     "count": 4,
-    "items": ["进气", "压缩", "做功", "排气"]
+    "items": ["進氣", "壓縮", "做功", "排氣"]
   },
   "constraints": {
-    "must_feel": "工程图感、专业、可信"
+    "must_feel": "工程圖感、專業、可信"
   }
 }
 ```
 
-## 变体 2：低龄儿童教学图
+## 變體 2：低齡兒童教學圖
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "低龄儿童科普教学 Slide",
+  "type": "低齡兒童科普教學 Slide",
   "header": {
-    "main_title": "{argument name=\"concept\" default=\"为什么会下雨？\"}"
+    "main_title": "{argument name=\"concept\" default=\"爲什麼會下雨？\"}"
   },
   "style": {
-    "color_palette": "粉橙 + 天蓝 + 米白",
-    "rendering": "Q 萌卡通插画"
+    "color_palette": "粉橙 + 天藍 + 米白",
+    "rendering": "Q 萌卡通插畫"
   },
   "steps": {
     "count": 4,
-    "items": ["太阳晒水", "水变云", "云变重", "下雨"]
+    "items": ["太陽曬水", "水變雲", "雲變重", "下雨"]
   },
   "constraints": {
-    "must_feel": "可爱、易懂、温馨"
+    "must_feel": "可愛、易懂、溫馨"
   }
 }
 ```
 
-## 变体 3：自动补全模式
+## 變體 3：自動補全模式
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "教学示意自动补全模板",
+  "type": "教學示意自動補全模板",
   "mode": "auto-fill",
-  "rule": "用户给概念，自动决定步骤、风格、配色、主图",
+  "rule": "用戶給概念，自動決定步驟、風格、配色、主圖",
   "constraints": {
-    "must_feel": "可直接放进教科书 / 课件"
+    "must_feel": "可直接放進教科書 / 課件"
   }
 }
 ```
 
-## 避免事项
+## 避免事項
 
-- 不要让概念过于学术化以至小学生看不懂
-- 不要让步骤超过 7 步
-- 不要让插画与解释文字风格冲突
-- 不要在科学示意图里出现品牌广告
-- 不要让标注线交叉
-- 不要使用过度饱和颜色破坏阅读舒适度
+- 不要讓概念過於學術化以至小學生看不懂
+- 不要讓步驟超過 7 步
+- 不要讓插畫與解釋文字風格衝突
+- 不要在科學示意圖裏出現品牌廣告
+- 不要讓標註線交叉
+- 不要使用過度飽和顏色破壞閱讀舒適度

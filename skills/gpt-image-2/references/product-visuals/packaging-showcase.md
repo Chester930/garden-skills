@@ -1,215 +1,215 @@
-# 包装展示图模板
+# 包裝展示圖模板
 
-本文件用于生成“产品包装本身”作为视觉主体的展示图：
+本文件用於生成「產品包裝本身」作爲視覺主體的展示圖：
 
-- 礼盒包装 + 内容物
-- 单品外盒 + 角度组合
-- 系列产品包装合集
-- 限量礼盒拆解视觉
-- 套装内容物开盒摆放
+- 禮盒包裝 + 內容物
+- 單品外盒 + 角度組合
+- 系列產品包裝合集
+- 限量禮盒拆解視覺
+- 套裝內容物開盒擺放
 
-它跟 `branding-and-packaging/` 下的“品牌包装系统”模板的区别：
+它跟 `branding-and-packaging/` 下的「品牌包裝系統」模板的區別：
 
-- 本模板：单一产品 / 单一礼盒为视觉中心，重点是“开箱即用”的产品图
-- branding-and-packaging：偏“品牌包装设计 system”视觉，可能包含多个 SKU、规范页
+- 本模板：單一產品 / 單一禮盒爲視覺中心，重點是「開箱即用」的產品圖
+- branding-and-packaging：偏「品牌包裝設計 system」視覺，可能包含多個 SKU、規範頁
 
-跟 `white-background-product.md` 的区别：
+跟 `white-background-product.md` 的區別：
 
-- 白底主图：单品本身
-- 包装展示：盒子 + 拆开后内含的瓶 / 卡 / 说明书 / 周边
+- 白底主圖：單品本身
+- 包裝展示：盒子 + 拆開後內含的瓶 / 卡 / 說明書 / 周邊
 
-## 适用范围
+## 適用範圍
 
-- 礼盒展示
-- 限量套装宣传图
-- 节日促销主图
-- 美妆套装 / 美食礼包 / 数码套装
-- 内容物摆放图
-- 节日礼盒主图
+- 禮盒展示
+- 限量套裝宣傳圖
+- 節日促銷主圖
+- 美妝套裝 / 美食禮包 / 數碼套裝
+- 內容物擺放圖
+- 節日禮盒主圖
 
-## 何时使用
+## 何時使用
 
-- 用户提到“礼盒 / 套装 / 包装 / 开箱图 / 套盒主图”
-- 用户希望同时展示外盒 + 内容物
-- 用户希望突出包装设计本身
+- 用戶提到「禮盒 / 套裝 / 包裝 / 開箱圖 / 套盒主圖」
+- 用戶希望同時展示外盒 + 內容物
+- 用戶希望突出包裝設計本身
 
 不要使用：
 
-- 用户只要单品白底主图（用 `white-background-product.md`）
-- 用户要场景化（用 `lifestyle-product-scene.md`）
-- 用户要爆炸视图（用 `exploded-view-poster.md`）
+- 用戶只要單品白底主圖（用 `white-background-product.md`）
+- 用戶要場景化（用 `lifestyle-product-scene.md`）
+- 用戶要爆炸視圖（用 `exploded-view-poster.md`）
 
-## 缺失信息优先提问顺序
+## 缺失信息優先提問順序
 
-1. 包装类型：纸盒 / 铁盒 / 木盒 / 布袋 / 礼盒 / 简易盒
-2. 内容物：几样、各是什么
+1. 包裝類型：紙盒 / 鐵盒 / 木盒 / 布袋 / 禮盒 / 簡易盒
+2. 內容物：幾樣、各是什麼
 3. 品牌名 / 系列名
-4. 风格：高级简约 / 节日喜庆 / 轻奢复古 / 童趣可爱 / 国潮东方
-5. 主色 + 辅色
-6. 是否要展示打开状态
+4. 風格：高級簡約 / 節日喜慶 / 輕奢復古 / 童趣可愛 / 國潮東方
+5. 主色 + 輔色
+6. 是否要展示打開狀態
 
-## 主模板：礼盒打开 + 内容物展示
+## 主模板：禮盒打開 + 內容物展示
 
 📖 描述
 
-主体是一个开盖的礼盒，内容物有序摆放在盒中或盒旁，背景为同色调干净表面。
+主體是一個開蓋的禮盒，內容物有序擺放在盒中或盒旁，背景爲同色調乾淨表面。
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "礼盒包装展示图",
-  "goal": "生成一张兼具产品介绍与节日感的礼盒展示图，包含外盒 + 内容物 + 品牌信息层",
+  "type": "禮盒包裝展示圖",
+  "goal": "生成一張兼具產品介紹與節日感的禮盒展示圖，包含外盒 + 內容物 + 品牌信息層",
   "package": {
-    "type": "{argument name=\"package type\" default=\"硬纸礼盒，开盖状态\"}",
-    "shape": "{argument name=\"package shape\" default=\"长方形\"}",
-    "exterior_color": "{argument name=\"exterior color\" default=\"墨绿色 + 烫金 logo\"}",
-    "interior_color": "{argument name=\"interior color\" default=\"奶白色绒布内衬\"}",
-    "logo": "{argument name=\"package logo\" default=\"金色品牌字标\"}",
-    "ribbon": "{argument name=\"ribbon\" default=\"墨绿色丝带\"}"
+    "type": "{argument name=\"package type\" default=\"硬紙禮盒，開蓋狀態\"}",
+    "shape": "{argument name=\"package shape\" default=\"長方形\"}",
+    "exterior_color": "{argument name=\"exterior color\" default=\"墨綠色 + 燙金 logo\"}",
+    "interior_color": "{argument name=\"interior color\" default=\"奶白色絨布內襯\"}",
+    "logo": "{argument name=\"package logo\" default=\"金色品牌字標\"}",
+    "ribbon": "{argument name=\"ribbon\" default=\"墨綠色絲帶\"}"
   },
   "contents": {
     "count": "{argument name=\"content count\" default=\"4\"}",
     "items": [
-      "{argument name=\"content item 1\" default=\"主产品玻璃瓶\"}",
-      "{argument name=\"content item 2\" default=\"小袋装样品 x 2\"}",
-      "{argument name=\"content item 3\" default=\"品牌卡片 + 使用说明\"}",
-      "{argument name=\"content item 4\" default=\"金属勺 / 配件\"}"
+      "{argument name=\"content item 1\" default=\"主產品玻璃瓶\"}",
+      "{argument name=\"content item 2\" default=\"小袋裝樣品 x 2\"}",
+      "{argument name=\"content item 3\" default=\"品牌卡片 + 使用說明\"}",
+      "{argument name=\"content item 4\" default=\"金屬勺 / 配件\"}"
     ],
-    "arrangement": "{argument name=\"content arrangement\" default=\"内容物在盒内对称摆放，主产品略前置突出\"}"
+    "arrangement": "{argument name=\"content arrangement\" default=\"內容物在盒內對稱擺放，主產品略前置突出\"}"
   },
   "scene": {
-    "background_surface": "{argument name=\"background surface\" default=\"奶白色亚光石面\"}",
-    "background_color_tone": "{argument name=\"background tone\" default=\"米白 + 墨绿点缀\"}",
+    "background_surface": "{argument name=\"background surface\" default=\"奶白色亞光石面\"}",
+    "background_color_tone": "{argument name=\"background tone\" default=\"米白 + 墨綠點綴\"}",
     "extra_decorations": [
-      "{argument name=\"deco 1\" default=\"散落的小植物叶片\"}",
-      "{argument name=\"deco 2\" default=\"无\"}"
+      "{argument name=\"deco 1\" default=\"散落的小植物葉片\"}",
+      "{argument name=\"deco 2\" default=\"無\"}"
     ]
   },
   "lighting": {
-    "key_light": "{argument name=\"key light\" default=\"45° 顶光柔光\"}",
-    "fill_light": "{argument name=\"fill light\" default=\"环境补光均匀\"}"
+    "key_light": "{argument name=\"key light\" default=\"45° 頂光柔光\"}",
+    "fill_light": "{argument name=\"fill light\" default=\"環境補光均勻\"}"
   },
   "text_overlay": {
     "enabled": "{argument name=\"text overlay enabled\" default=\"true\"}",
     "brand": "{argument name=\"brand name\" default=\"NORINE\"}",
-    "headline": "{argument name=\"headline\" default=\"献给重要日子的礼物\"}",
+    "headline": "{argument name=\"headline\" default=\"獻給重要日子的禮物\"}",
     "subline": "{argument name=\"subline\" default=\"Limited Edition · 2026 Holiday\"}",
-    "position": "画面左上或右上，简洁排版"
+    "position": "畫面左上或右上，簡潔排版"
   },
   "style": {
-    "rendering": "高分辨率商业产品摄影，内容物质感真实，包装材质清晰可识别",
-    "consistency": "色板与材质一致，画面克制不杂乱"
+    "rendering": "高分辨率商業產品攝影，內容物質感真實，包裝材質清晰可識別",
+    "consistency": "色板與材質一致，畫面克制不雜亂"
   },
   "constraints": {
     "must_keep": [
-      "外盒可识别 + logo 可读",
-      "内容物清晰可数",
-      "盒盖打开角度自然不别扭",
-      "文字位置与主体不抢镜"
+      "外盒可識別 + logo 可讀",
+      "內容物清晰可數",
+      "盒蓋打開角度自然不彆扭",
+      "文字位置與主體不搶鏡"
     ],
     "avoid": [
-      "内容物挤在一起难分辨",
-      "盒子形状不规整",
-      "光线把烫金 logo 完全吃掉",
-      "出现人物 / 模特 / 手"
+      "內容物擠在一起難分辨",
+      "盒子形狀不規整",
+      "光線把燙金 logo 完全喫掉",
+      "出現人物 / 模特 / 手"
     ]
   }
 }
 ```
 
-### 参数策略
+### 參數策略
 
-- 必问：包装类型、内容物组成、品牌名、主色
-- 可默认：丝带、内衬颜色、装饰
-- 可随机：装饰小物（在色板内）
+- 必問：包裝類型、內容物組成、品牌名、主色
+- 可默認：絲帶、內襯顏色、裝飾
+- 可隨機：裝飾小物（在色板內）
 
-### 自动补全策略
+### 自動補全策略
 
-- 美妆礼盒默认：奶白内衬 + 金色 logo + 玻璃瓶为主产品
-- 节日食品礼盒默认：木盒或牛皮纸 + 红色丝带 + 多种小袋装内容
-- 数码礼盒默认：黑色硬盒 + 灰色泡棉内衬 + 主机 + 配件
-- slogan 默认 “Limited Edition / Holiday / Anniversary” 系收束语
+- 美妝禮盒默認：奶白內襯 + 金色 logo + 玻璃瓶爲主產品
+- 節日食品禮盒默認：木盒或牛皮紙 + 紅色絲帶 + 多種小袋裝內容
+- 數碼禮盒默認：黑色硬盒 + 灰色泡棉內襯 + 主機 + 配件
+- slogan 默認 「Limited Edition / Holiday / Anniversary」 系收束語
 
-## 变体 1：节日喜庆礼盒
+## 變體 1：節日喜慶禮盒
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "节日喜庆礼盒展示图",
+  "type": "節日喜慶禮盒展示圖",
   "package": {
-    "type": "硬纸礼盒，开盖状态",
-    "exterior_color": "{argument name=\"exterior color\" default=\"中国红 + 烫金\"}",
-    "interior_color": "金色绒布内衬",
-    "ribbon": "金色蝴蝶结"
+    "type": "硬紙禮盒，開蓋狀態",
+    "exterior_color": "{argument name=\"exterior color\" default=\"中國紅 + 燙金\"}",
+    "interior_color": "金色絨布內襯",
+    "ribbon": "金色蝴蝶結"
   },
   "contents": {
     "items": [
-      "{argument name=\"content 1\" default=\"红色礼袋 x 2\"}",
-      "{argument name=\"content 2\" default=\"主礼品（食品 / 茶叶 / 工艺品）\"}",
-      "{argument name=\"content 3\" default=\"祝福贺卡\"}"
+      "{argument name=\"content 1\" default=\"紅色禮袋 x 2\"}",
+      "{argument name=\"content 2\" default=\"主禮品（食品 / 茶葉 / 工藝品）\"}",
+      "{argument name=\"content 3\" default=\"祝福賀卡\"}"
     ]
   },
   "scene": {
-    "background_surface": "金色亮面或深红绒布",
-    "extra_decorations": ["散落小金粒", "梅花枝点缀"]
+    "background_surface": "金色亮面或深紅絨布",
+    "extra_decorations": ["散落小金粒", "梅花枝點綴"]
   },
   "constraints": {
-    "must_feel": "节日庄重感、东方喜庆"
+    "must_feel": "節日莊重感、東方喜慶"
   }
 }
 ```
 
-## 变体 2：极简轻奢礼盒
+## 變體 2：極簡輕奢禮盒
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "极简轻奢礼盒展示图",
+  "type": "極簡輕奢禮盒展示圖",
   "package": {
-    "type": "亚光硬纸礼盒",
-    "exterior_color": "奶白 + 灰色细线",
-    "interior_color": "深灰绒布",
-    "logo": "压凹品牌字 + 极小金箔"
+    "type": "亞光硬紙禮盒",
+    "exterior_color": "奶白 + 灰色細線",
+    "interior_color": "深灰絨布",
+    "logo": "壓凹品牌字 + 極小金箔"
   },
   "contents": {
     "items": [
       "{argument name=\"content 1\" default=\"主玻璃瓶\"}",
-      "{argument name=\"content 2\" default=\"配件 / 说明卡\"}"
+      "{argument name=\"content 2\" default=\"配件 / 說明卡\"}"
     ]
   },
   "scene": {
-    "background_surface": "暖灰色亚光石板",
+    "background_surface": "暖灰色亞光石板",
     "extra_decorations": []
   },
   "constraints": {
-    "must_feel": "克制、有体面感"
+    "must_feel": "克制、有體面感"
   }
 }
 ```
 
-## 变体 3：自动补全模式
+## 變體 3：自動補全模式
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "包装展示图自动补全模板",
+  "type": "包裝展示圖自動補全模板",
   "mode": "auto-fill",
-  "rule": "用户给品类与品牌即可。自动决定包装类型、内容物组合、配色与装饰，但必须维持包装为视觉中心",
+  "rule": "用戶給品類與品牌即可。自動決定包裝類型、內容物組合、配色與裝飾，但必須維持包裝爲視覺中心",
   "constraints": {
-    "must_feel": "可以直接用作品牌官网或电商页 hero"
+    "must_feel": "可以直接用作品牌官網或電商頁 hero"
   }
 }
 ```
 
-## 避免事项
+## 避免事項
 
-- 内容物超过 6 件就开始杂乱，建议 3-5 件
-- 不要把内容物全部塞回盒里，至少 1 件半露或前置
-- 不要用强反光金属面做背景（会让金箔 logo 看不清）
-- 不要在画面里塞品牌之外的其他 logo
-- 不要让礼盒呈现“快递箱拆开”那种廉价感
-- 不要使用过于饱和的彩色背景，让盒子的颜色失真
+- 內容物超過 6 件就開始雜亂，建議 3-5 件
+- 不要把內容物全部塞回盒裡，至少 1 件半露或前置
+- 不要用強反光金屬面做背景（會讓金箔 logo 看不清）
+- 不要在畫面裏塞品牌之外的其他 logo
+- 不要讓禮盒呈現「快遞箱拆開」那種廉價感
+- 不要使用過於飽和的彩色背景，讓盒子的顏色失真

@@ -1,68 +1,68 @@
-# 复古档案 / 编辑式信息图海报模板
+# 復古檔案 / 編輯式信息圖海報模板
 
-本文件用于生成"以历史人物 / 科学概念 / 经典理论为主题，用 1940s Bell Labs 档案 / 老报纸 / 蓝图 / 博物馆出版物风格呈现"的复古信息图海报。
+本文件用於生成"以歷史人物 / 科學概念 / 經典理論爲主題，用 1940s Bell Labs 檔案 / 老報紙 / 藍圖 / 博物館出版物風格呈現"的復古信息圖海報。
 
 典型用途：
 
-- 科学家 / 思想家致敬海报（Shannon / Turing / Curie / 鲁迅…）
-- 经典理论可视化（信息论 / 量子力学 / 进化论）
-- 课程 / 出版物 / 博物馆教育海报
-- 知识科普向 SNS / 朋友圈分享图
-- 复古风文创品 / 周边周边
+- 科學家 / 思想家致敬海報（Shannon / Turing / Curie / 魯迅…）
+- 經典理論可視化（信息論 / 量子力學 / 進化論）
+- 課程 / 出版物 / 博物館教育海報
+- 知識科普向 SNS / 朋友圈分享圖
+- 復古風文創品 / 周邊周邊
 
-特征（与现有 poster / infographics 模板的区别）：
+特徵（與現有 poster / infographics 模板的區別）：
 
-| 模板 | 风格 |
+| 模板 | 風格 |
 |---|---|
-| `editorial-cover.md`（已有） | 现代杂志封面 |
-| `infographics/legend-heavy-infographic.md`（已有） | 高密度科普图（现代或自然） |
-| `infographics/bento-grid-infographic.md`（已有） | 便当格模块化（现代） |
-| **本模板**（新增） | **复古档案 / 蓝图 / 老报纸 / 博物馆教育海报** |
+| `editorial-cover.md`（已有） | 現代雜誌封面 |
+| `infographics/legend-heavy-infographic.md`（已有） | 高密度科普圖（現代或自然） |
+| `infographics/bento-grid-infographic.md`（已有） | 便當格模塊化（現代） |
+| **本模板**（新增） | **復古檔案 / 藍圖 / 老報紙 / 博物館教育海報** |
 
-**关键词**：1940s 风格、aged paper、ink linework、engraved portrait、navy + charcoal、measurement ticks、formula、archival stamp。
+**關鍵詞**：1940s 風格、aged paper、ink linework、engraved portrait、navy + charcoal、measurement ticks、formula、archival stamp。
 
-## 适用范围
+## 適用範圍
 
-- 历史人物 + 思想 / 理论 致敬海报
-- 复古蓝图 / 老报纸 / 博物馆出版物风教育图
-- 科学概念可视化（带公式 / chart / 时间轴）
-- 文创品 / 教育出版 / 学术致敬
+- 歷史人物 + 思想 / 理論 致敬海報
+- 復古藍圖 / 老報紙 / 博物館出版物風教育圖
+- 科學概念可視化（帶公式 / chart / 時間軸）
+- 文創品 / 教育出版 / 學術致敬
 
-## 何时使用
+## 何時使用
 
-- 用户提到"复古信息图 / 致敬海报 / 老报纸风 / 蓝图风 / 博物馆海报"
-- 海报主题是历史人物 / 经典理论
-- 想要"高文字密度 + 复古质感"
+- 用戶提到"復古信息圖 / 致敬海報 / 老報紙風 / 藍圖風 / 博物館海報"
+- 海報主題是歷史人物 / 經典理論
+- 想要"高文字密度 + 復古質感"
 
 不要使用：
 
-- 现代扁平信息图 → 用 `infographics/legend-heavy-infographic.md`
-- 现代便当格 → 用 `infographics/bento-grid-infographic.md`
-- 单纯杂志封面 → 用 `editorial-cover.md`
-- 道教 / 神秘主义图 → 走中式古典工笔（建议直接用自然语言，不强用本模板）
+- 現代扁平信息圖 → 用 `infographics/legend-heavy-infographic.md`
+- 現代便當格 → 用 `infographics/bento-grid-infographic.md`
+- 單純雜誌封面 → 用 `editorial-cover.md`
+- 道教 / 神祕主義圖 → 走中式古典工筆（建議直接用自然語言，不強用本模板）
 
-## 缺失信息优先提问顺序
+## 缺失信息優先提問順序
 
-1. 主题人物 / 概念（Claude Shannon / Turing / 鲁迅…）
-2. 核心理论 / 公式 / 模型（决定中央图示）
-3. 历史时期与档案风格（**1940s Bell Labs / 1900 老报纸 / 复古蓝图 / 博物馆出版物 / 学院手稿**）
-4. 是否需要时间轴（影响理论的历史脉络）
-5. 是否需要人物肖像（如不允许真人脸 → 用脸部遮挡块 / 雕版剪影）
-6. 比例（**16:9 横版展板 / 3:4 竖版海报**）
-7. 主语言（英 / 中 / 双语）
+1. 主題人物 / 概念（Claude Shannon / Turing / 魯迅…）
+2. 核心理論 / 公式 / 模型（決定中央圖示）
+3. 歷史時期與檔案風格（**1940s Bell Labs / 1900 老報紙 / 復古藍圖 / 博物館出版物 / 學院手稿**）
+4. 是否需要時間軸（影響理論的歷史脈絡）
+5. 是否需要人物肖像（如不允許真人臉 → 用臉部遮擋塊 / 雕版剪影）
+6. 比例（**16:9 橫版展板 / 3:4 豎版海報**）
+7. 主語言（英 / 中 / 雙語）
 
-## 主模板：复古档案信息图海报（人物 + 模型 + 公式 + 时间轴）
+## 主模板：復古檔案信息圖海報（人物 + 模型 + 公式 + 時間軸）
 
 📖 描述
 
-宽幅海报，左侧档案 sidebar + 中央 hero 模型 + 右侧公式 box + 中下理论分区 + 底部时间轴，包含人物肖像 + 多种 chart + 复古纸张质感。
+寬幅海報，左側檔案 sidebar + 中央 hero 模型 + 右側公式 box + 中下理論分區 + 底部時間軸，包含人物肖像 + 多種 chart + 復古紙張質感。
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
   "type": "vintage editorial infographic poster",
-  "goal": "生成一张复古档案 / 1940s 出版物风格的科普海报，把人物 / 理论 / 公式 / 应用时间轴密集组合在一张图里",
+  "goal": "生成一張復古檔案 / 1940s 出版物風格的科普海報，把人物 / 理論 / 公式 / 應用時間軸密集組合在一張圖裏",
   "subject": "{argument name=\"subject\" default=\"Claude Shannon and information theory\"}",
   "style": {
     "era": "{argument name=\"era\" default=\"1940s Bell Labs archival poster\"}",
@@ -176,61 +176,61 @@
   "aspectRatio": "{argument name=\"aspect ratio\" default=\"16:9 landscape\"}",
   "constraints": {
     "must_keep": [
-      "复古 1940s 印刷质感（aged paper / 网格 / 钢笔线 / 墨色）",
-      "公式 / 模型 / 时间轴 / 肖像 4 大元素全部出现且清晰可读",
-      "全图配色严格控制在 ivory + 1 主墨色 + 1 副墨色 + 1 accent",
-      "若使用真实人物，脸部用 censor block / 雕版剪影 / 模糊处理"
+      "復古 1940s 印刷質感（aged paper / 網格 / 鋼筆線 / 墨色）",
+      "公式 / 模型 / 時間軸 / 肖像 4 大元素全部出現且清晰可讀",
+      "全圖配色嚴格控制在 ivory + 1 主墨色 + 1 副墨色 + 1 accent",
+      "若使用真實人物，臉部用 censor block / 雕版剪影 / 模糊處理"
     ],
     "avoid": [
-      "用现代扁平 icon / 渐变 → 立刻破坏复古质感",
-      "公式写错或丢失 (LaTeX 字符须由 prompt 描述清楚)",
-      "时间轴超过 8 节点导致每节点不可读",
-      "肖像区域过大压垮信息密度（应 ≤ 25% 总面积）",
-      "使用霓虹 / 荧光色"
+      "用現代扁平 icon / 漸變 → 立刻破壞復古質感",
+      "公式寫錯或丟失 (LaTeX 字符須由 prompt 描述清楚)",
+      "時間軸超過 8 節點導致每節點不可讀",
+      "肖像區域過大壓垮信息密度（應 ≤ 25% 總面積）",
+      "使用霓虹 / 熒光色"
     ]
   }
 }
 ```
 
-### 参数策略
+### 參數策略
 
-- **必问**：subject、headline、formula / 模型 / 时间轴的具体内容
-- **可默认**：era、paper look、portrait style、centerpiece description
-- **可随机**：sidebar 5 行小文案、bottom decor
+- **必問**：subject、headline、formula / 模型 / 時間軸的具體內容
+- **可默認**：era、paper look、portrait style、centerpiece description
+- **可隨機**：sidebar 5 行小文案、bottom decor
 
-### 自动补全策略
+### 自動補全策略
 
-- 用户给了主题人物 → 自动反推核心模型 / 公式 / 时间轴
-- 不指定肖像处理 → 默认 censor block 遮脸（避免真人脸生成失败）
-- 不指定 paper / ink 色 → 用模板默认 ivory + navy + charcoal + steel blue
+- 用戶給了主題人物 → 自動反推核心模型 / 公式 / 時間軸
+- 不指定肖像處理 → 默認 censor block 遮臉（避免真人臉生成失敗）
+- 不指定 paper / ink 色 → 用模板默認 ivory + navy + charcoal + steel blue
 
-## 变体 1：中文学者 / 文人致敬版（鲁迅 / 钱学森 / 沈括…）
+## 變體 1：中文學者 / 文人致敬版（魯迅 / 錢學森 / 沈括…）
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
   "type": "vintage editorial infographic poster, Chinese scholar tribute edition",
-  "subject": "{argument name=\"chinese subject\" default=\"鲁迅与现代白话文运动\"}",
+  "subject": "{argument name=\"chinese subject\" default=\"魯迅與現代白話文運動\"}",
   "style_override": {
-    "era": "1920s 中国新文化运动时期出版物",
-    "look": "aged 米黄宣纸 with 雕版印刷 effect, 红印泥 seal stamps, 竖排繁体或简化中文 mixed with 英译注释",
-    "ink": "墨黑 + 朱红 + 灰青"
+    "era": "1920s 中國新文化運動時期出版物",
+    "look": "aged 米黃宣紙 with 雕版印刷 effect, 紅印泥 seal stamps, 豎排繁體或簡化中文 mixed with 英譯註釋",
+    "ink": "墨黑 + 朱紅 + 灰青"
   },
-  "language_override": "中文为主 + 英文小注释",
-  "extra_elements": ["传统印章", "竖排标题", "毛笔签名", "线装书边框装饰"]
+  "language_override": "中文爲主 + 英文小注釋",
+  "extra_elements": ["傳統印章", "豎排標題", "毛筆籤名", "線裝書邊框裝飾"]
 }
 ```
 
-### 何时选这个变体
+### 何時選這個變體
 
-- 中国学者 / 文人 / 历史人物
+- 中國學者 / 文人 / 歷史人物
 - 教育 / 出版 / 文化致敬
-- 想要「东方文人风」而非"西方档案风"
+- 想要「東方文人風」而非"西方檔案風"
 
-## 变体 2：3:4 竖版精装海报（适合印刷 / 文创售卖）
+## 變體 2：3:4 豎版精裝海報（適合印刷 / 文創售賣）
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
@@ -240,42 +240,42 @@
     "structure": "top hero portrait + middle theory section + bottom timeline; sidebar moved to bottom strip",
     "headline_position": "very top, large serif"
   },
-  "use_case": "可作为限量印刷海报 / 文创周边产品"
+  "use_case": "可作爲限量印刷海報 / 文創周邊產品"
 }
 ```
 
-### 何时选这个变体
+### 何時選這個變體
 
-- 文创售卖品（A2 / A3 印刷海报）
-- 教育机构教室张贴
-- 想做"可挂墙"成品
+- 文創售賣品（A2 / A3 印刷海報）
+- 教育機構教室張貼
+- 想做"可掛牆"成品
 
-## 变体 3：博物馆展板版（双语，更教育）
+## 變體 3：博物館展板版（雙語，更教育）
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
   "type": "museum exhibition panel infographic",
-  "language": "bilingual (English + 主体语言)",
-  "extra_sections": ["Acknowledgments / 致谢", "Further Reading / 延伸阅读", "QR code square (museum app)"],
-  "must_keep": ["所有标注双语对照", "底部 acknowledgments / 资料来源 必须出现"]
+  "language": "bilingual (English + 主體語言)",
+  "extra_sections": ["Acknowledgments / 致謝", "Further Reading / 延伸閱讀", "QR code square (museum app)"],
+  "must_keep": ["所有標註雙語對照", "底部 acknowledgments / 資料來源 必須出現"]
 }
 ```
 
-### 何时选这个变体
+### 何時選這個變體
 
-- 真实博物馆 / 展览出版物
-- 教育机构课程展板
-- 学术致敬场景
+- 真實博物館 / 展覽出版物
+- 教育機構課程展板
+- 學術致敬場景
 
-## 避免事项
+## 避免事項
 
-- ❌ 用渐变 / 霓虹 / 现代扁平 icon → 立即破坏复古感
-- ❌ 把人物画得过大、占据 50%+ 面积 → 应该是模型 / 公式 / 时间轴占主，肖像辅助
-- ❌ 公式写错或丢公式（核心理论必须可读）
-- ❌ 时间轴节点 > 10 → 不可读，应控制在 6-8
-- ❌ 让 GPT 生成真人脸 → 优先用 censor block / 雕版 / 模糊
-- ❌ 只用一种字号 → 复古海报必须有 4-5 级 hierarchy
-- ❌ 使用现代 web font（应描述为 serif / hand-set / engraved type）
-- ❌ 把主题人物名字拼错（多次出现的名字必须在 prompt 中显式 spell-out）
+- ❌ 用漸變 / 霓虹 / 現代扁平 icon → 立即破壞復古感
+- ❌ 把人物畫得過大、佔據 50%+ 面積 → 應該是模型 / 公式 / 時間軸佔主，肖像輔助
+- ❌ 公式寫錯或丟公式（核心理論必須可讀）
+- ❌ 時間軸節點 > 10 → 不可讀，應控制在 6-8
+- ❌ 讓 GPT 生成真人臉 → 優先用 censor block / 雕版 / 模糊
+- ❌ 只用一種字號 → 復古海報必須有 4-5 級 hierarchy
+- ❌ 使用現代 web font（應描述爲 serif / hand-set / engraved type）
+- ❌ 把主題人物名字拼錯（多次出現的名字必須在 prompt 中顯式 spell-out）

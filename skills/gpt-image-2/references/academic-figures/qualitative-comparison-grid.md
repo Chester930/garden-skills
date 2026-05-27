@@ -1,64 +1,64 @@
-# 多方法 Qualitative 对比网格模板
+# 多方法 Qualitative 對比網格模板
 
-本文件用于生成"论文 qualitative results 对比网格"：
+本文件用於生成"論文 qualitative results 對比網格"：
 
-- CV 论文：多方法分割 / 检测 / 生成结果对比
-- NLP 论文：多方法生成文本对比（截图式）
-- 3D / 重建论文：多方法重建结果对比
-- Diffusion / 图像生成论文：不同 prompt × 不同方法的网格
-- Ablation study 的视觉对比
+- CV 論文：多方法分割 / 檢測 / 生成結果對比
+- NLP 論文：多方法生成文本對比（截圖式）
+- 3D / 重建論文：多方法重建結果對比
+- Diffusion / 圖像生成論文：不同 prompt × 不同方法的網格
+- Ablation study 的視覺對比
 
-特征：
+特徵：
 
-- 严格的网格：行 = 样本 / 输入，列 = 方法（含 GT 和 Ours）
-- 列首行有方法名（带 citation）
-- Ours 列通常加边框 / 高亮
-- 单元格内容统一（图片 / 文本片段 / heatmap）
-- 网格之间留细 gap，整体白底
-- 可附 caption 解释
+- 嚴格的網格：行 = 樣本 / 輸入，列 = 方法（含 GT 和 Ours）
+- 列首行有方法名（帶 citation）
+- Ours 列通常加邊框 / 高亮
+- 單元格內容統一（圖片 / 文本片段 / heatmap）
+- 網格之間留細 gap，整體白底
+- 可附 caption 解釋
 
-## 适用范围
+## 適用範圍
 
-- 论文 qualitative results section
-- Ablation study 的视觉对比
-- 顶会 supplementary 大网格图
-- 综述论文 method gallery
-- 答辩 PPT 对比页
+- 論文 qualitative results section
+- Ablation study 的視覺對比
+- 頂會 supplementary 大網格圖
+- 綜述論文 method gallery
+- 答辯 PPT 對比頁
 
-## 何时使用
+## 何時使用
 
-- 用户提到 "qualitative / 对比图 / comparison grid / methods comparison / ablation visual"
-- 用户希望「行=样本、列=方法的标准论文对比网格」
+- 用戶提到 "qualitative / 對比圖 / comparison grid / methods comparison / ablation visual"
+- 用戶希望「行=樣本、列=方法的標準論文對比網格」
 
 不要使用：
 
-- 用户要的是「双产品消费对比」 → 用 `infographics/comparison-infographic.md`
-- 用户要的是「多人头像网格」 → 用 `avatars-and-profile/character-grid-portrait.md`
-- 用户要的是「数据图表」 → 用 `academic-figures/publication-chart.md`
-- 用户要的是「视频帧序列」 → 用 `storyboards-and-sequences/`
+- 用戶要的是「雙產品消費對比」 → 用 `infographics/comparison-infographic.md`
+- 用戶要的是「多人頭像網格」 → 用 `avatars-and-profile/character-grid-portrait.md`
+- 用戶要的是「數據圖表」 → 用 `academic-figures/publication-chart.md`
+- 用戶要的是「視頻幀序列」 → 用 `storyboards-and-sequences/`
 
-## 缺失信息优先提问顺序
+## 缺失信息優先提問順序
 
-1. 行数（样本数，建议 3-6 行）
-2. 列数（方法数，建议 3-6 列，含 Input/GT 和 Ours）
+1. 行數（樣本數，建議 3-6 行）
+2. 列數（方法數，建議 3-6 列，含 Input/GT 和 Ours）
 3. 每列的方法名（含 citation 引用，如 "Method A [12]"）
-4. 单元格内容类型（RGB 图 / mask / heatmap / 文本片段 / 3D 渲染）
-5. 是否要 row labels（左侧标"Sample 1 / 2 / ..."或"Easy / Medium / Hard"）
-6. 是否要在某些位置加红框 zoom-in（focus area）
-7. 是否要 caption 注释
+4. 單元格內容類型（RGB 圖 / mask / heatmap / 文本片段 / 3D 渲染）
+5. 是否要 row labels（左側標"Sample 1 / 2 / ..."或"Easy / Medium / Hard"）
+6. 是否要在某些位置加紅框 zoom-in（focus area）
+7. 是否要 caption 注釋
 
 ## 主模板：Qualitative comparison grid (M rows × N cols)
 
 📖 描述
 
-整张图是严格的 M×N 网格：每一行是一个样本，每一列是一个方法。最左可加 row labels，最上一行是列首（方法名 + citation）。Ours 列加边框高亮，可在某些 cell 内画红色 zoom-in 框。
+整張圖是嚴格的 M×N 網格：每一行是一個樣本，每一列是一個方法。最左可加 row labels，最上一行是列首（方法名 + citation）。Ours 列加邊框高亮，可在某些 cell 內畫紅色 zoom-in 框。
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "Qualitative Comparison Grid（论文级多方法多样本对比网格）",
-  "goal": "生成一张可直接放进论文 qualitative results 章节的网格对比图，要求严格对齐、清晰列首、Ours 高亮、可单色印刷可读",
+  "type": "Qualitative Comparison Grid（論文級多方法多樣本對比網格）",
+  "goal": "生成一張可直接放進論文 qualitative results 章節的網格對比圖，要求嚴格對齊、清晰列首、Ours 高亮、可單色印刷可讀",
   "canvas": {
     "aspect_ratio": "{argument name=\"aspect_ratio\" default=\"4:3\"}",
     "background": "white #FFFFFF",
@@ -148,21 +148,21 @@
 }
 ```
 
-### 参数策略
+### 參數策略
 
-- **必问**：`rows`、`cols`、每列方法名（含 citation）、`content_type`
-- **可默认**：`aspect_ratio`（4:3）、`row_labels_enabled`（true）、`caption_enabled`（true）
-- **可随机**：列间 gap 精确像素、字体大小（在合理范围内）
+- **必問**：`rows`、`cols`、每列方法名（含 citation）、`content_type`
+- **可默認**：`aspect_ratio`（4:3）、`row_labels_enabled`（true）、`caption_enabled`（true）
+- **可隨機**：列間 gap 精確像素、字體大小（在合理範圍內）
 
-### 自动补全策略
+### 自動補全策略
 
-- 用户给 "我有 4 个方法 + ours" → 自动加上 Input 列（成为 5 列：Input / M1 / M2 / M3 / M4 / Ours，共 6 列）
-- 用户没给 row labels → 默认用 "Sample 1, 2, 3, ..." 或反问是否要分难易度
-- 用户没给 citation → 提示 "建议加 [n] 引用占位" 而不是擅自编造
-- 用户说 "ablation study" → 列名改为 "w/o A", "w/o B", "Full" 等消融变体
-- 用户说 "需要 zoom-in" → 启用 `zoom_in_enabled` 并提示需要标 region 坐标
+- 用戶給 "我有 4 個方法 + ours" → 自動加上 Input 列（成爲 5 列：Input / M1 / M2 / M3 / M4 / Ours，共 6 列）
+- 用戶沒給 row labels → 默認用 "Sample 1, 2, 3, ..." 或反問是否要分難易度
+- 用戶沒給 citation → 提示 "建議加 [n] 引用佔位" 而不是擅自編造
+- 用戶說 "ablation study" → 列名改爲 "w/o A", "w/o B", "Full" 等消融變體
+- 用戶說 "需要 zoom-in" → 啓用 `zoom_in_enabled` 並提示需要標 region 坐標
 
-## 变体 1：纯文本 NLP qualitative 对比
+## 變體 1：純文本 NLP qualitative 對比
 
 ```json
 {
@@ -171,31 +171,31 @@
     "content_type": "text_snippet",
     "cell_aspect": "tall rectangle (e.g. 2:3 portrait)",
     "cell_styling": "monospace font in cell, black text on white, with key tokens highlighted in colored boxes",
-    "row_labels": "input prompt / question 显示在每一行最左",
-    "use_case": "对比多个 LLM / 翻译 / summarization 输出"
+    "row_labels": "input prompt / question 顯示在每一行最左",
+    "use_case": "對比多個 LLM / 翻譯 / summarization 輸出"
   }
 }
 ```
 
-适用：NLP 论文生成结果对比、机器翻译质量对比。
+適用：NLP 論文生成結果對比、機器翻譯質量對比。
 
-## 变体 2：分割 mask 多列对比（含彩色 overlay）
+## 變體 2：分割 mask 多列對比（含彩色 overlay）
 
 ```json
 {
   "type": "Segmentation mask comparison grid",
   "modify": {
     "content_type": "segmentation_mask",
-    "cell_styling": "RGB image base + 半透明 mask 叠加；每类颜色一致；GT 列与 Ours 列容易对比",
-    "extras": "在 cells 下方可加 'mIoU: 0.78' 等定量指标小字",
-    "color_legend": "图右下角附小图例：颜色 → 类别名"
+    "cell_styling": "RGB image base + 半透明 mask 疊加；每類顏色一致；GT 列與 Ours 列容易對比",
+    "extras": "在 cells 下方可加 'mIoU: 0.78' 等定量指標小字",
+    "color_legend": "圖右下角附小圖例：顏色 → 類別名"
   }
 }
 ```
 
-适用：语义分割、实例分割、医学影像分割论文。
+適用：語義分割、實例分割、醫學影像分割論文。
 
-## 变体 3：Diffusion / 生成模型 prompt × method 矩阵
+## 變體 3：Diffusion / 生成模型 prompt × method 矩陣
 
 ```json
 {
@@ -204,21 +204,21 @@
     "rows": "different text prompts (left labels show prompt text)",
     "cols": "different generation methods or different sampling steps",
     "cell_content": "generated images, all from same prompt across the row",
-    "extras": "可在 ours 列加 '↑ +0.3 CLIP score' 小标"
+    "extras": "可在 ours 列加 '↑ +0.3 CLIP score' 小標"
   }
 }
 ```
 
-适用：扩散模型、文本到图像生成、图像编辑方法对比。
+適用：擴散模型、文本到圖像生成、圖像編輯方法對比。
 
-## 避免事项
+## 避免事項
 
-- 单元格大小不一致 → 完全失去对比意义
-- 缺 citation → 同行评审会扣分
-- Ours 列没有标记 → 读者不知道哪个是你的
-- 同一行的样本不一致（这一行第一列是猫，第二列是狗）→ 对比不成立
-- 添加渐变 / 阴影 / 圆角过大 → 不像论文
-- 用 emoji 或 cartoon 装饰 → 严重不专业
-- 列数 > 6 → 论文双栏排版下看不清
-- 没有 caption → 读者不知道这张图想说什么
-- zoom-in 框位置在不同 cell 不一致 → 对比不公平
+- 單元格大小不一致 → 完全失去對比意義
+- 缺 citation → 同行評審會扣分
+- Ours 列沒有標記 → 讀者不知道哪個是你的
+- 同一行的樣本不一致（這一行第一列是貓，第二列是狗）→ 對比不成立
+- 添加漸變 / 陰影 / 圓角過大 → 不像論文
+- 用 emoji 或 cartoon 裝飾 → 嚴重不專業
+- 列數 > 6 → 論文雙欄排版下看不清
+- 沒有 caption → 讀者不知道這張圖想說什麼
+- zoom-in 框位置在不同 cell 不一致 → 對比不公平

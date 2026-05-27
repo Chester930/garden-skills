@@ -38,7 +38,7 @@ const FILES = [
 
 const COPY = {
   en: { label: "Download v%V .zip", unreleased: "_(no release yet — coming soon)_" },
-  zh: { label: "下载 v%V .zip", unreleased: "_（暂未发布）_" },
+  zh: { label: "下載 v%V .zip", unreleased: "_（暫未發布）_" },
   ja: { label: "Download v%V .zip", unreleased: "_（まだリリースされていません）_" },
 };
 

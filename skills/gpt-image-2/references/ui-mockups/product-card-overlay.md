@@ -1,246 +1,246 @@
-# 商品卡叠加样机模板
+# 商品卡疊加樣機模板
 
-本文件用于生成“以人物 / 场景图为底，叠加商品卡 / 营销 UI 元素”的电商样机。
+本文件用於生成「以人物 / 場景圖爲底，疊加商品卡 / 營銷 UI 元素」的電商樣機。
 
-它跟 `live-commerce-ui.md` 的区别是：
+它跟 `live-commerce-ui.md` 的區別是：
 
-- `live-commerce-ui.md`：仿真直播平台界面，强调聊天区 / 礼物区 / 平台 UI
-- 本模板：偏向“商品 + 模特 / 商品 + 场景 + 卖点卡”的产品营销视觉，更接近落地页 hero 区或电商详情页主图
+- `live-commerce-ui.md`：仿真直播平臺界面，強調聊天區 / 禮物區 / 平臺 UI
+- 本模板：偏向「商品 + 模特 / 商品 + 場景 + 賣點卡」的產品營銷視覺，更接近落地頁 hero 區或電商詳情頁主圖
 
-## 适用范围
+## 適用範圍
 
-- 电商详情页主图样机
-- 落地页 hero section
-- 朋友圈 / 公众号配图带商品卡
-- 单图广告：人物 + 商品卡 + 卖点徽章
-- 模特拿着商品 + 信息卡叠加
+- 電商詳情頁主圖樣機
+- 落地頁 hero section
+- 朋友圈 / 公衆號配圖帶商品卡
+- 單圖廣告：人物 + 商品卡 + 賣點徽章
+- 模特拿着商品 + 信息卡疊加
 
-## 何时使用
+## 何時使用
 
-- 用户要的是“一张图能讲清楚商品是什么 / 卖点是什么 / 价格是多少”
-- 用户提到“详情页主图 / 投放图 / hero 图 / 落地页样机”
-- 用户希望既有真实人物视觉，又有电商信息层
+- 用戶要的是「一張圖能講清楚商品是什麼 / 賣點是什麼 / 價格是多少」
+- 用戶提到「詳情頁主圖 / 投放圖 / hero 圖 / 落地頁樣機」
+- 用戶希望既有真實人物視覺，又有電商信息層
 
 不要使用：
 
-- 用户要的是真实直播间截图（用 `live-commerce-ui.md`）
-- 用户要的是纯白底产品图（用 `product-visuals/white-background-product.md`）
+- 用戶要的是真實直播間截圖（用 `live-commerce-ui.md`）
+- 用戶要的是純白底產品圖（用 `product-visuals/white-background-product.md`）
 
-## 缺失信息优先提问顺序
+## 缺失信息優先提問順序
 
-1. 商品是什么（名称 + 类目）
-2. 主体来源：真人模特照片、模特描述、抽象“无人”场景
-3. 是否要展示价格 / 卖点 / 徽章
-4. 风格：日式简洁 / 极客科技 / 暖色生活方式 / 高级影棚 / 街头时尚
-5. 配色主调
-6. 文案语种：中文 / 英文 / 日文 / 双语
+1. 商品是什麼（名稱 + 類目）
+2. 主體來源：真人模特照片、模特描述、抽象「無人」場景
+3. 是否要展示價格 / 賣點 / 徽章
+4. 風格：日式簡潔 / 極客科技 / 暖色生活方式 / 高級影棚 / 街頭時尚
+5. 配色主調
+6. 文案語種：中文 / 英文 / 日文 / 雙語
 
-## 主模板：人物 + 商品卡 + 卖点叠加
+## 主模板：人物 + 商品卡 + 賣點疊加
 
 📖 描述
 
-生成一张电商落地页 hero 区视觉，结构稳定为：左侧文案 + 中间产品 + 右侧模特 / 场景。
+生成一張電商落地頁 hero 區視覺，結構穩定爲：左側文案 + 中間產品 + 右側模特 / 場景。
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "电商落地页 hero 商品卡叠加样机",
-  "goal": "生成一张能直接当作电商详情页主视觉或营销落地页 hero 区使用的图，包含人物、产品、卖点、价格信息四要素",
+  "type": "電商落地頁 hero 商品卡疊加樣機",
+  "goal": "生成一張能直接當作電商詳情頁主視覺或營銷落地頁 hero 區使用的圖，包含人物、產品、賣點、價格信息四要素",
   "brand": {
     "name": "{argument name=\"brand name\" default=\"DERMA CALM\"}",
-    "subtext": "{argument name=\"brand subtext\" default=\"敏感肌专研\"}"
+    "subtext": "{argument name=\"brand subtext\" default=\"敏感肌專研\"}"
   },
   "color_palette": {
     "base": "{argument name=\"base color\" default=\"白\"}",
-    "primary": "{argument name=\"primary color\" default=\"深蓝\"}",
-    "accent": "{argument name=\"accent color\" default=\"浅蓝\"}"
+    "primary": "{argument name=\"primary color\" default=\"深藍\"}",
+    "accent": "{argument name=\"accent color\" default=\"淺藍\"}"
   },
   "layout": {
     "header": {
-      "logo": "左侧品牌名 + 副标题",
+      "logo": "左側品牌名 + 副標題",
       "navigation_links": "{argument name=\"nav links\" default=\"ABOUT, PRODUCT, FEATURE, INGREDIENT, VOICE, Q&A\"}",
-      "cta_buttons": "{argument name=\"cta buttons\" default=\"我的页面, 立即购买\"}"
+      "cta_buttons": "{argument name=\"cta buttons\" default=\"我的頁面, 立即購買\"}"
     },
     "hero": {
       "left_column": {
-        "headline": "{argument name=\"main headline\" default=\"敏感肌也能每天安心使用的温和护理\"}",
-        "subtext": "{argument name=\"sub headline\" default=\"低刺激 · 持久保湿 · 无香料 · 无酒精\"}",
-        "buttons": ["立即购买", "了解详情"]
+        "headline": "{argument name=\"main headline\" default=\"敏感肌也能每天安心使用的溫和護理\"}",
+        "subtext": "{argument name=\"sub headline\" default=\"低刺激 · 持久保溼 · 無香料 · 無酒精\"}",
+        "buttons": ["立即購買", "了解詳情"]
       },
       "center_column": {
-        "product": "{argument name=\"product description\" default=\"白色按压瓶，瓶身印 'Moisture Barrier Serum'\"}",
+        "product": "{argument name=\"product description\" default=\"白色按壓瓶，瓶身印 'Moisture Barrier Serum'\"}",
         "props": [
-          "白色乳液质感液滴特写",
-          "圆形 '皮肤科医生监修' 徽章"
+          "白色乳液質感液滴特寫",
+          "圓形 '皮膚科醫生監修' 徽章"
         ]
       },
       "right_column": {
-        "subject": "{argument name=\"model description\" default=\"东亚年轻女性，皮肤通透，手指轻触脸颊\"}",
-        "background": "{argument name=\"background\" default=\"虚化的实验室玻璃器皿背景，明亮干净\"}"
+        "subject": "{argument name=\"model description\" default=\"東亞年輕女性，皮膚通透，手指輕觸臉頰\"}",
+        "background": "{argument name=\"background\" default=\"虛化的實驗室玻璃器皿背景，明亮乾淨\"}"
       }
     },
     "bottom_features_panel": {
       "left_cards": {
         "count": "{argument name=\"left feature count\" default=\"3\"}",
         "items": [
-          "{argument name=\"feature 1\" default=\"95% 用户给出 5 星好评\"}",
-          "{argument name=\"feature 2\" default=\"低刺激配方，盾牌图标\"}",
-          "{argument name=\"feature 3\" default=\"水滴图标 + 屏障修护\"}"
+          "{argument name=\"feature 1\" default=\"95% 用戶給出 5 星好評\"}",
+          "{argument name=\"feature 2\" default=\"低刺激配方，盾牌圖標\"}",
+          "{argument name=\"feature 3\" default=\"水滴圖標 + 屏障修護\"}"
         ]
       },
       "right_badges": {
         "count": 3,
-        "items": ["无香料", "无酒精", "敏感肌测试通过"]
+        "items": ["無香料", "無酒精", "敏感肌測試通過"]
       },
-      "footer": "底部小字免责声明"
+      "footer": "底部小字免責聲明"
     }
   },
   "style": {
-    "rendering": "干净、临床感、商业级渲染，看起来像真实落地页截图",
-    "consistency": "色板严格按照 base / primary / accent 三色"
+    "rendering": "乾淨、臨牀感、商業級渲染，看起來像真實落地頁截圖",
+    "consistency": "色板嚴格按照 base / primary / accent 三色"
   },
   "constraints": {
     "must_keep": [
-      "三栏结构清晰",
-      "产品作为视觉中心",
-      "文案与产品一致",
-      "徽章不能比 logo 还大"
+      "三欄結構清晰",
+      "產品作爲視覺中心",
+      "文案與產品一致",
+      "徽章不能比 logo 還大"
     ],
     "avoid": [
-      "排版极度拥挤",
-      "模特动作显得违和",
-      "色板出现额外鲜艳颜色"
+      "排版極度擁擠",
+      "模特動作顯得違和",
+      "色板出現額外鮮豔顏色"
     ]
   }
 }
 ```
 
-### 参数策略
+### 參數策略
 
-- 必问：商品名、品牌名、模特方向、主色
-- 可默认：导航文案、按钮文案、徽章文案
-- 可随机：底部小字免责声明、卖点措辞具体表述
+- 必問：商品名、品牌名、模特方向、主色
+- 可默認：導航文案、按鈕文案、徽章文案
+- 可隨機：底部小字免責聲明、賣點措辭具體表述
 
-### 自动补全策略
+### 自動補全策略
 
-- 没有给品牌就生成一个简洁的英文品牌名 + 中文副标题
-- 没有给模特方向，默认目标用户画像（护肤 -> 年轻女性 / 男士护肤 -> 年轻男性 / 数码 -> 都市年轻人）
-- 卖点必须 3 条，互不重复，不空洞
+- 沒有給品牌就生成一個簡潔的英文品牌名 + 中文副標題
+- 沒有給模特方向，默認目標用戶畫像（護膚 -> 年輕女性 / 男士護膚 -> 年輕男性 / 數碼 -> 都市年輕人）
+- 賣點必須 3 條，互不重複，不空洞
 
-## 变体 1：暗色科技产品落地页
+## 變體 1：暗色科技產品落地頁
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "暗色科技品牌落地页 hero 样机",
-  "theme": "{argument name=\"theme\" default=\"男士护肤 / 数码硬件\"}",
-  "color_palette": ["深海军蓝", "白", "蓝色渐变"],
+  "type": "暗色科技品牌落地頁 hero 樣機",
+  "theme": "{argument name=\"theme\" default=\"男士護膚 / 數碼硬件\"}",
+  "color_palette": ["深海軍藍", "白", "藍色漸變"],
   "header": {
     "logo": "{argument name=\"brand name\" default=\"NEX SKIN\"}",
     "navigation": ["HOME", "PRODUCT", "ABOUT", "FEATURE", "FAQ"],
-    "cta_button": "立即开始 >"
+    "cta_button": "立即開始 >"
   },
   "hero": {
     "left_column": {
-      "headline": "{argument name=\"main headline\" default=\"清爽感，从每日护理开始\"}",
-      "sub_headline": "男士肌肤，更需要简单",
+      "headline": "{argument name=\"main headline\" default=\"清爽感，從每日護理開始\"}",
+      "sub_headline": "男士肌膚，更需要簡單",
       "feature_highlights": [
-        "去油控亮：调节皮脂",
-        "保湿：长时间润泽",
-        "一瓶搞定：化妆水 + 精华 + 乳液"
+        "去油控亮：調節皮脂",
+        "保溼：長時間潤澤",
+        "一瓶搞定：化妝水 + 精華 + 乳液"
       ]
     },
     "center_image": {
-      "subject": "{argument name=\"model\" default=\"清爽干练的亚洲年轻男性\"}",
-      "pose": "手部托腮思考"
+      "subject": "{argument name=\"model\" default=\"清爽幹練的亞洲年輕男性\"}",
+      "pose": "手部託腮思考"
     },
     "right_column": {
-      "product_shot": "{argument name=\"product\" default=\"高瘦的深蓝色瓶身，瓶身带水珠\"}"
+      "product_shot": "{argument name=\"product\" default=\"高瘦的深藍色瓶身，瓶身帶水珠\"}"
     }
   },
   "bottom_stats_bar": {
     "items": [
-      "累计销量 120 万瓶",
-      "满意度 92.1%",
-      "复购率 85.3%"
+      "累計銷量 120 萬瓶",
+      "滿意度 92.1%",
+      "復購率 85.3%"
     ]
   },
   "constraints": {
-    "must_feel": "硬朗、专业、可信赖"
+    "must_feel": "硬朗、專業、可信賴"
   }
 }
 ```
 
-## 变体 2：四格人物 + 商品卡集合
+## 變體 2：四格人物 + 商品卡集合
 
-适合一张图覆盖多个人群 / 场景。
+適合一張圖覆蓋多個人羣 / 場景。
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "四格人物-商品卡集合样机",
-  "layout": "2x2 网格，每格独立人物 + 独立商品卡",
+  "type": "四格人物-商品卡集合樣機",
+  "layout": "2x2 網格，每格獨立人物 + 獨立商品卡",
   "quadrants": [
     {
       "position": "左上",
-      "industry": "护肤",
-      "subject": "亚洲女性轻触脸颊",
-      "product": "白色按压瓶",
-      "headline": "{argument name=\"q1 headline\" default=\"素肌觉醒\"}"
+      "industry": "護膚",
+      "subject": "亞洲女性輕觸臉頰",
+      "product": "白色按壓瓶",
+      "headline": "{argument name=\"q1 headline\" default=\"素肌覺醒\"}"
     },
     {
       "position": "右上",
-      "industry": "餐饮",
-      "subject": "意大利肉酱面特写",
-      "product": "餐厅 logo + 限定上市标识",
-      "headline": "{argument name=\"q2 headline\" default=\"这碗面，事件级\"}"
+      "industry": "餐飲",
+      "subject": "意大利肉醬面特寫",
+      "product": "餐廳 logo + 限定上市標識",
+      "headline": "{argument name=\"q2 headline\" default=\"這碗面，事件級\"}"
     },
     {
       "position": "左下",
       "industry": "旅行",
-      "subject": "背包女性面对高山湖泊",
+      "subject": "背包女性面對高山湖泊",
       "product": "旅行品牌 + 折扣 banner",
-      "headline": "{argument name=\"q3 headline\" default=\"出发，让自己自由\"}"
+      "headline": "{argument name=\"q3 headline\" default=\"出發，讓自己自由\"}"
     },
     {
       "position": "右下",
-      "industry": "SaaS 应用",
-      "subject": "手机展示任务管理 App 界面",
-      "product": "应用品牌 + 7 天免费试用",
-      "headline": "{argument name=\"q4 headline\" default=\"让任务管理更简单\"}"
+      "industry": "SaaS 應用",
+      "subject": "手機展示任務管理 App 界面",
+      "product": "應用品牌 + 7 天免費試用",
+      "headline": "{argument name=\"q4 headline\" default=\"讓任務管理更簡單\"}"
     }
   ],
   "constraints": {
-    "must_feel": "像同一品牌矩阵或同一广告 campaign 出品"
+    "must_feel": "像同一品牌矩陣或同一廣告 campaign 出品"
   }
 }
 ```
 
-## 变体 3：自动补全模式
+## 變體 3：自動補全模式
 
-适合用户只说“做一张电商落地页主图”。
+適合用戶只說「做一張電商落地頁主圖」。
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "落地页商品卡叠加自动补全模板",
+  "type": "落地頁商品卡疊加自動補全模板",
   "mode": "auto-fill",
-  "rule": "在主模板基础上，自动补齐品牌名、文案、模特方向，但保持四要素：品牌、人物、商品、卖点都齐",
+  "rule": "在主模板基礎上，自動補齊品牌名、文案、模特方向，但保持四要素：品牌、人物、商品、賣點都齊",
   "constraints": {
-    "must_feel": "真实电商投放图",
-    "avoid": "看起来像 PPT"
+    "must_feel": "真實電商投放圖",
+    "avoid": "看起來像 PPT"
   }
 }
 ```
 
-## 避免事项
+## 避免事項
 
-- 不要让人物表情过于夸张或假笑（会立刻破坏可信度）
-- 卖点徽章 ≤ 3-4 个，多了会变成广告噪音
-- 文案颜色不能与底图过于接近，否则不可读
-- 商品在画面中必须有清晰主光，不能跟模特一起虚化
-- 不要让中文 + 英文 + 日文同时占据同等大小，必须有主导语种
+- 不要讓人物表情過於誇張或假笑（會立刻破壞可信度）
+- 賣點徽章 ≤ 3-4 個，多了會變成廣告噪音
+- 文案顏色不能與底圖過於接近，否則不可讀
+- 商品在畫面中必須有清晰主光，不能跟模特一起虛化
+- 不要讓中文 + 英文 + 日文同時佔據同等大小，必須有主導語種

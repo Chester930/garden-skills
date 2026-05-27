@@ -1,63 +1,63 @@
-# 概念 / 原理示意图模板
+# 概念 / 原理示意圖模板
 
-本文件用于生成"科学概念 / 原理 / 实验装置"示意图：
+本文件用於生成"科學概念 / 原理 / 實驗裝置"示意圖：
 
-- 物理 / 化学 / 生物 实验装置图
-- 算法 / 数学 概念示意（如 attention 机制、流形、坐标系）
-- 机制 / 通路 / 过程示意（细胞通路、化学反应）
-- 教科书风原理图
-- Nature / Science 综述里的"我们这个领域大概是这样工作的"概念图
+- 物理 / 化學 / 生物 實驗裝置圖
+- 算法 / 數學 概念示意（如 attention 機制、流形、坐標系）
+- 機制 / 通路 / 過程示意（細胞通路、化學反應）
+- 教科書風原理圖
+- Nature / Science 綜述裏的"我們這個領域大概是這樣工作的"概念圖
 
-特征：
+特徵：
 
-- **自由度极高**：每张科学示意图都长得不一样，不像 pipeline / network 那样可被网格化
-- 极简白底 / 浅灰底
-- 几何精确：标尺 / 坐标轴 / 角度对齐
-- 简化但非卡通的风格（科学严谨）
-- 标注线 + 编号 + 公式
-- 出版物字体（Helvetica / Inter / Computer Modern 数学公式）
+- **自由度極高**：每張科學示意圖都長得不一樣，不像 pipeline / network 那樣可被網格化
+- 極簡白底 / 淺灰底
+- 幾何精確：標尺 / 坐標軸 / 角度對齊
+- 簡化但非卡通的風格（科學嚴謹）
+- 標註線 + 編號 + 公式
+- 出版物字體（Helvetica / Inter / Computer Modern 數學公式）
 
-> 设计判断：**这类图自由度极高、变化丰富，强行 JSON 反而限制构图**。本模板采用「**结构化自然语言提示词 + 关键参数 + 示例**」的混合形式，把控约束但不锁死构图。
+> 設計判斷：**這類圖自由度極高、變化豐富，強行 JSON 反而限制構圖**。本模板採用「**結構化自然語言提示詞 + 關鍵參數 + 示例**」的混合形式，把控約束但不鎖死構圖。
 
-## 适用范围
+## 適用範圍
 
-- 实验装置示意（光学 / 力学 / 流体 / 化学反应器）
-- 生物机制 / 通路 / 解剖示意
-- 算法 / 数学概念可视化（attention / convex set / manifold / 坐标变换）
-- 物理过程示意（波 / 场 / 粒子轨迹）
-- 综述论文里"领域 big picture"概念图
+- 實驗裝置示意（光學 / 力學 / 流體 / 化學反應器）
+- 生物機制 / 通路 / 解剖示意
+- 算法 / 數學概念可視化（attention / convex set / manifold / 坐標變換）
+- 物理過程示意（波 / 場 / 粒子軌跡）
+- 綜述論文裡"領域 big picture"概念圖
 
-## 何时使用
+## 何時使用
 
-- 用户提到 "schematic / illustration / 示意图 / 原理图 / 实验装置 / 机制图 / Nature 风 / 教科书风"
-- 用户希望"自由构图、白底、几何精确、有学术感"
-- 用户的内容是「单一概念 / 单一装置 / 单一机制」而非「pipeline / 网络 / 多方法」
+- 用戶提到 "schematic / illustration / 示意圖 / 原理圖 / 實驗裝置 / 機製圖 / Nature 風 / 教科書風"
+- 用戶希望"自由構圖、白底、幾何精確、有學術感"
+- 用戶的內容是「單一概念 / 單一裝置 / 單一機制」而非「pipeline / 網絡 / 多方法」
 
 不要使用：
 
-- 用户要的是「方法 pipeline」（多 stage 流）→ 用 `academic-figures/method-pipeline-overview.md`
-- 用户要的是「神经网络架构」 → 用 `academic-figures/neural-network-architecture.md`
-- 用户要的是「数据图表」 → 用 `academic-figures/publication-chart.md`
-- 用户要的是「手绘卡通示意」 → 用 `infographics/hand-drawn-infographic.md`
-- 用户要的是「儿童科普」 → 用 `scenes-and-illustrations/picture-book-scene.md`
+- 用戶要的是「方法 pipeline」（多 stage 流）→ 用 `academic-figures/method-pipeline-overview.md`
+- 用戶要的是「神經網絡架構」 → 用 `academic-figures/neural-network-architecture.md`
+- 用戶要的是「數據圖表」 → 用 `academic-figures/publication-chart.md`
+- 用戶要的是「手繪卡通示意」 → 用 `infographics/hand-drawn-infographic.md`
+- 用戶要的是「兒童科普」 → 用 `scenes-and-illustrations/picture-book-scene.md`
 
-## 缺失信息优先提问顺序
+## 缺失信息優先提問順序
 
-1. 要解释什么概念 / 装置 / 机制？（一句话定义）
-2. 主体是什么？（中央那个核心实体——分子 / 细胞 / 透镜 / 反应器 / 矩阵 / ...）
-3. 配套元素？（标注线 / 公式 / 坐标 / 参数）
-4. 风格倾向（Nature 综述风 / 教科书风 / 顶会论文严肃风 / BioRender 友好风）
-5. 是否需要数学公式标注？需要的话哪些？
-6. 是否中英文（默认英文）
-7. 比例（论文常用 1:1、4:3、16:9）
+1. 要解釋什麼概念 / 裝置 / 機制？（一句話定義）
+2. 主體是什麼？（中央那個核心實體——分子 / 細胞 / 透鏡 / 反應器 / 矩陣 / ...）
+3. 配套元素？（標註線 / 公式 / 坐標 / 參數）
+4. 風格傾向（Nature 綜述風 / 教科書風 / 頂會論文嚴肅風 / BioRender 友好風）
+5. 是否需要數學公式標註？需要的話哪些？
+6. 是否中英文（默認英文）
+7. 比例（論文常用 1:1、4:3、16:9）
 
-## 主模板：科学概念 / 原理示意图（自然语言结构化）
+## 主模板：科學概念 / 原理示意圖（自然語言結構化）
 
 📖 描述
 
-整张图围绕一个中心概念 / 装置 / 机制展开，用极简几何元素 + 标注线 + 公式 + 简洁辅助色构成，达到出版物级的清晰度和严谨感。
+整張圖圍繞一個中心概念 / 裝置 / 機制展開，用極簡幾何元素 + 標註線 + 公式 + 簡潔輔助色構成，達到出版物級的清晰度和嚴謹感。
 
-📝 提示词（结构化自然语言模板）
+📝 提示詞（結構化自然語言模板）
 
 ```
 A scientific schematic illustration in the style of {argument name="reference_style" default="a Nature / Science methods figure"}.
@@ -110,21 +110,21 @@ CAPTION (optional, drawn below figure)
 {argument name="caption_text" default="Figure 2. Illustration of the cross-attention mechanism. Queries (Q) attend to keys (K) via scaled dot-product, producing attention weights that aggregate values (V)."}
 ```
 
-### 参数策略
+### 參數策略
 
-- **必问**：`core_concept`、`central_subject` 至少一句话描述
-- **可默认**：`reference_style`（Nature methods 风）、`color_count`（3-4）、配色三件套（深蓝 + 橙 + 灰）、`label_font`、`aspect_ratio`
-- **可随机**：annotation 摆放角度、leader line 走向（应避开关键内容）、equations 是否启用
+- **必問**：`core_concept`、`central_subject` 至少一句話描述
+- **可默認**：`reference_style`（Nature methods 風）、`color_count`（3-4）、配色三件套（深藍 + 橙 + 灰）、`label_font`、`aspect_ratio`
+- **可隨機**：annotation 擺放角度、leader line 走向（應避開關鍵內容）、equations 是否啓用
 
-### 自动补全策略
+### 自動補全策略
 
-- 用户给"我要画 attention 机制示意图"但没说细节 → 自动用 default 给出 cross-attention 示意，问用户是否还需要 self-attention 单独一张
-- 用户给"光学双缝干涉实验" → central_subject = 双缝挡板 + 屏幕 + 入射光，supporting = 干涉条纹小图 + 公式 d sinθ = mλ
-- 用户给"细胞 receptor 信号通路" → 用 BioRender 友好风：圆角细胞膜 + 受体 + 配体 + 内部信号链
-- 用户没给 reference_style：根据领域猜——CV/ML 用 "顶会论文风"；生物用 "BioRender / Nature methods 风"；物理用 "教科书 + 公式风"
-- 用户说"我要无英文，全中文" → 切换 label_font 为思源黑 / 宋体 + 公式保留 LaTeX 数学体
+- 用戶給"我要畫 attention 機制示意圖"但沒說細節 → 自動用 default 給出 cross-attention 示意，問用戶是否還需要 self-attention 單獨一張
+- 用戶給"光學雙縫幹涉實驗" → central_subject = 雙縫擋板 + 屏幕 + 入射光，supporting = 幹涉條紋小圖 + 公式 d sinθ = mλ
+- 用戶給"細胞 receptor 信號通路" → 用 BioRender 友好風：圓角細胞膜 + 受體 + 配體 + 內部信號鏈
+- 用戶沒給 reference_style：根據領域猜——CV/ML 用 "頂會論文風"；生物用 "BioRender / Nature methods 風"；物理用 "教科書 + 公式風"
+- 用戶說"我要無英文，全中文" → 切換 label_font 爲思源黑 / 宋體 + 公式保留 LaTeX 數學體
 
-## 变体 1：实验装置示意图（光学 / 化学）
+## 變體 1：實驗裝置示意圖（光學 / 化學）
 
 ```
 Modify the main template:
@@ -151,9 +151,9 @@ VIBE
 Like a JOSA / Optics Letters experimental setup figure, or like a chemistry textbook reaction apparatus.
 ```
 
-适用：光学实验、化学反应装置、流体 / 力学装置、半导体制造流程示意。
+適用：光學實驗、化學反應裝置、流體 / 力學裝置、半導體製造流程示意。
 
-## 变体 2：生物 / 医学机制示意（BioRender 风）
+## 變體 2：生物 / 醫學機制示意（BioRender 風）
 
 ```
 Modify the main template:
@@ -175,9 +175,9 @@ VIBE
 Like a Cell / Nature review pathway figure, balanced between scientific accuracy and visual approachability.
 ```
 
-适用：分子生物学通路、细胞机制、解剖示意、药物作用机制。
+適用：分子生物學通路、細胞機制、解剖示意、藥物作用機制。
 
-## 变体 3：数学 / 算法概念可视化
+## 變體 3：數學 / 算法概念可視化
 
 ```
 Modify the main template:
@@ -202,18 +202,18 @@ VIBE
 Like a figure from "Convex Optimization" by Boyd, or from a SIGGRAPH technical paper.
 ```
 
-适用：优化理论、几何 / 拓扑、概率分布、信号处理、计算机图形数学基础。
+適用：優化理論、幾何 / 拓撲、概率分布、信號處理、計算機圖形數學基礎。
 
-## 避免事项
+## 避免事項
 
-- 卡通化、夸张化的元素 → 失去科学严谨感
-- 渐变 / 玻璃质感 / drop shadow → 像 PPT 不像论文
-- 颜色超过 4 种 / 高饱和 / 霓虹色
-- 公式用非数学字体（必须斜体变量 + serif 数学体）
-- 中英文混排（除非显式双语）
-- 装饰性背景纹理 / 图案
-- 标注线穿过主体 / 标签碰撞
-- 用 emoji 当生物 / 化学元素图标
-- 多个互不相关概念塞在一张图（应拆分）
-- 模糊或低分辨率（论文图必须矢量级清晰）
-- 自由手绘风的"草图感" → 用 `infographics/hand-drawn-infographic.md` 才对，本模板必须几何精确
+- 卡通化、誇張化的元素 → 失去科學嚴謹感
+- 漸變 / 玻璃質感 / drop shadow → 像 PPT 不像論文
+- 顏色超過 4 種 / 高飽和 / 霓虹色
+- 公式用非數學字體（必須斜體變量 + serif 數學體）
+- 中英文混排（除非顯式雙語）
+- 裝飾性背景紋理 / 圖案
+- 標註線穿過主體 / 標籤碰撞
+- 用 emoji 當生物 / 化學元素圖標
+- 多個互不相關概念塞在一張圖（應拆分）
+- 模糊或低分辨率（論文圖必須矢量級清晰）
+- 自由手繪風的"草圖感" → 用 `infographics/hand-drawn-infographic.md` 才對，本模板必須幾何精確

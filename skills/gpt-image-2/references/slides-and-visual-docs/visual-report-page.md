@@ -1,81 +1,81 @@
-# 商业视觉报告页模板
+# 商業視覺報告頁模板
 
-本文件用于生成“商业报告 / 投资分析 / 增长复盘 / OKR 概览” 风格的视觉单页：
+本文件用於生成「商業報告 / 投資分析 / 增長復盤 / OKR 概覽」 風格的視覺單頁：
 
-- 商业咨询公司风格
-- 投行 / 研究报告
-- 公司年报概览
-- 投资人简报
-- OKR 季度总结
+- 商業諮詢公司風格
+- 投行 / 研究報告
+- 公司年報概覽
+- 投資人簡報
+- OKR 季度總結
 
-特征：
+特徵：
 
-- 数据驱动
-- 表格 + 图表 + 插图混合
-- 排版严谨
-- 一页能讲清楚一个商业判断
+- 數據驅動
+- 表格 + 圖表 + 插圖混合
+- 排版嚴謹
+- 一頁能講清楚一個商業判斷
 
-## 适用范围
+## 適用範圍
 
-- 单页 KPI 概览
-- 投资人简报封面
-- 报告执行摘要页
-- 季度业务复盘页
+- 單頁 KPI 概覽
+- 投資人簡報封面
+- 報告執行摘要頁
+- 季度業務復盤頁
 
-## 何时使用
+## 何時使用
 
-- 用户提到“报告 / 复盘 / 投资人简报 / KPI / OKR / executive summary”
-- 用户需要数据可视化 + 商业判断风格
+- 用戶提到「報告 / 復盤 / 投資人簡報 / KPI / OKR / executive summary」
+- 用戶需要數據可視化 + 商業判斷風格
 
 不要使用：
 
-- 用户要的是政府公告（用 `policy-style-slide.md`）
-- 用户要的是讲解课件（用 `dense-explainer-slides.md`）
-- 用户要的是科普图（用 `educational-diagram-slide.md`）
+- 用戶要的是政府公告（用 `policy-style-slide.md`）
+- 用戶要的是講解課件（用 `dense-explainer-slides.md`）
+- 用戶要的是科普圖（用 `educational-diagram-slide.md`）
 
-## 缺失信息优先提问顺序
+## 缺失信息優先提問順序
 
-1. 报告主题（业务 / 季度 / 项目 / 公司）
-2. 关键数据（3-5 个）
-3. 关键判断（1 句话结论）
-4. 是否需要时间线 / 趋势图
-5. 配色：商业蓝 / 黑金 / 暖灰
-6. 是否英文 / 中英双语
+1. 報告主題（業務 / 季度 / 項目 / 公司）
+2. 關鍵數據（3-5 個）
+3. 關鍵判斷（1 句話結論）
+4. 是否需要時間線 / 趨勢圖
+5. 配色：商業藍 / 黑金 / 暖灰
+6. 是否英文 / 中英雙語
 
-## 主模板：商业报告执行摘要页
+## 主模板：商業報告執行摘要頁
 
 📖 描述
 
-顶部为标题 + 报告期 + logo；中间为关键数据卡 + 趋势小图 + 一句判断；底部为来源 / 备注。
+頂部爲標題 + 報告期 + logo；中間爲關鍵數據卡 + 趨勢小圖 + 一句判斷；底部爲來源 / 備註。
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "商业报告执行摘要页",
-  "goal": "生成一张可作为投资人简报、季度报告封面、内部 OKR 复盘的执行摘要视觉单页",
+  "type": "商業報告執行摘要頁",
+  "goal": "生成一張可作爲投資人簡報、季度報告封面、內部 OKR 復盤的執行摘要視覺單頁",
   "style": {
-    "color_palette": "{argument name=\"color palette\" default=\"商业蓝 + 灰 + 白\"}",
-    "tone": "{argument name=\"visual tone\" default=\"理性、克制、可信赖\"}",
-    "typography": "{argument name=\"typography\" default=\"无衬线现代字体 + 数字粗体\"}"
+    "color_palette": "{argument name=\"color palette\" default=\"商業藍 + 灰 + 白\"}",
+    "tone": "{argument name=\"visual tone\" default=\"理性、克制、可信賴\"}",
+    "typography": "{argument name=\"typography\" default=\"無襯線現代字體 + 數字粗體\"}"
   },
   "header": {
     "company_or_team": "{argument name=\"team name\" default=\"NEX Inc.\"}",
     "report_period": "{argument name=\"period\" default=\"2026 Q1\"}",
-    "main_title": "{argument name=\"main title\" default=\"季度业务复盘 · 执行摘要\"}",
-    "subtitle": "{argument name=\"subtitle\" default=\"3 项关键数据 + 1 句核心判断\"}"
+    "main_title": "{argument name=\"main title\" default=\"季度業務復盤 · 執行摘要\"}",
+    "subtitle": "{argument name=\"subtitle\" default=\"3 項關鍵數據 + 1 句核心判斷\"}"
   },
   "kpi_cards": {
     "count": "{argument name=\"kpi count\" default=\"4\"}",
     "items": [
       {
-        "label": "{argument name=\"kpi 1 label\" default=\"营收\"}",
-        "value": "{argument name=\"kpi 1 value\" default=\"¥ 12.4 亿\"}",
+        "label": "{argument name=\"kpi 1 label\" default=\"營收\"}",
+        "value": "{argument name=\"kpi 1 value\" default=\"¥ 12.4 億\"}",
         "change": "{argument name=\"kpi 1 change\" default=\"+18% YoY\"}"
       },
       {
-        "label": "{argument name=\"kpi 2 label\" default=\"活跃用户\"}",
-        "value": "{argument name=\"kpi 2 value\" default=\"3,820 万\"}",
+        "label": "{argument name=\"kpi 2 label\" default=\"活躍用戶\"}",
+        "value": "{argument name=\"kpi 2 value\" default=\"3,820 萬\"}",
         "change": "{argument name=\"kpi 2 change\" default=\"+22% YoY\"}"
       },
       {
@@ -92,113 +92,113 @@
   },
   "trend_chart": {
     "enabled": "{argument name=\"trend chart enabled\" default=\"true\"}",
-    "type": "{argument name=\"chart type\" default=\"折线 + 面积\"}",
-    "metric": "{argument name=\"chart metric\" default=\"季度营收\"}",
+    "type": "{argument name=\"chart type\" default=\"折線 + 面積\"}",
+    "metric": "{argument name=\"chart metric\" default=\"季度營收\"}",
     "x_axis": "Q1-Q4",
-    "y_axis": "亿元"
+    "y_axis": "億元"
   },
   "core_judgment": {
-    "headline": "{argument name=\"core judgment\" default=\"核心增长来自 AI 产品线，需在 Q2 投入更多研发资源\"}"
+    "headline": "{argument name=\"core judgment\" default=\"核心增長來自 AI 產品線，需在 Q2 投入更多研發資源\"}"
   },
   "footer": {
-    "source": "{argument name=\"source\" default=\"数据来源：内部财务系统\"}",
-    "confidentiality": "{argument name=\"confidentiality\" default=\"内部资料 · 仅供讨论\"}"
+    "source": "{argument name=\"source\" default=\"數據來源：內部財務系統\"}",
+    "confidentiality": "{argument name=\"confidentiality\" default=\"內部資料 · 僅供討論\"}"
   },
   "constraints": {
     "must_keep": [
-      "数字必须最大、最显眼",
-      "趋势图与 KPI 数据一致",
-      "核心判断只有一句",
-      "色板极简 ≤ 3 色"
+      "數字必須最大、最顯眼",
+      "趨勢圖與 KPI 數據一致",
+      "核心判斷只有一句",
+      "色板極簡 ≤ 3 色"
     ],
     "avoid": [
-      "数据过于堆叠",
-      "出现装饰性插画",
-      "字体多种类",
-      "底色过亮影响数字识别"
+      "數據過於堆疊",
+      "出現裝飾性插畫",
+      "字體多種類",
+      "底色過亮影響數字識別"
     ]
   }
 }
 ```
 
-### 参数策略
+### 參數策略
 
-- 必问：报告期、主题、关键数据
-- 可默认：色板、字体、保密标识
-- 可随机：装饰小元素
+- 必問：報告期、主題、關鍵數據
+- 可默認：色板、字體、保密標識
+- 可隨機：裝飾小元素
 
-### 自动补全策略
+### 自動補全策略
 
-- 用户只给主题时：自动生成 4 个常见 KPI（营收 / 用户 / 毛利率 / NPS）
-- 默认色板商业蓝
-- 默认 1 句核心判断使用“因 X，所以 Y”句式
+- 用戶只給主題時：自動生成 4 個常見 KPI（營收 / 用戶 / 毛利率 / NPS）
+- 默認色板商業藍
+- 默認 1 句核心判斷使用「因 X，所以 Y」句式
 
-## 变体 1：投资人 pitch 封面
+## 變體 1：投資人 pitch 封面
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "投资人 pitch 封面单页",
+  "type": "投資人 pitch 封面單頁",
   "header": {
     "main_title": "{argument name=\"company\" default=\"NEX Inc.\"}",
-    "subtitle": "{argument name=\"tagline\" default=\"重新定义 AI 工作流\"}"
+    "subtitle": "{argument name=\"tagline\" default=\"重新定義 AI 工作流\"}"
   },
   "kpi_cards": {
     "items": [
-      "ARR ¥ 1.2 亿",
-      "增长 240% YoY",
-      "客户 4500+"
+      "ARR ¥ 1.2 億",
+      "增長 240% YoY",
+      "客戶 4500+"
     ]
   },
   "core_judgment": {
-    "headline": "现在是融资的最佳窗口"
+    "headline": "現在是融資的最佳窗口"
   },
   "constraints": {
-    "must_feel": "锐利、自信、未来感"
+    "must_feel": "銳利、自信、未來感"
   }
 }
 ```
 
-## 变体 2：年报概览页
+## 變體 2：年報概覽頁
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "公司年报概览页",
+  "type": "公司年報概覽頁",
   "header": {
-    "main_title": "{argument name=\"year\" default=\"2025 年度报告\"}",
-    "subtitle": "全年关键成就 + 来年展望"
+    "main_title": "{argument name=\"year\" default=\"2025 年度報告\"}",
+    "subtitle": "全年關鍵成就 + 來年展望"
   },
   "sections": {
-    "items": ["全年 KPI", "重要里程碑", "团队成长", "来年规划"]
+    "items": ["全年 KPI", "重要裏程碑", "團隊成長", "來年規劃"]
   },
   "constraints": {
-    "must_feel": "克制、有沉淀感"
+    "must_feel": "克制、有沉澱感"
   }
 }
 ```
 
-## 变体 3：自动补全模式
+## 變體 3：自動補全模式
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "商业报告页自动补全模板",
+  "type": "商業報告頁自動補全模板",
   "mode": "auto-fill",
-  "rule": "用户给业务方向 + 报告期，自动生成 KPI / 趋势 / 核心判断",
+  "rule": "用戶給業務方向 + 報告期，自動生成 KPI / 趨勢 / 核心判斷",
   "constraints": {
-    "must_feel": "可发给投资人 / 高管"
+    "must_feel": "可發給投資人 / 高管"
   }
 }
 ```
 
-## 避免事项
+## 避免事項
 
-- 不要在执行摘要页里塞 > 6 个 KPI
-- 不要让趋势图与 KPI 矛盾
-- 不要使用花哨字体
-- 不要让核心判断超过 2 句
-- 不要让背景色过深，会让数字读不清
+- 不要在執行摘要頁裏塞 > 6 個 KPI
+- 不要讓趨勢圖與 KPI 矛盾
+- 不要使用花哨字體
+- 不要讓核心判斷超過 2 句
+- 不要讓背景色過深，會讓數字讀不清

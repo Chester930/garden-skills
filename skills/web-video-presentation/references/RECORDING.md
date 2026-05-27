@@ -28,71 +28,71 @@ npm run record
 
 ---
 
-## 推荐流程：Auto 模式一镜到底
+## 推薦流程：Auto 模式一鏡到底
 
 ### 前置
 
-- 章节代码做完，每章都有 `narrations.ts`
-- 已经跑过 `npm run extract-narrations` + `npm run synthesize-audio`，
+- 章節代碼做完，每章都有 `narrations.ts`
+- 已經跑過 `npm run extract-narrations` + `npm run synthesize-audio`，
   `public/audio/<id>/<step>.mp3` 全部就位
-- `npm run dev` 跑着，浏览器能打开页面
+- `npm run dev` 跑着，瀏覽器能打開頁面
 
-### 录制步骤
+### 錄製步驟
 
-1. **浏览器全屏**（F11 / Ctrl+Cmd+F），URL 改成
+1. **瀏覽器全屏**（F11 / Ctrl+Cmd+F），URL 改成
    `http://localhost:5173/?auto=1`
-2. 看到 "Press SPACE to start" 蒙层 = Auto 模式就绪
-3. **打开屏幕录制**（QuickTime / OBS / Cmd+Shift+5），开始录
-4. **按一次 Space** → 蒙层消失 → step 0 出现，1.mp3 自动播 →
-   播完自动推进到 step 1 → 2.mp3 → … → 最后一个 step 播完 → 停在终态
-5. **停止录制** → 后期裁掉头尾（Space 那一下、最后停在终态的尾巴）就是
+2. 看到 "Press SPACE to start" 蒙層 = Auto 模式就緒
+3. **打開屏幕錄製**（QuickTime / OBS / Cmd+Shift+5），開始錄
+4. **按一次 Space** → 蒙層消失 → step 0 出現，1.mp3 自動播 →
+   播完自動推進到 step 1 → 2.mp3 → … → 最後一個 step 播完 → 停在終態
+5. **停止錄製** → 後期裁掉頭尾（Space 那一下、最後停在終態的尾巴）就是
    成品
 
-整个过程**完全不用点鼠标**。音视频天然同步，不需要后期对轨。
+整個過程**完全不用點鼠標**。音視頻天然同步，不需要後期對軌。
 
-> **Auto 模式严格按音频结束推进**（+ 200ms 缓冲），没有"等动画跑完"
-> 的兜底。如果你看到某步动画被切了一半 → 说明该 step 动画长于口播，
-> 回章节代码改：写更长口播 / 拆 step / 调动画速度。
+> **Auto 模式嚴格按音頻結束推進**（+ 200ms 緩衝），沒有"等動畫跑完"
+> 的兜底。如果你看到某步動畫被切了一半 → 說明該 step 動畫長於口播，
+> 回章節代碼改：寫更長口播 / 拆 step / 調動畫速度。
 
-### 录屏工具
+### 錄屏工具
 
-| 平台 | 工具 | 设置 |
+| 平臺 | 工具 | 設置 |
 |---|---|---|
-| macOS | Cmd+Shift+5 → 录制选定窗口 | 选浏览器窗口；浏览器全屏后输出就是 1920×1080 |
-| macOS | QuickTime → 文件 → 新建屏幕录制 | 同上 |
-| 跨平台 | OBS Studio | 窗口捕获，Canvas 1920×1080，60fps |
+| macOS | Cmd+Shift+5 → 錄製選定窗口 | 選瀏覽器窗口；瀏覽器全屏後輸出就是 1920×1080 |
+| macOS | QuickTime → 文件 → 新建屏幕錄製 | 同上 |
+| 跨平臺 | OBS Studio | 窗口捕獲，Canvas 1920×1080，60fps |
 
 ### 模式速查
 
-| URL / 快捷键 | 行为 |
+| URL / 快捷鍵 | 行爲 |
 |---|---|
-| 直接打开（默认） | Manual：点击 / ←→ 推进，不播音频 |
-| `?audio=1` 或按 `M` | Audio：进入 step 自动播音频，但**手动点鼠标推进** |
-| `?audio=1` + 再按 `M` | Auto：进入 step 自动播 + 自动推进（录制用） |
-| Auto 模式下首次按 `Space` | 启动 Auto 播放（绕过浏览器自动播放限制） |
+| 直接打開（默認） | Manual：點擊 / ←→ 推進，不播音頻 |
+| `?audio=1` 或按 `M` | Audio：進入 step 自動播音頻，但**手動點鼠標推進** |
+| `?audio=1` + 再按 `M` | Auto：進入 step 自動播 + 自動推進（錄製用） |
+| Auto 模式下首次按 `Space` | 啓動 Auto 播放（繞過瀏覽器自動播放限制） |
 
-也可以鼠标移到右上角，会出现一个隐藏的模式切换按钮。
+也可以鼠標移到右上角，會出現一個隱藏的模式切換按鈕。
 
 ---
 
-## 备用流程：没合成音频时手动录屏
+## 備用流程：沒合成音頻時手動錄屏
 
-如果你跳过了音频合成（`Checkpoint Audio` 选了"不合成"），按老方法：
+如果你跳過了音頻合成（`Checkpoint Audio` 選了"不合成"），按老方法：
 
-1. 浏览器全屏 → 打开 `localhost:5173`（默认 Manual 模式）
-2. **刷新一次**清空历史 step
-3. 开始录屏 → 按口播节奏点击空白推进 step
-4. 后期用任何剪辑软件配音 + 调时间线
+1. 瀏覽器全屏 → 打開 `localhost:5173`（默認 Manual 模式）
+2. **刷新一次**清空歷史 step
+3. 開始錄屏 → 按口播節奏點擊空白推進 step
+4. 後期用任何剪輯軟件配音 + 調時間線
 
-### 后期工具
+### 後期工具
 
-| 工具 | 适合 |
+| 工具 | 適合 |
 |---|---|
-| **DaVinci Resolve** | 跨平台免费、能处理多段音频拼接 |
-| **iMovie** | macOS 简单场景 |
-| **CapCut / 剪映** | B 站 / 抖音风加字幕 |
+| **DaVinci Resolve** | 跨平臺免費、能處理多段音頻拼接 |
+| **iMovie** | macOS 簡單場景 |
+| **CapCut / 剪映** | B 站 / 抖音風加字幕 |
 
 ---
 
-> agent 在 Checkpoint Audio 后**主动告诉用户**上面 Auto 模式录屏的
-> 路径，让用户知道下一步怎么把网页变成 mp4。
+> agent 在 Checkpoint Audio 後**主動告訴用戶**上面 Auto 模式錄屏的
+> 路徑，讓用戶知道下一步怎麼把網頁變成 mp4。

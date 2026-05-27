@@ -2,7 +2,7 @@
 
 **A method-driven agent skill for turning scripts and articles into click-driven 16:9 web presentations that can be screen-recorded as cinematic videos.**
 
-[中文文档](./README.zh-CN.md) · [Back to collection root](../../README.md)
+[中文文檔](./README.zh-CN.md) · [Back to collection root](../../README.md)
 
 ![Web Video Presentation Skill](../../dist/imgs/web-video-presentation-skill.png)
 
@@ -17,7 +17,7 @@ It is designed for:
 - Turning a written article into a Bilibili / YouTube / video-channel narration script
 - Turning an existing voiceover script into a cinematic web presentation
 - Building product demos, tutorials, keynote-style explainers, and visual talks
-- Creating “dynamic PPT, but not PPT” experiences with strong motion and pacing
+- Creating 「dynamic PPT, but not PPT」 experiences with strong motion and pacing
 - Optionally synthesizing narration audio after the visual outline is approved
 
 The skill is primarily a **methodology and collaboration workflow**. The scaffold supplies reusable tokens, stage primitives, themes, and examples, but each project should still choose a visual language that fits the topic.

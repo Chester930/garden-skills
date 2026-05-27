@@ -1,85 +1,85 @@
-# 短视频封面 / Stream 缩略图 UI 模板
+# 短視頻封面 / Stream 縮略圖 UI 模板
 
-本文件用于生成“短视频封面 + UI 元素”样机，例如：
+本文件用於生成「短視頻封面 + UI 元素」樣機，例如：
 
-- 抖音 / 快手 / B 站 / 小红书 视频封面
-- YouTube / Twitch 缩略图
+- 抖音 / 快手 / B 站 / 小紅書 視頻封面
+- YouTube / Twitch 縮略圖
 - VTuber / 主播 stream 封面
-- 自媒体节目封面
-- 社交平台短视频封面
+- 自媒體節目封面
+- 社交平臺短視頻封面
 
-特点：
+特點：
 
-- 主体大、文字大、信息层级高
-- 必须有可视化“点击诱因”
-- 文字与人物 / 主体画面强叠加
+- 主體大、文字大、信息層級高
+- 必須有可視化「點擊誘因」
+- 文字與人物 / 主體畫面強疊加
 
-它跟 `live-commerce-ui.md` 的区别：
+它跟 `live-commerce-ui.md` 的區別：
 
-- 直播 UI：仿真整个直播间界面（聊天 / 礼物 / 商品）
-- 本模板：只是封面图层，重点在抓眼球的标题 + 主视觉
+- 直播 UI：仿真整個直播間界面（聊天 / 禮物 / 商品）
+- 本模板：只是封面圖層，重點在抓眼球的標題 + 主視覺
 
-## 适用范围
+## 適用範圍
 
-- 短视频平台封面图
-- YouTube / Bilibili / Twitch 缩略图
-- 节目主视觉
-- 直播预告图
-- 课程 / 知识类视频封面
+- 短視頻平臺封面圖
+- YouTube / Bilibili / Twitch 縮略圖
+- 節目主視覺
+- 直播預告圖
+- 課程 / 知識類視頻封面
 
-## 何时使用
+## 何時使用
 
-- 用户提到“封面 / 缩略图 / 短视频封面 / 视频首图”
-- 用户希望生成一张点击率高的视觉
-- 用户给出节目名 / 标题 / 主播 / 主题
+- 用戶提到「封面 / 縮略圖 / 短視頻封面 / 視頻首圖」
+- 用戶希望生成一張點擊率高的視覺
+- 用戶給出節目名 / 標題 / 主播 / 主題
 
 不要使用：
 
-- 用户要的是真实直播间截图（用 `live-commerce-ui.md`）
-- 用户要的是社交动态详情页（用 `social-interface-mockup.md`）
+- 用戶要的是真實直播間截圖（用 `live-commerce-ui.md`）
+- 用戶要的是社交動態詳情頁（用 `social-interface-mockup.md`）
 
-## 缺失信息优先提问顺序
+## 缺失信息優先提問順序
 
-1. 平台：抖音 / 快手 / 小红书 / B 站 / YouTube / Twitch
-2. 内容类型：知识科普 / 生活 vlog / 游戏 / 直播预告 / 商业广告 / 萌系内容
-3. 主标题文案
-4. 主体（真人 / 卡通 / 物品 / 抽象主视觉）
-5. 风格：高对比醒目 / 软萌少女 / 冷静极简 / 暗黑神秘
-6. 是否需要副标题、bullet、徽章
+1. 平臺：抖音 / 快手 / 小紅書 / B 站 / YouTube / Twitch
+2. 內容類型：知識科普 / 生活 vlog / 遊戲 / 直播預告 / 商業廣告 / 萌系內容
+3. 主標題文案
+4. 主體（真人 / 卡通 / 物品 / 抽象主視覺）
+5. 風格：高對比醒目 / 軟萌少女 / 冷靜極簡 / 暗黑神祕
+6. 是否需要副標題、bullet、徽章
 
-## 主模板：知识类高对比短视频封面
+## 主模板：知識類高對比短視頻封面
 
 📖 描述
 
-仿真“讲清楚一件事的科普 / 解读类视频封面”，主体偏右，左侧为大字标题，附副标题与点状要点。
+仿真「講清楚一件事的科普 / 解讀類視頻封面」，主體偏右，左側爲大字標題，附副標題與點狀要點。
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "短视频科普类封面样机",
-  "goal": "生成一张高点击率的视频封面图，包含主标题、副标题、主视觉、平台风格小标识",
-  "platform": "{argument name=\"platform\" default=\"通用短视频封面\"}",
+  "type": "短視頻科普類封面樣機",
+  "goal": "生成一張高點擊率的視頻封面圖，包含主標題、副標題、主視覺、平颱風格小標識",
+  "platform": "{argument name=\"platform\" default=\"通用短視頻封面\"}",
   "aspect_ratio": "{argument name=\"aspect ratio\" default=\"16:9\"}",
   "background": {
-    "color_palette": "{argument name=\"color palette\" default=\"深蓝渐变 + 高亮黄\"}",
-    "texture": "{argument name=\"texture\" default=\"细微噪点 + 柔光\"}"
+    "color_palette": "{argument name=\"color palette\" default=\"深藍漸變 + 高亮黃\"}",
+    "texture": "{argument name=\"texture\" default=\"細微噪點 + 柔光\"}"
   },
   "main_visual": {
-    "subject": "{argument name=\"main subject\" default=\"一位看向镜头并指向左侧标题的中年男性\"}",
-    "position": "{argument name=\"subject position\" default=\"画面右侧 1/3\"}",
-    "expression": "{argument name=\"expression\" default=\"有信服感、略带惊讶\"}"
+    "subject": "{argument name=\"main subject\" default=\"一位看向鏡頭並指向左側標題的中年男性\"}",
+    "position": "{argument name=\"subject position\" default=\"畫面右側 1/3\"}",
+    "expression": "{argument name=\"expression\" default=\"有信服感、略帶驚訝\"}"
   },
   "title_block": {
     "main_title": "{argument name=\"main title\" default=\"99% 的人都不知道的 ChatGPT 用法\"}",
-    "title_style": "{argument name=\"title style\" default=\"白底黑字粗黑体 + 局部高亮黄色描边\"}",
+    "title_style": "{argument name=\"title style\" default=\"白底黑字粗黑體 + 局部高亮黃色描邊\"}",
     "sub_title": "{argument name=\"sub title\" default=\"一招提升 10 倍效率\"}",
     "bullet_points": {
       "count": "{argument name=\"bullet count\" default=\"3\"}",
       "items": [
-        "{argument name=\"bullet 1\" default=\"自动整理会议纪要\"}",
-        "{argument name=\"bullet 2\" default=\"批量生成 PPT 大纲\"}",
-        "{argument name=\"bullet 3\" default=\"一键写邮件模板\"}"
+        "{argument name=\"bullet 1\" default=\"自動整理會議紀要\"}",
+        "{argument name=\"bullet 2\" default=\"批量生成 PPT 大綱\"}",
+        "{argument name=\"bullet 3\" default=\"一鍵寫郵件模板\"}"
       ]
     }
   },
@@ -88,132 +88,132 @@
     "duration_label": "{argument name=\"duration\" default=\"06:24\"}"
   },
   "style": {
-    "rendering": "封面图必须像真实视频封面，而不是普通海报",
-    "contrast": "标题必须在 1 米外都能看清",
-    "consistency": "整体风格一致，不出现风格冲突"
+    "rendering": "封面圖必須像真實視頻封面，而不是普通海報",
+    "contrast": "標題必須在 1 米外都能看清",
+    "consistency": "整體風格一致，不出現風格衝突"
   },
   "constraints": {
     "must_keep": [
-      "主标题视觉权重最高",
-      "主视觉与标题不相互遮挡",
-      "颜色对比度足够高"
+      "主標題視覺權重最高",
+      "主視覺與標題不相互遮擋",
+      "顏色對比度足夠高"
     ],
     "avoid": [
-      "标题过长导致换行混乱",
-      "主体表情夸张到掉档次",
-      "边角小字过多"
+      "標題過長導致換行混亂",
+      "主體表情誇張到掉檔次",
+      "邊角小字過多"
     ]
   }
 }
 ```
 
-### 参数策略
+### 參數策略
 
-- 必问：主标题、主体、平台、风格
-- 可默认：副标题、徽章、小字标签
-- 可随机：bullet points 的次序与具体措辞，但与主题强相关
+- 必問：主標題、主體、平臺、風格
+- 可默認：副標題、徽章、小字標籤
+- 可隨機：bullet points 的次序與具體措辭，但與主題強相關
 
-### 自动补全策略
+### 自動補全策略
 
-- 主标题为空时不要自动编造，必须问
-- 副标题缺失可自动补一个“数字 + 动词”句式
-- bullet points 必须 ≤ 4 条
-- 主体表情默认“信服 + 略带惊讶”
+- 主標題爲空時不要自動編造，必須問
+- 副標題缺失可自動補一個「數字 + 動詞」句式
+- bullet points 必須 ≤ 4 條
+- 主體表情默認「信服 + 略帶驚訝」
 
-## 变体 1：可爱风 VTuber / 主播预告封面
+## 變體 1：可愛風 VTuber / 主播預告封面
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "VTuber / 主播预告封面",
-  "style": "anime, 高对比可爱粉系，闪光、爱心、星星装饰",
+  "type": "VTuber / 主播預告封面",
+  "style": "anime, 高對比可愛粉系，閃光、愛心、星星裝飾",
   "character": {
-    "description": "{argument name=\"character description\" default=\"棕发双丸子头动漫女孩，琥珀色眼眸，温柔微笑\"}",
-    "outfit": "{argument name=\"outfit\" default=\"粉色和服 + 白色女仆围裙，樱花发饰\"}",
-    "pose": "{argument name=\"pose\" default=\"手持装饰花朵的粉色麦克风\"}"
+    "description": "{argument name=\"character description\" default=\"棕發雙丸子頭動漫女孩，琥珀色眼眸，溫柔微笑\"}",
+    "outfit": "{argument name=\"outfit\" default=\"粉色和服 + 白色女僕圍裙，櫻花髮飾\"}",
+    "pose": "{argument name=\"pose\" default=\"手持裝飾花朵的粉色麥克風\"}"
   },
   "layout": {
-    "background": "{argument name=\"background\" default=\"粉色渐变 + 闪光 + 心形 + 蝴蝶结\"}",
+    "background": "{argument name=\"background\" default=\"粉色漸變 + 閃光 + 心形 + 蝴蝶結\"}",
     "text_sections": [
       {
-        "type": "顶部丝带",
-        "text": "{argument name=\"top ribbon\" default=\"今晚开播一起聊聊吧～\"}"
+        "type": "頂部絲帶",
+        "text": "{argument name=\"top ribbon\" default=\"今晚開播一起聊聊吧～\"}"
       },
       {
-        "type": "主标题",
-        "text": "{argument name=\"main title\" default=\"杂谈直播\"}",
-        "decorations": "周围 3 个大桃子插画"
+        "type": "主標題",
+        "text": "{argument name=\"main title\" default=\"雜談直播\"}",
+        "decorations": "周圍 3 個大桃子插畫"
       },
       {
-        "type": "中间丝带",
-        "text": "{argument name=\"middle ribbon\" default=\"想和大家度过开心的时光♡\"}"
+        "type": "中間絲帶",
+        "text": "{argument name=\"middle ribbon\" default=\"想和大家度過開心的時光♡\"}"
       },
       {
-        "type": "底部要点",
+        "type": "底部要點",
         "items": [
           "新人友好",
-          "礼物回收",
+          "禮物回收",
           "ROMO"
         ]
       },
       {
-        "type": "底部说话框",
-        "text": "评论大欢迎♪ 一起多聊聊吧"
+        "type": "底部說話框",
+        "text": "評論大歡迎♪ 一起多聊聊吧"
       }
     ]
   },
   "constraints": {
-    "must_feel": "像真实主播预告封面，不是同人插画"
+    "must_feel": "像真實主播預告封面，不是同人插畫"
   }
 }
 ```
 
-## 变体 2：开箱 / 评测视频封面
+## 變體 2：開箱 / 評測視頻封面
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "开箱评测视频封面",
+  "type": "開箱評測視頻封面",
   "platform": "{argument name=\"platform\" default=\"YouTube\"}",
   "aspect_ratio": "16:9",
   "main_visual": {
-    "subject": "{argument name=\"main product\" default=\"一台尚未拆封的科技产品包装盒\"}",
-    "host": "{argument name=\"host description\" default=\"画面左侧主播半身，表情夸张惊喜\"}",
-    "extras": ["盒子周围环绕的发光线条", "局部撕开包装的悬念感"]
+    "subject": "{argument name=\"main product\" default=\"一臺尚未拆封的科技產品包裝盒\"}",
+    "host": "{argument name=\"host description\" default=\"畫面左側主播半身，表情誇張驚喜\"}",
+    "extras": ["盒子周圍環繞的發光線條", "局部撕開包裝的懸念感"]
   },
   "title_block": {
-    "main_title": "{argument name=\"main title\" default=\"全网首发！我把它拆了\"}",
-    "sub_title": "{argument name=\"sub title\" default=\"真的值这个价吗？\"}",
-    "label_badge": "{argument name=\"badge\" default=\"独家\"}"
+    "main_title": "{argument name=\"main title\" default=\"全網首發！我把它拆了\"}",
+    "sub_title": "{argument name=\"sub title\" default=\"真的值這個價嗎？\"}",
+    "label_badge": "{argument name=\"badge\" default=\"獨家\"}"
   },
   "constraints": {
-    "must_feel": "强诱因 + 强好奇感"
+    "must_feel": "強誘因 + 強好奇感"
   }
 }
 ```
 
-## 变体 3：自动补全模式
+## 變體 3：自動補全模式
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "短视频封面自动补全模板",
+  "type": "短視頻封面自動補全模板",
   "mode": "auto-fill",
-  "rule": "用户只给出主题时，自动补主标题、副标题、主体、风格、配色，但必须保持封面三要素：主标题、主视觉、强对比",
+  "rule": "用戶只給出主題時，自動補主標題、副標題、主體、風格、配色，但必須保持封面三要素：主標題、主視覺、強對比",
   "constraints": {
-    "must_feel": "像真实视频平台上抓人封面"
+    "must_feel": "像真實視頻平臺上抓人封面"
   }
 }
 ```
 
-## 避免事项
+## 避免事項
 
-- 不要让标题占满整个画面（必须留出主视觉）
-- 不要让标题颜色与背景过于接近，必须高对比
-- 不要在一张封面塞超过 2 行的副标题
-- 不要让主体面部被标题文字大块遮挡
-- 不要混合多个平台的 UI 元素（比如 YouTube 红色播放按钮 + 抖音水印）
-- 不要在“知识科普”封面里出现 emoji 表情堆叠
+- 不要讓標題佔滿整個畫面（必須留出主視覺）
+- 不要讓標題顏色與背景過於接近，必須高對比
+- 不要在一張封面塞超過 2 行的副標題
+- 不要讓主體面部被標題文字大塊遮擋
+- 不要混合多個平臺的 UI 元素（比如 YouTube 紅色播放按鈕 + 抖音水印）
+- 不要在「知識科普」封面裡出現 emoji 表情堆疊

@@ -1,175 +1,175 @@
 # Campaign Key Visual 模板
 
-本文件用于生成“一组 campaign 主视觉”，强调“可延展、可复用、可成系列”：
+本文件用於生成「一組 campaign 主視覺」，強調「可延展、可復用、可成系列」：
 
-- 季度 campaign 主视觉
-- 节日 campaign 主图
-- 跨平台投放统一视觉
-- 联名 campaign 主图
+- 季度 campaign 主視覺
+- 節日 campaign 主圖
+- 跨平臺投放統一視覺
+- 聯名 campaign 主圖
 
-特征：
+特徵：
 
-- 主视觉强调“可拓展”到 banner / story / 短视频封面
-- 由 1 个 anchor visual + 1 套 layout system 组成
-- 强调 campaign claim
-- 色板严格统一
+- 主視覺強調「可拓展」到 banner / story / 短視頻封面
+- 由 1 個 anchor visual + 1 套 layout system 組成
+- 強調 campaign claim
+- 色板嚴格統一
 
-## 适用范围
+## 適用範圍
 
-- 全新 campaign 主视觉系统
-- 节日 / 双 11 / 大促 campaign
-- 联名 campaign
+- 全新 campaign 主視覺系統
+- 節日 / 雙 11 / 大促 campaign
+- 聯名 campaign
 
-## 何时使用
+## 何時使用
 
-- 用户提到“campaign / 大促 / 季度活动 / KV / 系列主视觉”
-- 用户希望视觉能延展为 banner / story / 海报
+- 用戶提到「campaign / 大促 / 季度活動 / KV / 系列主視覺」
+- 用戶希望視覺能延展爲 banner / story / 海報
 
 不要使用：
 
-- 单张品牌海报（用 `brand-poster.md`）
+- 單張品牌海報（用 `brand-poster.md`）
 - Web hero（用 `banner-hero.md`）
 
-## 缺失信息优先提问顺序
+## 缺失信息優先提問順序
 
-1. Campaign 主题
-2. Campaign 时间窗口
-3. Campaign claim（slogan / 主张句）
-4. 品牌色 + campaign 专属色
-5. 主视觉中心（人物 / 产品 / 概念图形）
+1. Campaign 主題
+2. Campaign 時間窗口
+3. Campaign claim（slogan / 主張句）
+4. 品牌色 + campaign 專屬色
+5. 主視覺中心（人物 / 產品 / 概念圖形）
 6. 是否需要展示衍生 layout
 
 ## 主模板：Campaign Key Visual + 衍生
 
 📖 描述
 
-主图为 anchor visual，画面中央有 campaign claim，下方展示衍生 layout（1:1、9:16、16:9）小预览。
+主圖爲 anchor visual，畫面中央有 campaign claim，下方展示衍生 layout（1:1、9:16、16:9）小預覽。
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "Campaign Key Visual 主视觉系统",
-  "goal": "生成一张能作为 campaign 主图，并展示其衍生版本的视觉系统图",
+  "type": "Campaign Key Visual 主視覺系統",
+  "goal": "生成一張能作爲 campaign 主圖，並展示其衍生版本的視覺系統圖",
   "campaign": {
     "name": "{argument name=\"campaign name\" default=\"AURORA Spring Drop 2026\"}",
-    "claim": "{argument name=\"campaign claim\" default=\"春日新声，听见每一刻心动\"}",
+    "claim": "{argument name=\"campaign claim\" default=\"春日新聲，聽見每一刻心動\"}",
     "duration": "{argument name=\"duration\" default=\"2026.4.20 - 2026.5.15\"}"
   },
   "visual_system": {
-    "color_palette": "{argument name=\"color palette\" default=\"樱粉 + 雾蓝 + 米白\"}",
+    "color_palette": "{argument name=\"color palette\" default=\"櫻粉 + 霧藍 + 米白\"}",
     "anchor_visual": {
-      "description": "{argument name=\"anchor visual\" default=\"少女戴着新款无线耳机，背景为樱花花瓣飘落\"}",
-      "composition": "人物在画面 1/3 偏左，留白足够给 claim"
+      "description": "{argument name=\"anchor visual\" default=\"少女戴着新款無線耳機，背景爲櫻花花瓣飄落\"}",
+      "composition": "人物在畫面 1/3 偏左，留白足夠給 claim"
     },
-    "graphic_motif": "{argument name=\"motif\" default=\"重复出现的小樱花标志 + 圆点节奏点\"}"
+    "graphic_motif": "{argument name=\"motif\" default=\"重複出現的小櫻花標誌 + 圓點節奏點\"}"
   },
   "claim_typography": {
-    "font_style": "{argument name=\"font style\" default=\"现代衬线 + 圆滑细节\"}",
-    "color": "深灰 + 樱粉点缀"
+    "font_style": "{argument name=\"font style\" default=\"現代襯線 + 圓滑細節\"}",
+    "color": "深灰 + 櫻粉點綴"
   },
   "derivative_layouts": {
     "enabled": "{argument name=\"derivatives enabled\" default=\"true\"}",
     "items": [
-      "1:1 社交首图",
-      "9:16 短视频封面",
+      "1:1 社交首圖",
+      "9:16 短視頻封面",
       "16:9 banner"
     ],
-    "rule": "三个衍生 layout 在主图下方排成一行展示"
+    "rule": "三個衍生 layout 在主圖下方排成一行展示"
   },
   "logo_placement": {
     "position": "右下角"
   },
   "constraints": {
     "must_keep": [
-      "anchor visual 与衍生 layout 保持视觉一致",
-      "claim 文字在所有比例下都可读",
-      "色板严格统一",
-      "品牌 logo 在所有版本都出现"
+      "anchor visual 與衍生 layout 保持視覺一致",
+      "claim 文字在所有比例下都可讀",
+      "色板嚴格統一",
+      "品牌 logo 在所有版本都出現"
     ],
     "avoid": [
-      "衍生 layout 风格漂移",
-      "claim 在小尺寸下不可读",
-      "色板出现额外色",
-      "anchor visual 主体超出画面"
+      "衍生 layout 風格漂移",
+      "claim 在小尺寸下不可讀",
+      "色板出現額外色",
+      "anchor visual 主體超出畫面"
     ]
   }
 }
 ```
 
-### 参数策略
+### 參數策略
 
-- 必问：campaign 名、claim、色板、anchor visual
-- 可默认：衍生 layout 列表、logo 位置、字体
-- 可随机：motif 装饰具体形式
+- 必問：campaign 名、claim、色板、anchor visual
+- 可默認：衍生 layout 列表、logo 位置、字體
+- 可隨機：motif 裝飾具體形式
 
-### 自动补全策略
+### 自動補全策略
 
-- 用户给主题 + 节点（春 / 夏 / 双 11 / 圣诞），自动选色板与 motif
-- claim 默认 12-18 字
-- 衍生 layout 默认 3 种比例
+- 用戶給主題 + 節點（春 / 夏 / 雙 11 / 聖誕），自動選色板與 motif
+- claim 默認 12-18 字
+- 衍生 layout 默認 3 種比例
 
-## 变体 1：联名 campaign
+## 變體 1：聯名 campaign
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "联名 campaign 主视觉",
+  "type": "聯名 campaign 主視覺",
   "campaign": {
     "name": "{argument name=\"co-brand campaign\" default=\"AURORA × MUJI Limited\"}",
-    "claim": "{argument name=\"claim\" default=\"日常之声，安静的力量\"}"
+    "claim": "{argument name=\"claim\" default=\"日常之聲，安靜的力量\"}"
   },
   "visual_system": {
-    "color_palette": "灰白 + 暖米 + 一丝品牌色",
+    "color_palette": "灰白 + 暖米 + 一絲品牌色",
     "anchor_visual": {
-      "description": "两品牌产品并置 + 日常场景"
+      "description": "兩品牌產品並置 + 日常場景"
     }
   },
   "constraints": {
-    "must_feel": "克制、有共同语境、不互相压倒"
+    "must_feel": "克制、有共同語境、不互相壓倒"
   }
 }
 ```
 
-## 变体 2：纯图形 campaign
+## 變體 2：純圖形 campaign
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "纯图形 campaign 主视觉",
+  "type": "純圖形 campaign 主視覺",
   "visual_system": {
     "anchor_visual": {
-      "description": "{argument name=\"motif\" default=\"由品牌字标演化的几何图形\"}"
+      "description": "{argument name=\"motif\" default=\"由品牌字標演化的幾何圖形\"}"
     },
-    "graphic_motif": "{argument name=\"pattern\" default=\"重复 grid + 节奏点\"}"
+    "graphic_motif": "{argument name=\"pattern\" default=\"重複 grid + 節奏點\"}"
   },
   "constraints": {
-    "must_feel": "概念感强、抽象、属于品牌资产"
+    "must_feel": "概念感強、抽象、屬於品牌資產"
   }
 }
 ```
 
-## 变体 3：自动补全模式
+## 變體 3：自動補全模式
 
-📝 提示词
+📝 提示詞
 
 ```json
 {
-  "type": "Campaign KV 自动补全模板",
+  "type": "Campaign KV 自動補全模板",
   "mode": "auto-fill",
-  "rule": "用户给 campaign 主题 + 时间，自动决定 claim、色板、anchor、衍生",
+  "rule": "用戶給 campaign 主題 + 時間，自動決定 claim、色板、anchor、衍生",
   "constraints": {
-    "must_feel": "可直接进入投放系统"
+    "must_feel": "可直接進入投放系統"
   }
 }
 ```
 
-## 避免事项
+## 避免事項
 
-- 不要让衍生 layout 与主图风格分裂
-- 不要让 claim 跨越主体（必须留白）
-- 不要在一张 KV 系统里出现 > 2 套字体
-- 不要把所有比例都画成同一构图（必须真实重新构图）
-- 不要让 motif 喧宾夺主
+- 不要讓衍生 layout 與主圖風格分裂
+- 不要讓 claim 跨越主體（必須留白）
+- 不要在一張 KV 系統裏出現 > 2 套字體
+- 不要把所有比例都畫成同一構圖（必須真實重新構圖）
+- 不要讓 motif 喧賓奪主
