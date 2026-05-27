@@ -148,7 +148,7 @@ jobs:
           git checkout "$DEFAULT_BRANCH"
           git pull --ff-only origin "$DEFAULT_BRANCH"
 
-          npm run readme:sync
+          npm run readme:sync -- --repo "${{ github.repository }}"
 
           if [ -z "$(git status --porcelain README.md README.zh-CN.md README.ja-JP.md)" ]; then
             echo "README already in sync — nothing to commit."

@@ -95,8 +95,27 @@ function escapeRe(s) {
   return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
+function extractExistingVersionAndRepo(readmeContent, skillName) {
+  const re = new RegExp(
+    `<!--\\s*DOWNLOAD:${escapeRe(skillName)}:start\\s*-->([\\s\\S]*?)<!--\\s*DOWNLOAD:${escapeRe(skillName)}:end\\s*-->`
+  );
+  const m = re.exec(readmeContent);
+  if (!m) return null;
+  const blockContent = m[1];
+  const urlRe = /https:\/\/github\.com\/([^/]+\/[^/]+)\/releases\/download\/([^/]+)\/[^)]+/;
+  const urlMatch = urlRe.exec(blockContent);
+  if (!urlMatch) return null;
+  const repo = urlMatch[1];
+  const tag = urlMatch[2];
+  const parsed = parseTag(tag);
+  if (parsed) {
+    return { version: parsed.version, repo };
+  }
+  return null;
+}
+
 function parseArgs(argv) {
-  const args = { check: false, repo: process.env.GITHUB_REPOSITORY || DEFAULT_REPO };
+  const args = { check: false, repo: DEFAULT_REPO };
   for (let i = 2; i < argv.length; i++) {
     const a = argv[i];
     if (a === "--check") args.check = true;
@@ -115,13 +134,33 @@ async function main() {
   }
 
   const manifests = await loadAllManifests();
+
+  let readmeContent = "";
+  try {
+    readmeContent = await readFile(path.join(REPO_ROOT, "README.md"), "utf8");
+  } catch {}
+
   // Resolve the published version for each skill ONCE here, so we don't
   // shell out to git per-file.
-  const published = manifests.map((m) => ({
-    name: m.name,
-    manifestVersion: m.manifest.version,
-    publishedVersion: publishedVersionFor(m.name),
-  }));
+  const published = manifests.map((m) => {
+    let ver = publishedVersionFor(m.name);
+    let repo = args.repo;
+    if (ver === null && readmeContent) {
+      const extracted = extractExistingVersionAndRepo(readmeContent, m.name);
+      if (extracted) {
+        ver = extracted.version;
+        if (args.repo === DEFAULT_REPO) {
+          repo = extracted.repo;
+        }
+      }
+    }
+    return {
+      name: m.name,
+      manifestVersion: m.manifest.version,
+      publishedVersion: ver,
+      repo: repo,
+    };
+  });
   console.log(`[readme] repo=${args.repo}  skills=${manifests.length}`);
   for (const p of published) {
     const note =
@@ -139,7 +178,7 @@ async function main() {
     const blocks = Object.fromEntries(
       published.map((p) => [
         p.name,
-        buildBlock(p.name, p.publishedVersion, args.repo, file.lang),
+        buildBlock(p.name, p.publishedVersion, p.repo, file.lang),
       ]),
     );
     const updated = rewrite(original, blocks);

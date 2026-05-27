@@ -72,7 +72,7 @@
 - **可插拔 TTS**：獨立於供應商（provider-agnostic）的音訊執行器，**內建 2 個 provider**（MiniMax `mmx-cli` + OpenAI TTS via curl），並附帶三函數契約 + ElevenLabs / edge-tts / Azure / Google Cloud / macOS `say` 的現成程式碼片段
 - 腳手架產出 Vite + Angular + TypeScript 專案，並附帶舞台原語與錄影指南
 
-連結：[README](./skills/web-video-presentation/README.zh-CN.md) · [SKILL.md](./skills/web-video-presentation/SKILL.md) · <!-- DOWNLOAD:web-video-presentation:start -->[下載 v1.2.1 .zip](https://github.com/ConardLi/garden-skills/releases/download/web-video-presentation-v1.2.1/web-video-presentation-1.2.1.zip)<!-- DOWNLOAD:web-video-presentation:end -->
+連結：[README](./skills/web-video-presentation/README.zh-CN.md) · [SKILL.md](./skills/web-video-presentation/SKILL.md) · <!-- DOWNLOAD:web-video-presentation:start -->[下载 v1.2.1 .zip](https://github.com/ConardLi/garden-skills/releases/download/web-video-presentation-v1.2.1/web-video-presentation-1.2.1.zip)<!-- DOWNLOAD:web-video-presentation:end -->
 
 ---
 
@@ -94,7 +94,7 @@
 - 包含 inline React + Babel、CSS tokens、`oklch()` 配色、container queries、reduced-motion 等實作規則
 - 提供高階模式參考，覆蓋設備框、投影片引擎、動畫時間軸、儀表板等常見 Web 產物
 
-連結：[README](./skills/web-design-engineer/README.zh-CN.md) · [SKILL.md](./skills/web-design-engineer/SKILL.md) · [Website](./website/web-design-website) · [Demo](./demo/web-design-demo) · <!-- DOWNLOAD:web-design-engineer:start -->[下載 v1.2.0 .zip](https://github.com/ConardLi/garden-skills/releases/download/web-design-engineer-v1.2.0/web-design-engineer-1.2.0.zip)<!-- DOWNLOAD:web-design-engineer:end -->
+連結：[README](./skills/web-design-engineer/README.zh-CN.md) · [SKILL.md](./skills/web-design-engineer/SKILL.md) · [Website](./website/web-design-website) · [Demo](./demo/web-design-demo) · <!-- DOWNLOAD:web-design-engineer:start -->[下载 v1.2.0 .zip](https://github.com/ConardLi/garden-skills/releases/download/web-design-engineer-v1.2.0/web-design-engineer-1.2.0.zip)<!-- DOWNLOAD:web-design-engineer:end -->
 
 ---
 
@@ -115,7 +115,7 @@
 - 同時覆蓋影像生成和影像編輯，並配套專門工作流與指令碼
 - Garden 模式下會把 prompt 與生成圖片儲存到 `garden-gpt-image-2/`，方便複用、審查和版本管理
 
-連結：[README](./skills/gpt-image-2/README.zh-CN.md) · [SKILL.md](./skills/gpt-image-2/SKILL.md) · [Website](./website/gpt-image2-website) · <!-- DOWNLOAD:gpt-image-2:start -->[下載 v1.0.3 .zip](https://github.com/ConardLi/garden-skills/releases/download/gpt-image-2-v1.0.3/gpt-image-2-1.0.3.zip)<!-- DOWNLOAD:gpt-image-2:end -->
+連結：[README](./skills/gpt-image-2/README.zh-CN.md) · [SKILL.md](./skills/gpt-image-2/SKILL.md) · [Website](./website/gpt-image2-website) · <!-- DOWNLOAD:gpt-image-2:start -->[下载 v1.0.3 .zip](https://github.com/ConardLi/garden-skills/releases/download/gpt-image-2-v1.0.3/gpt-image-2-1.0.3.zip)<!-- DOWNLOAD:gpt-image-2:end -->
 
 ---
 
@@ -136,7 +136,7 @@
 - 最多 5 輪檢索，讓探索過程有邊界
 - 內建 `grep`、`pdftotext`、`pdfplumber`、`pandas` 工作流，並強調答案來源
 
-連結：[README](./skills/kb-retriever/README.zh-CN.md) · [SKILL.md](./skills/kb-retriever/SKILL.md) · <!-- DOWNLOAD:kb-retriever:start -->[下載 v1.0.0 .zip](https://github.com/ConardLi/garden-skills/releases/download/kb-retriever-v1.0.0/kb-retriever-1.0.0.zip)<!-- DOWNLOAD:kb-retriever:end -->
+連結：[README](./skills/kb-retriever/README.zh-CN.md) · [SKILL.md](./skills/kb-retriever/SKILL.md) · <!-- DOWNLOAD:kb-retriever:start -->[下载 v1.0.0 .zip](https://github.com/ConardLi/garden-skills/releases/download/kb-retriever-v1.0.0/kb-retriever-1.0.0.zip)<!-- DOWNLOAD:kb-retriever:end -->
 
 ---
 
