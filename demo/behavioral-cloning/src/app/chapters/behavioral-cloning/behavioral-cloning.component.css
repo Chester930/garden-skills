@@ -1,0 +1,179 @@
+.slide-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--surface, #0a0f0a);
+  transition: background 0.8s ease;
+  z-index: 1;
+}
+
+.slide-background.warning-state {
+  background: radial-gradient(circle, #2a0505 0%, #0c0202 100%);
+}
+
+/* Base style for all blocks */
+.slide-block {
+  position: absolute;
+  z-index: 10;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(30px);
+  transition: 
+    opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+    left 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+    top 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+    width 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+    height 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.slide-block.active-block {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/* In editing mode, show all blocks (non-active blocks are semi-transparent but IGNORED by pointer to prevent dragging wrong items) */
+:host-context(.editing-layout) .slide-block {
+  opacity: 0.25;
+  pointer-events: none;
+  transform: translateY(0);
+  outline: 1px dashed rgba(255, 255, 255, 0.15);
+}
+
+:host-context(.editing-layout) .slide-block.active-block {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+  box-shadow: 0 0 0 2px rgba(0, 255, 136, 0.5), 0 8px 30px rgba(0, 0, 0, 0.5);
+  outline: 1px dashed rgba(0, 255, 136, 0.4);
+}
+
+/* Typography styles */
+.main-title h1 {
+  margin: 0;
+  font-size: 5.5rem;
+  font-weight: 800;
+  letter-spacing: -2px;
+  color: #fff;
+  text-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  line-height: 1.1;
+}
+
+.main-subtitle p {
+  margin: 0;
+  font-size: 2.2rem;
+  color: var(--accent, #00ff88);
+  font-weight: 400;
+}
+
+.section-title h2 {
+  margin: 0;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -1px;
+}
+
+.warning-title h2 {
+  color: #ff5577;
+}
+
+.accent-title h2 {
+  color: var(--accent, #00ff88);
+}
+
+.desc-text p {
+  margin: 0;
+  font-size: 1.6rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+/* Cards & Graphic Styles */
+.diagram-card, .collapse-card, .solution-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  backdrop-filter: blur(10px);
+}
+
+.diagram-card pre, .collapse-card pre, .solution-card pre {
+  margin: 0;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+  white-space: pre-wrap;
+  height: 100%;
+}
+
+.formula-block {
+  background: rgba(0, 255, 136, 0.03);
+  border: 1px solid rgba(0, 255, 136, 0.15);
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.raw-latex-input {
+  width: 100%;
+  height: 100%;
+  font-family: monospace;
+  font-size: 1.4rem;
+  background: rgba(0,0,0,0.3);
+  border: 1px dashed var(--accent);
+  padding: 10px;
+  color: #fff;
+  overflow: auto;
+}
+
+.math-render {
+  font-size: 2.2rem;
+  color: #fff;
+}
+
+.collapse-card {
+  border-color: rgba(255, 85, 119, 0.2);
+}
+
+.solution-card {
+  border-color: rgba(0, 255, 136, 0.2);
+}
+
+.solution-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+/* Mini Graphic Animation */
+.collapse-graphic {
+  width: 100%;
+  height: 100px;
+  position: relative;
+  margin-bottom: 20px;
+  border-bottom: 2px solid rgba(255,255,255,0.1);
+}
+
+.pendulum {
+  width: 12px;
+  height: 80px;
+  background: var(--accent);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform-origin: bottom center;
+  transition: transform 1.5s ease-in-out;
+}
+
+.pendulum.collapse-anim {
+  transform: rotate(75deg);
+  background: #ff5577;
+}

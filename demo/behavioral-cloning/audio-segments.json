@@ -1,0 +1,26 @@
+[
+  {
+    "chapter": "behavioral-cloning",
+    "step": 1,
+    "text": "歡迎來到強化學習實作課。今天我們首先要聊聊，為什麼機器人不能只靠模仿學習？",
+    "audio": "assets/audio/behavioral-cloning/1.mp3"
+  },
+  {
+    "chapter": "behavioral-cloning",
+    "step": 2,
+    "text": "模仿學習中最基礎的演算法是 Behavioral Cloning。它的本質就是把控制問題當作監督式學習，照著專家的示範動作學。",
+    "audio": "assets/audio/behavioral-cloning/2.mp3"
+  },
+  {
+    "chapter": "behavioral-cloning",
+    "step": 3,
+    "text": "但這有一個致命缺點叫做分佈偏移。只要機器人稍有偏離，誤差就會迅速累積，導致策略徹底崩潰。",
+    "audio": "assets/audio/behavioral-cloning/3.mp3"
+  },
+  {
+    "chapter": "behavioral-cloning",
+    "step": 4,
+    "text": "這就是為什麼我們需要進入強化學習。讓智慧體自己探索試錯，學會如何從錯誤的狀態中自己修正回來。",
+    "audio": "assets/audio/behavioral-cloning/4.mp3"
+  }
+]
